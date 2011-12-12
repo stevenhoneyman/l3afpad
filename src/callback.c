@@ -320,6 +320,7 @@ void on_help_about(void)
 		NULL
 	};
 	gtk_show_about_dialog(GTK_WINDOW(pub->mw->window),
+		"program-name", "Lɜafpad",
 		"version", PACKAGE_VERSION,
 		"copyright", copyright,
 		"comments", comments,

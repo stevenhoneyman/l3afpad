@@ -1,3 +1,8 @@
+2011-09-05
+
+  version 0.8.18.1.2:
+	* Fix print function (This is a bug NOT in Leafpad, oops.)
+
 2011-09-01
 
   version 0.8.18.1.1:
@@ -220,7 +225,7 @@
 
   version 0.7.6:
 	* Improved command line recognition of filename (uri & space-separated).
-	* Added MimeType entry to l3afpad.desktop (suggested by Carlos).
+	* Added MimeType entry to leafpad.desktop (suggested by Carlos).
 	* Assigned Ctrl+G & Shift+Ctrl+G to Find Next/Previous.
 	* Added statements of copying permission to all source codes.
 	* Added French translation (thanks Luc Pionchon).
@@ -229,7 +234,7 @@
 2004-10-29
 
   version 0.7.5:
-	* Added l3afpad.desktop file.
+	* Added leafpad.desktop file.
 	* Fixed DnD with space-separated filename (thanks Eugenia).
 	* Added Russian translation (thanks Artem Vakhitov).
 	* Added Swedish translation (thanks Isak Savo).

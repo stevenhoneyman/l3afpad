@@ -20,7 +20,7 @@
 #include <gtk/gtk.h>
 
 static PangoLayout *layout;
-static PangoFontDescription *font_desc;
+static const PangoFontDescription *font_desc;
 static gint line_count, lines_per_page, text_height;
 static gint n_pages;
 static gdouble page_width, page_height;
@@ -54,7 +54,7 @@ static void cb_begin_print(GtkPrintOperation *op,
 	
 	page_width = gtk_print_context_get_width(ctx);
 	page_height = gtk_print_context_get_height(ctx);
-	gtk_widget_style_get_property(data, font_desc, font_desc);
+	font_desc = gtk_style_context_get_font(gtk_widget_get_style_context(data), GTK_STATE_FLAG_NORMAL);
 	layout = gtk_print_context_create_pango_layout(ctx);
 	pango_layout_set_width(layout, page_width * PANGO_SCALE);
 	pango_layout_set_font_description(layout, font_desc);

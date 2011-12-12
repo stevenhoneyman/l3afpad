@@ -220,7 +220,7 @@ gint main(gint argc, gchar **argv)
 	
 	gtk_window_set_default_size(
 		GTK_WINDOW(pub->mw->window), conf->width, conf->height);
-	set_text_font_by_name(pub->mw->view, conf->fontname);
+    set_text_font_by_name(pub->mw->view, conf->fontname);
     gtk_window_set_icon_from_file(GTK_WINDOW(pub->mw->window), ICONDIR"/l3afpad.png", NULL);
 
 	ifactory = gtk_item_factory_from_widget(pub->mw->menubar);
