@@ -17,16 +17,9 @@
  *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#include <gtk/gtk.h>
 #include <stdio.h>
 #include <string.h>
-#include "file.h"
-#include "view.h"
-#include "encoding.h"
-#include "dialog.h"
-#include "menu.h"
-#include <glib/gi18n.h>
-//#include "undo.h"
+#include "l3afpad.h"
 
 gboolean check_file_writable(gchar *filename)
 {
@@ -235,3 +228,102 @@ gint file_save_real(GtkWidget *view, FileInfo *fi)
 
 	return 0;
 }
+
+#if ENABLE_STATISTICS
+void text_stats(gchar * text, gint * wc, gint * lc);
+gint skipDelim(gchar ** pos);
+inline gboolean isDelim(gchar);
+
+gchar * file_stats(GtkWidget *view, FileInfo *fi)
+{
+	GtkTextIter start;
+	GtkTextIter end;
+	GtkTextIter textStart;
+	GtkTextIter textEnd;
+	gchar * str;
+	gchar * text;
+	gint totalLines = 0;
+	gint totalChars = 0;
+	gint totalWords = 0;
+	gint charCount  = 0;
+	gint wordCount  = 0;
+	gint lineCount  = 0;
+	gchar * toret = g_malloc( 8192 );
+	GtkTextBuffer *buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(view));
+	gboolean hasSelection = gtk_text_buffer_get_selection_bounds( buffer, &start, &end );
+
+	if ( !hasSelection ) {
+		gtk_text_buffer_get_start_iter(buffer, &start);
+		gtk_text_buffer_get_start_iter(buffer, &end);
+	}
+
+	gtk_text_buffer_get_start_iter(buffer, &textStart);
+	gtk_text_buffer_get_end_iter(buffer, &textEnd);
+
+	str  = gtk_text_buffer_get_text(buffer, &start, &end, FALSE);
+	text = gtk_text_buffer_get_text(buffer, &textStart, &textEnd, FALSE);
+
+	totalChars = gtk_text_buffer_get_char_count( buffer );
+	charCount  = strlen( str );
+
+	text_stats( str, &wordCount, &lineCount );
+	text_stats( text, &totalWords, &totalLines );
+
+	g_sprintf(
+		toret,
+		_("<u>Totals count</u>\nChars: %7d Words: %6d Lines: %5d\n\n"
+		"<u>Selection</u>\nChars: %7d Words: %6d Lines: %5d\n"),
+		totalChars,
+		totalWords,
+		totalLines,
+		charCount,
+		wordCount,
+		lineCount
+	);
+
+	return toret;
+}
+
+const gchar * DelimChars = " ,.;:\t\n-_?¿()!¡'/&%$#\"\\|{}[]+*";
+
+void text_stats(gchar * text, gint * wc, gint * lc)
+{
+	gchar * pos = text;
+	*wc = 0;
+	*lc = 1;
+
+	*lc += skipDelim( &pos );
+	while( *pos != 0 ) {
+		++(*wc);
+		while( *pos != 0
+		    && !isDelim( *pos ) )
+		{
+			++pos;
+		}
+
+		*lc += skipDelim( &pos );
+	}
+}
+
+gint skipDelim(gchar ** pos)
+{
+	gint lc = 0;
+
+	while( **pos != 0
+            && isDelim( **pos ) )
+	{
+		if ( **pos == '\n' ) {
+			++lc;
+		}
+		++( *pos );
+	}
+
+	return lc;
+}
+
+inline
+gboolean isDelim(gchar ch)
+{
+	return ( strchr( DelimChars, ch ) != NULL );
+}
+#endif

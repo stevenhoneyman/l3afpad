@@ -1,3 +1,10 @@
+2011-12-09
+
+  version 0.8.18.1.6:
+	* Support simple statistics and option: --disable-statistics
+	  Translation wanted.
+	* Fix build failure with "-Werror=format-security" flag
+
 2011-11-09
 
   version 0.8.18.1.5:

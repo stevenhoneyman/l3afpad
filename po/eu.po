@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-09 14:19+0800\n"
+"POT-Creation-Date: 2011-12-09 11:16+0800\n"
 "PO-Revision-Date: 2008-01-14 21:35+0900\n"
 "Last-Translator: Mikel Olasagasti <hey_neken@mundurat.net>\n"
 "Language-Team: Basque <translation-team-eu@lists.sourceforge.net>\n"
@@ -56,94 +56,102 @@ msgid "Save _As..."
 msgstr "Gorde _Honela..."
 
 #: ../src/menu.c:44
+msgid "Sta_tistics..."
+msgstr ""
+
+#: ../src/menu.c:47
 msgid "Print Pre_view"
 msgstr "Inprimatze Aurre_bista"
 
-#: ../src/menu.c:45
+#: ../src/menu.c:48
 msgid "_Print..."
 msgstr "In_primatu"
 
-#: ../src/menu.c:47
+#: ../src/menu.c:50
 msgid "_Quit"
 msgstr "It_xi"
 
-#: ../src/menu.c:48
+#: ../src/menu.c:51
 msgid "_Undo"
 msgstr "_Desegin"
 
-#: ../src/menu.c:49
+#: ../src/menu.c:52
 msgid "_Redo"
 msgstr "Be_rregin"
 
-#: ../src/menu.c:50
+#: ../src/menu.c:53
 msgid "Cu_t"
 msgstr "Eba_ki"
 
-#: ../src/menu.c:51
+#: ../src/menu.c:54
 msgid "_Copy"
 msgstr "_Kopiatu"
 
-#: ../src/menu.c:52
+#: ../src/menu.c:55
 msgid "_Paste"
 msgstr "_Itsatsi"
 
-#: ../src/menu.c:53
+#: ../src/menu.c:56
 msgid "_Delete"
 msgstr "_Ezabatu"
 
-#: ../src/menu.c:54
+#: ../src/menu.c:57
 msgid "Select _All"
 msgstr "_Hautatu Dena"
 
-#: ../src/menu.c:55
+#: ../src/menu.c:58
 msgid "_Find..."
 msgstr "_Bilatu"
 
-#: ../src/menu.c:56
+#: ../src/menu.c:59
 msgid "Find _Next"
 msgstr "Bilatu _hurrengoa"
 
-#: ../src/menu.c:57
+#: ../src/menu.c:60
 msgid "Find _Previous"
 msgstr "Bilatu _aurrekoa"
 
-#: ../src/menu.c:58
+#: ../src/menu.c:61
 msgid "_Replace..."
 msgstr "_Ordezkatu"
 
-#: ../src/menu.c:59
+#: ../src/menu.c:62
 msgid "_Jump To..."
 msgstr "_Jauzi Hona..."
 
-#: ../src/menu.c:60
+#: ../src/menu.c:63
 msgid "_Font..."
 msgstr "Letra _Tipoa..."
 
-#: ../src/menu.c:61
+#: ../src/menu.c:64
 msgid "_About"
 msgstr "_Honi buruz"
 
-#: ../src/menu.c:68
+#: ../src/menu.c:71
 msgid "_Word Wrap"
 msgstr "_Hitz doiketa"
 
-#: ../src/menu.c:69
+#: ../src/menu.c:72
 msgid "_Line Numbers"
 msgstr "_Lerro Zenbakiak"
 
-#: ../src/menu.c:70
+#: ../src/menu.c:73
 msgid "_Auto Indent"
 msgstr "_Autoindentazioa"
 
-#: ../src/callback.c:299
+#: ../src/callback.c:139
+msgid "<b>Statistics</b>"
+msgstr ""
+
+#: ../src/callback.c:330
 msgid "GTK+ based simple text editor"
 msgstr "GTK+-n oinarritutako testu editore sinplea"
 
-#: ../src/callback.c:305
+#: ../src/callback.c:336
 msgid "translator-credits"
 msgstr "Inko Illarramendi <inkoia@gmail.com>"
 
-#: ../src/callback.c:316
+#: ../src/callback.c:347
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 
@@ -195,22 +203,32 @@ msgstr "K_araktere Kodeketa:"
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' badago. Gainean idatzi?"
 
-#: ../src/file.c:55
+#: ../src/file.c:48
 msgid "Untitled"
 msgstr "Izengabea"
 
-#: ../src/file.c:210
+#: ../src/file.c:203
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Ezin da kodeketa multzoa '%s'-ra bihurtu"
 
-#: ../src/file.c:223
+#: ../src/file.c:216
 msgid "Can't open file to write"
 msgstr "Ezin da fitxategia idazketarako ireki"
 
-#: ../src/file.c:228
+#: ../src/file.c:221
 msgid "Can't write file"
 msgstr "Ezin da fitxategian gorde"
+
+#: ../src/file.c:274
+#, c-format
+msgid ""
+"<u>Totals count</u>\n"
+"Chars: %7d Words: %6d Lines: %5d\n"
+"\n"
+"<u>Selection</u>\n"
+"Chars: %7d Words: %6d Lines: %5d\n"
+msgstr ""
 
 #: ../src/search.c:125
 msgid "Search string not found"

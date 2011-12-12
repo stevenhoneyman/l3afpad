@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-09 14:19+0800\n"
+"POT-Creation-Date: 2011-12-09 11:16+0800\n"
 "PO-Revision-Date: 2008-05-07 17:39-0300\n"
 "Last-Translator: Leslie Harlley Watter <leslie@watter.org>\n"
 "Language-Team:  Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
@@ -53,94 +53,102 @@ msgid "Save _As..."
 msgstr "Salvar _Como"
 
 #: ../src/menu.c:44
+msgid "Sta_tistics..."
+msgstr ""
+
+#: ../src/menu.c:47
 msgid "Print Pre_view"
 msgstr "Pré-_Visualizar Impressão"
 
-#: ../src/menu.c:45
+#: ../src/menu.c:48
 msgid "_Print..."
 msgstr "Im_primir"
 
-#: ../src/menu.c:47
+#: ../src/menu.c:50
 msgid "_Quit"
 msgstr "Sa_ir"
 
-#: ../src/menu.c:48
+#: ../src/menu.c:51
 msgid "_Undo"
 msgstr "_Desfazer"
 
-#: ../src/menu.c:49
+#: ../src/menu.c:52
 msgid "_Redo"
 msgstr "_Refazer"
 
-#: ../src/menu.c:50
+#: ../src/menu.c:53
 msgid "Cu_t"
 msgstr "R_ecortar"
 
-#: ../src/menu.c:51
+#: ../src/menu.c:54
 msgid "_Copy"
 msgstr "_Copiar"
 
-#: ../src/menu.c:52
+#: ../src/menu.c:55
 msgid "_Paste"
 msgstr "C_olar"
 
-#: ../src/menu.c:53
+#: ../src/menu.c:56
 msgid "_Delete"
 msgstr "_Remover"
 
-#: ../src/menu.c:54
+#: ../src/menu.c:57
 msgid "Select _All"
 msgstr "Selecionar _Tudo"
 
-#: ../src/menu.c:55
+#: ../src/menu.c:58
 msgid "_Find..."
 msgstr "_Procurar..."
 
-#: ../src/menu.c:56
+#: ../src/menu.c:59
 msgid "Find _Next"
 msgstr "P_rocurar Próximo"
 
-#: ../src/menu.c:57
+#: ../src/menu.c:60
 msgid "Find _Previous"
 msgstr "Procurar _Anterior"
 
-#: ../src/menu.c:58
+#: ../src/menu.c:61
 msgid "_Replace..."
 msgstr "_Substituir..."
 
-#: ../src/menu.c:59
+#: ../src/menu.c:62
 msgid "_Jump To..."
 msgstr "_Ir Para..."
 
-#: ../src/menu.c:60
+#: ../src/menu.c:63
 msgid "_Font..."
 msgstr "_Fonte"
 
-#: ../src/menu.c:61
+#: ../src/menu.c:64
 msgid "_About"
 msgstr "_Sobre"
 
-#: ../src/menu.c:68
+#: ../src/menu.c:71
 msgid "_Word Wrap"
 msgstr "_Quebrar Linha"
 
-#: ../src/menu.c:69
+#: ../src/menu.c:72
 msgid "_Line Numbers"
 msgstr "_Número de Linhas"
 
-#: ../src/menu.c:70
+#: ../src/menu.c:73
 msgid "_Auto Indent"
 msgstr "_Auto Indentar"
 
-#: ../src/callback.c:299
+#: ../src/callback.c:139
+msgid "<b>Statistics</b>"
+msgstr ""
+
+#: ../src/callback.c:330
 msgid "GTK+ based simple text editor"
 msgstr "Editor de texto simples feito em GTK+"
 
-#: ../src/callback.c:305
+#: ../src/callback.c:336
 msgid "translator-credits"
 msgstr "Fábio Antunes <fabio.antunes@hotmail.com>"
 
-#: ../src/callback.c:316
+#: ../src/callback.c:347
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 
@@ -192,22 +200,32 @@ msgstr "_Codificação de Caracteres:"
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' já existe. Sobrescrever?"
 
-#: ../src/file.c:55
+#: ../src/file.c:48
 msgid "Untitled"
 msgstr "Sem Título"
 
-#: ../src/file.c:210
+#: ../src/file.c:203
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Não foi possível converter o conjunto de caracteres para '%s'"
 
-#: ../src/file.c:223
+#: ../src/file.c:216
 msgid "Can't open file to write"
 msgstr "Não foi possível abrir o arquivo para escrita"
 
-#: ../src/file.c:228
+#: ../src/file.c:221
 msgid "Can't write file"
 msgstr "Não foi possível escrever no arquivo"
+
+#: ../src/file.c:274
+#, c-format
+msgid ""
+"<u>Totals count</u>\n"
+"Chars: %7d Words: %6d Lines: %5d\n"
+"\n"
+"<u>Selection</u>\n"
+"Chars: %7d Words: %6d Lines: %5d\n"
+msgstr ""
 
 #: ../src/search.c:125
 msgid "Search string not found"

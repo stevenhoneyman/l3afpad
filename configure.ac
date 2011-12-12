@@ -1,4 +1,4 @@
-AC_INIT(L3afpad, 0.8.18.1.5, caleb@calno.com)
+AC_INIT(L3afpad, 0.8.18.1.6, caleb@calno.com)
 AM_INIT_AUTOMAKE($PACKAGE_TARNAME, $PACKAGE_VERSION)
 AM_CONFIG_HEADER(config.h)
 AC_SYS_LARGEFILE
@@ -15,6 +15,12 @@ AC_ARG_ENABLE(print,
 	AC_HELP_STRING([--disable-print], [force to disable print feature]))
 	if test "$enable_print" = "no"; then
 		AC_DEFINE(ENABLE_PRINT, 0, [Define to 0 if you disable print.])
+	fi
+
+AC_ARG_ENABLE(statistics,
+	AC_HELP_STRING([--disable-statistics], [force to disable statistics]))
+	if test "$enable_statistics" = "no"; then
+		AC_DEFINE(ENABLE_STATISTICS, 0, [Define to 0 if you disable statistics.])
 	fi
 
 AC_ARG_ENABLE(xinput2,

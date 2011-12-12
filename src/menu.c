@@ -40,6 +40,9 @@ static GtkActionEntry menu_items[] =
 	{ "Open", GTK_STOCK_OPEN, N_("_Open..."), "<control>O", NULL, G_CALLBACK(on_file_open) },
 	{ "Save", GTK_STOCK_SAVE, N_("_Save"), "<control>S", NULL, G_CALLBACK(on_file_save) },
 	{ "SaveAs", GTK_STOCK_SAVE_AS, N_("Save _As..."), "<shift><control>S", NULL, G_CALLBACK(on_file_save_as) },
+#if ENABLE_STATISTICS
+	{ "Statistics", GTK_STOCK_PROPERTIES, N_("Sta_tistics..."), NULL, NULL, G_CALLBACK(on_file_stats) },
+#endif
 #if ENABLE_PRINT
 	{ "PrintPreview", GTK_STOCK_PRINT_PREVIEW, N_("Print Pre_view"), "<shift><control>P", NULL, G_CALLBACK(on_file_print_preview) },
 	{ "Print", GTK_STOCK_PRINT, N_("_Print..."), "<control>P", NULL, G_CALLBACK(on_file_print) },
@@ -80,6 +83,9 @@ static const gchar *ui_info =
 "      <menuitem action='Save'/>"
 "      <menuitem action='SaveAs'/>"
 "      <separator/>"
+#if ENABLE_STATISTICS
+"      <menuitem action='Statistics'/>"
+#endif
 #if ENABLE_PRINT
 "      <menuitem action='PrintPreview'/>"
 "      <menuitem action='Print'/>"

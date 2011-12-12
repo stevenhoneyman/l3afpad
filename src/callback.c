@@ -125,6 +125,37 @@ gint on_file_save_as(void)
 //	undo_init(sd->mainwin->textview, sd->mainwin->textbuffer, sd->mainwin->menubar);
 	return 0;
 }
+
+#if ENABLE_STATISTICS
+void on_file_stats(void)
+{
+	gchar * stats = file_stats( pub->mw->view, pub->fi );
+
+	GtkMessageDialog * msg = (GtkMessageDialog *)
+		gtk_message_dialog_new_with_markup( NULL,
+			GTK_DIALOG_MODAL,
+			GTK_MESSAGE_INFO,
+			GTK_BUTTONS_OK,
+			_("<b>Statistics</b>")
+	);
+
+	gtk_message_dialog_format_secondary_markup(
+		msg,
+		"<i>%s</i>",
+		stats
+	);
+
+	gtk_window_set_title( GTK_WINDOW(msg),
+		pub->fi->filename );
+	gtk_window_set_transient_for(GTK_WINDOW(msg),
+		GTK_WINDOW(pub->mw->window));
+	gtk_dialog_run( (GtkDialog *) msg );
+	gtk_widget_destroy( (GtkWidget *) msg );
+
+	g_free( stats );
+}
+#endif
+
 #if ENABLE_PRINT
 void on_file_print_preview(void)
 {

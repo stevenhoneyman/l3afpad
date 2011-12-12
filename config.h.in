@@ -9,6 +9,9 @@
 /* Define to 0 if you disable print. */
 #undef ENABLE_PRINT
 
+/* Define to 0 if you disable statistics. */
+#undef ENABLE_STATISTICS
+
 /* Define to 0 if you disable Xinput2. */
 #undef ENABLE_XINPUT2
 

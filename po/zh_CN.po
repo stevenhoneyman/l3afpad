@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-09 14:19+0800\n"
+"POT-Creation-Date: 2011-12-09 11:16+0800\n"
 "PO-Revision-Date: 2008-01-26 10:12+0800\n"
 "Last-Translator: LI Daobing <lidaobing@gmail.com>\n"
 "Language-Team: Chinese (simplified) <translation-team-zh-cn@lists."
@@ -54,96 +54,104 @@ msgid "Save _As..."
 msgstr "另存为(_A)..."
 
 #: ../src/menu.c:44
+msgid "Sta_tistics..."
+msgstr ""
+
+#: ../src/menu.c:47
 msgid "Print Pre_view"
 msgstr "打印预览(_V)"
 
-#: ../src/menu.c:45
+#: ../src/menu.c:48
 msgid "_Print..."
 msgstr "打印(_P)..."
 
-#: ../src/menu.c:47
+#: ../src/menu.c:50
 msgid "_Quit"
 msgstr "退出(_Q)"
 
-#: ../src/menu.c:48
+#: ../src/menu.c:51
 msgid "_Undo"
 msgstr "撤销(_U)"
 
-#: ../src/menu.c:49
+#: ../src/menu.c:52
 msgid "_Redo"
 msgstr "重复(_R)"
 
-#: ../src/menu.c:50
+#: ../src/menu.c:53
 msgid "Cu_t"
 msgstr "剪切(_T)"
 
-#: ../src/menu.c:51
+#: ../src/menu.c:54
 msgid "_Copy"
 msgstr "复制(_C)"
 
-#: ../src/menu.c:52
+#: ../src/menu.c:55
 msgid "_Paste"
 msgstr "粘贴(_P)"
 
-#: ../src/menu.c:53
+#: ../src/menu.c:56
 msgid "_Delete"
 msgstr "删除(_D)"
 
-#: ../src/menu.c:54
+#: ../src/menu.c:57
 msgid "Select _All"
 msgstr "选择全部(_A)"
 
-#: ../src/menu.c:55
+#: ../src/menu.c:58
 msgid "_Find..."
 msgstr "查找(_F)..."
 
-#: ../src/menu.c:56
+#: ../src/menu.c:59
 msgid "Find _Next"
 msgstr "查找下一个(_N)"
 
-#: ../src/menu.c:57
+#: ../src/menu.c:60
 msgid "Find _Previous"
 msgstr "查找上一个(_P)"
 
-#: ../src/menu.c:58
+#: ../src/menu.c:61
 msgid "_Replace..."
 msgstr "替换(_R)..."
 
-#: ../src/menu.c:59
+#: ../src/menu.c:62
 msgid "_Jump To..."
 msgstr "跳转到(_J)..."
 
-#: ../src/menu.c:60
+#: ../src/menu.c:63
 msgid "_Font..."
 msgstr "字体(_F)..."
 
-#: ../src/menu.c:61
+#: ../src/menu.c:64
 msgid "_About"
 msgstr "关于(_A)"
 
-#: ../src/menu.c:68
+#: ../src/menu.c:71
 msgid "_Word Wrap"
 msgstr "自动换行(_W)"
 
-#: ../src/menu.c:69
+#: ../src/menu.c:72
 msgid "_Line Numbers"
 msgstr "行号(_L)"
 
-#: ../src/menu.c:70
+#: ../src/menu.c:73
 msgid "_Auto Indent"
 msgstr "自动缩进(_A)"
 
-#: ../src/callback.c:299
+#: ../src/callback.c:139
+msgid "<b>Statistics</b>"
+msgstr ""
+
+#: ../src/callback.c:330
 msgid "GTK+ based simple text editor"
 msgstr "基于 GTK+ 的简易文字编辑器"
 
-#: ../src/callback.c:305
+#: ../src/callback.c:336
 msgid "translator-credits"
 msgstr ""
 "Carlos Z.F. Liu <carlos_liu@yahoo.com>\n"
 "LI Daobing <lidaobing@gmail.com>"
 
-#: ../src/callback.c:316
+#: ../src/callback.c:347
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 
@@ -195,22 +203,32 @@ msgstr "字符编码(_H)："
 msgid "'%s' already exists. Overwrite?"
 msgstr "文件“%s”已经存在。覆盖它吗？"
 
-#: ../src/file.c:55
+#: ../src/file.c:48
 msgid "Untitled"
 msgstr "无标题"
 
-#: ../src/file.c:210
+#: ../src/file.c:203
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "无法将编码转换到“%s”"
 
-#: ../src/file.c:223
+#: ../src/file.c:216
 msgid "Can't open file to write"
 msgstr "无法打开要写入的文件"
 
-#: ../src/file.c:228
+#: ../src/file.c:221
 msgid "Can't write file"
 msgstr "无法写入文件"
+
+#: ../src/file.c:274
+#, c-format
+msgid ""
+"<u>Totals count</u>\n"
+"Chars: %7d Words: %6d Lines: %5d\n"
+"\n"
+"<u>Selection</u>\n"
+"Chars: %7d Words: %6d Lines: %5d\n"
+msgstr ""
 
 #: ../src/search.c:125
 msgid "Search string not found"

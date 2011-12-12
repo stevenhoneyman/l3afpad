@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad-0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-09 14:19+0800\n"
+"POT-Creation-Date: 2011-12-09 11:16+0800\n"
 "PO-Revision-Date: 2009-04-28 22:31+0100\n"
 "Last-Translator: Alan Pepelko <alan.pepelko@gmail.com>\n"
 "Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
@@ -59,94 +59,102 @@ msgid "Save _As..."
 msgstr "Shrani _kot ..."
 
 #: ../src/menu.c:44
+msgid "Sta_tistics..."
+msgstr ""
+
+#: ../src/menu.c:47
 msgid "Print Pre_view"
 msgstr "Pre_dogled tiskanja"
 
-#: ../src/menu.c:45
+#: ../src/menu.c:48
 msgid "_Print..."
 msgstr "Na_tisni ..."
 
-#: ../src/menu.c:47
+#: ../src/menu.c:50
 msgid "_Quit"
 msgstr "Iz_hod"
 
-#: ../src/menu.c:48
+#: ../src/menu.c:51
 msgid "_Undo"
 msgstr "R_azveljavi"
 
-#: ../src/menu.c:49
+#: ../src/menu.c:52
 msgid "_Redo"
 msgstr "_Uveljavi"
 
-#: ../src/menu.c:50
+#: ../src/menu.c:53
 msgid "Cu_t"
 msgstr "Iz_reži"
 
-#: ../src/menu.c:51
+#: ../src/menu.c:54
 msgid "_Copy"
 msgstr "_Kopiraj"
 
-#: ../src/menu.c:52
+#: ../src/menu.c:55
 msgid "_Paste"
 msgstr "_Prilepi"
 
-#: ../src/menu.c:53
+#: ../src/menu.c:56
 msgid "_Delete"
 msgstr "Poči_sti"
 
-#: ../src/menu.c:54
+#: ../src/menu.c:57
 msgid "Select _All"
 msgstr "Iz_beri vse"
 
-#: ../src/menu.c:55
+#: ../src/menu.c:58
 msgid "_Find..."
 msgstr "_Najdi ..."
 
-#: ../src/menu.c:56
+#: ../src/menu.c:59
 msgid "Find _Next"
 msgstr "Najdi na_slednji"
 
-#: ../src/menu.c:57
+#: ../src/menu.c:60
 msgid "Find _Previous"
 msgstr "Najdi _prejšnji"
 
-#: ../src/menu.c:58
+#: ../src/menu.c:61
 msgid "_Replace..."
 msgstr "_Zamenjaj ..."
 
-#: ../src/menu.c:59
+#: ../src/menu.c:62
 msgid "_Jump To..."
 msgstr "Poj_di na ..."
 
-#: ../src/menu.c:60
+#: ../src/menu.c:63
 msgid "_Font..."
 msgstr "_Pisava ..."
 
-#: ../src/menu.c:61
+#: ../src/menu.c:64
 msgid "_About"
 msgstr "_O"
 
-#: ../src/menu.c:68
+#: ../src/menu.c:71
 msgid "_Word Wrap"
 msgstr "Prelom _besedila"
 
-#: ../src/menu.c:69
+#: ../src/menu.c:72
 msgid "_Line Numbers"
 msgstr "_Številke vrstic"
 
-#: ../src/menu.c:70
+#: ../src/menu.c:73
 msgid "_Auto Indent"
 msgstr "_Zamik prve vrstice"
 
-#: ../src/callback.c:299
+#: ../src/callback.c:139
+msgid "<b>Statistics</b>"
+msgstr ""
+
+#: ../src/callback.c:330
 msgid "GTK+ based simple text editor"
 msgstr "Preprost urejevalnik besedila temelječ na GTK+"
 
-#: ../src/callback.c:305
+#: ../src/callback.c:336
 msgid "translator-credits"
 msgstr "Alan Pepelko <alan.pepelko@gmail.com>"
 
-#: ../src/callback.c:316
+#: ../src/callback.c:347
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 
@@ -198,22 +206,32 @@ msgstr "_Kodiranje znakov:"
 msgid "'%s' already exists. Overwrite?"
 msgstr "Datoteka '%s' že obstaja. Jo želite prepisati?"
 
-#: ../src/file.c:55
+#: ../src/file.c:48
 msgid "Untitled"
 msgstr "Neimenovano"
 
-#: ../src/file.c:210
+#: ../src/file.c:203
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Ni mogoče pretvoriti nabora znakov v '%s'"
 
-#: ../src/file.c:223
+#: ../src/file.c:216
 msgid "Can't open file to write"
 msgstr "Ni mogoče odpreti datoteke"
 
-#: ../src/file.c:228
+#: ../src/file.c:221
 msgid "Can't write file"
 msgstr "Ni mogoče zapisati datoteke"
+
+#: ../src/file.c:274
+#, c-format
+msgid ""
+"<u>Totals count</u>\n"
+"Chars: %7d Words: %6d Lines: %5d\n"
+"\n"
+"<u>Selection</u>\n"
+"Chars: %7d Words: %6d Lines: %5d\n"
+msgstr ""
 
 #: ../src/search.c:125
 msgid "Search string not found"

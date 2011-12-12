@@ -31,6 +31,10 @@
 #define ENABLE_PRINT 1
 #endif
 
+#ifndef ENABLE_STATISTICS
+#define ENABLE_STATISTICS 1
+#endif
+
 #ifndef ENABLE_XINPUT2
 #define ENABLE_XINPUT2 1
 #endif

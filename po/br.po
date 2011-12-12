@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: L3afpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-09 14:19+0800\n"
+"POT-Creation-Date: 2011-12-09 11:16+0800\n"
 "PO-Revision-Date: 2009-07-04 16:58+0100\n"
 "Last-Translator: Alan Monfort <alan.monfort@free.fr>\n"
 "Language-Team: Breton Team <brenux@free.fr>\n"
@@ -56,50 +56,54 @@ msgid "Save _As..."
 msgstr "Enrollan dind_an..."
 
 #: ../src/menu.c:44
+msgid "Sta_tistics..."
+msgstr ""
+
+#: ../src/menu.c:47
 msgid "Print Pre_view"
 msgstr "_Alberz ar moullan"
 
-#: ../src/menu.c:45
+#: ../src/menu.c:48
 msgid "_Print..."
 msgstr "_Moullan..."
 
-#: ../src/menu.c:47
+#: ../src/menu.c:50
 msgid "_Quit"
 msgstr "_Kuitaat"
 
-#: ../src/menu.c:48
+#: ../src/menu.c:51
 msgid "_Undo"
 msgstr "_Dizober"
 
-#: ../src/menu.c:49
+#: ../src/menu.c:52
 msgid "_Redo"
 msgstr "_Adober"
 
-#: ../src/menu.c:50
+#: ../src/menu.c:53
 msgid "Cu_t"
 msgstr "_Troc'han"
 
-#: ../src/menu.c:51
+#: ../src/menu.c:54
 msgid "_Copy"
 msgstr "_Eilan"
 
-#: ../src/menu.c:52
+#: ../src/menu.c:55
 msgid "_Paste"
 msgstr "_Pegan"
 
-#: ../src/menu.c:53
+#: ../src/menu.c:56
 msgid "_Delete"
 msgstr "_Dilemel"
 
-#: ../src/menu.c:54
+#: ../src/menu.c:57
 msgid "Select _All"
 msgstr "Diuzan pep tr_a"
 
-#: ../src/menu.c:55
+#: ../src/menu.c:58
 msgid "_Find..."
 msgstr "_Kavout..."
 
-#: ../src/menu.c:56
+#: ../src/menu.c:59
 msgid "Find _Next"
 msgstr "Kavout an hi_ni da heul"
 
@@ -107,49 +111,53 @@ msgstr "Kavout an hi_ni da heul"
 # s'il s'agit d'un mot : ger g. -iou : an hini kent
 # pajenn b. -ou : an hini gent
 # Kent mute comme un adjectif.
-#: ../src/menu.c:57
+#: ../src/menu.c:60
 msgid "Find _Previous"
 msgstr "Kavout an hini ken_t"
 
-#: ../src/menu.c:58
+#: ../src/menu.c:61
 msgid "_Replace..."
 msgstr "Am_savin..."
 
 # [fr]aller a la ligne
 # ligne de texte : arroudenn
-#: ../src/menu.c:59
+#: ../src/menu.c:62
 msgid "_Jump To..."
 msgstr "_Mont da..."
 
-#: ../src/menu.c:60
+#: ../src/menu.c:63
 msgid "_Font..."
 msgstr "_Nodrezh..."
 
-#: ../src/menu.c:61
+#: ../src/menu.c:64
 msgid "_About"
 msgstr "_A-zivout"
 
-#: ../src/menu.c:68
+#: ../src/menu.c:71
 msgid "_Word Wrap"
 msgstr "_Distro emgefreek d'al linenn"
 
-#: ../src/menu.c:69
+#: ../src/menu.c:72
 msgid "_Line Numbers"
 msgstr "_Niver al linennou/an arroudenn"
 
-#: ../src/menu.c:70
+#: ../src/menu.c:73
 msgid "_Auto Indent"
 msgstr "_EmDilinennan"
 
-#: ../src/callback.c:299
+#: ../src/callback.c:139
+msgid "<b>Statistics</b>"
+msgstr ""
+
+#: ../src/callback.c:330
 msgid "GTK+ based simple text editor"
 msgstr "Embanner testennou eeun diazezet war GTK+"
 
-#: ../src/callback.c:305
+#: ../src/callback.c:336
 msgid "translator-credits"
 msgstr "Denis ARNAUD <denisarnuad@yahoo.fr>"
 
-#: ../src/callback.c:316
+#: ../src/callback.c:347
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 
@@ -201,22 +209,32 @@ msgstr "Bonegan an _arouezenn :"
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' zo anezhan endeo. Flastran ?"
 
-#: ../src/file.c:55
+#: ../src/file.c:48
 msgid "Untitled"
 msgstr "Hep titl"
 
-#: ../src/file.c:210
+#: ../src/file.c:203
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "N'haller ket amdrein spletad arouezennou da '%s'"
 
-#: ../src/file.c:223
+#: ../src/file.c:216
 msgid "Can't open file to write"
 msgstr "N'haller ket digerin ar restr da skrivan"
 
-#: ../src/file.c:228
+#: ../src/file.c:221
 msgid "Can't write file"
 msgstr "N'haller ket enrollan ar restr "
+
+#: ../src/file.c:274
+#, c-format
+msgid ""
+"<u>Totals count</u>\n"
+"Chars: %7d Words: %6d Lines: %5d\n"
+"\n"
+"<u>Selection</u>\n"
+"Chars: %7d Words: %6d Lines: %5d\n"
+msgstr ""
 
 #: ../src/search.c:125
 msgid "Search string not found"

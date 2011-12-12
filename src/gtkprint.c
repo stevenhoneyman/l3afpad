@@ -163,7 +163,7 @@ static void create_error_dialog(GtkTextView *text_view, gchar *message)
 		GTK_DIALOG_DESTROY_WITH_PARENT,
 		GTK_MESSAGE_ERROR,
 		GTK_BUTTONS_NONE,
-		message);
+		"%s", message);
 	gtk_window_set_resizable(GTK_WINDOW(dialog), FALSE);
 	gtk_dialog_add_buttons(GTK_DIALOG(dialog),
 		GTK_STOCK_OK, GTK_RESPONSE_CANCEL, NULL);

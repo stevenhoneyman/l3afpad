@@ -120,10 +120,6 @@ line_numbers_expose (GtkWidget *widget, cairo_t *event)
 	gint justify_width = 0;
 	gint i;
 	gchar str [8];  /* we don't expect more than ten million lines */
-#if 0
-	cairo_t *gc;
-	gint height;
-#endif
 
 	if (line_number_visible) {
 
@@ -201,16 +197,7 @@ DV({g_print("Painting line numbers %d - %d\n",
 	pango_layout_set_alignment (layout, PANGO_ALIGN_RIGHT);
 
 	alist = pango_attr_list_new();
-	attr = pango_attr_foreground_new(
-#if 1
-		0,
-		0,
-		0);
-#else
-		widget->style->text_aa->red,
-		widget->style->text_aa->green,
-		widget->style->text_aa->blue);
-#endif
+	attr = pango_attr_foreground_new(0, 0, 0);
 	attr->start_index = 0;
 	attr->end_index = G_MAXUINT;
 	pango_attr_list_insert(alist, attr);
@@ -248,6 +235,8 @@ DV({g_print("Painting line numbers %d - %d\n",
 	}
 
 #if 0
+	cairo_t *gc;
+	gint height;
 	gc = gdk_gc_new(event->window);
 	gdk_gc_set_foreground(gc, widget->style->base);
 	gdk_window_get_geometry(event->window, NULL, NULL, NULL, &height, NULL);
