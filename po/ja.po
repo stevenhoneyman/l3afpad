@@ -2,14 +2,15 @@
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the L3afpad package.
 # Tarot Osuji <tarot@sdf.lonestar.org>, 2004.
+# Toshiharu Kudoh <toshi.kd2@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: L3afpad 0.8.11\n"
+"Project-Id-Version: L3afpad 0.8.18.1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-12-09 11:16+0800\n"
 "PO-Revision-Date: 2007-05-06 20:26+0900\n"
-"Last-Translator: Tarot Osuji <tarot@sdf.lonestar.org>\n"
+"Last-Translator: Toshiharu Kudoh <toshi.kd2@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -54,7 +55,7 @@ msgstr "別名で保存(_A)..."
 
 #: ../src/menu.c:44
 msgid "Sta_tistics..."
-msgstr ""
+msgstr "統計情報(_T)..."
 
 #: ../src/menu.c:47
 msgid "Print Pre_view"
@@ -138,7 +139,7 @@ msgstr "自動インデント(_A)"
 
 #: ../src/callback.c:139
 msgid "<b>Statistics</b>"
-msgstr ""
+msgstr "<b>統計情報</b>"
 
 #: ../src/callback.c:330
 msgid "GTK+ based simple text editor"
@@ -226,6 +227,11 @@ msgid ""
 "<u>Selection</u>\n"
 "Chars: %7d Words: %6d Lines: %5d\n"
 msgstr ""
+"<u>総計</u>\n"
+"文字数: %7d 単語数: %6d 行数: %5d\n"
+"\n"
+"<u>選択部分</u>\n"
+"文字数: %7d 単語数: %6d 行数: %5d\n"
 
 #: ../src/search.c:125
 msgid "Search string not found"
