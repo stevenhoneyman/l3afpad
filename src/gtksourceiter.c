@@ -1,7 +1,7 @@
-/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- 
+/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*-
  *  gtksourceiter.h
  *
- *  Copyright (C) 2000, 2002 Paolo Maggi 
+ *  Copyright (C) 2000, 2002 Paolo Maggi
  *  Copyright (C) 2002, 2003 Jeroen Zwartepoorte
  *
  *  This library is free software; you can redistribute it and/or
@@ -198,7 +198,7 @@ g_utf8_caselessnmatch (const char *s1, const char *s2,
 
 finally_2:
 	g_free (normalized_s1);
-	g_free (normalized_s2);	
+	g_free (normalized_s2);
 
 	return ret;
 }
@@ -231,7 +231,7 @@ forward_chars_with_skipping (GtkTextIter *iter,
 		{
 			/* being UTF8 correct sucks; this accounts for extra
 			   offsets coming from canonical decompositions of
-			   UTF8 characters (e.g. accented characters) which 
+			   UTF8 characters (e.g. accented characters) which
 			   g_utf8_normalize() performs */
 			gunichar *decomp;
 			gsize decomp_len;
@@ -512,14 +512,14 @@ strbreakup (const char *string,
  * @match_start: return location for start of match, or %NULL
  * @match_end: return location for end of match, or %NULL
  * @limit: bound for the search, or %NULL for the end of the buffer
- * 
- * Searches forward for @str. Any match is returned by setting 
- * @match_start to the first character of the match and @match_end to the 
+ *
+ * Searches forward for @str. Any match is returned by setting
+ * @match_start to the first character of the match and @match_end to the
  * first character after the match. The search will not continue past
  * @limit. Note that a search is a linear or O(n) operation, so you
  * may wish to use @limit to avoid locking up your UI on large
  * buffers.
- * 
+ *
  * If the #GTK_SOURCE_SEARCH_VISIBLE_ONLY flag is present, the match may
  * have invisible text interspersed in @str. i.e. @str will be a
  * possibly-noncontiguous subsequence of the matched range. similarly,
@@ -532,7 +532,7 @@ strbreakup (const char *string,
  *
  * Same as gtk_text_iter_forward_search(), but supports case insensitive
  * searching.
- * 
+ *
  * Return value: whether a match was found
  **/
 gboolean
@@ -556,7 +556,7 @@ gtk_source_iter_forward_search (const GtkTextIter   *iter,
 	if ((flags & GTK_SOURCE_SEARCH_CASE_INSENSITIVE) == 0)
 		return gtk_text_iter_forward_search (iter, str, flags,
 						     match_start, match_end,
-						     limit); 
+						     limit);
 
 	if (limit && gtk_text_iter_compare (iter, limit) >= 0)
 		return FALSE;
@@ -632,10 +632,10 @@ gtk_source_iter_forward_search (const GtkTextIter   *iter,
  * @match_start: return location for start of match, or %NULL
  * @match_end: return location for end of match, or %NULL
  * @limit: location of last possible @match_start, or %NULL for start of buffer
- * 
+ *
  * Same as gtk_text_iter_backward_search(), but supports case insensitive
  * searching.
- * 
+ *
  * Return value: whether a match was found
  **/
 gboolean
@@ -659,7 +659,7 @@ gtk_source_iter_backward_search (const GtkTextIter   *iter,
 	if ((flags & GTK_SOURCE_SEARCH_CASE_INSENSITIVE) == 0)
 		return gtk_text_iter_backward_search (iter, str, flags,
 						      match_start, match_end,
-						      limit); 
+						      limit);
 
 	if (limit && gtk_text_iter_compare (iter, limit) <= 0)
 		return FALSE;

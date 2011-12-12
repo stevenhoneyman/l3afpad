@@ -1,7 +1,7 @@
-/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- 
+/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*-
  *  gtksourceiter.h
  *
- *  Copyright (C) 2000, 2002 Paolo Maggi 
+ *  Copyright (C) 2000, 2002 Paolo Maggi
  *  Copyright (C) 2002, 2003 Jeroen Zwartepoorte
  *
  *  This library is free software; you can redistribute it and/or

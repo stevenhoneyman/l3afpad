@@ -1,0 +1,124 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1,SHA512
+
+634071380936e4893b0e8cacdfcd344638406575    171 AUTHORS
+50a0e2caef12c331a3c95001ffcba51617c3c204   9183 ChangeLog
+0beb31ee37259edeb621d345db933f2c827b2a21     22 Makefile.am
+32ae3f99a247e614dcad4cfb2156a8d992ab53d0  22228 Makefile.in
+04dc937708d52f3b9b6f9a096898c5e23fb80ace   2071 README
+e8059be7927ee878a209d09c6b0b882efeb552e1  66001 aclocal.m4
+08e7ff6a0bc9382beae57974c3ac95c9ac565faa   3769 compile
+043325a2386905b51ee710e9f087ede0babb1582   2270 config.h.in
+95b14b7bc5b26190ce20fcd52e8bd444a24289c7 230835 configure
+354c7221d0f6584f3c3bd5a4d269f21429201ee1    883 configure.ac
+c5431839bbf6b9730c1909bd298b3de52173da75    247 data/Makefile.am
+4497d54143e764fc5a147d6c3f9b9df932f9203c  12544 data/Makefile.in
+341ac8179d9307b2769eafc24266c8fcd440a6d8    174 data/l3afpad.desktop.in
+8cc36795a560edddf585ab069d7670e5c78213d6   2768 data/l3afpad.png
+ed913883150c97b3a48a4363b8609fe577dfed07   4555 data/l3afpad.xpm
+6749a6b5ab2b3edd45d38ac560759c641cd50200  18615 depcomp
+4cc77b90af91e615a64ae04893fdffa7939db84c  18092 gpl-2.0.txt
+d30e962a3de2da09ab0a9a7979bee787922464a1  13663 install-sh
+01a6b4bf79aca9b556822601186afab86e8c4fbf  26530 lgpl-2.1.txt
+aeef20c1028a7ac4b904dd51b4c40376eba21350  11419 missing
+ead91d3c7d4c3ca3172041ce36e23ee487066902   6881 po/ChangeLog
+0640d6d14812d6323dbb683259046b95a6c0ceb5    169 po/LINGUAS
+ce1c3468fcd9afcacfb197457ae3c40ea97f585f   6911 po/Makefile.in.in
+610fcd63bc842d466f948e96e625fb3927202b32    135 po/POTFILES.in
+1abde2a0918a5e08502d84047d9bc65c0441bd55   5947 po/bg.po
+35501c0eaff18979ef115a04a7e0bdae233f74c9   5264 po/br.po
+703fa4b2e5ce144c0b7151a3e702febcb11d5d4d   4898 po/ca.po
+709e314887b42431f9a896e39fad05075ed2e1a5   4815 po/cs.po
+a1731e206e48a7e76c46867637e997b83e26fced   5486 po/da.po
+00f64edde15d34d896ad1b48bd1f967722a51761   5184 po/de.po
+12b8e546eff912f3179773711f09f42ee90fbc1b   5864 po/el.po
+4164574361f31aaf3180500bf76591da178267ad   4786 po/eo.po
+07512d0c7f94052084c3606eb78965f0a7d0078e   4926 po/es.po
+068c7f3c38df583613af4341c1a85b61e923fdc4   5005 po/eu.po
+aa17b2614a12cdde6d39531db897fcaad7d06955   4943 po/fi.po
+a55a52d64efe7db16f39b2203024e4ad412c4a15   5262 po/fr.po
+4725e3351924f81bba3f5d0a2a441ebe4b0cbab1   4911 po/ga.po
+6aae96a1217e7aec27812d49e4a3b9eb3e59245a   5443 po/gl.po
+4cb77cbab55534cd5efd482a24964888614a8ea2   5051 po/he.po
+ef5cabced9ffb6808012d4fa69d0627431adb7c8   5180 po/hu.po
+e238d626502e32916c62517d11f4040e010905c6   4827 po/id.po
+ec625438b4f05e2df23f7a0c3174f5bd72e53907   5022 po/it.po
+6b4d5ff8d0c6997e9c8a36f9ec6a0ee97294c07f   5216 po/ja.po
+5cf424964a586cb52cbee8e31d0e2c3da88e9ab3   4817 po/ko.po
+29a85e608edd8747132bf682f57c06d37d1428da   4918 po/lt.po
+03091b5055bab9b1c1853d1040e6b3c6fa07d2ad   5038 po/lv.po
+b05e2ad4e44beaac97a26bfe2b631f4964a2a46c   5108 po/nl.po
+e8b5410d074596617f28e992caf27199ffa4c2aa   5217 po/nn.po
+e909ebe2a7b2ea27617675f0531904302487c42d   6436 po/pl.po
+eb67d4c031310274bcb586c69aa857b84631861b   4911 po/pt.po
+985fef0047dfbf433334ee9093da1834b9048f1e   5026 po/pt_BR.po
+b091b66da6d1e7aad35df9605fb53a7f60838f43   5480 po/ru.po
+2efe3079f4b30c4befe9e0ef134cbe7105396054   4975 po/sk.po
+6f485449eaa6bb7e8b9fc75ced10929b4f328a33   5149 po/sl.po
+e145b2413f6b972bfe1ba5180d4a184c42c9308c   5658 po/sr.po
+de20cd84a7e889a1910beaefb1e9185efcbe3c15   4888 po/sv.po
+3f1cd9b2bfc2063dd9cbb1b2c98802f2fd86ca5f   6153 po/ta.po
+86ebe253dfe474d5064e64c41fada29b6fe18eb4   4951 po/tr.po
+bbfba656c7b520c033b440407f3b326af6a7fb70   5782 po/uk.po
+5dffb74471a502cdacb8d118175df14812afaaa7   5158 po/vi.po
+f480b775778bf342a743124d30c21f205f00d6f4   4982 po/zh_CN.po
+a1eac2664221c8757f3d642b93552b52ed0fb6b5   4960 po/zh_TW.po
+5436cb3b94928a04328d697be5716f4e71aa4e0f    583 src/Makefile.am
+23b1dac1edc2f3a415a6ceeac9c821a05332de37  50150 src/Makefile.in
+56b7c80c5f8a17819ab6a078d01197a393755d15   8265 src/callback.c
+3d28029623e9d2251392de8c9ab30647be4c38d1   1631 src/callback.h
+3fcc1c61e32b6d0611e76bf4f885533482fee487   2582 src/dialog.c
+0651e705696688f15d124e86d76e8cd7298393bd   1127 src/dialog.h
+a30834e8ff24d95828cf8265b1e3e0feddd204d4   6764 src/dnd.c
+5f28dec9ccd8eebb58e25877057576bc6e276e34    909 src/dnd.h
+d9dc41cb508b056b4e3848fac280c3335fdda3c7   6723 src/emacs.c
+24279f8befe55dce2157382398c97c0040dcb3ac    956 src/emacs.h
+c3d84301cd67dcfd7396f60355f54f7c00945dbd  11332 src/encoding.c
+6f7d53179676cfa352482a630f1d796a3a00f80c   1422 src/encoding.h
+7e271e8064c11df22d5a2f574c4e595c3ac1793a   5855 src/file.c
+861011b730c85c185d7a05cd10a1d63520648546   1254 src/file.h
+ebd263a67797b54d311ebf60a39482f990a768f9   2245 src/font.c
+b73558fe7e17a6cf441d1ff922ee3ee018060643   1070 src/font.h
+545fa27823583624fee92eeaa8b8c0b39a8a5870   6885 src/gtkprint.c
+be9c382045d0fc1fb5eeabc8ed3493f1736e8f57   1046 src/gtkprint.h
+bb9ebe7f9ee8d1e3f0c7663f03d15d30d2ce17f1  17436 src/gtksourceiter.c
+1a0550b24ac6dfabcd2b0c5065ab79ad2340c39a   1862 src/gtksourceiter.h
+f6b21adcfc00151deba02a4339ea5883a7b8f411   2486 src/hlight.c
+828e51d43aaa64cbaa492baf761d053bba6b02dd   1019 src/hlight.h
+88ed5855fed283f685d93f6504e0c2717259b8ba   6775 src/indent.c
+bb2a52d5a1969da5a312b91bbba32d0489a48871   1334 src/indent.h
+fe86394925b4c38a947038c103f7e97f61e6c12c   3057 src/l3afpad.h
+3c982692110d9c2fc653efb8e8f4a468ffe115cd   9583 src/linenum.c
+6f63e2c07f844c7ba97c77d3e7234d30560a09f0    983 src/linenum.h
+7fbac5e5272a0b8277e64b1d131224e783b42e0a   8360 src/main.c
+f53a6e54f4121d11fc315c0bebafe5e611738a8d   8598 src/menu.c
+a7de57aa7b8e7bc0b97ee70eb7b82543ccef553d   1176 src/menu.h
+572e07e6bd163dfc55ddcfd57cf5cabfdb45b9e5  14763 src/search.c
+cee72ed3fd94d1637021e9c73602f109f7af06d1   1054 src/search.h
+de6b8830c63963736fa5243d9e41e1739238d20d  12527 src/selector.c
+5af4e5fa14e8ab0106b07f15a74777124df098a8   1019 src/selector.h
+609fd713cef54955274804dadd59d51fbc3e7aa4  10743 src/undo.c
+13e3a08982c1aee8ea5bedb3e76ac33f3f161290   1211 src/undo.h
+db205a5a6aa876fd5764a3ee1e4bdef8d82c2433   2746 src/utils.c
+e700377b8a734da1fc62cde0e735ea3b0be3b3ff   1026 src/utils.h
+87454d9941ac4e2f6ca2c9ae689a0c6dbca1b000  11207 src/view.c
+f9797a035a29fe5e6f1137d20fb916c573bd1bea   1276 src/view.h
+8611757f226b3254ab81a860e194f1704c49a3cf   3068 src/window.c
+2b419507bce0a451781183f98de60868071bc2b1   1065 src/window.h
+-----BEGIN PGP SIGNATURE-----
+
+iEYEARECAAYFAk5orUIACgkQdEpXpumNYVmfkACeIdMycslGqug085z9g1QzppGl
+ovAAoIxm2wG0MsV2Uvlq5g5U5Qd8TpDdiQIcBAEBCgAGBQJOaK1CAAoJELc3H0m+
+i6gZfzIP/RQ3JfdL6QrC8ekkmMSAeIpsvNmP5Cb7jF8h4cT6Vsp4S53tR6322UzL
+MBGVwly6fvOfaU9adhMDGZD9FtkWuWIes61oNlSysyXjxauhrWOpM+aOWUtEKAxr
+x0TYk+28rBQU0S5+bQjKGQ+2tzZzRM8uuOEE7tc9gjwHrb+EBJ3chy6D16BnF7uv
+gpxyaLckaJYXnc8UJuOpYvAmg3SGfs6YBQn8eO/hLKI3JJdS3wfv4D/TFQL7sPEk
+EksiYAYOkmIXsKpLxsAh7Z3TwtYbFg5BDZAYj9vnBY6ngN/SXBUgQtO/GGo5RLNU
+bQUeA/Fg+Y9eMVuXD4yfsAQXFUa1WfLDYV5HtCaH4/i8q3cEBk+m0XU253NXLxkN
+WIMyPehc2kQCf6mE2xPpiL4Eku5+hbVXQNT6auHVqdULW3dXWX9FLJ0Z9YlplU2+
++0ox8qd5TJv0conIPTBtkxikl9LbdylsM0WBz0C5M1tbkrfYB7Zdp9n6jUgH3xcT
+5eFpLF52ekmxk4UqGBx905NyUQcvCbDHBgXPsC41SMmuoP1SXI9fUAyOSl2Aj8Lw
+Vk25Tv9kTgtWVwpTGCALfklQRkPtDA+wPaFJ0PCIpOXBaPr/Uf2EBWfOimaoP4rk
+wMzyTosCPOAUrqe86kYjUHjEKFnSVGKwXYQBKVv9j+XKBuY4P/sv
+=fHtw
+-----END PGP SIGNATURE-----

@@ -1,7 +1,7 @@
 /*
  *  L3afpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2005 Tarot Osuji
- *  
+ *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -27,6 +27,10 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 
+#ifndef ENABLE_PRINT
+#define ENABLE_PRINT 1
+#endif
+
 #include "window.h"
 #include "menu.h"
 #include "callback.h"
@@ -44,9 +48,10 @@
 #include "dnd.h"
 #include "utils.h"
 #include "emacs.h"
-#ifdef ENABLE_PRINT
+#if ENABLE_PRINT
 #include "gtkprint.h"
 #endif
+#include <gdk/gdkkeysyms-compat.h>
 
 #undef GTK_CHECK_MENU_ITEM
 #define GTK_CHECK_MENU_ITEM
@@ -55,8 +60,6 @@
 #define gtk_item_factory_from_widget (GtkUIManager*)
 #define gtk_item_factory_get_item(x,y) GTK_TOGGLE_ACTION(gtk_ui_manager_get_action(x,y))
 #define gtk_item_factory_get_widget gtk_ui_manager_get_widget
-#if GTK_CHECK_VERSION(3, 0, 0)
-#include <gdk/gdkkeysyms-compat.h>
 #define GTK_OPTION_MENU GTK_COMBO_BOX
 #define GTK_WIDGET_IS_SENSITIVE gtk_widget_is_sensitive
 #define GTK_WIDGET_VISIBLE gtk_widget_get_visible
@@ -65,6 +68,17 @@
 #define gtk_option_menu_new gtk_combo_box_text_new
 #define gtk_option_menu_set_history gtk_combo_box_set_active
 #define gtk_option_menu_set_menu(x,y)
+#ifndef USE_GTK_GRID
+#define gtk_orientable_set_orientation(x,y)
+#define gtk_widget_set_hexpand(x,y)
+#define gtk_widget_set_vexpand(x,y)
+#endif
+#ifdef USE_GTK_GRID
+#undef GTK_BOX
+#define GTK_BOX GTK_GRID
+#define gtk_hbox_new(x,y) gtk_grid_new()
+#define gtk_vbox_new(x,y) gtk_grid_new()
+#define gtk_box_pack_start(v,w,x,y,z) gtk_container_add(GTK_CONTAINER(v),w)
 #endif
 #if GTK_CHECK_VERSION(3,1,12)
 #undef  GTK_FONT_SELECTION_DIALOG

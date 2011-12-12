@@ -1,7 +1,7 @@
 /*
  *  L3afpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2005 Tarot Osuji
- *  
+ *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -27,11 +27,11 @@ void run_dialog_message(GtkWidget *window,
 	va_list ap;
 	GtkWidget *dialog;
 	gchar *str;
-	
+
 	va_start(ap, message);
 		str = g_strdup_vprintf(message, ap);
 	va_end(ap);
-	
+
 	dialog = gtk_message_dialog_new(GTK_WINDOW(window),
 		GTK_DIALOG_DESTROY_WITH_PARENT,
 		type,
@@ -42,7 +42,7 @@ void run_dialog_message(GtkWidget *window,
 		GTK_STOCK_OK, GTK_RESPONSE_CANCEL, NULL);
 	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_CANCEL);
 	g_free(str);
-	
+
 	gtk_dialog_run(GTK_DIALOG(dialog));
 	gtk_widget_destroy(dialog);
 }
@@ -52,11 +52,11 @@ GtkWidget *create_dialog_message_question(GtkWidget *window, gchar *message, ...
 	va_list ap;
 	GtkWidget *dialog;
 	gchar *str;
-	
+
 	va_start(ap, message);
 		str = g_strdup_vprintf(message, ap);
 	va_end(ap);
-	
+
 	dialog = gtk_message_dialog_new(GTK_WINDOW(window),
 		GTK_DIALOG_DESTROY_WITH_PARENT,
 		GTK_MESSAGE_QUESTION,
@@ -70,7 +70,7 @@ GtkWidget *create_dialog_message_question(GtkWidget *window, gchar *message, ...
 		NULL);
 	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_YES);
 	g_free(str);
-	
+
 	return dialog;
 }
 
@@ -80,16 +80,16 @@ gint run_dialog_message_question(GtkWidget *window, gchar *message, ...)
 	GtkWidget *dialog;
 	gchar *str;
 	gint res;
-	
+
 	va_start(ap, message);
 		str = g_strdup_vprintf(message, ap);
 	va_end(ap);
-	
+
 	dialog = create_dialog_message_question(window, str);
 	g_free(str);
-	
+
 	res = gtk_dialog_run(GTK_DIALOG(dialog));
 	gtk_widget_destroy(dialog);
-	
+
 	return res;
 }

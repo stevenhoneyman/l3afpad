@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"POT-Creation-Date: 2011-09-06 17:04+0800\n"
 "PO-Revision-Date: 2010-12-02 10:22+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -148,6 +148,10 @@ msgstr ""
 "\n"
 "Proxecto Trasno - Adaptación de software libre á lingua galega:  Se desexas\n"
 "colaborar connosco, podes atopar máis información en <http://www.trasno.net>"
+
+#: ../src/callback.c:323
+msgid "Lɜafpad"
+msgstr "Lɜafpad"
 
 #: ../src/view.c:62
 #, c-format

@@ -1,7 +1,7 @@
 /*
  *  L3afpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2005 Tarot Osuji
- *  
+ *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -38,7 +38,7 @@ static void load_config_file(Conf *conf)
 	gchar *path;
 	gchar buf[BUFSIZ];
 	gchar **num;
-	
+
 	path = g_build_filename(g_get_user_config_dir(),
 	    PACKAGE, PACKAGE "rc", NULL);
 	fp = fopen(path, "r");
@@ -76,7 +76,7 @@ void save_config_file(void)
 	gint width, height;
 	gchar *fontname;
 	gboolean wordwrap, linenumbers, autoindent;
-	
+
 	gtk_window_get_size(GTK_WINDOW(pub->mw->window), &width, &height);
 	fontname = get_font_name_from_widget(pub->mw->view);
 	ifactory = gtk_item_factory_from_widget(pub->mw->menubar);
@@ -89,7 +89,7 @@ void save_config_file(void)
 	autoindent = gtk_check_menu_item_get_active(
 		GTK_CHECK_MENU_ITEM(gtk_item_factory_get_item(ifactory,
 			"/M/Options/AutoIndent")));
-	
+
 	path = g_build_filename(g_get_user_config_dir(), PACKAGE, NULL);
 	if (!g_file_test(path, G_FILE_TEST_IS_DIR))
 		g_mkdir_with_parents(path, 0700);
@@ -102,7 +102,7 @@ void save_config_file(void)
 		return;
 	}
 	g_free(path);
-	
+
 	fprintf(fp, "%s\n", PACKAGE_VERSION);
 	fprintf(fp, "%d\n", width);
 	fprintf(fp, "%d\n", height);
@@ -111,7 +111,7 @@ void save_config_file(void)
 	fprintf(fp, "%d\n", linenumbers);
 	fprintf(fp, "%d\n", autoindent);
 	fclose(fp);
-	
+
 	g_free(fontname);
 }
 
@@ -122,13 +122,13 @@ static void parse_args(gint argc, gchar **argv, FileInfo *fi)
 	EncArray *encarray;
 	gint i;
 	GError *error = NULL;
-	
+
 	GOptionContext *context;
 	gchar *opt_codeset = NULL;
 	gint opt_tab_width = 0;
 	gboolean opt_jump = 0;
 	gboolean opt_version = FALSE;
-	GOptionEntry entries[] = 
+	GOptionEntry entries[] =
 	{
 		{ "codeset", 0, 0, G_OPTION_ARG_STRING, &opt_codeset, "Set codeset to open file", "CODESET" },
 		{ "tab-width", 0, 0, G_OPTION_ARG_INT, &opt_tab_width, "Set tab width", "WIDTH" },
@@ -136,14 +136,14 @@ static void parse_args(gint argc, gchar **argv, FileInfo *fi)
 		{ "version", 0, 0, G_OPTION_ARG_NONE, &opt_version, "Show version number", NULL },
 		{ NULL, 0, 0, G_OPTION_ARG_NONE, NULL, NULL, NULL }
 	};
-	
+
 	context = g_option_context_new("[filename]");
 	g_option_context_add_main_entries(context, entries, PACKAGE);
 	g_option_context_add_group(context, gtk_get_option_group(TRUE));
 	g_option_context_set_ignore_unknown_options(context, FALSE);
 	g_option_context_parse(context, &argc, &argv, &error);
 	g_option_context_free(context);
-	
+
 	if (error) {
 		g_print("%s: %s\n", PACKAGE, error->message);
 		g_error_free(error);
@@ -167,19 +167,19 @@ static void parse_args(gint argc, gchar **argv, FileInfo *fi)
 		indent_set_default_tab_width(opt_tab_width);
 	if (opt_jump)
 		jump_linenum = opt_jump;
-	
-	if (fi->charset 
-		&& (g_strcasecmp(fi->charset, get_default_charset()) != 0)
-		&& (g_strcasecmp(fi->charset, "UTF-8") != 0)) {
+
+	if (fi->charset
+		&& (g_ascii_strcasecmp(fi->charset, get_default_charset()) != 0)
+		&& (g_ascii_strcasecmp(fi->charset, "UTF-8") != 0)) {
 		encarray = get_encoding_items(get_encoding_code());
 		for (i = 0; i < ENCODING_MAX_ITEM_NUM; i++)
 			if (encarray->item[i])
-				if (g_strcasecmp(fi->charset, encarray->item[i]) == 0)
+				if (g_ascii_strcasecmp(fi->charset, encarray->item[i]) == 0)
 					break;
 		if (i == ENCODING_MAX_ITEM_NUM)
 			fi->charset_flag = TRUE;
 	}
-	
+
 	if (argc >= 2)
 		fi->filename = parse_file_uri(argv[1]);
 }
@@ -189,25 +189,25 @@ gint main(gint argc, gchar **argv)
 	Conf *conf;
 	GtkItemFactory *ifactory;
 	gchar *stdin_data = NULL;
-	
+
 	bindtextdomain(PACKAGE, LOCALEDIR);
 	bind_textdomain_codeset(PACKAGE, "UTF-8");
 	textdomain(PACKAGE);
-	
+
 	pub = g_malloc(sizeof(PublicData));
 	pub->fi = g_malloc(sizeof(FileInfo));
 	pub->fi->filename     = NULL;
 	pub->fi->charset      = NULL;
 	pub->fi->charset_flag = FALSE;
 	pub->fi->lineend      = LF;
-	
+
 	parse_args(argc, argv, pub->fi);
-	
+
 	gtk_init(&argc, &argv);
 	g_set_application_name(PACKAGE_NAME);
-	
+
 	pub->mw = create_main_window();
-	
+
 	conf = g_malloc(sizeof(Conf));
 	conf->width       = 600;
 	conf->height      = 400;
@@ -215,13 +215,12 @@ gint main(gint argc, gchar **argv)
 	conf->wordwrap    = FALSE;
 	conf->linenumbers = FALSE;
 	conf->autoindent  = FALSE;
-	
+
 	load_config_file(conf);
-	
+
 	gtk_window_set_default_size(
 		GTK_WINDOW(pub->mw->window), conf->width, conf->height);
-    set_text_font_by_name(pub->mw->view, conf->fontname);
-    gtk_window_set_icon_from_file(GTK_WINDOW(pub->mw->window), ICONDIR"/l3afpad.png", NULL);
+	set_text_font_by_name(pub->mw->view, conf->fontname);
 
 	ifactory = gtk_item_factory_from_widget(pub->mw->menubar);
 	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(
@@ -234,22 +233,22 @@ gint main(gint argc, gchar **argv)
 	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(
 		(GtkCheckMenuItem*)gtk_item_factory_get_widget(ifactory, "/M/Options/AutoIndent")),
 		conf->autoindent);
-	
+
 	gtk_widget_show_all(pub->mw->window);
 	g_free(conf->fontname);
 	g_free(conf);
-	
-#ifdef ENABLE_EMACS
+
+#if ENABLE_EMACS
 	check_emacs_key_theme(GTK_WINDOW(pub->mw->window), ifactory);
 #endif
-	
+
 	hlight_init(pub->mw->buffer);
 	undo_init(pub->mw->view,
 		gtk_item_factory_get_widget(ifactory, "/M/Edit/Undo"),
 		gtk_item_factory_get_widget(ifactory, "/M/Edit/Redo"));
 //	hlight_init(pub->mw->buffer);
 	dnd_init(pub->mw->view);
-	
+
 	if (pub->fi->filename)
 		file_open_real(pub->mw->view, pub->fi);
 #ifdef G_OS_UNIX
@@ -259,11 +258,11 @@ gint main(gint argc, gchar **argv)
 	if (stdin_data) {
 		gchar *str;
 		GtkTextIter iter;
-		
+
 		str = g_convert(stdin_data, -1, "UTF-8",
 			get_default_charset(), NULL, NULL, NULL);
 		g_free(stdin_data);
-	
+
 //		gtk_text_buffer_set_text(buffer, "", 0);
 		gtk_text_buffer_get_start_iter(pub->mw->buffer, &iter);
 		gtk_text_buffer_insert(pub->mw->buffer, &iter, str, strlen(str));
@@ -273,20 +272,20 @@ gint main(gint argc, gchar **argv)
 		gtk_text_view_scroll_to_iter(GTK_TEXT_VIEW(pub->mw->view), &iter, 0, FALSE, 0, 0);
 		g_free(str);
 	}
-	
+
 	if (jump_linenum) {
 		GtkTextIter iter;
-		
+
 		gtk_text_buffer_get_iter_at_line(pub->mw->buffer, &iter, jump_linenum - 1);
 		gtk_text_buffer_place_cursor(pub->mw->buffer, &iter);
 //		gtk_text_view_scroll_to_iter(GTK_TEXT_VIEW(textview), &iter, 0.1, FALSE, 0.5, 0.5);
 		scroll_to_cursor(pub->mw->buffer, 0.25);
 	}
-	
+
 	set_main_window_title();
 //	hlight_apply_all(pub->mw->buffer);
-	
+
 	gtk_main();
-	
+
 	return 0;
 }

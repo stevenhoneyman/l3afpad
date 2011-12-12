@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"POT-Creation-Date: 2011-09-06 17:04+0800\n"
 "PO-Revision-Date: 2010-12-07 13:02+0200\n"
 "Last-Translator: Jorma Karvonen <karvonen.jorma@gmail.com>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
@@ -141,6 +141,10 @@ msgstr "GTK+-pohjainen yksinkertainen tekstieditori"
 #: ../src/callback.c:313
 msgid "translator-credits"
 msgstr "Eero Tamminen, Jorma Karvonen"
+
+#: ../src/callback.c:323
+msgid "Lɜafpad"
+msgstr "Lɜafpad"
 
 #: ../src/view.c:62
 #, c-format

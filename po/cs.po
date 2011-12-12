@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.7.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"POT-Creation-Date: 2011-09-06 17:04+0800\n"
 "PO-Revision-Date: 2004-11-18 23:58+0100\n"
 "Last-Translator: Petr Vysloužil <evyslouz@volny.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -139,6 +139,10 @@ msgstr "Jednoduchý GTK+ textový editor"
 #: ../src/callback.c:313
 msgid "translator-credits"
 msgstr "Petr Vyslouzil <evyslouz@volny.cz>"
+
+#: ../src/callback.c:323
+msgid "Lɜafpad"
+msgstr "Lɜafpad"
 
 #: ../src/view.c:62
 #, c-format

@@ -1,7 +1,7 @@
 /*
  *  L3afpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2005 Tarot Osuji
- *  
+ *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -45,7 +45,7 @@ static gchar *compute_indentation(GtkTextBuffer *buffer, GtkTextIter *iter, gint
 {
 	GtkTextIter start_iter, end_iter;
 	gunichar ch;
-	
+
 	gtk_text_buffer_get_iter_at_line(buffer, &start_iter, line);
 	end_iter = start_iter;
 	ch = gtk_text_iter_get_char(&end_iter);
@@ -56,7 +56,7 @@ static gchar *compute_indentation(GtkTextBuffer *buffer, GtkTextIter *iter, gint
 	}
 	if (gtk_text_iter_equal(&start_iter, &end_iter))
 		return NULL;
-	
+
 	if (iter && gtk_text_iter_compare(iter, &end_iter) < 0)
 		return gtk_text_iter_get_text(&start_iter, iter);
 	return gtk_text_iter_get_text(&start_iter, &end_iter);
@@ -66,9 +66,9 @@ void indent_real(GtkWidget *text_view)
 {
 	GtkTextIter iter;
 	gchar *ind, *str;
-	
+
 	GtkTextBuffer *buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(text_view));
-	
+
 	g_signal_emit_by_name(G_OBJECT(buffer), "begin-user-action");
 	gtk_text_buffer_delete_selection(buffer, TRUE, TRUE);
 	gtk_text_buffer_get_iter_at_mark(buffer, &iter, gtk_text_buffer_get_insert(buffer));
@@ -78,7 +78,7 @@ void indent_real(GtkWidget *text_view)
 	g_signal_emit_by_name(G_OBJECT(buffer), "end-user-action");
 	g_free(str);
 	g_free(ind);
-	
+
 	gtk_text_view_scroll_mark_onscreen(
 		GTK_TEXT_VIEW(text_view),
 		gtk_text_buffer_get_insert(buffer));
@@ -96,7 +96,7 @@ static gint calculate_real_tab_width(GtkWidget *text_view, guint tab_size) //fro
 	tab_string = g_strnfill(tab_size, 0x20);
 	layout = gtk_widget_create_pango_layout(text_view, tab_string);
 	g_free (tab_string);
-	
+
 	if (layout != NULL) {
 		pango_layout_get_pixel_size(layout, &tab_width, NULL);
 		g_object_unref(G_OBJECT(layout));
@@ -109,7 +109,7 @@ static gint calculate_real_tab_width(GtkWidget *text_view, guint tab_size) //fro
 void indent_refresh_tab_width(GtkWidget *text_view)
 {
 	PangoTabArray *tab_array;
-	
+
 	tab_array = pango_tab_array_new(1, TRUE);
 	pango_tab_array_set_tab(tab_array, 0, PANGO_TAB_LEFT,
 		calculate_real_tab_width(text_view, current_tab_width));
@@ -140,7 +140,7 @@ void indent_multi_line_indent(GtkTextBuffer *buffer)
 	GtkTextIter start_iter, end_iter, iter;
 	gint start_line, end_line, i;
 	gboolean pos;
-	
+
 	gtk_text_buffer_get_selection_bounds(buffer, &start_iter, &end_iter);
 	start_line = gtk_text_iter_get_line(&start_iter);
 	end_line = gtk_text_iter_get_line(&end_iter);
@@ -155,7 +155,7 @@ void indent_multi_line_indent(GtkTextBuffer *buffer)
 		undo_set_sequency(TRUE);
 	}
 	undo_set_sequency(FALSE);
-	
+
 	gtk_text_buffer_get_iter_at_line(buffer, &start_iter, start_line);
 	gtk_text_buffer_get_iter_at_line(buffer, &end_iter, end_line);
 	if (pos) {
@@ -171,11 +171,11 @@ static gint compute_indent_offset_length(const gchar *ind)
 {
 	guint8 c = *ind;
 	gint len = 1;
-	
+
 	if (c == 0x20)
 		while ((len < current_tab_width) && (c = *++ind) == 0x20)
 			len++;
-	
+
 	return len;
 }
 
@@ -185,7 +185,7 @@ void indent_multi_line_unindent(GtkTextBuffer *buffer)
 	gint start_line, end_line, i, len;
 	gboolean pos;
 	gchar *ind;
-	
+
 	gtk_text_buffer_get_selection_bounds(buffer, &start_iter, &end_iter);
 	start_line = gtk_text_iter_get_line(&start_iter);
 	end_line = gtk_text_iter_get_line(&end_iter);
@@ -210,7 +210,7 @@ void indent_multi_line_unindent(GtkTextBuffer *buffer)
 		i++;
 	} while (i < end_line);
 	undo_set_sequency(FALSE);
-	
+
 	gtk_text_buffer_get_iter_at_line(buffer, &start_iter, start_line);
 	gtk_text_buffer_get_iter_at_line(buffer, &end_iter, end_line);
 	if (pos) {

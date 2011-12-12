@@ -1,7 +1,7 @@
 /*
  *  L3afpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2005 Tarot Osuji
- *  
+ *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -26,7 +26,7 @@ static gboolean searched_flag = FALSE;
 static void cb_changed(GtkTextBuffer *buffer)
 {
 	GtkTextIter start, end;
-	
+
 	gtk_text_buffer_get_bounds(buffer, &start, &end);
 //	gtk_text_buffer_remove_tag_by_name(buffer,
 //		"searched", &start, &end);
@@ -39,7 +39,7 @@ static void cb_changed(GtkTextBuffer *buffer)
 static void cb_paste_clipboard(void)
 {
 	gchar *text;
-	
+
 	text = gtk_clipboard_wait_for_text(
 		gtk_clipboard_get(GDK_SELECTION_CLIPBOARD));
 	if (text) {
@@ -82,7 +82,7 @@ void hlight_init(GtkTextBuffer *buffer)
 		G_CALLBACK(cb_changed), NULL);
 	g_signal_handlers_block_by_func(G_OBJECT(buffer),
 		G_CALLBACK(cb_changed), NULL);
-	
+
 	g_signal_connect(G_OBJECT(pub->mw->view), "paste-clipboard",
 		G_CALLBACK(cb_paste_clipboard), NULL);
 }

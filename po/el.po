@@ -1,4 +1,4 @@
-# Greek translation of l3afpad.pot 
+# Greek translation of l3afpad.pot
 # Copyright (C) 2004-2005 Tarot Osuji <tarot@sdf.lonestar.org>
 # This file is distributed under the same license as the l3afpad package.
 # Stavros Giannouris <stavrosg2002@freemail.gr>, 2005-2006
@@ -7,13 +7,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"POT-Creation-Date: 2011-09-06 17:04+0800\n"
 "PO-Revision-Date: 2006-04-23 00:52+0200\n"
 "Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Greek\n"
 "X-Poedit-Country: GREECE\n"
@@ -141,6 +141,10 @@ msgstr "Ένας απλός επεξεργαστής κειμένου σε GTK+"
 #: ../src/callback.c:313
 msgid "translator-credits"
 msgstr "Σταύρος Γιαννούρης <stavrosg2002@freemail.gr>"
+
+#: ../src/callback.c:323
+msgid "Lɜafpad"
+msgstr "Lɜafpad"
 
 #: ../src/view.c:62
 #, c-format

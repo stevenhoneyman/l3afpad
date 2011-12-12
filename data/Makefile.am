@@ -5,7 +5,3 @@ desktop_DATA     = $(desktop_in_files:.desktop.in=.desktop)
 
 pixmapsdir       = $(datadir)/pixmaps
 pixmaps_DATA     = l3afpad.png l3afpad.xpm
-
-EXTRA_DIST = \
-	$(desktop_DATA) $(desktop_in_files) \
-	$(pixmaps_DATA)

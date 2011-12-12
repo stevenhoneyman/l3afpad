@@ -1,7 +1,7 @@
 /*
  *  L3afpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2005 Tarot Osuji
- *  
+ *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -98,7 +98,7 @@ guint get_encoding_code(void)
 	static guint code = END_CODE;
 	const gchar *env;
 	guint i, j = 1;
-	
+
 	if (code == END_CODE) {
 		env = g_getenv("LC_ALL");
 		if (!env)
@@ -118,7 +118,7 @@ guint get_encoding_code(void)
 		if (code == END_CODE)
 			code = 0;
 	}
-	
+
 	return code;
 }
 
@@ -126,23 +126,23 @@ EncArray *get_encoding_items(guint code)
 {
 	gint i;
 	static EncArray *array = NULL;
-	
+
 	if (!array) {
 		array = g_malloc(sizeof(EncArray));
 		for (i = 0; i < ENCODING_MAX_ITEM_NUM; i++)
 			array->item[i] = encoding_table[code][i] ?
 				encoding_table[code][i] : NULL;
 	}
-	
+
 	return array;
 }
 
 const gchar *get_default_charset(void)
 {
 	const gchar *charset;
-	
+
 	g_get_charset(&charset);
-	
+
 	return charset;
 }
 
@@ -154,7 +154,7 @@ http://examples.oreilly.com/cjkvinfo/Ch7/DetectCodeType.c
 void convert_line_ending_to_lf(gchar *text)
 {
 	gint i, j;
-	
+
 	for (i = 0, j = 0; TRUE; i++, j++) {
 		if (*(text + i) == CR) {
 			*(text + j) = LF;
@@ -173,7 +173,7 @@ void convert_line_ending(gchar **text, gint retcode)
 	gchar *buf, *str = *text;
 	const gint len = strlen(str);
 	gint i, j, LFNum = 0;
-	
+
 	switch (retcode) {
 	case CR:
 		while (*str != '\0') {
@@ -222,9 +222,9 @@ static const gchar *detect_charset_cylillic(const gchar *text)
 	guint8 c = *text;
 	gboolean noniso = FALSE;
 	guint32 xc = 0, xd = 0, xef = 0;
-	
+
 	const gchar *charset = get_encoding_items(get_encoding_code())->item[OPENI18N];
-	
+
 	while ((c = *text++) != '\0') {
 		if (c >= 0x80 && c <= 0x9F)
 			noniso = TRUE;
@@ -235,21 +235,21 @@ static const gchar *detect_charset_cylillic(const gchar *text)
 		else if (c >= 0xE0)
 			xef++;
 	}
-	
+
 	if (!noniso && ((xc + xef) < xd))
 		charset = "ISO-8859-5";
 	else if ((xc + xd) < xef)
 		charset = "CP1251";
-	
+
 	return charset;
 }
 
 static const gchar *detect_charset_chinese(const gchar *text)
 {
 	guint8 c = *text;
-	
+
 	const gchar *charset = get_encoding_items(get_encoding_code())->item[IANA];
-	
+
 	while ((c = *text++) != '\0') {
 		if (c >= 0x81 && c <= 0x87) {
 			charset = "GB18030";
@@ -279,7 +279,7 @@ static const gchar *detect_charset_chinese(const gchar *text)
 			}
 		}
 	}
-	
+
 	return charset;
 }
 
@@ -287,7 +287,7 @@ static const gchar *detect_charset_japanese(const gchar *text)
 {
 	guint8 c = *text;
 	gchar *charset = NULL;
-	
+
 	while (charset == NULL && (c = *text++) != '\0') {
 		if (c >= 0x81 && c <= 0x9F) {
 			if (c == 0x8E) /* SS2 */ {
@@ -322,10 +322,10 @@ static const gchar *detect_charset_japanese(const gchar *text)
 		else if (c >= 0xF0)
 			break;
 	}
-	
+
 	if (charset == NULL)
 		charset = "EUC-JP";
-	
+
 	return charset;
 }
 
@@ -335,7 +335,7 @@ static const gchar *detect_charset_korean(const gchar *text)
 	gboolean noneuc = FALSE;
 	gboolean nonjohab = FALSE;
 	gchar *charset = NULL;
-	
+
 	while (charset == NULL && (c = *text++) != '\0') {
 		if (c >= 0x81 && c < 0x84) {
 			charset = "CP949";
@@ -380,21 +380,21 @@ static const gchar *detect_charset_korean(const gchar *text)
 		if (noneuc && nonjohab)
 			charset = "CP949";
 	}
-	
+
 	if (charset == NULL) {
 		if (noneuc)
 			charset = "CP949";
 		else
 			charset = "EUC-KR";
 	}
-	
+
 	return charset;
 }
 
 static gboolean detect_noniso(const gchar *text)
 {
 	guint8 c = *text;
-	
+
 	while ((c = *text++) != '\0') {
 		if (c >= 0x80 && c <= 0x9F)
 			return TRUE;
@@ -406,7 +406,7 @@ const gchar *detect_charset(const gchar *text)
 {
 	guint8 c = *text;
 	const gchar *charset = NULL;
-	
+
 	if (g_utf8_validate(text, -1, NULL)) {
 		while ((c = *text++) != '\0') {
 			if (c > 0x7F) {
@@ -445,7 +445,7 @@ const gchar *detect_charset(const gchar *text)
 		if (!charset)
 			charset = get_default_charset();
 	}
-	
+
 	if (!charset) {
 		switch (get_encoding_code()) {
 		case LATINC:
@@ -477,9 +477,9 @@ const gchar *detect_charset(const gchar *text)
 			else
 				charset = get_encoding_items(get_encoding_code())->item[OPENI18N];
 			if (!charset)
-				charset = get_encoding_items(get_encoding_code())->item[IANA];					
+				charset = get_encoding_items(get_encoding_code())->item[IANA];
 		}
 	}
-	
+
 	return charset;
 }

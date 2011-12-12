@@ -1,7 +1,7 @@
 /*
  *  L3afpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2005 Tarot Osuji
- *  
+ *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -37,7 +37,7 @@ void clear_current_keyval(void)
 gboolean scroll_to_cursor(GtkTextBuffer *buffer, gdouble within_margin)
 {
 	GtkTextIter iter;
-	
+
 //	gtk_text_buffer_get_start_iter(buffer, &iter);
 	gtk_text_buffer_get_iter_at_mark(buffer, &iter,
 		gtk_text_buffer_get_insert(buffer));
@@ -56,7 +56,7 @@ gint check_text_modification(void)
 {
 	gchar *basename, *str;
 	gint res;
-	
+
 	if (gtk_text_buffer_get_modified(pub->mw->buffer)) {
 		basename = get_file_basename(pub->fi->filename, FALSE);
 		str = g_strdup_printf(_("Save changes to '%s'?"), basename);
@@ -72,7 +72,7 @@ gint check_text_modification(void)
 		}
 		return -1;
 	}
-	
+
 	return 0;
 }
 
@@ -80,10 +80,10 @@ gint check_text_modification(void)
 static gint check_preedit(GtkWidget *view)
 {
 	gint cursor_pos;
-	
+
 	gtk_im_context_get_preedit_string(
 		GTK_TEXT_VIEW(view)->im_context, NULL, NULL, &cursor_pos);
-	
+
 	return cursor_pos;
 }
 #endif
@@ -92,7 +92,7 @@ static gboolean check_selection_bound(GtkTextBuffer *buffer)
 {
 	GtkTextIter start, end;
 	gchar *str, *p;
-	
+
 	if (gtk_text_buffer_get_selection_bounds(buffer, &start, &end)) {
 		str = gtk_text_iter_get_text(&start, &end);
 		p = strchr(str, '\n');
@@ -100,7 +100,7 @@ static gboolean check_selection_bound(GtkTextBuffer *buffer)
 		if (p)
 			return TRUE;
 	}
-	
+
 	return FALSE;
 }
 
@@ -110,17 +110,17 @@ static gboolean cb_key_press_event(GtkWidget *view, GdkEventKey *event)
 	GtkTextMark *mark;
 	GtkTextIter iter;
 	GdkRectangle prev_rect;
-	
+
 #if 0
 	if (check_preedit(view))
 		return FALSE;
 #endif
-	
+
 	buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(view));
 	mark = gtk_text_buffer_get_insert(buffer);
 	gtk_text_buffer_get_iter_at_mark(buffer, &iter, mark);
 	gtk_text_view_get_iter_location(GTK_TEXT_VIEW(view), &iter, &prev_rect);
-	
+
 	keyval = 0;
 //g_print("key-press-event: 0x%X\n", event->keyval);
 	switch (event->keyval) {
@@ -131,7 +131,7 @@ static gboolean cb_key_press_event(GtkWidget *view, GdkEventKey *event)
 			gtk_text_buffer_get_iter_at_mark(buffer, &iter, mark);
 			gtk_text_view_get_iter_location(GTK_TEXT_VIEW(view), &iter, &iter_rect);
 			if (iter_rect.y < prev_rect.y) {
-				gtk_text_view_get_line_at_y(GTK_TEXT_VIEW(view), &iter,				
+				gtk_text_view_get_line_at_y(GTK_TEXT_VIEW(view), &iter,
 					iter_rect.y - iter_rect.height, NULL);
 				gtk_text_buffer_move_mark(buffer, mark, &iter);
 			}
@@ -195,7 +195,7 @@ static gboolean cb_key_press_event(GtkWidget *view, GdkEventKey *event)
 		keyval = keyval + 0x10000;
 //g_print("=================================================\n");
 	}
-	
+
 	return FALSE;
 }
 
@@ -203,9 +203,9 @@ static gboolean cb_button_press_event(GtkWidget *view, GdkEventButton *event)
 {
 	GtkTextIter iter, start, end;
 	gint x, y;
-	
+
 	GtkTextBuffer *buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(view));
-	
+
 	if ((event->button) == 3 && (event->type == GDK_BUTTON_PRESS)) {
 		gtk_text_view_window_to_buffer_coords(GTK_TEXT_VIEW(view),
 			gtk_text_view_get_window_type(GTK_TEXT_VIEW(view), event->window),
@@ -215,7 +215,7 @@ static gboolean cb_button_press_event(GtkWidget *view, GdkEventButton *event)
 		if (!gtk_text_iter_in_range(&iter, &start, &end))
 			gtk_text_buffer_place_cursor(buffer, &iter);
 	}
-	
+
 	return FALSE;
 }
 
@@ -223,7 +223,7 @@ static void cb_modified_changed(GtkTextBuffer *buffer, GtkWidget *view)
 {
 	gboolean modified_flag, exist_flag = FALSE;
 	gchar *filename, *title;
-	
+
 	modified_flag = gtk_text_buffer_get_modified(buffer);
 	filename = get_file_basename(pub->fi->filename, TRUE);
 	if (modified_flag)
@@ -286,14 +286,14 @@ static void cb_focus_event(GtkWidget *view, GdkEventFocus *event)
 /*
 static void cb_begin_user_action(GtkTextBuffer *buffer, GtkWidget *view)
 {
-	g_signal_handlers_unblock_by_func(G_OBJECT(buffer), 
+	g_signal_handlers_unblock_by_func(G_OBJECT(buffer),
 		G_CALLBACK(cb_modified_changed), view);
 //	g_print("begin-user-action\n");
 }
 
 static void cb_end_user_action(GtkTextBuffer *buffer, GtkWidget *view)
 {
-	g_signal_handlers_block_by_func(G_OBJECT(buffer), 
+	g_signal_handlers_block_by_func(G_OBJECT(buffer),
 		G_CALLBACK(cb_modified_changed), view);
 	gtk_text_view_scroll_mark_onscreen(		// TODO: require?
 		GTK_TEXT_VIEW(view),
@@ -325,13 +325,13 @@ GtkWidget *create_text_view(void)
 {
  	GtkWidget *view;
 	GtkTextBuffer *buffer;
-	
+
 	view = gtk_text_view_new();
 	buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(view));
-	
+
 //	gtk_text_view_set_left_margin(GTK_TEXT_VIEW(view), 1);
 //	gtk_text_view_set_right_margin(GTK_TEXT_VIEW(view), 1);
-	
+
 	g_signal_connect(G_OBJECT(view), "key-press-event",
 		G_CALLBACK(cb_key_press_event), NULL);
 	g_signal_connect(G_OBJECT(view), "button-press-event",
@@ -350,7 +350,7 @@ GtkWidget *create_text_view(void)
 		G_CALLBACK(cb_focus_event), NULL);
 	g_signal_connect_after(G_OBJECT(view), "focus-out-event",
 		G_CALLBACK(cb_focus_event), NULL);
-	
+
 	g_signal_connect(G_OBJECT(buffer), "mark-set",
 		G_CALLBACK(cb_mark_changed), NULL);
 	g_signal_connect(G_OBJECT(buffer), "mark-deleted",
@@ -364,8 +364,8 @@ GtkWidget *create_text_view(void)
 	g_signal_connect_after(G_OBJECT(buffer), "end-user-action",
 		G_CALLBACK(cb_end_user_action), view);
 	cb_end_user_action(buffer, view);
-*/	
+*/
 	linenum_init(view);
-	
+
 	return view;
 }

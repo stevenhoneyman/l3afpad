@@ -1,7 +1,7 @@
 /*
  *  L3afpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2005 Tarot Osuji
- *  
+ *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -25,7 +25,7 @@
 static void set_selection_bound(GtkTextBuffer *buffer, gint start, gint end)
 {
 	GtkTextIter start_iter, end_iter;
-	
+
 	gtk_text_buffer_get_iter_at_offset(buffer, &start_iter, start);
 	if (end < 0)
 		gtk_text_buffer_get_end_iter(buffer, &end_iter);
@@ -56,7 +56,7 @@ void on_file_open(void)
 	FileInfo *fi;
 	gchar *comline;
 	gchar *option = NULL;
-	
+
 	fi = get_fileinfo_from_selector(pub->fi, OPEN);
 	if (fi) {
 		save_config_file();
@@ -73,7 +73,7 @@ void on_file_open(void)
 #else
 {
 	FileInfo *fi;
-	
+
 	if (check_text_modification())
 		return;
 	fi = get_fileinfo_from_selector(pub->fi, OPEN);
@@ -109,7 +109,7 @@ gint on_file_save(void)
 gint on_file_save_as(void)
 {
 	FileInfo *fi;
-	
+
 	fi = get_fileinfo_from_selector(pub->fi, SAVE);
 	if (fi == NULL)
 		return -1;
@@ -125,7 +125,7 @@ gint on_file_save_as(void)
 //	undo_init(sd->mainwin->textview, sd->mainwin->textbuffer, sd->mainwin->menubar);
 	return 0;
 }
-#ifdef ENABLE_PRINT
+#if ENABLE_PRINT
 void on_file_print_preview(void)
 {
 	create_gtkprint_preview_session(GTK_TEXT_VIEW(pub->mw->view),
@@ -214,7 +214,7 @@ static void activate_quick_find(void)
 {
 	GtkItemFactory *ifactory;
 	static gboolean flag = FALSE;
-	
+
 	if (!flag) {
 		ifactory = gtk_item_factory_from_widget(pub->mw->menubar);
 		gtk_widget_set_sensitive(
@@ -263,7 +263,7 @@ void on_option_word_wrap(void)
 {
 	GtkItemFactory *ifactory;
 	gboolean state;
-	
+
 	ifactory = gtk_item_factory_from_widget(pub->mw->menubar);
 	state = gtk_check_menu_item_get_active(
 		GTK_CHECK_MENU_ITEM(gtk_item_factory_get_item(ifactory, "/M/Options/WordWrap")));
@@ -275,7 +275,7 @@ void on_option_line_numbers(void)
 {
 	GtkItemFactory *ifactory;
 	gboolean state;
-	
+
 	ifactory = gtk_item_factory_from_widget(pub->mw->menubar);
 	state = gtk_check_menu_item_get_active(
 		GTK_CHECK_MENU_ITEM(gtk_item_factory_get_item(ifactory, "/M/Options/LineNumbers")));
@@ -285,7 +285,7 @@ void on_option_line_numbers(void)
 void on_option_always_on_top(void)
 {
 	static gboolean flag = FALSE;
-	
+
 	flag =! flag;
 	gtk_window_set_keep_above(GTK_WINDOW(pub->mw->window), flag);
 }
@@ -294,7 +294,7 @@ void on_option_auto_indent(void)
 {
 	GtkItemFactory *ifactory;
 	gboolean state;
-	
+
 	ifactory = gtk_item_factory_from_widget(pub->mw->menubar);
 	state = gtk_check_menu_item_get_active(
 		GTK_CHECK_MENU_ITEM(gtk_item_factory_get_item(ifactory, "/M/Options/AutoIndent")));
@@ -311,16 +311,16 @@ void on_help_about(void)
 		NULL
 	};
 	const gchar *translator_credits = _("translator-credits");
-	
+
 	translator_credits = strcmp(translator_credits, "translator-credits")
 		? translator_credits : NULL;
-	
+
 	const gchar *artists[] = {
 		"Lapo Calamandrei <calamandrei@gmail.com>",
 		NULL
 	};
 	gtk_show_about_dialog(GTK_WINDOW(pub->mw->window),
-		"program-name", "Lɜafpad",
+		"program-name", _("Lɜafpad"),
 		"version", PACKAGE_VERSION,
 		"copyright", copyright,
 		"comments", comments,

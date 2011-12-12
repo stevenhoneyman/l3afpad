@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"POT-Creation-Date: 2011-09-06 17:04+0800\n"
 "PO-Revision-Date: 2009-06-24 21:36+0100\n"
 "Last-Translator: Michał Trzebiatowski <hippie_1968@hotmail.com>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
@@ -174,6 +174,10 @@ msgstr "Prosty edytor tekstowy oparty na GTK+"
 #: ../src/callback.c:313
 msgid "translator-credits"
 msgstr "Michał Trzebiatowski <hippie_1968@hotmail.com>"
+
+#: ../src/callback.c:323
+msgid "Lɜafpad"
+msgstr "Lɜafpad"
 
 # src/view.c:62
 #: ../src/view.c:62

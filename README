@@ -10,7 +10,7 @@ are implemented in the editor. L3afpad is simple to use, is easily compiled,
 requires few libraries, and starts up quickly.
 
 This program is released under the GNU General Public License (GPL) version 2,
-see the file 'COPYING' for more information.
+see the file 'gpl-2.0.txt' for more information.
 
 
 Features
@@ -38,8 +38,6 @@ Simple install procedure:
   $ make                                # build L3afpad
   [ Become root if necessary ]
   # make install-strip                  # install L3afpad
-
-See the file 'INSTALL' for more detailed information.
 
 
 Keybindings

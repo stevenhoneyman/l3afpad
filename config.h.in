@@ -1,12 +1,12 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
-/* Define if Emacs key theme is enabled. */
+/* Define to 1 if you enable Emacs key theme. */
 #undef ENABLE_EMACS
 
 /* always defined to indicate that i18n is enabled */
 #undef ENABLE_NLS
 
-/* Define if print feature is enabled. */
+/* Define to 0 if you disable print. */
 #undef ENABLE_PRINT
 
 /* Define to 1 if you have the `bind_textdomain_codeset' function. */

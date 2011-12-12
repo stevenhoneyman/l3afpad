@@ -1,7 +1,7 @@
 /*
  *  L3afpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2005 Tarot Osuji
- *  
+ *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -17,7 +17,7 @@
  *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#include <gtk/gtk.h>
+#include "l3afpad.h"
 #include <stdio.h>
 #include <string.h>
 #include <sys/types.h>
@@ -37,7 +37,7 @@ gchar *gedit_utils_get_stdin (void)
 //	GnomeVFSResult	res;
 	fd_set rfds;
 	struct timeval tv;
-	
+
 	FD_ZERO (&rfds);
 	FD_SET (0, &rfds);
 
@@ -52,7 +52,7 @@ gchar *gedit_utils_get_stdin (void)
 	g_return_val_if_fail (tmp_buf != NULL, FALSE);
 
 	file_contents = g_string_new (NULL);
-	
+
 	while (feof (stdin) == 0)
 	{
 		buffer_length = fread (tmp_buf, 1, GEDIT_STDIN_BUFSIZE, stdin);
@@ -61,8 +61,8 @@ gchar *gedit_utils_get_stdin (void)
 
 		if (ferror (stdin) != 0)
 		{
-//			res = gnome_vfs_result_from_errno (); 
-		
+//			res = gnome_vfs_result_from_errno ();
+
 			g_free (tmp_buf);
 			g_string_free (file_contents, TRUE);
 			return NULL;
@@ -82,21 +82,25 @@ GtkWidget *create_button_with_stock_image(const gchar *text, const gchar *stock_
 	GtkWidget *image;
 	GtkWidget *label;
 	GtkWidget *align;
-	
+
 	hbox = gtk_hbox_new(FALSE, 2);
-	
+
 	image = gtk_image_new_from_stock(stock_id, GTK_ICON_SIZE_BUTTON);
 	gtk_box_pack_start(GTK_BOX(hbox), image, FALSE, FALSE, 0);
-	
+
 	label = gtk_label_new_with_mnemonic(text);
+#if USE_GTK_GRID
+	gtk_grid_attach_next_to (GTK_BOX (hbox), label, image, GTK_POS_RIGHT, 1, 1);
+#else
 	gtk_box_pack_end(GTK_BOX(hbox), label, FALSE, FALSE, 0);
-	
+#endif
+
 	align = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
 	gtk_container_add(GTK_CONTAINER(align), hbox);
-	
+
 	button = gtk_button_new();
 	gtk_container_add(GTK_CONTAINER(button), align);
 	gtk_widget_show_all(button);
-	
+
 	return button;
 }

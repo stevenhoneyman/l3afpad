@@ -2,7 +2,7 @@
  *  L3afpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2005 Tarot Osuji
  *  Copyright (C)      2011 Wen-Yen Chuang <caleb AT calno DOT com>
- *  
+ *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -40,7 +40,7 @@ static GtkActionEntry menu_items[] =
 	{ "Open", GTK_STOCK_OPEN, N_("_Open..."), "<control>O", NULL, G_CALLBACK(on_file_open) },
 	{ "Save", GTK_STOCK_SAVE, N_("_Save"), "<control>S", NULL, G_CALLBACK(on_file_save) },
 	{ "SaveAs", GTK_STOCK_SAVE_AS, N_("Save _As..."), "<shift><control>S", NULL, G_CALLBACK(on_file_save_as) },
-#ifdef ENABLE_PRINT
+#if ENABLE_PRINT
 	{ "PrintPreview", GTK_STOCK_PRINT_PREVIEW, N_("Print Pre_view"), "<shift><control>P", NULL, G_CALLBACK(on_file_print_preview) },
 	{ "Print", GTK_STOCK_PRINT, N_("_Print..."), "<control>P", NULL, G_CALLBACK(on_file_print) },
 #endif
@@ -71,7 +71,7 @@ static GtkToggleActionEntry toggle_entries[] =
 };
 static guint n_toggle_entries = G_N_ELEMENTS (toggle_entries);
 
-static const gchar *ui_info = 
+static const gchar *ui_info =
 "<ui>"
 "  <menubar name='M'>"
 "    <menu action='File'>"
@@ -80,9 +80,11 @@ static const gchar *ui_info =
 "      <menuitem action='Save'/>"
 "      <menuitem action='SaveAs'/>"
 "      <separator/>"
+#if ENABLE_PRINT
 "      <menuitem action='PrintPreview'/>"
 "      <menuitem action='Print'/>"
 "      <separator/>"
+#endif
 "      <menuitem action='Quit'/>"
 "    </menu>"
 "    <menu action='Edit'>"
@@ -120,9 +122,9 @@ static const gchar *ui_info =
 static gchar *menu_translate(const gchar *path, gpointer data)
 {
 	gchar *str;
-	
+
 	str = (gchar *)_(path);
-	
+
 	return str;
 }
 
@@ -152,7 +154,7 @@ GtkWidget *create_menu_bar(GtkWidget *window)
 	GtkItemFactory *ifactory;
 #if 0
 	gboolean flag_emacs = FALSE;
-	
+
 	gchar *key_theme = NULL;
 	GtkSettings *settings = gtk_settings_get_default();
 	if (settings) {
@@ -164,7 +166,7 @@ GtkWidget *create_menu_bar(GtkWidget *window)
 		}
 	}
 #endif
-	
+
 	ifactory = gtk_ui_manager_new();
 	GtkActionGroup *actions = gtk_action_group_new("Actions");
 	gtk_action_group_set_translate_func(actions, menu_translate, NULL, NULL);
@@ -174,7 +176,7 @@ GtkWidget *create_menu_bar(GtkWidget *window)
 	g_object_unref(actions);
 	gtk_ui_manager_add_ui_from_string(ifactory, ui_info, -1, NULL);
 	gtk_window_add_accel_group(GTK_WINDOW(window), accel_group);
-	
+
 	/* hidden keybinds */
 	gtk_accel_group_connect(
 		accel_group, GDK_W, GDK_CONTROL_MASK, 0,
@@ -194,7 +196,7 @@ GtkWidget *create_menu_bar(GtkWidget *window)
 	gtk_widget_add_accelerator(
 		gtk_item_factory_get_widget(ifactory, "/M/Search/Replace"),
 		"activate", accel_group, GDK_R, GDK_CONTROL_MASK, 0);
-	
+
 	/* initialize sensitivities */
 	gtk_widget_set_sensitive(
 		gtk_item_factory_get_widget(ifactory, "/M/Search/FindNext"),
@@ -202,13 +204,13 @@ GtkWidget *create_menu_bar(GtkWidget *window)
 	gtk_widget_set_sensitive(
 		gtk_item_factory_get_widget(ifactory, "/M/Search/FindPrevious"),
 		FALSE);
-	
+
 	menu_item_save   = gtk_item_factory_get_widget(ifactory, "/M/File/Save");
 	menu_item_cut    = gtk_item_factory_get_widget(ifactory, "/M/Edit/Cut");
 	menu_item_copy   = gtk_item_factory_get_widget(ifactory, "/M/Edit/Copy");
 	menu_item_paste  = gtk_item_factory_get_widget(ifactory, "/M/Edit/Paste");
 	menu_item_delete = gtk_item_factory_get_widget(ifactory, "/M/Edit/Delete");
 	menu_sensitivity_from_selection_bound(FALSE);
-	
+
 	return (GtkWidget*)ifactory;
 }

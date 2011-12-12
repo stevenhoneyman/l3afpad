@@ -1,3 +1,11 @@
+2011-09-08
+
+  version 0.8.18.1.3:
+	* Fix encoding and newline selection (a bug NOT in Leafpad, ouch!)
+	* Support GtkGrid
+	* Provide a clearsigned SHA1SUMS using
+	  RSA key ID BE8BA819 and DSA key ID E98D6159
+
 2011-09-05
 
   version 0.8.18.1.2:

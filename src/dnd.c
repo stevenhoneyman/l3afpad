@@ -1,7 +1,7 @@
 /*
  *  L3afpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2006 Tarot Osuji
- *  
+ *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -65,7 +65,7 @@ void dnd_init(GtkWidget *widget)
 static void dnd_open_first_file(gchar *filename)
 {
 	FileInfo *fi;
-	
+
 	if (check_text_modification())
 		return;
 	fi = g_malloc(sizeof(FileInfo));
@@ -82,7 +82,7 @@ static void dnd_open_first_file(gchar *filename)
 		set_main_window_title();
 //		undo_init(sd->mainwin->textview, sd->mainwin->textbuffer, sd->mainwin->menubar);
 	}
-}	
+}
 #endif
 
 #if 0
@@ -101,9 +101,9 @@ static void dnd_drag_data_recieved_handler(GtkWidget *widget,
 	j = 1;
 #endif
 DV(g_print("DND start!\n"));
-	
+
 #if 0
-	if (g_strcasecmp(gdk_atom_name(context->targets->data),
+	if (g_ascii_strcasecmp(gdk_atom_name(context->targets->data),
 	    "GTK_TEXT_BUFFER_CONTENTS") != 0) {
 #endif
 		if (flag_called_once) {
@@ -114,8 +114,8 @@ DV(g_print("second drop signal killed.\n"));
 		} else
 			flag_called_once = TRUE;
 	}
-	
-DV({	
+
+DV({
 	g_print("info                      = %d\n", info);
 	g_print("time                      = %d\n", time);
 	g_print("context->protocol         = %d\n", context->protocol);
@@ -133,8 +133,8 @@ DV({
 	g_print("selection_data->format    = %d\n", selection_data->format);
 	g_print("selection_data->length    = %d\n", selection_data->length);
 	g_print("%s\n", selection_data->data);
-});	
-	
+});
+
 	if (selection_data->data && info == TARGET_URI_LIST) {
 		files = g_strsplit((gchar *)selection_data->data, "\n" , -1);
 		while (files[i]) {
@@ -169,13 +169,13 @@ DV(g_print(">%s\n", comline));
 		if (info == TARGET_UTF8_STRING) {
 			undo_set_sequency_reserve();
 			context->action = GDK_ACTION_MOVE;
-		} else if (info == TARGET_PLAIN 
+		} else if (info == TARGET_PLAIN
 			&& g_utf8_validate((gchar *)selection_data->data, -1, NULL)) {
 			selection_data->type =
 				gdk_atom_intern("UTF8_STRING", FALSE);
 		}
 	}
-	
+
 	return;
 }
 
@@ -185,7 +185,7 @@ static gboolean dnd_drag_motion_handler(GtkWidget *widget,
 	GList *targets;
 	gchar *name;
 	gboolean flag = FALSE;
-	
+
 	targets = context->targets;
 	while (targets) {
 		name = gdk_atom_name(targets->data);
@@ -200,11 +200,11 @@ DV(g_print("%s\n", name));
 	else
 		context->action = GDK_ACTION_COPY;
 //	g_signal_stop_emission_by_name(widget, "drag_motion");
-*/	
+*/
 /*	if (!flag) {
 		gint bx, by;
 		GtkTextIter iter;
-		
+
 		gtk_text_view_window_to_buffer_coords(GTK_TEXT_VIEW(widget),
 			GTK_TEXT_WINDOW_WIDGET,
 			x, y, &bx, &by);
@@ -219,7 +219,7 @@ DV(g_print("%s\n", name));
 			    dnd_mark, &iter);
 			gtk_text_mark_set_visible(dnd_mark, TRUE);
 	}
-*/	
+*/
 	return flag;
 }
 #endif

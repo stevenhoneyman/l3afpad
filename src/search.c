@@ -1,7 +1,7 @@
 /*
  *  L3afpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2005 Tarot Osuji
- *  
+ *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -19,19 +19,8 @@
 
 #include <string.h>
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
-
-#include <gtk/gtk.h>
-#include <glib/gi18n.h>
-#include "dialog.h"
-#include "utils.h"
-#include "view.h"
-#include "undo.h"
+#include "l3afpad.h"
 #include "gtksourceiter.h"
-#include "search.h"
-#include "hlight.h"
 
 static gchar *string_find    = NULL;
 static gchar *string_replace = NULL;
@@ -43,13 +32,13 @@ static gboolean hlight_searched_strings(GtkTextBuffer *buffer, gchar *str)
 	gboolean res, retval = FALSE;
 	GtkSourceSearchFlags search_flags =
 		GTK_SOURCE_SEARCH_VISIBLE_ONLY | GTK_SOURCE_SEARCH_TEXT_ONLY;
-	
+
 	if (!string_find)
 		return FALSE;
-	
+
 	if (!match_case)
 		search_flags = search_flags | GTK_SOURCE_SEARCH_CASE_INSENSITIVE;
-	
+
 	gtk_text_buffer_get_bounds(buffer, &start, &end);
 /*	gtk_text_buffer_remove_tag_by_name(buffer,
 		"searched", &start, &end);
@@ -72,7 +61,7 @@ static gboolean hlight_searched_strings(GtkTextBuffer *buffer, gchar *str)
 		replace_mode = FALSE;
 	else	*/
 	hlight_toggle_searched(buffer);
-	
+
 	return retval;
 }
 
@@ -82,21 +71,21 @@ gboolean document_search_real(GtkWidget *textview, gint direction)
 	gboolean res;
 	GtkSourceSearchFlags search_flags = GTK_SOURCE_SEARCH_VISIBLE_ONLY | GTK_SOURCE_SEARCH_TEXT_ONLY;
 	GtkTextBuffer *textbuffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(textview));
-	
+
 	if (!string_find)
 		return FALSE;
-	
+
 	if (!match_case)
 		search_flags = search_flags | GTK_SOURCE_SEARCH_CASE_INSENSITIVE;
-	
+
 //	if (direction == 0 || !hlight_check_searched())
 	if (direction == 0 || (direction != 2 && !hlight_check_searched()))
 		hlight_searched_strings(gtk_text_view_get_buffer(GTK_TEXT_VIEW(textview)), string_find);
-	
+
 	gtk_text_mark_set_visible(
 		gtk_text_buffer_get_selection_bound(
 			gtk_text_view_get_buffer(GTK_TEXT_VIEW(textview))), FALSE);
-	
+
 	gtk_text_buffer_get_iter_at_mark(textbuffer, &iter, gtk_text_buffer_get_insert(textbuffer));
 	if (direction < 0) {
 		res = gtk_source_iter_backward_search(
@@ -110,7 +99,7 @@ gboolean document_search_real(GtkWidget *textview, gint direction)
 			&iter, string_find, search_flags, &match_start, &match_end, NULL);
 	}
 	/* TODO: both gtk_(text/source)_iter_backward_search works not fine for multi-byte */
-	
+
 	/* wrap */
 	/* TODO: define limit NULL -> proper value */
 	if (!res) {
@@ -124,17 +113,17 @@ gboolean document_search_real(GtkWidget *textview, gint direction)
 				&iter, string_find, search_flags, &match_start, &match_end, NULL);
 		}
 	}
-	
+
 	if (res) {
 		gtk_text_buffer_place_cursor(textbuffer, &match_start);
 		gtk_text_buffer_move_mark_by_name(textbuffer, "insert", &match_end);
 //		gtk_text_view_scroll_to_iter(GTK_TEXT_VIEW(textview), &match_start, 0.1, FALSE, 0.5, 0.5);
 		scroll_to_cursor(textbuffer, 0.05);
-	} 
+	}
 	else if (direction == 0)
 		run_dialog_message(gtk_widget_get_toplevel(textview), GTK_MESSAGE_WARNING,
 			_("Search string not found"));
-	
+
 	return res;
 }
 
@@ -145,18 +134,18 @@ static gint document_replace_real(GtkWidget *textview)
 	gboolean res;
 	gint num = 0, offset;
 	GtkWidget *q_dialog = NULL;
-	GtkSourceSearchFlags search_flags = GTK_SOURCE_SEARCH_VISIBLE_ONLY | GTK_SOURCE_SEARCH_TEXT_ONLY;	
+	GtkSourceSearchFlags search_flags = GTK_SOURCE_SEARCH_VISIBLE_ONLY | GTK_SOURCE_SEARCH_TEXT_ONLY;
 	GtkTextBuffer *textbuffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(textview));
-	
+
 	if (!match_case)
 		search_flags = search_flags | GTK_SOURCE_SEARCH_CASE_INSENSITIVE;
-	
+
 	if (replace_all) {
 		gtk_text_buffer_get_iter_at_mark(textbuffer,
 			&iter, gtk_text_buffer_get_insert(textbuffer));
 		mark_init = gtk_text_buffer_create_mark(textbuffer, NULL, &iter, FALSE);
 		gtk_text_buffer_get_start_iter(textbuffer, &iter);
-		
+
 		gtk_text_buffer_get_end_iter(textbuffer, &match_end);
 //		gtk_text_buffer_remove_tag_by_name(textbuffer,
 //			"replaced", &iter, &match_end);
@@ -166,7 +155,7 @@ static gint document_replace_real(GtkWidget *textview)
 		hlight_searched_strings(textbuffer, string_find);
 		hlight_toggle_searched(textbuffer);
 	}
-	
+
 	do {
 		if (replace_all) {
 			res = gtk_source_iter_forward_search(
@@ -181,7 +170,7 @@ static gint document_replace_real(GtkWidget *textview)
 		else
 //			res = document_search_real(textview, 0);
 			res = document_search_real(textview, 2);
-		
+
 		if (res) {
 			if (!replace_all) {
 				if (num == 0 && q_dialog == NULL)
@@ -227,7 +216,7 @@ static gint document_replace_real(GtkWidget *textview)
 				gtk_text_buffer_get_iter_at_mark(
 					textbuffer, &iter,
 					gtk_text_buffer_get_insert(textbuffer));
-			
+
 			num++;
 /*			if (replace_all)
 				undo_set_sequency(TRUE);
@@ -238,7 +227,7 @@ static gint document_replace_real(GtkWidget *textview)
 	} while (res);
 	if (!hlight_check_searched())
 		hlight_toggle_searched(textbuffer);
-	
+
 	if (q_dialog)
 		gtk_widget_destroy(q_dialog);
 /*	if (strlen(string_replace)) {
@@ -252,7 +241,7 @@ static gint document_replace_real(GtkWidget *textview)
 			_("%d strings replaced"), num);
 		undo_set_sequency(FALSE);
 	}
-	
+
 	return num;
 }
 
@@ -293,7 +282,7 @@ gint run_dialog_search(GtkWidget *textview, gint mode)
 	GtkWidget *entry_find, *entry_replace = NULL;
 	GtkWidget *check_case, *check_all;
 	gint res;
-	
+
 	if (mode)
 		dialog = gtk_dialog_new_with_buttons(_("Replace"),
 			GTK_WINDOW(gtk_widget_get_toplevel(textview)),
@@ -308,7 +297,7 @@ gint run_dialog_search(GtkWidget *textview, gint mode)
 			GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
 			GTK_STOCK_FIND, GTK_RESPONSE_OK,
 			NULL);
-	
+
 	table = gtk_table_new(mode + 2, 2, FALSE);
 	 gtk_table_set_row_spacings(GTK_TABLE(table), 8);
 	 gtk_table_set_col_spacings(GTK_TABLE(table), 8);
@@ -346,7 +335,7 @@ gint run_dialog_search(GtkWidget *textview, gint mode)
 	gtk_entry_set_activates_default(GTK_ENTRY(entry_find), TRUE);
 	if (mode)
 		gtk_entry_set_activates_default(GTK_ENTRY(entry_replace), TRUE);
-	
+
 	check_case = gtk_check_button_new_with_mnemonic(_("_Match case"));
 	 gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(check_case), match_case);
 	 g_signal_connect(check_case, "toggled", G_CALLBACK(toggle_check_case), NULL);
@@ -358,8 +347,8 @@ gint run_dialog_search(GtkWidget *textview, gint mode)
 	 gtk_table_attach_defaults(GTK_TABLE(table), check_all, 0, 2, 2 + mode, 3 + mode);
 	}
 	gtk_window_set_resizable(GTK_WINDOW(dialog), FALSE);
-	gtk_widget_show_all(table);	
-	
+	gtk_widget_show_all(table);
+
 	res = gtk_dialog_run(GTK_DIALOG(dialog));
 	if (res == GTK_RESPONSE_OK) {
 		g_free(string_find);
@@ -369,9 +358,9 @@ gint run_dialog_search(GtkWidget *textview, gint mode)
 			string_replace = g_strdup(gtk_entry_get_text(GTK_ENTRY(entry_replace)));
 		}
 	}
-	
+
 	gtk_widget_destroy(dialog);
-	
+
 	if (res == GTK_RESPONSE_OK) {
 		if (strlen(string_find)) {
 			if (mode)
@@ -380,7 +369,7 @@ gint run_dialog_search(GtkWidget *textview, gint mode)
 				document_search_real(textview, 0);
 		}
 	}
-	
+
 	return res;
 }
 
@@ -394,15 +383,15 @@ void run_dialog_jump_to(GtkWidget *textview)
 	GtkAdjustment *spinner_adj;
 	GtkTextIter iter;
 	gint num, max_num;
-	
+
 	GtkTextBuffer *textbuffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(textview));
-	
+
 	gtk_text_buffer_get_iter_at_mark(textbuffer, &iter,
 		gtk_text_buffer_get_insert(textbuffer));
 	num = gtk_text_iter_get_line(&iter) + 1;
 	gtk_text_buffer_get_end_iter(textbuffer, &iter);
 	max_num = gtk_text_iter_get_line(&iter) + 1;
-	
+
 	dialog = gtk_dialog_new_with_buttons(_("Jump To"),
 		GTK_WINDOW(gtk_widget_get_toplevel(textview)),
 		GTK_DIALOG_DESTROY_WITH_PARENT,
@@ -423,11 +412,11 @@ void run_dialog_jump_to(GtkWidget *textview)
 	 gtk_entry_set_activates_default(GTK_ENTRY(spinner), TRUE);
 	gtk_table_attach_defaults(GTK_TABLE(table), label, 0, 1, 0, 1);
 	gtk_table_attach_defaults(GTK_TABLE(table), spinner, 1, 2, 0, 1);
-	
+
 	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_OK);
 	gtk_window_set_resizable(GTK_WINDOW(dialog), FALSE);
 	gtk_widget_show_all(dialog);
-	
+
 	if (gtk_dialog_run(GTK_DIALOG(dialog)) == GTK_RESPONSE_OK) {
 		gtk_text_buffer_get_iter_at_line(textbuffer, &iter,
 			gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(spinner)) - 1);
@@ -435,6 +424,6 @@ void run_dialog_jump_to(GtkWidget *textview)
 //		gtk_text_view_scroll_to_iter(GTK_TEXT_VIEW(textview), &iter, 0.1, FALSE, 0.5, 0.5);
 		scroll_to_cursor(textbuffer, 0.25);
 	}
-	
+
 	gtk_widget_destroy (dialog);
 }

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: L3afpad 0.8.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"POT-Creation-Date: 2011-09-06 17:04+0800\n"
 "PO-Revision-Date: 2005-07-31 22:54+0300\n"
 "Last-Translator: Yo'av Moshe <black_jesus@myrealbox.com>\n"
 "Language-Team: Hebrew\n"
@@ -139,6 +139,10 @@ msgstr "עורך טקסט פשוט מבוסס GTK+"
 #: ../src/callback.c:313
 msgid "translator-credits"
 msgstr "Yo´av Moshe <black_jesus@myrealbox.com>"
+
+#: ../src/callback.c:323
+msgid "Lɜafpad"
+msgstr "Lɜafpad"
 
 #: ../src/view.c:62
 #, c-format

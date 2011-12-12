@@ -1,7 +1,7 @@
 /*
  *  L3afpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2006 Tarot Osuji
- *  
+ *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 2 of the License, or
@@ -20,7 +20,7 @@
 #include "l3afpad.h"
 #include <gdk/gdkkeysyms.h>
 
-#ifdef ENABLE_EMACS
+#if ENABLE_EMACS
 
 static void cb_key_release_event(GtkWidget *view, GdkEventKey *event)
 {
@@ -105,7 +105,7 @@ static void cb_key_press_event(GtkWidget *view, GdkEventKey *event)
 static void emacs_key_prefix(void)
 {
 	gulong id;
-	
+
 	gtk_widget_set_sensitive(pub->mw->menubar, FALSE);
 //	gtk_text_view_set_cursor_visible(GTK_TEXT_VIEW(pub->mw->view), FALSE);
 	gtk_text_view_set_editable(GTK_TEXT_VIEW(pub->mw->view), FALSE);
@@ -114,13 +114,13 @@ static void emacs_key_prefix(void)
 		G_CALLBACK(cb_key_release_event), NULL);
 	gtk_main();
 	g_signal_handler_disconnect(G_OBJECT(pub->mw->window), id);
-	
+
 	/* waiting for input sequence */
 	id = g_signal_connect(G_OBJECT(pub->mw->window), "key-press-event",
 		G_CALLBACK(cb_key_press_event), NULL);
 	gtk_main();
 	g_signal_handler_disconnect(G_OBJECT(pub->mw->window), id);
-	
+
 	gtk_text_view_set_editable(GTK_TEXT_VIEW(pub->mw->view), TRUE);
 //	gtk_text_view_set_cursor_visible(GTK_TEXT_VIEW(pub->mw->view), TRUE);
 	gtk_widget_set_sensitive(pub->mw->menubar, TRUE);
@@ -133,7 +133,7 @@ gboolean check_emacs_key_theme(GtkWindow *window, GtkItemFactory *ifactory)
 	gchar *key_theme = NULL;
 	gboolean emacs_flag = FALSE;
 	GtkSettings *settings = gtk_settings_get_default();
-	
+
 	g_object_get(settings, "gtk-key-theme-name", &key_theme, NULL);
 	if (key_theme) {
 		if (!g_ascii_strcasecmp(key_theme, "Emacs"))
@@ -142,7 +142,7 @@ gboolean check_emacs_key_theme(GtkWindow *window, GtkItemFactory *ifactory)
 	}
 	if (!emacs_flag)
 		return FALSE;
-	
+
 	groups = gtk_accel_groups_from_object(G_OBJECT(window));
 	accel_group = groups->data;
 	if (accel_group) {
@@ -150,14 +150,14 @@ gboolean check_emacs_key_theme(GtkWindow *window, GtkItemFactory *ifactory)
 		g_object_unref(accel_group);
 	}
 	accel_group = gtk_accel_group_new();
-	
+
 	gtk_rc_parse_string (
 	"binding \"gtk-emacs-text-entry\""
 	"{\n"
 	"bind \"<ctrl>w\" { \"cut-clipboard\" () }"
 	"}\n"
 	);
-	
+
 /*	gtk_widget_remove_accelerator(
 		gtk_item_factory_get_widget(ifactory, "/M/File/New"),
 		accel_group, GDK_N, GDK_CONTROL_MASK);
@@ -170,7 +170,7 @@ gboolean check_emacs_key_theme(GtkWindow *window, GtkItemFactory *ifactory)
 	gtk_widget_remove_accelerator(
 		gtk_item_factory_get_widget(ifactory, "/M/File/SaveAs"),
 		accel_group, GDK_S, GDK_SHIFT_MASK | GDK_CONTROL_MASK);
-#ifdef ENABLE_PRINT
+#if ENABLE_PRINT
 	gtk_widget_remove_accelerator(
 		gtk_item_factory_get_widget(ifactory, "/M/File/Print"),
 		accel_group, GDK_P, GDK_CONTROL_MASK);
@@ -208,13 +208,13 @@ gboolean check_emacs_key_theme(GtkWindow *window, GtkItemFactory *ifactory)
 */	gtk_widget_add_accelerator(
 		gtk_item_factory_get_widget(ifactory, "/M/Search/JumpTo"),
 		"activate", accel_group, GDK_G, GDK_MOD1_MASK, GTK_ACCEL_VISIBLE);
-	
+
 	gtk_accel_group_connect(
 		accel_group, GDK_X, GDK_CONTROL_MASK, 0,
 		g_cclosure_new_swap(G_CALLBACK(emacs_key_prefix), NULL, NULL));
-	
+
 	gtk_window_add_accel_group(GTK_WINDOW(window), accel_group);
-	
+
 	return TRUE;
 }
 
