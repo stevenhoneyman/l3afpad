@@ -323,7 +323,7 @@ static void cb_end_user_action(GtkTextBuffer *buffer, GtkWidget *view)
 
 GtkWidget *create_text_view(void)
 {
- 	GtkWidget *view;
+	GtkWidget *view;
 	GtkTextBuffer *buffer;
 
 	view = gtk_text_view_new();

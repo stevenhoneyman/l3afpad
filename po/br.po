@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: L3afpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-06 17:04+0800\n"
+"POT-Creation-Date: 2011-10-08 16:32+0800\n"
 "PO-Revision-Date: 2009-07-04 16:58+0100\n"
 "Last-Translator: Alan Monfort <alan.monfort@free.fr>\n"
 "Language-Team: Breton Team <brenux@free.fr>\n"
@@ -158,7 +158,7 @@ msgstr "Lɜafpad"
 msgid "Save changes to '%s'?"
 msgstr "Enrollan ar c'hemmou dindan '%s' ?"
 
-#: ../src/font.c:44
+#: ../src/font.c:36
 msgid "Font"
 msgstr "Nodrezh"
 
@@ -171,32 +171,32 @@ msgstr "Lec'hadur bremanel (%s)"
 msgid "Other Codeset"
 msgstr "Spletad arouezennou all"
 
-#: ../src/selector.c:165
+#: ../src/selector.c:166
 msgid "Code_set:"
 msgstr "_Spletad arouezennou :"
 
-#: ../src/selector.c:187
+#: ../src/selector.c:190
 #, c-format
 msgid "'%s' is not supported"
 msgstr "Anskoret eo '%s'"
 
-#: ../src/selector.c:248
+#: ../src/selector.c:250
 msgid "Auto-Detect"
 msgstr "EmZinoin"
 
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Open"
 msgstr "Digerin"
 
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Save As"
 msgstr "Enrollan dindan"
 
-#: ../src/selector.c:315
+#: ../src/selector.c:314
 msgid "C_haracter Coding:"
 msgstr "Bonegan an _arouezenn :"
 
-#: ../src/selector.c:373
+#: ../src/selector.c:372
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' zo anezhan endeo. Flastran ?"
@@ -218,55 +218,55 @@ msgstr "N'haller ket digerin ar restr da skrivan"
 msgid "Can't write file"
 msgstr "N'haller ket enrollan ar restr "
 
-#: ../src/search.c:136
+#: ../src/search.c:125
 msgid "Search string not found"
 msgstr "Klask hedad ket kavet"
 
-#: ../src/search.c:189
+#: ../src/search.c:178
 msgid "Replace?"
 msgstr "Amsavin ?"
 
-#: ../src/search.c:252
+#: ../src/search.c:241
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d hedad arouezennou amsavet"
 
-#: ../src/search.c:298
+#: ../src/search.c:287
 msgid "Replace"
 msgstr "Amsavin"
 
-#: ../src/search.c:305
+#: ../src/search.c:294
 msgid "Find"
 msgstr "Kavout"
 
-#: ../src/search.c:317
+#: ../src/search.c:306
 msgid "Fi_nd what:"
 msgstr "Kla_sk petra :"
 
-#: ../src/search.c:336
+#: ../src/search.c:325
 msgid "Re_place with:"
 msgstr "Am_savin gant :"
 
-#: ../src/search.c:350
+#: ../src/search.c:339
 msgid "_Match case"
 msgstr "_Teurel evezh eus ar pennlizherennou"
 
-#: ../src/search.c:355
+#: ../src/search.c:344
 msgid "Replace _all at once"
 msgstr "Amsavin pep tr_a"
 
 # [fr]aller a la ligne
 # ligne de texte : arroudenn
-#: ../src/search.c:406
+#: ../src/search.c:395
 msgid "Jump To"
 msgstr "Mont d'al linenn"
 
 # [fr]aller a la ligne
-#: ../src/search.c:411
+#: ../src/search.c:400
 msgid "_Jump"
 msgstr "_Mont d'al linenn"
 
-#: ../src/search.c:418
+#: ../src/search.c:407
 msgid "_Line number:"
 msgstr "Niverenn al _linenn :"
 

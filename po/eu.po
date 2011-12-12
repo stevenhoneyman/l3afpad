@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-06 17:04+0800\n"
+"POT-Creation-Date: 2011-10-08 16:32+0800\n"
 "PO-Revision-Date: 2008-01-14 21:35+0900\n"
 "Last-Translator: Mikel Olasagasti <hey_neken@mundurat.net>\n"
 "Language-Team: Basque <translation-team-eu@lists.sourceforge.net>\n"
@@ -152,7 +152,7 @@ msgstr "Lɜafpad"
 msgid "Save changes to '%s'?"
 msgstr "Aldaketak '%s'-n gorde?"
 
-#: ../src/font.c:44
+#: ../src/font.c:36
 msgid "Font"
 msgstr "Letra tipoa"
 
@@ -165,32 +165,32 @@ msgstr "Uneko Locale-a (%s)"
 msgid "Other Codeset"
 msgstr "Beste Kodeketa Multzoa"
 
-#: ../src/selector.c:165
+#: ../src/selector.c:166
 msgid "Code_set:"
 msgstr "Kodeketa_multzoa:"
 
-#: ../src/selector.c:187
+#: ../src/selector.c:190
 #, c-format
 msgid "'%s' is not supported"
 msgstr "'%s'-entzat ez dago sostengurik"
 
-#: ../src/selector.c:248
+#: ../src/selector.c:250
 msgid "Auto-Detect"
 msgstr "Auto-Detektatu"
 
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Open"
 msgstr "Ireki"
 
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Save As"
 msgstr "Gorde Honela"
 
-#: ../src/selector.c:315
+#: ../src/selector.c:314
 msgid "C_haracter Coding:"
 msgstr "K_araktere Kodeketa:"
 
-#: ../src/selector.c:373
+#: ../src/selector.c:372
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' badago. Gainean idatzi?"
@@ -212,52 +212,52 @@ msgstr "Ezin da fitxategia idazketarako ireki"
 msgid "Can't write file"
 msgstr "Ezin da fitxategian gorde"
 
-#: ../src/search.c:136
+#: ../src/search.c:125
 msgid "Search string not found"
 msgstr "Bilaketa katea ez da aurkitu"
 
-#: ../src/search.c:189
+#: ../src/search.c:178
 msgid "Replace?"
 msgstr "Ordezkatu?"
 
-#: ../src/search.c:252
+#: ../src/search.c:241
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d kate ordezkatuta"
 
-#: ../src/search.c:298
+#: ../src/search.c:287
 msgid "Replace"
 msgstr "Ordezkatu"
 
-#: ../src/search.c:305
+#: ../src/search.c:294
 msgid "Find"
 msgstr "Bilatu"
 
-#: ../src/search.c:317
+#: ../src/search.c:306
 msgid "Fi_nd what:"
 msgstr "Zer _bilatu:"
 
-#: ../src/search.c:336
+#: ../src/search.c:325
 msgid "Re_place with:"
 msgstr "Zerekin _ordezkatu:"
 
-#: ../src/search.c:350
+#: ../src/search.c:339
 msgid "_Match case"
 msgstr "_Maiuskulak/minuskulak kointziditu"
 
-#: ../src/search.c:355
+#: ../src/search.c:344
 msgid "Replace _all at once"
 msgstr "_Guztiak ordezkatu"
 
-#: ../src/search.c:406
+#: ../src/search.c:395
 msgid "Jump To"
 msgstr "Jauzi"
 
-#: ../src/search.c:411
+#: ../src/search.c:400
 msgid "_Jump"
 msgstr "_Jauzi"
 
-#: ../src/search.c:418
+#: ../src/search.c:407
 msgid "_Line number:"
 msgstr "_Lerro zenbakia:"
 

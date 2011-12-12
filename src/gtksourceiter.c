@@ -23,12 +23,9 @@
  * Parts of this file are copied from the gedit and glimmer project.
  */
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include <string.h>
 #include "gtksourceiter.h"
+#include "l3afpad.h"
 
 #define GTK_TEXT_UNKNOWN_CHAR 0xFFFC
 

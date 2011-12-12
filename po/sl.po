@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad-0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-06 17:04+0800\n"
+"POT-Creation-Date: 2011-10-08 16:32+0800\n"
 "PO-Revision-Date: 2009-04-28 22:31+0100\n"
 "Last-Translator: Alan Pepelko <alan.pepelko@gmail.com>\n"
 "Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
@@ -155,7 +155,7 @@ msgstr "Lɜafpad"
 msgid "Save changes to '%s'?"
 msgstr "Želite shraniti spremembe v '%s'?"
 
-#: ../src/font.c:44
+#: ../src/font.c:36
 msgid "Font"
 msgstr "Pisava"
 
@@ -168,32 +168,32 @@ msgstr "Trenutne lokalne nastavitve (%s)"
 msgid "Other Codeset"
 msgstr "Drug nabor znakov"
 
-#: ../src/selector.c:165
+#: ../src/selector.c:166
 msgid "Code_set:"
 msgstr "Nabor _znakov:"
 
-#: ../src/selector.c:187
+#: ../src/selector.c:190
 #, c-format
 msgid "'%s' is not supported"
 msgstr "'%s' ni podprt"
 
-#: ../src/selector.c:248
+#: ../src/selector.c:250
 msgid "Auto-Detect"
 msgstr "Samozaznaj"
 
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Open"
 msgstr "Odpri"
 
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Save As"
 msgstr "Shrani kot"
 
-#: ../src/selector.c:315
+#: ../src/selector.c:314
 msgid "C_haracter Coding:"
 msgstr "_Kodiranje znakov:"
 
-#: ../src/selector.c:373
+#: ../src/selector.c:372
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "Datoteka '%s' že obstaja. Jo želite prepisati?"
@@ -215,52 +215,52 @@ msgstr "Ni mogoče odpreti datoteke"
 msgid "Can't write file"
 msgstr "Ni mogoče zapisati datoteke"
 
-#: ../src/search.c:136
+#: ../src/search.c:125
 msgid "Search string not found"
 msgstr "Iskanega niza ni mogoče najti"
 
-#: ../src/search.c:189
+#: ../src/search.c:178
 msgid "Replace?"
 msgstr "Želite zamenjati?"
 
-#: ../src/search.c:252
+#: ../src/search.c:241
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d nizov zamenjanih"
 
-#: ../src/search.c:298
+#: ../src/search.c:287
 msgid "Replace"
 msgstr "Zamenjaj"
 
-#: ../src/search.c:305
+#: ../src/search.c:294
 msgid "Find"
 msgstr "Najdi"
 
-#: ../src/search.c:317
+#: ../src/search.c:306
 msgid "Fi_nd what:"
 msgstr "_Najdi kaj:"
 
-#: ../src/search.c:336
+#: ../src/search.c:325
 msgid "Re_place with:"
 msgstr "Zamenjaj z:"
 
-#: ../src/search.c:350
+#: ../src/search.c:339
 msgid "_Match case"
 msgstr "_Velikost črk mora ustrezati"
 
-#: ../src/search.c:355
+#: ../src/search.c:344
 msgid "Replace _all at once"
 msgstr "Zamenjaj _vse naenkrat"
 
-#: ../src/search.c:406
+#: ../src/search.c:395
 msgid "Jump To"
 msgstr "Pojdi na"
 
-#: ../src/search.c:411
+#: ../src/search.c:400
 msgid "_Jump"
 msgstr "Po_jdi"
 
-#: ../src/search.c:418
+#: ../src/search.c:407
 msgid "_Line number:"
 msgstr "Števi_lka vrstice:"
 

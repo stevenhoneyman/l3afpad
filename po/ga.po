@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-06 17:04+0800\n"
+"POT-Creation-Date: 2011-10-08 16:32+0800\n"
 "PO-Revision-Date: 2008-01-15 15:46-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -149,7 +149,7 @@ msgstr "Lɜafpad"
 msgid "Save changes to '%s'?"
 msgstr "Sábháil athruithe i '%s'?"
 
-#: ../src/font.c:44
+#: ../src/font.c:36
 msgid "Font"
 msgstr "Cló"
 
@@ -162,32 +162,32 @@ msgstr "Logchaighdeán Reatha (%s)"
 msgid "Other Codeset"
 msgstr "Ionchódú Eile"
 
-#: ../src/selector.c:165
+#: ../src/selector.c:166
 msgid "Code_set:"
 msgstr "Ionchódú:"
 
-#: ../src/selector.c:187
+#: ../src/selector.c:190
 #, c-format
 msgid "'%s' is not supported"
 msgstr "Ní thacaítear le '%s'"
 
-#: ../src/selector.c:248
+#: ../src/selector.c:250
 msgid "Auto-Detect"
 msgstr "Braith go hUathoibríoch"
 
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Open"
 msgstr "Oscail"
 
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Save As"
 msgstr "Sábháil Mar"
 
-#: ../src/selector.c:315
+#: ../src/selector.c:314
 msgid "C_haracter Coding:"
 msgstr "Ionc_hódú Carachtar:"
 
-#: ../src/selector.c:373
+#: ../src/selector.c:372
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "Tá '%s' ann cheana. Forscríobh?"
@@ -209,52 +209,52 @@ msgstr "Ní féidir an comhad a oscailt chun scríobh ann"
 msgid "Can't write file"
 msgstr "Ní féidir an comhad a scríobh"
 
-#: ../src/search.c:136
+#: ../src/search.c:125
 msgid "Search string not found"
 msgstr "Teaghrán gan aimsiú"
 
-#: ../src/search.c:189
+#: ../src/search.c:178
 msgid "Replace?"
 msgstr "Ionadaigh?"
 
-#: ../src/search.c:252
+#: ../src/search.c:241
 #, c-format
 msgid "%d strings replaced"
 msgstr "Ionadaíodh %d teaghrán"
 
-#: ../src/search.c:298
+#: ../src/search.c:287
 msgid "Replace"
 msgstr "Ionadaigh"
 
-#: ../src/search.c:305
+#: ../src/search.c:294
 msgid "Find"
 msgstr "Aimsigh"
 
-#: ../src/search.c:317
+#: ../src/search.c:306
 msgid "Fi_nd what:"
 msgstr "Cad is mian leat _aimsiú:"
 
-#: ../src/search.c:336
+#: ../src/search.c:325
 msgid "Re_place with:"
 msgstr "_Ionadaigh le:"
 
-#: ../src/search.c:350
+#: ../src/search.c:339
 msgid "_Match case"
 msgstr "_Comhoiriúnaigh an cás"
 
-#: ../src/search.c:355
+#: ../src/search.c:344
 msgid "Replace _all at once"
 msgstr "Ionadaigh d'aon _iarraidh"
 
-#: ../src/search.c:406
+#: ../src/search.c:395
 msgid "Jump To"
 msgstr "Léim Go"
 
-#: ../src/search.c:411
+#: ../src/search.c:400
 msgid "_Jump"
 msgstr "_Léim"
 
-#: ../src/search.c:418
+#: ../src/search.c:407
 msgid "_Line number:"
 msgstr "_Líne-uimhir:"
 

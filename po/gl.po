@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-06 17:04+0800\n"
+"POT-Creation-Date: 2011-10-08 16:32+0800\n"
 "PO-Revision-Date: 2010-12-02 10:22+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -158,7 +158,7 @@ msgstr "Lɜafpad"
 msgid "Save changes to '%s'?"
 msgstr "Desexa gardar os cambios en '%s'?"
 
-#: ../src/font.c:44
+#: ../src/font.c:36
 msgid "Font"
 msgstr "Tipo de letra"
 
@@ -171,32 +171,32 @@ msgstr "Configuración rexional actual (%s)"
 msgid "Other Codeset"
 msgstr "Outra codificación de caracteres"
 
-#: ../src/selector.c:165
+#: ../src/selector.c:166
 msgid "Code_set:"
 msgstr "_Codificación de caracteres:"
 
-#: ../src/selector.c:187
+#: ../src/selector.c:190
 #, c-format
 msgid "'%s' is not supported"
 msgstr "Non hai compatibilidade con '%s'"
 
-#: ../src/selector.c:248
+#: ../src/selector.c:250
 msgid "Auto-Detect"
 msgstr "Detectar automaticamente"
 
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Open"
 msgstr "Abrir"
 
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Save As"
 msgstr "Abrir como"
 
-#: ../src/selector.c:315
+#: ../src/selector.c:314
 msgid "C_haracter Coding:"
 msgstr "_Codificación de caracteres:"
 
-#: ../src/selector.c:373
+#: ../src/selector.c:372
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' xa existe. Desexa sobrescribilo?"
@@ -218,52 +218,52 @@ msgstr "Non foi posíbel abrir o ficheiro para escribir"
 msgid "Can't write file"
 msgstr "Non foi posíbel escribir o ficheiro"
 
-#: ../src/search.c:136
+#: ../src/search.c:125
 msgid "Search string not found"
 msgstr "Non se atopou a cadea de busca"
 
-#: ../src/search.c:189
+#: ../src/search.c:178
 msgid "Replace?"
 msgstr "Desexa substituír?"
 
-#: ../src/search.c:252
+#: ../src/search.c:241
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d cadeas substituídas"
 
-#: ../src/search.c:298
+#: ../src/search.c:287
 msgid "Replace"
 msgstr "Substituír"
 
-#: ../src/search.c:305
+#: ../src/search.c:294
 msgid "Find"
 msgstr "Buscar"
 
-#: ../src/search.c:317
+#: ../src/search.c:306
 msgid "Fi_nd what:"
 msgstr "_Buscar por:"
 
-#: ../src/search.c:336
+#: ../src/search.c:325
 msgid "Re_place with:"
 msgstr "Substituír _con:"
 
-#: ../src/search.c:350
+#: ../src/search.c:339
 msgid "_Match case"
 msgstr "_Diferenciar maiúsculas de minúsculas"
 
-#: ../src/search.c:355
+#: ../src/search.c:344
 msgid "Replace _all at once"
 msgstr "Substituír _todo"
 
-#: ../src/search.c:406
+#: ../src/search.c:395
 msgid "Jump To"
 msgstr "Ir á liña"
 
-#: ../src/search.c:411
+#: ../src/search.c:400
 msgid "_Jump"
 msgstr "_Ir á liña"
 
-#: ../src/search.c:418
+#: ../src/search.c:407
 msgid "_Line number:"
 msgstr "Número de _liña:"
 

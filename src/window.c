@@ -28,10 +28,10 @@ MainWin *create_main_window(void)
 {
 	GtkWidget *window;
 	GtkWidget *vbox;
- 	GtkWidget *menubar;
- 	GtkWidget *sw;
- 	GtkWidget *view;
-// 	gint size;
+	GtkWidget *menubar;
+	GtkWidget *sw;
+	GtkWidget *view;
+//	gint size;
 //	GtkAdjustment *hadj, *vadj;
 
 	MainWin *mw = g_malloc(sizeof(MainWin));

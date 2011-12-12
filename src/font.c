@@ -24,16 +24,8 @@ void set_text_font_by_name(GtkWidget *widget, gchar *fontname)
 	PangoFontDescription *font_desc;
 
 	font_desc = pango_font_description_from_string(fontname);
-	gtk_widget_modify_font(widget, font_desc);
+	gtk_widget_override_font(widget, font_desc);
 	pango_font_description_free(font_desc);
-}
-
-gchar *get_font_name_from_widget(GtkWidget *widget) /* MUST BE FREED */
-{
-	GtkStyle *style;
-
-	style = gtk_widget_get_style(widget);
-	return pango_font_description_to_string(style->font_desc);
 }
 
 static gchar *get_font_name_by_selector(GtkWidget *window, gchar *current_fontname)
@@ -57,7 +49,7 @@ void change_text_font_by_selector(GtkWidget *widget)
 {
 	gchar *current_fontname, *fontname;
 
-	current_fontname = get_font_name_from_widget(widget);
+	current_fontname = pango_font_description_to_string(gtk_style_context_get_font(gtk_widget_get_style_context(widget), 0));
 	fontname = get_font_name_by_selector(
 		gtk_widget_get_toplevel(widget), current_fontname);
 	if (fontname) {

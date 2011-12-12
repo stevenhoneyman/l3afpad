@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-06 17:04+0800\n"
+"POT-Creation-Date: 2011-10-08 16:32+0800\n"
 "PO-Revision-Date: 2006-04-23 00:52+0200\n"
 "Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -151,7 +151,7 @@ msgstr "Lɜafpad"
 msgid "Save changes to '%s'?"
 msgstr "Αποθήκευση αλλαγών στο '%s' ;"
 
-#: ../src/font.c:44
+#: ../src/font.c:36
 msgid "Font"
 msgstr "Γραμματοσειρά"
 
@@ -164,32 +164,32 @@ msgstr "Τρέχον Locale (%s)"
 msgid "Other Codeset"
 msgstr "Άλλες κωδικοποίησεις"
 
-#: ../src/selector.c:165
+#: ../src/selector.c:166
 msgid "Code_set:"
 msgstr "Σετ χαρακτήρων:"
 
-#: ../src/selector.c:187
+#: ../src/selector.c:190
 #, c-format
 msgid "'%s' is not supported"
 msgstr "το '%s' δεν υποστηρίζεται"
 
-#: ../src/selector.c:248
+#: ../src/selector.c:250
 msgid "Auto-Detect"
 msgstr "Αυτόματη αναγνώριση"
 
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Open"
 msgstr "Άνοιγμα"
 
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Save As"
 msgstr "Αποθήκευση ως"
 
-#: ../src/selector.c:315
+#: ../src/selector.c:314
 msgid "C_haracter Coding:"
 msgstr "Κωδικοποίηση χ_αρακτήρων:"
 
-#: ../src/selector.c:373
+#: ../src/selector.c:372
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "Το '%s' υπάρχει ήδη. Να αντικατασταθεί;"
@@ -211,52 +211,52 @@ msgstr "Αδυναμία εγγραφής σε αυτό το αρχείο."
 msgid "Can't write file"
 msgstr "Αδύνατη η εγγραφή του αρχείου"
 
-#: ../src/search.c:136
+#: ../src/search.c:125
 msgid "Search string not found"
 msgstr "Δεν βρέθηκε ταίρι"
 
-#: ../src/search.c:189
+#: ../src/search.c:178
 msgid "Replace?"
 msgstr "Αντικατάσταση;"
 
-#: ../src/search.c:252
+#: ../src/search.c:241
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d επαναλήψεις αντικαταστάθηκαν."
 
-#: ../src/search.c:298
+#: ../src/search.c:287
 msgid "Replace"
 msgstr "Αντικατάσταση"
 
-#: ../src/search.c:305
+#: ../src/search.c:294
 msgid "Find"
 msgstr "Εύρεση"
 
-#: ../src/search.c:317
+#: ../src/search.c:306
 msgid "Fi_nd what:"
 msgstr "Εύ_ρεση κειμένου:"
 
-#: ../src/search.c:336
+#: ../src/search.c:325
 msgid "Re_place with:"
 msgstr "Α_ντικατάσταση με:"
 
-#: ../src/search.c:350
+#: ../src/search.c:339
 msgid "_Match case"
 msgstr "_Ταίριασμα πεζών-κεφαλαίων"
 
-#: ../src/search.c:355
+#: ../src/search.c:344
 msgid "Replace _all at once"
 msgstr "Αντικατάσταση _όλων"
 
-#: ../src/search.c:406
+#: ../src/search.c:395
 msgid "Jump To"
 msgstr "Μετάβαση σε"
 
-#: ../src/search.c:411
+#: ../src/search.c:400
 msgid "_Jump"
 msgstr "_Μετάβαση"
 
-#: ../src/search.c:418
+#: ../src/search.c:407
 msgid "_Line number:"
 msgstr "_Αριθμός γραμμής:"
 

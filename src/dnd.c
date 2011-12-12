@@ -83,9 +83,7 @@ static void dnd_open_first_file(gchar *filename)
 //		undo_init(sd->mainwin->textview, sd->mainwin->textbuffer, sd->mainwin->menubar);
 	}
 }
-#endif
 
-#if 0
 static void dnd_drag_data_recieved_handler(GtkWidget *widget,
 	GdkDragContext *context, gint x, gint y,
 	GtkSelectionData *selection_data, guint info, guint time)
@@ -102,10 +100,8 @@ static void dnd_drag_data_recieved_handler(GtkWidget *widget,
 #endif
 DV(g_print("DND start!\n"));
 
-#if 0
 	if (g_ascii_strcasecmp(gdk_atom_name(context->targets->data),
 	    "GTK_TEXT_BUFFER_CONTENTS") != 0) {
-#endif
 		if (flag_called_once) {
 			flag_called_once = FALSE;
 			g_signal_stop_emission_by_name(widget, "drag_data_received");
@@ -223,4 +219,3 @@ DV(g_print("%s\n", name));
 	return flag;
 }
 #endif
-

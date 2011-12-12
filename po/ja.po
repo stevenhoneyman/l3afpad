@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: L3afpad 0.8.11\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-06 17:04+0800\n"
+"POT-Creation-Date: 2011-10-08 16:32+0800\n"
 "PO-Revision-Date: 2007-05-06 20:26+0900\n"
 "Last-Translator: Tarot Osuji <tarot@sdf.lonestar.org>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -149,7 +149,7 @@ msgstr "Lɜafpad"
 msgid "Save changes to '%s'?"
 msgstr "'%s' の変更を保存しますか?"
 
-#: ../src/font.c:44
+#: ../src/font.c:36
 msgid "Font"
 msgstr "フォント"
 
@@ -162,32 +162,32 @@ msgstr "現在のロケール (%s)"
 msgid "Other Codeset"
 msgstr "その他の文字コード"
 
-#: ../src/selector.c:165
+#: ../src/selector.c:166
 msgid "Code_set:"
 msgstr "文字コード(_S):"
 
-#: ../src/selector.c:187
+#: ../src/selector.c:190
 #, c-format
 msgid "'%s' is not supported"
 msgstr "'%s' はサポートされていません"
 
-#: ../src/selector.c:248
+#: ../src/selector.c:250
 msgid "Auto-Detect"
 msgstr "自動検出"
 
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Open"
 msgstr "開く"
 
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Save As"
 msgstr "別名で保存"
 
-#: ../src/selector.c:315
+#: ../src/selector.c:314
 msgid "C_haracter Coding:"
 msgstr "文字コード(_H):"
 
-#: ../src/selector.c:373
+#: ../src/selector.c:372
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' は既に存在します. 上書きしますか?"
@@ -209,52 +209,52 @@ msgstr "ファイルを作成できませんでした"
 msgid "Can't write file"
 msgstr "ファイルに書きこめませんでした"
 
-#: ../src/search.c:136
+#: ../src/search.c:125
 msgid "Search string not found"
 msgstr "検索文字列が見つかりません"
 
-#: ../src/search.c:189
+#: ../src/search.c:178
 msgid "Replace?"
 msgstr "置換しますか?"
 
-#: ../src/search.c:252
+#: ../src/search.c:241
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d 個の文字列を置換しました"
 
-#: ../src/search.c:298
+#: ../src/search.c:287
 msgid "Replace"
 msgstr "置換"
 
-#: ../src/search.c:305
+#: ../src/search.c:294
 msgid "Find"
 msgstr "検索"
 
-#: ../src/search.c:317
+#: ../src/search.c:306
 msgid "Fi_nd what:"
 msgstr "検索する文字列(_N):"
 
-#: ../src/search.c:336
+#: ../src/search.c:325
 msgid "Re_place with:"
 msgstr "置換後の文字列(_P):"
 
-#: ../src/search.c:350
+#: ../src/search.c:339
 msgid "_Match case"
 msgstr "大文字と小文字を区別する(_M)"
 
-#: ../src/search.c:355
+#: ../src/search.c:344
 msgid "Replace _all at once"
 msgstr "全て置換(_A)"
 
-#: ../src/search.c:406
+#: ../src/search.c:395
 msgid "Jump To"
 msgstr "行へジャンプ"
 
-#: ../src/search.c:411
+#: ../src/search.c:400
 msgid "_Jump"
 msgstr "ジャンプ(_J)"
 
-#: ../src/search.c:418
+#: ../src/search.c:407
 msgid "_Line number:"
 msgstr "行番号(_L):"
 

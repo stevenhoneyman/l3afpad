@@ -34,21 +34,21 @@ typedef enum
 	/* Possible future plans: SEARCH_REGEXP */
 } GtkSourceSearchFlags;
 
-gboolean gtk_source_iter_forward_search 	(const GtkTextIter   *iter,
+gboolean gtk_source_iter_forward_search (const GtkTextIter   *iter,
 						 const gchar         *str,
 						 GtkSourceSearchFlags flags,
 						 GtkTextIter         *match_start,
 						 GtkTextIter         *match_end,
 						 const GtkTextIter   *limit);
 
-gboolean gtk_source_iter_backward_search 	(const GtkTextIter   *iter,
+gboolean gtk_source_iter_backward_search (const GtkTextIter   *iter,
 						 const gchar         *str,
 						 GtkSourceSearchFlags flags,
 						 GtkTextIter         *match_start,
 						 GtkTextIter         *match_end,
 						 const GtkTextIter   *limit);
 
-gboolean gtk_source_iter_find_matching_bracket 	(GtkTextIter         *iter);
+gboolean gtk_source_iter_find_matching_bracket (GtkTextIter         *iter);
 
 G_END_DECLS
 

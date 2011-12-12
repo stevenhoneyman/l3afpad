@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-06 17:04+0800\n"
+"POT-Creation-Date: 2011-10-08 16:32+0800\n"
 "PO-Revision-Date: 2009-06-24 21:36+0100\n"
 "Last-Translator: Michał Trzebiatowski <hippie_1968@hotmail.com>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
@@ -186,7 +186,7 @@ msgid "Save changes to '%s'?"
 msgstr "Zachować zmiany w '%s'?"
 
 # src/font.c:44
-#: ../src/font.c:44
+#: ../src/font.c:36
 msgid "Font"
 msgstr "Czcionka"
 
@@ -202,38 +202,38 @@ msgid "Other Codeset"
 msgstr "Inne kodowanie znaków"
 
 # src/selector.c:170
-#: ../src/selector.c:165
+#: ../src/selector.c:166
 msgid "Code_set:"
 msgstr "Kodowanie znaków:"
 
 # src/selector.c:192
-#: ../src/selector.c:187
+#: ../src/selector.c:190
 #, c-format
 msgid "'%s' is not supported"
 msgstr "'%s' nie jest obsługiwany(a)"
 
 # src/selector.c:253
-#: ../src/selector.c:248
+#: ../src/selector.c:250
 msgid "Auto-Detect"
 msgstr "Autowykrywanie"
 
 # src/selector.c:305
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Open"
 msgstr "Otwórz"
 
 # src/selector.c:305
-#: ../src/selector.c:300
+#: ../src/selector.c:299
 msgid "Save As"
 msgstr "Zapisz jako"
 
 # src/selector.c:329
-#: ../src/selector.c:315
+#: ../src/selector.c:314
 msgid "C_haracter Coding:"
 msgstr "_Kodowanie znaków:"
 
 # src/selector.c:400
-#: ../src/selector.c:373
+#: ../src/selector.c:372
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' już istnieje. Czy go zastąpić?"
@@ -265,74 +265,74 @@ msgstr "Nie można zapisać pliku"
 
 # src/search.c:132
 # src/search.c:138
-#: ../src/search.c:136
+#: ../src/search.c:125
 msgid "Search string not found"
 msgstr "Szukany łańcuch nie został znaleziony"
 
 # src/search.c:175
 # src/search.c:181
-#: ../src/search.c:189
+#: ../src/search.c:178
 msgid "Replace?"
 msgstr "Zastąpić?"
 
 # src/search.c:210
 # src/search.c:218
-#: ../src/search.c:252
+#: ../src/search.c:241
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d łańcuchów zastąpiono"
 
 # src/search.c:256
 # src/search.c:264
-#: ../src/search.c:298
+#: ../src/search.c:287
 msgid "Replace"
 msgstr "Zastąp"
 
 # src/search.c:263
 # src/search.c:271
-#: ../src/search.c:305
+#: ../src/search.c:294
 msgid "Find"
 msgstr "Znajdź"
 
 # src/search.c:276
 # src/search.c:284
-#: ../src/search.c:317
+#: ../src/search.c:306
 msgid "Fi_nd what:"
 msgstr "_Znajdź:"
 
 # src/search.c:292
 # src/search.c:300
-#: ../src/search.c:336
+#: ../src/search.c:325
 msgid "Re_place with:"
 msgstr "Z_amień na:"
 
 # src/search.c:306
 # src/search.c:314
-#: ../src/search.c:350
+#: ../src/search.c:339
 msgid "_Match case"
 msgstr "_Uwzględniaj wielkość liter"
 
 # src/search.c:311
 # src/search.c:319
-#: ../src/search.c:355
+#: ../src/search.c:344
 msgid "Replace _all at once"
 msgstr "Zamień _wszystko"
 
 # src/search.c:362
 # src/search.c:370
-#: ../src/search.c:406
+#: ../src/search.c:395
 msgid "Jump To"
 msgstr "Idź do"
 
 # src/search.c:368
 # src/search.c:376
-#: ../src/search.c:411
+#: ../src/search.c:400
 msgid "_Jump"
 msgstr "_Idź"
 
 # src/search.c:375
 # src/search.c:383
-#: ../src/search.c:418
+#: ../src/search.c:407
 msgid "_Line number:"
 msgstr "Numer _linii:"
 

@@ -272,12 +272,8 @@ DV({g_print("Painting line numbers %d - %d\n",
 
 		pango_layout_set_text (layout, str, -1);
 
-		gtk_paint_layout (gtk_widget_get_style(widget),
+		gtk_render_layout (gtk_widget_get_style_context(widget),
 		                  event,
-		                  gtk_widget_get_state (widget),
-		                  FALSE,
-		                  widget,
-		                  NULL,
 		                  layout_width + justify_width + margin / 2 + 1,
 		                  pos,
 		                  layout);

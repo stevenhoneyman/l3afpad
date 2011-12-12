@@ -78,7 +78,7 @@ void save_config_file(void)
 	gboolean wordwrap, linenumbers, autoindent;
 
 	gtk_window_get_size(GTK_WINDOW(pub->mw->window), &width, &height);
-	fontname = get_font_name_from_widget(pub->mw->view);
+	fontname = pango_font_description_to_string(gtk_style_context_get_font(gtk_widget_get_style_context(pub->mw->view), 0));
 	ifactory = gtk_item_factory_from_widget(pub->mw->menubar);
 	wordwrap = gtk_check_menu_item_get_active(
 		GTK_CHECK_MENU_ITEM(gtk_item_factory_get_item(ifactory,
@@ -202,6 +202,10 @@ gint main(gint argc, gchar **argv)
 	pub->fi->lineend      = LF;
 
 	parse_args(argc, argv, pub->fi);
+
+#if !ENABLE_XINPUT2
+	gdk_disable_multidevice();
+#endif
 
 	gtk_init(&argc, &argv);
 	g_set_application_name(PACKAGE_NAME);
