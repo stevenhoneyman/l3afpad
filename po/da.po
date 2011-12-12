@@ -1,0 +1,280 @@
+# Danish translation for L3afpad.
+# Copyright (C) 2008 L3afpad.
+# This file is distributed under the same license as the l3afpad package.
+# Joe Hansen <joedalton2@yahoo.dk>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: l3afpad-0.8.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2008-08-24 00:00+0100\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_Fil"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "_Rediger"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "_Søg"
+
+# Men det er jo ikke rigtigt, altså "options"
+# betyder da ikke "funktioner".
+# Det må være en eller anden form for specielt brug i OO,
+# det kan være at OO folkene ved at det rent faktisk er funktioner der gemmer
+# sig i den menu, men det er ikke rigtigt generelt. Når option står i et
+# menupunkt sådan som det gør her, så oversættes det til
+# "Indstillinger", hvis det ikke er i et menu-punkt er der lidt flere muligheder
+# "valgmuligheder" og "indstillinger".
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "_Indstillinger"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "_Hjælp"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "_Ny"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "_Åbn..."
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "_Gem"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "Gem _som..."
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "Vis u_dskrift"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "_Udskriv..."
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "_Afslut"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "_Fortryd"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "G_endan"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "K_lip"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "_Kopier"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "Sæt i_nd"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "_Slet"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "Marker _alt"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "_Find..."
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "Find _Næste"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "Find _foregående"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "_Erstat..."
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "_Gå til..."
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "_Skrifttype..."
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "_Om"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "_Ordombrydning"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "_Linjenumre"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "_Automatisk indryk"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "En simpel GTK+-baseret tekstbehandler"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr ""
+"Joe Hansen <joedalton2@yahoo.dk>\n"
+"\n"
+"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
+"Mere info: http://www.dansk-gruppen.dk"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "Gem ændringer til »%s«?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "Skrifttype"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Nuværende lokalitet (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "Andre kodesæt"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "Kode_sæt:"
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "»%s« understøttes ikke"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "Automatisk detektering"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "Åbn"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "Gem som"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "_Karakterkodning:"
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "»%s« eksisterer allerede. Overskriv?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "Unavngivet"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "Kan ikke konvertere kodesæt til »%s«"
+
+# jeg ville tilføje "..til skrivning (ikke afklaret oversættelse)
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "Kan ikke åbne fil"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "Kan ikke skrive fil"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "Søgestrengen blev ikke fundet"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "Erstat?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d strenge erstattet"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "Erstat"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "Søg"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "Sø_g hvad:"
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "_Erstat med:"
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "_Søgestreng"
+
+# på en gang" ligesom i originalen (ikke afklaret oversættelse af
+# den her streng.
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "Erstat _alle"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "Gå til"
+
+# Måske enkeltords-versionen virker bedre hvis du bruger
+# "hop"
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "_Gå"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "_Linjenummer:"
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Enkel tekstbehandler"

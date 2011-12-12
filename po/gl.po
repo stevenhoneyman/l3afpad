@@ -1,0 +1,272 @@
+# Galician translation for l3afpad package.
+# This file is distributed under the same license as the l3afpad package.
+# Copyright (C) 2010 Leandro Regueiro.
+#
+# Leandro Regueiro <leandro.regueiro@gmail.com>, 2010.
+#
+# Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
+# colaborar connosco, podes atopar máis información en <http://www.trasno.net>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: l3afpad 0.8.16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2010-12-02 10:22+0100\n"
+"Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
+"Language-Team: Galician <proxecto@trasno.net>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_Ficheiro"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "_Editar"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "_Buscar"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "_Opcións"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "A_xuda"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "_Novo"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "_Abrir"
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "_Gardar"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "Gardar _como..."
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "Pre_visualización da impresión"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "_Imprimir"
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "_Saír"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "_Desfacer"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "_Refacer"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "Cor_tar"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "_Copiar"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "_Pegar"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "E_liminar"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "Seleccionar _todo"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "_Buscar..."
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "Buscar segu_inte"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "Buscar an_terior"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "_Substituír..."
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "Ir á _liña..."
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "_Tipo de letra..."
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "_Sobre"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "A_xuste do texto"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "Números de _liña"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "_Sangría automática"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "Editor de texto sinxelo baseado en GTK+"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr ""
+"Leandro Regueiro <leandro.regueiro@gmail.com>, 2010.\n"
+"\n"
+"Proxecto Trasno - Adaptación de software libre á lingua galega:  Se desexas\n"
+"colaborar connosco, podes atopar máis información en <http://www.trasno.net>"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "Desexa gardar os cambios en '%s'?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "Tipo de letra"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Configuración rexional actual (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "Outra codificación de caracteres"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "_Codificación de caracteres:"
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "Non hai compatibilidade con '%s'"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "Detectar automaticamente"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "Abrir"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "Abrir como"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "_Codificación de caracteres:"
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s' xa existe. Desexa sobrescribilo?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "Sen nome"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "Non foi posíbel converter a codificación de caracteres a '%s'"
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "Non foi posíbel abrir o ficheiro para escribir"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "Non foi posíbel escribir o ficheiro"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "Non se atopou a cadea de busca"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "Desexa substituír?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d cadeas substituídas"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "Substituír"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "Buscar"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "_Buscar por:"
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "Substituír _con:"
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "_Diferenciar maiúsculas de minúsculas"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "Substituír _todo"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "Ir á liña"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "_Ir á liña"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "Número de _liña:"
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Editor de texto sinxelo"

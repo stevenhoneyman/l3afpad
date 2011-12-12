@@ -1,0 +1,269 @@
+# Slovenian translations for PACKAGE package
+# Slovenski prevodi paketa PACKAGE.
+# Copyright (C) 2009 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the l3afpad package.
+# Alan Pepelko <alan.pepelko@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: l3afpad-0.8.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2009-04-28 22:31+0100\n"
+"Last-Translator: Alan Pepelko <alan.pepelko@gmail.com>\n"
+"Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3);\n"
+"X-Poedit-Language: Slovenian\n"
+"X-Poedit-Country: SLOVENIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_Datoteka"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "_Uredi"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "_Iskanje"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "M_ožnosti"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "_Pomoč"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "_Nova"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "_Odpri ..."
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "_Shrani"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "Shrani _kot ..."
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "Pre_dogled tiskanja"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "Na_tisni ..."
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "Iz_hod"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "R_azveljavi"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "_Uveljavi"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "Iz_reži"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "_Kopiraj"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "_Prilepi"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "Poči_sti"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "Iz_beri vse"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "_Najdi ..."
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "Najdi na_slednji"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "Najdi _prejšnji"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "_Zamenjaj ..."
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "Poj_di na ..."
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "_Pisava ..."
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "_O"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "Prelom _besedila"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "_Številke vrstic"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "_Zamik prve vrstice"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "Preprost urejevalnik besedila temelječ na GTK+"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr "Alan Pepelko <alan.pepelko@gmail.com>"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "Želite shraniti spremembe v '%s'?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "Pisava"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Trenutne lokalne nastavitve (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "Drug nabor znakov"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "Nabor _znakov:"
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' ni podprt"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "Samozaznaj"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "Odpri"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "Shrani kot"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "_Kodiranje znakov:"
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "Datoteka '%s' že obstaja. Jo želite prepisati?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "Neimenovano"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "Ni mogoče pretvoriti nabora znakov v '%s'"
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "Ni mogoče odpreti datoteke"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "Ni mogoče zapisati datoteke"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "Iskanega niza ni mogoče najti"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "Želite zamenjati?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d nizov zamenjanih"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "Zamenjaj"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "Najdi"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "_Najdi kaj:"
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "Zamenjaj z:"
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "_Velikost črk mora ustrezati"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "Zamenjaj _vse naenkrat"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "Pojdi na"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "Po_jdi"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "Števi_lka vrstice:"
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Preprost urejevalnik besedila"

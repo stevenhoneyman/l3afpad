@@ -1,0 +1,263 @@
+# Hebrew translation of L3afpad.
+# Copyright (C) 2005 THE L3afpad'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the L3afpad package.
+# Yo'av Moshe <black_jesus@myrealbox.com>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: L3afpad 0.8.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2005-07-31 22:54+0300\n"
+"Last-Translator: Yo'av Moshe <black_jesus@myrealbox.com>\n"
+"Language-Team: Hebrew\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_קובץ"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "_עריכה"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "_חיפוש"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "_אפשרויות"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "_עזרה"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "_חדש"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "_פתח..."
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "_שמור"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "שמור _בשם..."
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "_הדפס..."
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "_הדפס..."
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "י_ציאה"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "_בטל"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "ב_צע שוב"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "_גזור"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "_העתק"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "ה_דבק"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "_מחק"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "בחר בה_כל"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "_חפש..."
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "מצא את ה_בא"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "מצא את ה_קודם"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "_החלף"
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "_עבור אל"
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "_גופן"
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "_אודות"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "ג_לישת שורות"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "_מספרי שורות"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "_עימוד אוטומטי"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "עורך טקסט פשוט מבוסס GTK+"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr "Yo´av Moshe <black_jesus@myrealbox.com>"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "לשמור שינויים לקובץ '%s'?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "גופן"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "השפה שבשימוש (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "מערך תוים אחר"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "_מערך תוים:"
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' לא נתמך"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "זיהוי אוטומטי"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "פתח"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "שמור בשם"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "מערך תוים:"
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s' כבר קיים. להחליף?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "ללא שם"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "אי-אפשר להמיר את מערך התוים אל '%s'"
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "אי-אפשר לפתוח קובץ לכתיבה"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "אי-אפשר לכתוב קובץ"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "מחרוזת החיפוש לא נמצאה"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "להחליף?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d מחרוזות הוחלפו"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "החלף"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "חפש"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "מה ל_חפש:"
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "להח_ליף ב:"
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "התייחס לאותיות גדולות וקטנות"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "החלף ה_כל בבת אחת"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "עבור אל"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "_עבור"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "_שורה מספר:"
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "עורך טקסט פשוט"

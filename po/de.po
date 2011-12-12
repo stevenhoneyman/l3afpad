@@ -1,0 +1,268 @@
+# German translation of L3afpad
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# This file is distributed under the same license as the L3afpad package.
+# Sebastian Stach <sebsta@t-online.de>, 2004.
+# Ruediger Arp <ruediger@gmx.net>, 2004.
+# Mario Blättermann <mario.blaettermann@t-online.de>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: l3afpad 0.8.16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2009-06-28 13:12+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@t-online.de>\n"
+"Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_Datei"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "_Bearbeiten"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "_Suchen"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "_Optionen"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "_Hilfe"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "_Neu"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "Ö_ffnen"
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "_Speichern"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "Speichern _unter"
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "Druck_vorschau"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "_Drucken …"
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "_Beenden"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "_Rückgängig"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "_Wiederholen"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "_Ausschneiden"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "_Kopieren"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "E_infügen"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "_Löschen"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "_Alles markieren"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "_Suchen …"
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "_Weitersuchen"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "_Rückwärts suchen"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "_Ersetzen …"
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "_Gehe zu …"
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "_Schriftart …"
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "_Info"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "_Zeilenumbruch"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "Zeilen_nummern"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "_Auto-Einzug"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "Einfacher auf GTK+ basierender Texteditor"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr ""
+"Sebastian Stach <sebsta@t-online.de>\n"
+"Ruediger Arp <ruediger@gmx.net>\n"
+"Mario Blättermann <mariobl@gnome.org>"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "Änderungen an »%s« speichern?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "Schriftart"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Derzeitige Standorteinstellung (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "Anderer Zeichensatz"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "_Zeichensatz:"
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "»%s« wird nicht unterstützt"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "Automatisch erkennen"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "Öffnen"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "Speichern unter"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "Zeic_henkodierung: "
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "»%s« existiert bereits. Überschreiben?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "Unbenannt"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "Der Zeichensatz kann nicht nach »%s« konvertiert werden"
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "Die Datei kann nicht zum Schreiben geöffnet werden"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "Die Datei kann nicht geschrieben werden"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "Gesuchter Text wurde nicht gefunden"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "Ersetzen?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d Mal gefunden und ersetzt"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "Ersetzen"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "Suchen"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "_Suchen nach: "
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "_Ersetzen durch: "
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "_Groß-/Kleinschreibung berücksichtigen"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "_Alles ersetzen"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "Gehe zu"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "_Gehe zu"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "Zeilen_nummer: "
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Einfacher Texteditor"

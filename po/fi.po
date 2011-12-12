@@ -1,0 +1,265 @@
+# Finnish messages for l3afpad.
+# Copyright © 2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the l3afpad package.
+# Eero Tamminen <eerot@sf>, 2006.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: l3afpad 0.8.16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2010-12-07 13:02+0200\n"
+"Last-Translator: Jorma Karvonen <karvonen.jorma@gmail.com>\n"
+"Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_Tiedosto"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "Muo_kkaa"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "_Hae"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "_Asetukset"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "_Opaste"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "_Uusi"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "_Avaa..."
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "Talle_nna"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "Tallenna ni_mellä..."
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "E_sikatselu"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "Tu_losta..."
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "_Poistu"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "Per_u"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "Uu_delleen"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "L_eikkaa"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "Kop_ioi"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "_Liitä"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "_Poista"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "_Valitse kaikki"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "_Hae..."
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "Hae _seuraava"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "Hae _edellinen"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "_Korvaa..."
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "_Siirry riville..."
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "_Kirjasin..."
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "O_hjelmasta"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "_Rivitys"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "Rivi_numerot"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "Auto_maattinen sisennys"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "GTK+-pohjainen yksinkertainen tekstieditori"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr "Eero Tamminen, Jorma Karvonen"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "Tallenna ’%s’ muutokset?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "Kirjasin"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Nykyinen paikallisasetus (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "Toinen koodaus"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "_Koodaus:"
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "’%s’ ei ole tuettu"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "Automaattitunnistus"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "Avaa"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "Tallenna nimellä"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "_Merkistökoodaus:"
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "’%s’ on jo olemassa. Korvataanko?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "Nimetön"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "Koodaukseen ’%s’ muunnos ei onnistu"
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "Tiedoston avaus kirjoitusta varten ei onnistu"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "Tiedoston kirjoitus ei onnistu"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "Haettua merkkijonoa ei löydy"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "Korvaa?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d merkkijonoa korvattu"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "Korvaa"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "Hae"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "_Etsi:"
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "Ko_rvaa:"
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "_Tarkista pienet/ISOT"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "_Korvaa kaikki kerralla"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "Siirry riville"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "_Siirry"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "_Rivinumero:"
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Yksinkertainen tekstieditori"

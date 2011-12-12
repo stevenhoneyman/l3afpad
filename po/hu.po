@@ -1,0 +1,268 @@
+# Hungarian translation of L3afpad
+# Copyright (C) 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the L3afpad package.
+# Reviczky Ádám János <reviczky@freemail.hu>, 2007.
+# Kalman Kemenczy <kkemenczy@gmail.com>, 2010
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: l3afpad-0.8.16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2010-05-04 10:02+0200\n"
+"Last-Translator: Kalman Kemenczy <kkemenczy@gmail.com>\n"
+"Language-Team: Hungarian <translation-team-hu@lists.sourceforge.net>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.2\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_Fájl"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "Sz_erkesztés"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "Keres_és"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "_Beállítások"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "_Súgó"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "Ú_j"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "Megny_itás..."
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "Men_tés"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "Ment Má_skent..."
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "Ny_omtatási kép"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "_Nyomtatás..."
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "_Kilépés"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "_Visszavonás"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "Ú_jra"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "K_ivágás"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "M_ásolás"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "_Beillesztés"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "Tö_rlés"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "Mindent Kije_lölés"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "_Keres..."
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "K_övetkező Keresése"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "Elő_ző Keresése"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "_Csere..."
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "_Ugrás..."
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "Betütí_pus..."
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "_Névjegy"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "_Sortörés"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "Sorszá_mok"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "Automatikus Be_húzás"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "GTK+-ra épülő egyszerű szöveg szerkesztő"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr ""
+"Reviczky Ádám János <reviczky@freemail.hu>\n"
+"Kéménczy Kálmán <kkemenczy@gmail.com>"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "Elmenti a változásokat ide: '%s' ?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "Betűtípus"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Jelenlegi nyelv (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "Más kódtábla"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "Kód_tábla:"
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "A(z) '%s' nem támogatott"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "Automatikus felismerés"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "Megnyitás"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "Mentés másként"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "K_arakterkódolás:"
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "A(z) '%s' már létezik. Felülírja?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "Névtelen"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "A kódtáblát nem lehet erre konvertálni: '%s'"
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "Nem lehet a fájlt írásra megnyitni"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "Nem lehet a fájlt írni"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "A keresett szöveg nem található"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "Kicseréli?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "A(z) %d szövegrészlet kicserélve"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "Csere"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "Keresés"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "_Keresett szöveg:"
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "_Csere erre:"
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "_Kis- és nagybetű különbözik"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "Mind_et egyszerre cseréli"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "Ugrás Ide"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "_Ugrás"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "S_orszám:"
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Egyszerű szöveg szerkesztő"

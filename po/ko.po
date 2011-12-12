@@ -1,0 +1,263 @@
+# Korean translation of L3afpad
+# Copyright (C) 2006 Seo Sanghyeon
+# This file is distributed under the same license as the l3afpad package.
+# Seo Sanghyeon <sanxiyn@gmail.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: L3afpad 0.8.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2006-11-01 10:50+0900\n"
+"Last-Translator: Seo Sanghyeon <sanxiyn@gmail.com>\n"
+"Language-Team: Korean\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "파일(_F)"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "편집(_E)"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "검색(_S)"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "설정(_O)"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "도움말(_H)"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "새로 만들기(_N)"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "열기(_O)..."
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "저장(_S)"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "다른 이름으로 저장(_A)..."
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "인쇄 미리보기"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "인쇄(_P)..."
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "끝내기(_Q)"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "실행 취소(_U)"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "다시 실행(_R)"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "잘라내기(_T)"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "복사(_C)"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "붙여넣기(_P)"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "삭제(_D)"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "모두 선택(_A)"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "찾기(_F)..."
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "다음 찾기(_N)"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "이전 찾기(_P)"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "바꾸기(_R)..."
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "이동(_J)..."
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "글꼴(_F)..."
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "정보(_A)"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "자동 줄 바꿈(_W)"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "줄 번호(_L)"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "자동 들여쓰기(_A)"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "GTK+로 만든 간단한 텍스트 편집기"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr "Seo Sanghyeon <sanxiyn@gmail.com>"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "'%s'의 변경된 내용을 저장할까요?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "글꼴"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "현재 로케일 (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr ""
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr ""
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr ""
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "자동 선택"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "열기"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "다른 이름으로 저장"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "문자 인코딩(_H):"
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s'은(는) 이미 있습니다. 덮어쓸까요?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "제목 없음"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr ""
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr ""
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr ""
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "찾지 못했습니다"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "바꿀까요?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d번 바꿨습니다"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "바꾸기"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "찾기"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "찾을 내용(_N):"
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "바꿀 내용(_P):"
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "대/소문자 구분(_M)"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "모두 바꾸기"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "이동"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "이동(_J)"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "줄 번호(_L):"
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "간단한 텍스트 편집기"

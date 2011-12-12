@@ -1,0 +1,267 @@
+# Traditional Chinese translation for l3afpad.
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# This file is distributed under the same license as the l3afpad package.
+# OLS3 <ols3@lxer.idv.tw>, 2005.
+# Wei-Lun Chao <chaoweilun@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: l3afpad 0.8.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2008-03-20 20:21+0800\n"
+"Last-Translator: Wei-Lun Chao <chaoweilun@gmail.com>\n"
+"Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "檔案(_F)"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "編輯(_E)"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "搜尋(_S)"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "選項(_O)"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "求助(_H)"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "新建(_N)"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "開啟(_O)…"
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "儲存(_S)"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "另存為(_A)…"
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "列印預覽(_V)"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "列印(_P)…"
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "離開(_Q)"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "回復(_U)"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "重做(_R)"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "剪下(_T)"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "複製(_C)"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "貼上(_P)"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "刪除(_D)"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "全選(_A)"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "尋找(_F)…"
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "尋找下一個(_N)"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "尋找上一個(_P)"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "置換(_R)…"
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "跳至(_J)…"
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "字型(_F)…"
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "關於(_A)"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "自動換列(_W)"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "列號(_L)"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "自動縮排(_A)"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "基於 GTK+ 的簡易文字編輯器"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr ""
+"OLS3 <ols3@lxer.idv.tw>\n"
+"趙惟倫 <chaoweilun@gmail.com>"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "要將變更儲存到「%s」？"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "字型"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "目前語區 (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "其它編碼"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "編碼(_S):"
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "「%s」尚未支援"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "自動偵測"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "開啟"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "另存新檔"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "字元編碼(_H):"
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "檔案「%s」已經存在。要覆蓋它嗎？"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "未命名"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "無法將編碼轉換為「%s」"
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "無法打開要寫入的檔案"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "無法寫入檔案"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "找不到搜尋字串"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "要置換嗎？"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "置換了 %d 個字串"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "置換"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "尋找"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "尋找(_N):"
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "置換成(_P):"
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "區分大小寫(_M)"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "全部置換(_A)"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "跳至"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "跳至(_J)"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "列號(_L):"
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "簡易文字編輯器"

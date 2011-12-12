@@ -1,0 +1,267 @@
+# Latvain translation of l3afpad.
+# Copyright (C) 2009 l3afpad
+# This file is distributed under the same license as the l3afpad package.
+# Arvis Lācis <arvis.lacis@inbox.lv>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: l3afpad-0.8.16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2009-07-30 12:44+0100\n"
+"Last-Translator: Rihards Priedītis <rprieditis@gmail.com>\n"
+"Language-Team: Latvian <translation-team-lv@lists.sourceforge.net>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Latvian\n"
+"X-Poedit-Country: LATVIA\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_Fails"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "_Rediģēt"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "_Meklēt"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "_Uzstādījumi"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "_Palīdzība"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "_Jauns"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "_Atvērt..."
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "_Saglabāt"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "Saglabāt _kā..."
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "Drukas priekšs_katījums"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "_Drukāt..."
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "_Iziet"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "At_saukt"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "_Atjaunot"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "Izgriez_t"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "_Kopēt"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "Ie_līmēt"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "_Izdzēst"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "Atlasīt _visu"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "_Atrast..."
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "Atrast _nākošo"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "Atrast iep_riekšējo"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "Ai_zstāt..."
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "_Pāriet uz..."
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "_Fonts..."
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "_Par"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "_Vārda aplaušana"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "_Rindu numuri"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "_Automātiska atkāpe"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "Uz GTK+ balstīts vienkāršā teksta redaktors"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr "Arvis Lācis <arvis.lacis@inbox.lv>, 2009"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "Saglabāt izmaiņas \"%s\"?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "Fonts"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Pašreizējā lokāle (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "Citi kodējumi"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "Kodē_jums:"
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' netiek atbalstīts"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "Automātiska pamanīšana"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "Atvērt"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "Saglabāt kā"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "Sim_bola kodējums:"
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s' jau eksistē. Vai pārrakstīt?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "Nenosaukts"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "Nevar pārvērst kodējumu uz '%s'"
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "Nevar atvērt failu rakstīšanai"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "Nevar rakstīt failu"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "Meklējamā virkne netika atrasta"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "Aizstāt?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d virknes aizstātas"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "Aizstāt"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "Atrast"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "At_rast ko:"
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "Aizstāt a_r:"
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "_Reģistra jūtīgs"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "Aizstāt _visu vienlaicīgi"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "Pāriet uz"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "_Pāriet"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "_Rindas numurs:"
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Vienkāršā teksta redaktors"

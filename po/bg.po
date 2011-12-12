@@ -1,0 +1,269 @@
+# Bulgarian translation of l3afpad.
+# Copyright (C) 2005, 2006 Free Software Foundation, Inc.
+# This file is distributed under the same license as the l3afpad package.
+# Yavor Doganov <yavor@doganov.org>, 2005, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: l3afpad 0.8.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2006-05-20 13:05+0300\n"
+"Last-Translator: Yavor Doganov <yavor@doganov.org>\n"
+"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_Файл"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "_Редактиране"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "_Търсене"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "_Настройки"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "_Помощ"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "_Нов"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "_Отваряне..."
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "_Запазване"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "Запазване _като..."
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "Преглед за печат"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "_Печат..."
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "_Изход"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "_Отмяна"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "_Повтаряне"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "От_рязване"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "_Копиране"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "По_ставяне"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "Из_триване"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "Избор на вси_чко"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "_Търсене..."
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "Намиране на _следващ"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "Намиране на п_редишен"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "_Замяна..."
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "_Отиване на..."
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "_Шрифт..."
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "_Относно"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "Режим с _пренасяне"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "_Номера на редове"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "_Автоматичен отстъп"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "Опростен текстов редактор, базиран на GTK+"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr ""
+"Явор Доганов <yavor@doganov.org>\n"
+"\n"
+"Проектът за превод на GNOME има нужда от подкрепа.\n"
+"Научете повече за нас на http://gnome.cult.bg\n"
+"Докладвайте за грешки на http://gnome.cult.bg/bugs"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "Запазване на промените в „%s“?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "Шрифт"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Текущ локал (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "Друго кодиране на символите"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "Кодиране на _символите:"
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "„%s“ не се поддържа"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "Автоматично"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "Отваряне"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "Запазване като"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "Ко_диране на символите:"
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "„%s“ вече съществува, да се презапише ли?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "Неозаглавено"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "Превръщането в кодиране „%s“ е невъзможно"
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "Файлът не може да бъде отворен за запис"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "Файлът не може да бъде запазен"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "Търсеният низ не е намерен"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "Заменяне?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d низа са заменени"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "Замяна"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "Търсене"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "Търсене _на:"
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "_Замяна с:"
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "За_читане на малки/големи"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "Замяна на _всички"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "Отиване на"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "_Отиване на ред"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "_Ред номер:"
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Опростен текстов редактор"

@@ -1,0 +1,263 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: L3afpad 0.7.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date:2004-10-24 00:40+0400\n"
+"Last-Translator: Artem Vakhitov <temcat@mail.ru>\n"
+"Language-Team: RUSSIAN <ru@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_Файл"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "_Правка"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "П_оиск"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "Параметры"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "_Справка"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "_Создать"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "_Открыть..."
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "Со_хранить"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "Сохранить _как..."
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "В_ыход"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "В_ыход"
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "В_ыход"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "_Отменить"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "Ве_рнуть"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "_Вырезать"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "_Копировать"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "Вст_авить"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "У_далить"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "В_ыделить все"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "_Найти..."
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "Найти след_ующее"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "Найти пред_ыдущее"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "За_менить..."
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "Перейти к _строке..."
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "_Шрифт..."
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "_О программе"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "_Переносить слова"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "Показывать _номера строк"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "_Автоматический отступ"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "Простой текстовый редактор на основе GTK+"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr "Artem Vakhitov <temcat@mail.ru>"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "Сохранить изменения в '%s'?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "Шрифт"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Текущая локаль (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "Другая кодировка"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "_Кодировка:"
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' не поддерживается"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "Автоопределение"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "Открытие файла"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "Сохранение файла"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "Ко_дировка символов"
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s' уже существует. Переписать?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "Без имени"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "Не удалось преобразовать кодировку в '%s'"
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "Не удалось открыть файл для записи"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "Не удалось записать файл"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "Искомая строка не найдена"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "Заменить?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d строк заменено"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "Замена"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "Поиск"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "На_йти: "
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "З_аменить на: "
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "Учитывать _регистр"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "Заменить _все"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "Переход"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "_Перейти"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "_Номер строки: "
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Простой текстовый редактор"

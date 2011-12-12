@@ -1,0 +1,273 @@
+# Norwegian Nynorsk translation for l3afpad.
+# This file is distributed under the same license as the l3afpad package.
+# Robert Grønning <robertg@bitstorm.no>, 2009.
+# Åsmund Skjæveland <aasmunds@fys.uio.no>, 2009.
+# Eskild Hustvedt <eskildh@gnome.org>, 2009.
+# Eivind Ødegård <gingermig@yahoo.no>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: l3afpad 0.8.16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2009-07-03 13:59+0100\n"
+"Last-Translator: Eivind Ødegård <meinmycell-lists@yahoo.no>\n"
+"Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Norwegian Nynorsk\n"
+"X-Poedit-Country: NORWAY\n"
+"X-Poedit-Basepath: /home/eivind/umseting/l3afpad\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_Fil"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "R_ediger"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "Søk"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "_Val"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "_Hjelp"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "_Ny"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "_Opne..."
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "_Lagre"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "Lagre som..."
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "Førehands_vising"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "S_kriv ut..."
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "Avslu_tt"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "A_ngre"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "Gje_r om"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "_Klypp ut"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "K_opier"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "_Lim inn"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "_Slett"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "Vel _alt"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "_Finn..."
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "Finn _neste"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "Finn f_ørre"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "_Byt ut..."
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "_Gå til..."
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "Skrifttype..."
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "_Om"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "_Ordbryting"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "_Linjenummer"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "_Autoinnrykk"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "Enkel tekstredigerar basert på GTK+"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr ""
+"Robert Grønning <robertg@bitstorm.no>\n"
+"Åsmund Skjæveland <aasmunds@fys.uio.no>\n"
+"Eskild Hustvedt <eskildh@gnome.org>\n"
+"Eivind Ødegård <gingermig@yahoo.no\n"
+"\n"
+"Send feilmeldingar og kommentarar til <i18n-nn@lister.ping.uio.no>"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "Lagra endringar i «%s»?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "Skrifttype"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Noverande lokale (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "Anna teiknsett"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "Teikn_sett:"
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "«%s» er ikkje støtta"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "Finn automatisk"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "Opne"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "Lagre som"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "T_eiknkoding:"
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "Fila «%s» finst allereie. Vil du overskriva ho?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "Utan namn"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "Kan ikkje konvertera teiknsettet til «%s»"
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "Klarte ikkje opna fila for lagring"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "Klarer ikkje skriva fila"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "Fann ikkje søkjetekst"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "Byt ut?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "bytte ut %d strengar"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "Byt ut"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "Finn"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "Fi_nn dette:"
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "_Byt ut med:"
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "_Treff på små/store bokstavar"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "Byt ut _alle med ein gong"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "Hopp til"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "_Hopp"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "_Linjenummer:"
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Enkel tekstredigering"

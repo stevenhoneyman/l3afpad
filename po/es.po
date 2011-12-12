@@ -1,0 +1,263 @@
+# Spanish/Spain translation of L3afpad
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# This file is distributed under the same license as the l3afpad package.
+# Lucas Vieites <lucas@codexion.com>,2004-2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: l3afpad-0.8.16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2009-06-24 21:49+0200\n"
+"Last-Translator: Lucas Vieites <lucas@codexion.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_Archivo"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "_Editar"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "_Buscar"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "_Opciones"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "A_yuda"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "_Nuevo"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "_Abrir..."
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "_Guardar"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "Guardar _como..."
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "_Vista previa"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "Im_primir"
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "_Salir"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "_Deshacer"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "_Rehacer"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "Cor_tar"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "_Copiar"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "_Pegar"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "_Borrar"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "Seleccionar _todo"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "_Buscar"
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "Buscar el _siguiente"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "Buscar el an_terior"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "_Reemplazar"
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "Ira a la _línea"
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "Tipogra_fía..."
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "_Acerca de"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "Ajus_te de línea"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "_Numeración de líneas"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "_Autoindentación"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "Editor de texto simple"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr "Lucas Vieites <lucas@asixinformatica.com>"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "¿Desea guardar los cambios a «%s»?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "Tipografía"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Locale actual (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "Otro conjunto de códigos"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "Con_junto de códigos:"
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "No se soporta «%s»"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "Autodetectar"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "Abrir"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "Guardar como"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "Codificación de c_aracteres:"
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "«%s» ya existe. ¿Desea sobrescribirlo?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "Sin nombre"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "No se puede convertir el conjunto de códigos a «%s»"
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "No se puede abrir el archivo para escritura"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "No se puede escribir en el archivo"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "No se ha encontrado la cadena buscada"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "¿Desea reemplazar?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "Se han reemplazado %d cadenas"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "Reemplazar"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "Buscar"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "_Buscar: "
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "Reem_plazar con:"
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "Coi_ncidir con capitalización"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "Reemplaz_ar todos"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "Ir a"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "_Saltar"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "Número de _línea:"
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Editor de texto simple"

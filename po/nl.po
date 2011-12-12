@@ -1,0 +1,268 @@
+# Translation of l3afpad-0.8.13 to Dutch.
+# Copyright (C) 2004-2006 Tarot Osuji <tarot@sdf.lonestar.org>
+# This file is distributed under the same license as the l3afpad package.
+#
+# Wouter Van Hemel <wouter-oss@publica.duodecim.org>, 2006.
+# Benno Schulenberg <benno@vertaalt.nl>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: l3afpad-0.8.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2008-01-15 15:15+0100\n"
+"Last-Translator: Benno Schulenberg <benno@vertaalt.nl>\n"
+"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_Bestand"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "Be_werken"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "_Zoeken"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "_Opties"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "_Hulp"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "_Nieuw"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "_Openen..."
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "Op_slaan"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "Opslaan _als..."
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "Afdruk_voorbeeld"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "Af_drukken..."
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "A_fsluiten"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "_Ongedaan maken"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "Opnieu_w"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "K_nippen"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "_Kopiëren"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "_Plakken"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "_Verwijderen"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "_Alles selecteren"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "_Zoeken..."
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "V_olgende zoeken"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "Vorig_e zoeken"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "_Vervangen..."
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "_Naar regel..."
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "_Lettertype..."
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "_Info"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "Regel_afbreking"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "Regel_nummers"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "Automatisch _inspringen"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "Eenvoudige teksteditor gebouwd op GTK+"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr ""
+"Wouter Van Hemel <wouter-oss@publica.duodecim.org>\n"
+"Benno Schulenberg <benno@vertaalt.nl>"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "Wijzigingen aan '%s' opslaan?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "Lettertype"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Huidige taalomgeving (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "Andere tekencodering"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "Teken_codering:"
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' wordt niet ondersteund"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "Automatisch detecteren"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "Openen"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "Opslaan als"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "Teken_codering:"
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "Bestand '%s' bestaat al.  Vervangen?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "Naamloos"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "Kan de tekenset niet omzetten naar '%s'"
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "Kan het te schrijven bestand niet openen"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "Kan bestand niet wegschrijven"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "Zoekterm niet gevonden"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "Vervangen?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "Er zijn %d vondsten vervangen"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "Vervangen"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "Zoeken"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "Zoeken _naar:"
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "Vervangen _door:"
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "_Hoofdlettergevoelig"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "Alle v_ondsten vervangen"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "Naar regel"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "_Spring"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "Regel_nummer:"
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Eenvoudige teksteditor"

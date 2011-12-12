@@ -1,0 +1,268 @@
+# L3afpad - GTK+ based simple text editor
+# Copyright (C) 2004 Tarot Osuji <tarot@sdf.lonestar.org>
+# This file is distributed under the same license as the l3afpad package.
+# Marc Veillet <scouigne@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: l3afpad 0.8.16\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2009-06-25 10:53-0500\n"
+"Last-Translator: Marc Veillet <scouigne@gmail.com>\n"
+"Language-Team: French <traduc@traduc.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-SourceCharset: iso-8859-1\n"
+"X-Poedit-Country: CANADA\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_Fichier"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "_Édition"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "_Rechercher"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "_Options"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "_Aide"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "_Nouveau"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "_Ouvrir..."
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "_Enregistrer"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "Enregistrer _sous..."
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "Aperçu avant _impression"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "Im_primer"
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "_Quitter"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "_Annuler"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "_Refaire"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "Co_uper"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "_Copier"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "C_oller"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "_Supprimer"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "_Tout sélectionner"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "_Rechercher..."
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "Rechercher le _suivant"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "Rechercher le _précédent"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "Re_mplacer..."
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "Aller à la _ligne..."
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "_Fonte..."
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "À _propos"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "_Retour à la ligne automatique"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "_Numérotation des lignes"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "_Indentation automatique"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "Un éditeur de texte tout simple, basé sur GTK+"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr ""
+"Luc Pionchon <luc@handhelds.org>, Marc Veillet 2009 <scouigne@gmail.com>"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "Enregistrer les changements pour '%s' ?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "Fonte"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Locale courante (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "Autre jeu de caractères"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "Jeu de _caractères : "
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' n'est pas supporté"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "Détection automatique"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "Ouvrir"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "Enregistrer sous"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "Jeu de _caractères : "
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr ""
+"Le fichier '%s' existe déjà. Voulez-vous remplacer le fichier existant par "
+"celui-ci ?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "Sans titre"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "Erreur de conversion avec le jeu de caractères '%s'"
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "Impossible d'ouvrir le fichier en écriture"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "Impossible d'enregistrer le fichier"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "Le texte recherché n'a pas été trouvé"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "Remplacer ?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d occurences trouvées et remplacées."
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "Remplacer"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "Trouver"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "_Rechercher :"
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "Remplacer _par :"
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "Respecter la _casse"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "_Tout remplacer"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "Aller à la ligne"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "Aller à la ligne"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "Numéro de _ligne : "
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Un éditeur de texte tout simple"

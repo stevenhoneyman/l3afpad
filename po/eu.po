@@ -1,0 +1,266 @@
+# Basque translation for l3afpad.
+# Copyright (C) 2008 Free Software Foundation, Inc
+# This file is distributed under the same license as the l3afpad package.
+# Mikel Olasagasti Uranga <hey_neken@mundurat.net>, 2008.
+# Inko Illarramendi Arancibia <inkoia@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: l3afpad 0.8.13\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 15:36+0800\n"
+"PO-Revision-Date: 2008-01-14 21:35+0900\n"
+"Last-Translator: Mikel Olasagasti <hey_neken@mundurat.net>\n"
+"Language-Team: Basque <translation-team-eu@lists.sourceforge.net>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Basque\n"
+"X-Poedit-Country: SPAIN\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_Fitxategia"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "_Editatu"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "_Bilatu"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "_Aukerak"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "_Laguntza"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "_Berria"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "_Ireki"
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "_Gorde"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "Gorde _Honela..."
+
+#: ../src/menu.c:44
+msgid "Print Pre_view"
+msgstr "Inprimatze Aurre_bista"
+
+#: ../src/menu.c:45
+msgid "_Print..."
+msgstr "In_primatu"
+
+#: ../src/menu.c:47
+msgid "_Quit"
+msgstr "It_xi"
+
+#: ../src/menu.c:48
+msgid "_Undo"
+msgstr "_Desegin"
+
+#: ../src/menu.c:49
+msgid "_Redo"
+msgstr "Be_rregin"
+
+#: ../src/menu.c:50
+msgid "Cu_t"
+msgstr "Eba_ki"
+
+#: ../src/menu.c:51
+msgid "_Copy"
+msgstr "_Kopiatu"
+
+#: ../src/menu.c:52
+msgid "_Paste"
+msgstr "_Itsatsi"
+
+#: ../src/menu.c:53
+msgid "_Delete"
+msgstr "_Ezabatu"
+
+#: ../src/menu.c:54
+msgid "Select _All"
+msgstr "_Hautatu Dena"
+
+#: ../src/menu.c:55
+msgid "_Find..."
+msgstr "_Bilatu"
+
+#: ../src/menu.c:56
+msgid "Find _Next"
+msgstr "Bilatu _hurrengoa"
+
+#: ../src/menu.c:57
+msgid "Find _Previous"
+msgstr "Bilatu _aurrekoa"
+
+#: ../src/menu.c:58
+msgid "_Replace..."
+msgstr "_Ordezkatu"
+
+#: ../src/menu.c:59
+msgid "_Jump To..."
+msgstr "_Jauzi Hona..."
+
+#: ../src/menu.c:60
+msgid "_Font..."
+msgstr "Letra _Tipoa..."
+
+#: ../src/menu.c:61
+msgid "_About"
+msgstr "_Honi buruz"
+
+#: ../src/menu.c:68
+msgid "_Word Wrap"
+msgstr "_Hitz doiketa"
+
+#: ../src/menu.c:69
+msgid "_Line Numbers"
+msgstr "_Lerro Zenbakiak"
+
+#: ../src/menu.c:70
+msgid "_Auto Indent"
+msgstr "_Autoindentazioa"
+
+#: ../src/callback.c:307
+msgid "GTK+ based simple text editor"
+msgstr "GTK+-n oinarritutako testu editore sinplea"
+
+#: ../src/callback.c:313
+msgid "translator-credits"
+msgstr "Inko Illarramendi <inkoia@gmail.com>"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "Aldaketak '%s'-n gorde?"
+
+#: ../src/font.c:44
+msgid "Font"
+msgstr "Letra tipoa"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Uneko Locale-a (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "Beste Kodeketa Multzoa"
+
+#: ../src/selector.c:165
+msgid "Code_set:"
+msgstr "Kodeketa_multzoa:"
+
+#: ../src/selector.c:187
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s'-entzat ez dago sostengurik"
+
+#: ../src/selector.c:248
+msgid "Auto-Detect"
+msgstr "Auto-Detektatu"
+
+#: ../src/selector.c:300
+msgid "Open"
+msgstr "Ireki"
+
+#: ../src/selector.c:300
+msgid "Save As"
+msgstr "Gorde Honela"
+
+#: ../src/selector.c:315
+msgid "C_haracter Coding:"
+msgstr "K_araktere Kodeketa:"
+
+#: ../src/selector.c:373
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s' badago. Gainean idatzi?"
+
+#: ../src/file.c:55
+msgid "Untitled"
+msgstr "Izengabea"
+
+#: ../src/file.c:210
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "Ezin da kodeketa multzoa '%s'-ra bihurtu"
+
+#: ../src/file.c:223
+msgid "Can't open file to write"
+msgstr "Ezin da fitxategia idazketarako ireki"
+
+#: ../src/file.c:228
+msgid "Can't write file"
+msgstr "Ezin da fitxategian gorde"
+
+#: ../src/search.c:136
+msgid "Search string not found"
+msgstr "Bilaketa katea ez da aurkitu"
+
+#: ../src/search.c:189
+msgid "Replace?"
+msgstr "Ordezkatu?"
+
+#: ../src/search.c:252
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d kate ordezkatuta"
+
+#: ../src/search.c:298
+msgid "Replace"
+msgstr "Ordezkatu"
+
+#: ../src/search.c:305
+msgid "Find"
+msgstr "Bilatu"
+
+#: ../src/search.c:317
+msgid "Fi_nd what:"
+msgstr "Zer _bilatu:"
+
+#: ../src/search.c:336
+msgid "Re_place with:"
+msgstr "Zerekin _ordezkatu:"
+
+#: ../src/search.c:350
+msgid "_Match case"
+msgstr "_Maiuskulak/minuskulak kointziditu"
+
+#: ../src/search.c:355
+msgid "Replace _all at once"
+msgstr "_Guztiak ordezkatu"
+
+#: ../src/search.c:406
+msgid "Jump To"
+msgstr "Jauzi"
+
+#: ../src/search.c:411
+msgid "_Jump"
+msgstr "_Jauzi"
+
+#: ../src/search.c:418
+msgid "_Line number:"
+msgstr "_Lerro zenbakia:"
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Testu editore sinplea"
