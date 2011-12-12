@@ -1,4 +1,4 @@
-AC_INIT(L3afpad, 0.8.18.1.4, caleb@calno.com)
+AC_INIT(L3afpad, 0.8.18.1.5, caleb@calno.com)
 AM_INIT_AUTOMAKE($PACKAGE_TARNAME, $PACKAGE_VERSION)
 AM_CONFIG_HEADER(config.h)
 AC_SYS_LARGEFILE
@@ -43,5 +43,20 @@ AC_OUTPUT([
 	Makefile
 	src/Makefile
 	data/Makefile
+	data/icons/16x16/Makefile
+	data/icons/20x20/Makefile
+	data/icons/22x22/Makefile
+	data/icons/24x24/Makefile
+	data/icons/32x32/Makefile
+	data/icons/36x36/Makefile
+	data/icons/40x40/Makefile
+	data/icons/48x48/Makefile
+	data/icons/64x64/Makefile
+	data/icons/72x72/Makefile
+	data/icons/96x96/Makefile
+	data/icons/128x128/Makefile
+	data/icons/192x192/Makefile
+	data/icons/256x256/Makefile
+	data/icons/Makefile
 	po/Makefile.in
 ])

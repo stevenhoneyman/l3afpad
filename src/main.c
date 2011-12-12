@@ -72,22 +72,20 @@ void save_config_file(void)
 {
 	FILE *fp;
 	gchar *path;
-	GtkItemFactory *ifactory;
 	gint width, height;
 	gchar *fontname;
 	gboolean wordwrap, linenumbers, autoindent;
 
 	gtk_window_get_size(GTK_WINDOW(pub->mw->window), &width, &height);
 	fontname = pango_font_description_to_string(gtk_style_context_get_font(gtk_widget_get_style_context(pub->mw->view), 0));
-	ifactory = gtk_item_factory_from_widget(pub->mw->menubar);
 	wordwrap = gtk_check_menu_item_get_active(
-		GTK_CHECK_MENU_ITEM(gtk_item_factory_get_item(ifactory,
+		GTK_TOGGLE_ACTION(gtk_item_factory_get_item(pub->mw->menubar,
 			"/M/Options/WordWrap")));
 	linenumbers = gtk_check_menu_item_get_active(
-		GTK_CHECK_MENU_ITEM(gtk_item_factory_get_item(ifactory,
+		GTK_TOGGLE_ACTION(gtk_item_factory_get_item(pub->mw->menubar,
 			"/M/Options/LineNumbers")));
 	autoindent = gtk_check_menu_item_get_active(
-		GTK_CHECK_MENU_ITEM(gtk_item_factory_get_item(ifactory,
+		GTK_TOGGLE_ACTION(gtk_item_factory_get_item(pub->mw->menubar,
 			"/M/Options/AutoIndent")));
 
 	path = g_build_filename(g_get_user_config_dir(), PACKAGE, NULL);
@@ -187,7 +185,6 @@ static void parse_args(gint argc, gchar **argv, FileInfo *fi)
 gint main(gint argc, gchar **argv)
 {
 	Conf *conf;
-	GtkItemFactory *ifactory;
 	gchar *stdin_data = NULL;
 
 	bindtextdomain(PACKAGE, LOCALEDIR);
@@ -226,16 +223,15 @@ gint main(gint argc, gchar **argv)
 		GTK_WINDOW(pub->mw->window), conf->width, conf->height);
 	set_text_font_by_name(pub->mw->view, conf->fontname);
 
-	ifactory = gtk_item_factory_from_widget(pub->mw->menubar);
 	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(
-		(GtkCheckMenuItem*)gtk_item_factory_get_widget(ifactory, "/M/Options/WordWrap")),
+		gtk_item_factory_get_widget(pub->mw->menubar, "/M/Options/WordWrap")),
 		conf->wordwrap);
 	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(
-		(GtkCheckMenuItem*)gtk_item_factory_get_widget(ifactory, "/M/Options/LineNumbers")),
+		gtk_item_factory_get_widget(pub->mw->menubar, "/M/Options/LineNumbers")),
 		conf->linenumbers);
 	indent_refresh_tab_width(pub->mw->view);
 	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(
-		(GtkCheckMenuItem*)gtk_item_factory_get_widget(ifactory, "/M/Options/AutoIndent")),
+		gtk_item_factory_get_widget(pub->mw->menubar, "/M/Options/AutoIndent")),
 		conf->autoindent);
 
 	gtk_widget_show_all(pub->mw->window);
@@ -243,13 +239,13 @@ gint main(gint argc, gchar **argv)
 	g_free(conf);
 
 #if ENABLE_EMACS
-	check_emacs_key_theme(GTK_WINDOW(pub->mw->window), ifactory);
+	check_emacs_key_theme(GTK_WINDOW(pub->mw->window), pub->mw->menubar);
 #endif
 
 	hlight_init(pub->mw->buffer);
 	undo_init(pub->mw->view,
-		gtk_item_factory_get_widget(ifactory, "/M/Edit/Undo"),
-		gtk_item_factory_get_widget(ifactory, "/M/Edit/Redo"));
+		gtk_item_factory_get_widget(pub->mw->menubar, "/M/Edit/Undo"),
+		gtk_item_factory_get_widget(pub->mw->menubar, "/M/Edit/Redo"));
 //	hlight_init(pub->mw->buffer);
 	dnd_init(pub->mw->view);
 

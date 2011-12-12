@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-08 16:32+0800\n"
+"POT-Creation-Date: 2011-11-09 14:19+0800\n"
 "PO-Revision-Date: 2008-01-14 21:35+0900\n"
 "Last-Translator: Mikel Olasagasti <hey_neken@mundurat.net>\n"
 "Language-Team: Basque <translation-team-eu@lists.sourceforge.net>\n"
@@ -135,15 +135,15 @@ msgstr "_Lerro Zenbakiak"
 msgid "_Auto Indent"
 msgstr "_Autoindentazioa"
 
-#: ../src/callback.c:307
+#: ../src/callback.c:299
 msgid "GTK+ based simple text editor"
 msgstr "GTK+-n oinarritutako testu editore sinplea"
 
-#: ../src/callback.c:313
+#: ../src/callback.c:305
 msgid "translator-credits"
 msgstr "Inko Illarramendi <inkoia@gmail.com>"
 
-#: ../src/callback.c:323
+#: ../src/callback.c:316
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 

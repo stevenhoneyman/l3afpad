@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-08 16:32+0800\n"
+"POT-Creation-Date: 2011-11-09 14:19+0800\n"
 "PO-Revision-Date: 2008-05-07 17:39-0300\n"
 "Last-Translator: Leslie Harlley Watter <leslie@watter.org>\n"
 "Language-Team:  Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
@@ -132,15 +132,15 @@ msgstr "_Número de Linhas"
 msgid "_Auto Indent"
 msgstr "_Auto Indentar"
 
-#: ../src/callback.c:307
+#: ../src/callback.c:299
 msgid "GTK+ based simple text editor"
 msgstr "Editor de texto simples feito em GTK+"
 
-#: ../src/callback.c:313
+#: ../src/callback.c:305
 msgid "translator-credits"
 msgstr "Fábio Antunes <fabio.antunes@hotmail.com>"
 
-#: ../src/callback.c:323
+#: ../src/callback.c:316
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 

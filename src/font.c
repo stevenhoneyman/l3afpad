@@ -60,4 +60,3 @@ void change_text_font_by_selector(GtkWidget *widget)
 	g_free(fontname);
 	g_free(current_fontname);
 }
-

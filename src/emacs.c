@@ -56,7 +56,7 @@ static void cb_key_press_event(GtkWidget *view, GdkEventKey *event)
 		case GDK_s:
 		case GDK_S:
 			if (GTK_WIDGET_IS_SENSITIVE(gtk_item_factory_get_widget(
-				gtk_item_factory_from_widget(pub->mw->menubar), "/M/File/Save")
+				pub->mw->menubar, "/M/File/Save")
 				))
 				on_file_save();
 			break;
@@ -106,7 +106,7 @@ static void emacs_key_prefix(void)
 {
 	gulong id;
 
-	gtk_widget_set_sensitive(pub->mw->menubar, FALSE);
+	gtk_widget_set_sensitive(GTK_WIDGET(pub->mw->menubar), FALSE);
 //	gtk_text_view_set_cursor_visible(GTK_TEXT_VIEW(pub->mw->view), FALSE);
 	gtk_text_view_set_editable(GTK_TEXT_VIEW(pub->mw->view), FALSE);
 	/* waiting for release C-x */
@@ -123,10 +123,10 @@ static void emacs_key_prefix(void)
 
 	gtk_text_view_set_editable(GTK_TEXT_VIEW(pub->mw->view), TRUE);
 //	gtk_text_view_set_cursor_visible(GTK_TEXT_VIEW(pub->mw->view), TRUE);
-	gtk_widget_set_sensitive(pub->mw->menubar, TRUE);
+	gtk_widget_set_sensitive(GTK_WIDGET(pub->mw->menubar), TRUE);
 }
 
-gboolean check_emacs_key_theme(GtkWindow *window, GtkItemFactory *ifactory)
+gboolean check_emacs_key_theme(GtkWindow *window, GtkUIManager *ifactory)
 {
 	GtkAccelGroup *accel_group;
 	GSList *groups;

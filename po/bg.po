@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-08 16:32+0800\n"
+"POT-Creation-Date: 2011-11-09 14:19+0800\n"
 "PO-Revision-Date: 2006-05-20 13:05+0300\n"
 "Last-Translator: Yavor Doganov <yavor@doganov.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -133,11 +133,11 @@ msgstr "_Номера на редове"
 msgid "_Auto Indent"
 msgstr "_Автоматичен отстъп"
 
-#: ../src/callback.c:307
+#: ../src/callback.c:299
 msgid "GTK+ based simple text editor"
 msgstr "Опростен текстов редактор, базиран на GTK+"
 
-#: ../src/callback.c:313
+#: ../src/callback.c:305
 msgid "translator-credits"
 msgstr ""
 "Явор Доганов <yavor@doganov.org>\n"
@@ -146,7 +146,7 @@ msgstr ""
 "Научете повече за нас на http://gnome.cult.bg\n"
 "Докладвайте за грешки на http://gnome.cult.bg/bugs"
 
-#: ../src/callback.c:323
+#: ../src/callback.c:316
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 

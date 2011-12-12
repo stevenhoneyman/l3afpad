@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-08 16:32+0800\n"
+"POT-Creation-Date: 2011-11-09 14:19+0800\n"
 "PO-Revision-Date: 2008-03-20 20:21+0800\n"
 "Last-Translator: Wei-Lun Chao <chaoweilun@gmail.com>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
@@ -134,17 +134,17 @@ msgstr "列號(_L)"
 msgid "_Auto Indent"
 msgstr "自動縮排(_A)"
 
-#: ../src/callback.c:307
+#: ../src/callback.c:299
 msgid "GTK+ based simple text editor"
 msgstr "基於 GTK+ 的簡易文字編輯器"
 
-#: ../src/callback.c:313
+#: ../src/callback.c:305
 msgid "translator-credits"
 msgstr ""
 "OLS3 <ols3@lxer.idv.tw>\n"
 "趙惟倫 <chaoweilun@gmail.com>"
 
-#: ../src/callback.c:323
+#: ../src/callback.c:316
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 

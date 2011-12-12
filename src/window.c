@@ -26,34 +26,28 @@ static void cb_scroll_event(GtkAdjustment *adj, GtkWidget *view)
 */
 MainWin *create_main_window(void)
 {
-	GtkWidget *window;
 	GtkWidget *vbox;
-	GtkWidget *menubar;
 	GtkWidget *sw;
-	GtkWidget *view;
-//	gint size;
-//	GtkAdjustment *hadj, *vadj;
 
 	MainWin *mw = g_malloc(sizeof(MainWin));
 
-	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-//	gtk_window_set_title(GTK_WINDOW(window), PACKAGE_NAME);
-	gtk_widget_set_name(window, PACKAGE_NAME);
+	mw->window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+	gtk_widget_set_name(mw->window, PACKAGE_NAME);
 
-	gtk_window_set_icon_from_file(GTK_WINDOW(window), ICONDIR"/l3afpad.png", NULL);
+	gtk_window_set_icon_from_file(GTK_WINDOW(mw->window), ICONDIR"/l3afpad.png", NULL);
 	gtk_window_set_default_icon_name(PACKAGE);
 
-	g_signal_connect(G_OBJECT(window), "delete-event",
+	g_signal_connect(G_OBJECT(mw->window), "delete-event",
 		G_CALLBACK(on_file_quit), NULL);
-	g_signal_connect_after(G_OBJECT(window), "delete-event",
+	g_signal_connect_after(G_OBJECT(mw->window), "delete-event",
 		G_CALLBACK(gtk_widget_hide_on_delete), NULL);
 
 	vbox = gtk_vbox_new(FALSE, 0);
 	gtk_orientable_set_orientation(GTK_ORIENTABLE(vbox), GTK_ORIENTATION_VERTICAL);
-	gtk_container_add(GTK_CONTAINER(window), vbox);
+	gtk_container_add(GTK_CONTAINER(mw->window), vbox);
 
-	menubar = create_menu_bar(window);
-	gtk_box_pack_start(GTK_BOX(vbox), gtk_item_factory_get_widget(GTK_UI_MANAGER(menubar), "/M"), FALSE, FALSE, 0);
+	mw->menubar = create_menu_bar(mw->window);
+	gtk_box_pack_start(GTK_BOX(vbox), gtk_item_factory_get_widget(mw->menubar, "/M"), FALSE, FALSE, 0);
 
 	sw = gtk_scrolled_window_new(NULL, NULL);
 	gtk_widget_set_hexpand (sw, TRUE);
@@ -64,20 +58,9 @@ MainWin *create_main_window(void)
 		GTK_SHADOW_IN);
 	gtk_box_pack_start(GTK_BOX(vbox), sw, TRUE, TRUE, 0);
 
-	view = create_text_view();
-	gtk_container_add(GTK_CONTAINER(sw), view);
-/*
-	hadj = gtk_scrolled_window_get_hadjustment(GTK_SCROLLED_WINDOW(sw));
-	vadj = gtk_scrolled_window_get_vadjustment(GTK_SCROLLED_WINDOW(sw));
-	g_signal_connect_after(G_OBJECT(hadj), "value-changed",
-		G_CALLBACK(cb_scroll_event), view);
-	g_signal_connect_after(G_OBJECT(vadj), "value-changed",
-		G_CALLBACK(cb_scroll_event), view);
-*/
-	mw->window = window;
-	mw->menubar = menubar;
-	mw->view = view;
-	mw->buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(view));
+	mw->view = create_text_view();
+	gtk_container_add(GTK_CONTAINER(sw), mw->view);
+	mw->buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(mw->view));
 
 	return mw;
 }
@@ -90,4 +73,3 @@ void set_main_window_title(void)
 	gtk_window_set_title(GTK_WINDOW(pub->mw->window), title);
 	g_free(title);
 }
-

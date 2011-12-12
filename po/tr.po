@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tr\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-08 16:32+0800\n"
+"POT-Creation-Date: 2011-11-09 14:19+0800\n"
 "PO-Revision-Date: 2005-08-05 17:26+0300\n"
 "Last-Translator: kaya oğuz <kaya@kuzeykutbu.org>\n"
 "Language-Team: Türkçe <yerellestirme@kde.org.tr>\n"
@@ -134,15 +134,15 @@ msgstr "S_atır Numaraları"
 msgid "_Auto Indent"
 msgstr "_Otomatik Girinti"
 
-#: ../src/callback.c:307
+#: ../src/callback.c:299
 msgid "GTK+ based simple text editor"
 msgstr "GTK+ tabanlı basit metin düzenleyicisi"
 
-#: ../src/callback.c:313
+#: ../src/callback.c:305
 msgid "translator-credits"
 msgstr "Kaya Oğuz <kaya@kuzeykutbu.org>"
 
-#: ../src/callback.c:323
+#: ../src/callback.c:316
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 

@@ -405,7 +405,7 @@ void run_dialog_jump_to(GtkWidget *textview)
 	 gtk_container_set_border_width (GTK_CONTAINER(table), 8);
 	 gtk_box_pack_start(GTK_BOX(gtk_dialog_get_content_area(GTK_DIALOG(dialog))), table, FALSE, FALSE, 0);
 	label = gtk_label_new_with_mnemonic(_("_Line number:"));
-	spinner_adj = (GtkAdjustment *) gtk_adjustment_new(num, 1, max_num, 1, 1, 0);
+	spinner_adj = gtk_adjustment_new(num, 1, max_num, 1, 1, 0);
 	spinner = gtk_spin_button_new(spinner_adj, 1, 0);
 	 gtk_entry_set_width_chars(GTK_ENTRY(spinner), 8);
 	 gtk_label_set_mnemonic_widget(GTK_LABEL(label), spinner);

@@ -121,11 +121,7 @@ static const gchar *ui_info =
 
 static gchar *menu_translate(const gchar *path, gpointer data)
 {
-	gchar *str;
-
-	str = (gchar *)_(path);
-
-	return str;
+	return _(path);
 }
 
 void menu_sensitivity_from_modified_flag(gboolean is_text_modified)
@@ -149,9 +145,9 @@ void menu_sensitivity_from_clipboard(void)
 			gtk_clipboard_get(GDK_SELECTION_CLIPBOARD)));
 }
 
-GtkWidget *create_menu_bar(GtkWidget *window)
+GtkUIManager *create_menu_bar(GtkWidget *window)
 {
-	GtkItemFactory *ifactory;
+	GtkUIManager *ifactory;
 #if 0
 	gboolean flag_emacs = FALSE;
 
@@ -212,5 +208,5 @@ GtkWidget *create_menu_bar(GtkWidget *window)
 	menu_item_delete = gtk_item_factory_get_widget(ifactory, "/M/Edit/Delete");
 	menu_sensitivity_from_selection_bound(FALSE);
 
-	return (GtkWidget*)ifactory;
+	return ifactory;
 }

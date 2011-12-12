@@ -212,16 +212,14 @@ void on_edit_select_all(void)
 
 static void activate_quick_find(void)
 {
-	GtkItemFactory *ifactory;
 	static gboolean flag = FALSE;
 
 	if (!flag) {
-		ifactory = gtk_item_factory_from_widget(pub->mw->menubar);
 		gtk_widget_set_sensitive(
-			gtk_item_factory_get_widget(ifactory, "/M/Search/FindNext"),
+			gtk_item_factory_get_widget(pub->mw->menubar, "/M/Search/FindNext"),
 			TRUE);
 		gtk_widget_set_sensitive(
-			gtk_item_factory_get_widget(ifactory, "/M/Search/FindPrevious"),
+			gtk_item_factory_get_widget(pub->mw->menubar, "/M/Search/FindPrevious"),
 			TRUE);
 		flag = TRUE;
 	}
@@ -261,24 +259,20 @@ void on_option_font(void)
 
 void on_option_word_wrap(void)
 {
-	GtkItemFactory *ifactory;
 	gboolean state;
 
-	ifactory = gtk_item_factory_from_widget(pub->mw->menubar);
 	state = gtk_check_menu_item_get_active(
-		GTK_CHECK_MENU_ITEM(gtk_item_factory_get_item(ifactory, "/M/Options/WordWrap")));
+		GTK_TOGGLE_ACTION(gtk_item_factory_get_item(pub->mw->menubar, "/M/Options/WordWrap")));
 	gtk_text_view_set_wrap_mode(GTK_TEXT_VIEW(pub->mw->view),
 		state ? GTK_WRAP_WORD : GTK_WRAP_NONE);
 }
 
 void on_option_line_numbers(void)
 {
-	GtkItemFactory *ifactory;
 	gboolean state;
 
-	ifactory = gtk_item_factory_from_widget(pub->mw->menubar);
 	state = gtk_check_menu_item_get_active(
-		GTK_CHECK_MENU_ITEM(gtk_item_factory_get_item(ifactory, "/M/Options/LineNumbers")));
+		GTK_TOGGLE_ACTION(gtk_item_factory_get_item(pub->mw->menubar, "/M/Options/LineNumbers")));
 	show_line_numbers(pub->mw->view, state);
 }
 
@@ -292,18 +286,16 @@ void on_option_always_on_top(void)
 
 void on_option_auto_indent(void)
 {
-	GtkItemFactory *ifactory;
 	gboolean state;
 
-	ifactory = gtk_item_factory_from_widget(pub->mw->menubar);
 	state = gtk_check_menu_item_get_active(
-		GTK_CHECK_MENU_ITEM(gtk_item_factory_get_item(ifactory, "/M/Options/AutoIndent")));
+		GTK_TOGGLE_ACTION(gtk_item_factory_get_item(pub->mw->menubar, "/M/Options/AutoIndent")));
 	indent_set_state(state);
 }
 
 void on_help_about(void)
 {
-	const gchar *copyright = "Copyright \xc2\xa9 2004-2010 Tarot Osuji\nCopyright \xc2\xa9 2011 Wen-Yen Chuang";
+	const gchar *copyright = "Copyright \xc2\xa9 2004-2010 Tarot Osuji\nCopyright \xc2\xa9 2011 Wen-Yen Chuang\nCopyright \xc2\xa9 2011 Jack Gandy";
 	const gchar *comments = _("GTK+ based simple text editor");
 	const gchar *authors[] = {
 		"Tarot Osuji <tarot@sdf.lonestar.org>",
@@ -317,6 +309,7 @@ void on_help_about(void)
 
 	const gchar *artists[] = {
 		"Lapo Calamandrei <calamandrei@gmail.com>",
+		"Jack Gandy <scionicspectre@gmail.com>",
 		NULL
 	};
 	gtk_show_about_dialog(GTK_WINDOW(pub->mw->window),

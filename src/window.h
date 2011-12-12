@@ -22,7 +22,7 @@
 
 typedef struct {
 	GtkWidget *window;
-	GtkWidget *menubar;
+	GtkUIManager *menubar;
 	GtkWidget *view;
 	GtkTextBuffer *buffer;
 } MainWin;

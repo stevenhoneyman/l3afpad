@@ -55,9 +55,6 @@ get_lines (GtkTextView  *text_view,
 {
 	GtkTextIter iter;
 	gint count;
-#if 0
-	gint size;
-#endif
 		gint last_line_num;
 
 	g_array_set_size (buffer_coords, 0);
@@ -70,9 +67,6 @@ get_lines (GtkTextView  *text_view,
 	 * Stop when we pass y2
 	 */
 	count = 0;
-#if 0
-	size = 0;
-#endif
 
 	while (!gtk_text_iter_is_end (&iter))
 	{
@@ -115,7 +109,6 @@ static gint
 line_numbers_expose (GtkWidget *widget, cairo_t *event)
 {
 	GtkTextView *text_view;
-//	GtkStyle *style;
 	PangoLayout *layout;
 	PangoAttrList *alist;
 	PangoAttribute *attr;
@@ -126,45 +119,22 @@ line_numbers_expose (GtkWidget *widget, cairo_t *event)
 	gint layout_width;
 	gint justify_width = 0;
 	gint i;
-//	gchar *str;
 	gchar str [8];  /* we don't expect more than ten million lines */
 #if 0
 	cairo_t *gc;
 	gint height;
 #endif
 
-	if (line_number_visible){{{{{	// omit calculation
+	if (line_number_visible) {
 
 	text_view = GTK_TEXT_VIEW (widget);
 
-	/* See if this expose is on the line numbers window */
-/*	left_win = gtk_text_view_get_window (text_view,
-	                                     GTK_TEXT_WINDOW_LEFT);
-	right_win = gtk_text_view_get_window (text_view,
-	                                      GTK_TEXT_WINDOW_RIGHT);
-
-	if (event->window == left_win)
-	{
-		type = GTK_TEXT_WINDOW_LEFT;
-		target = event->window;
-	}
-	else if (event->window == right_win)
-	{
-		type = GTK_TEXT_WINDOW_RIGHT;
-		target = right_win;
-	}
-	else
-		return FALSE;
-*/
 #if 0
 	GdkWindow *win;
 	win = gtk_text_view_get_window (text_view,
 	                                GTK_TEXT_WINDOW_LEFT);
 	if (event->window != win)
 		return FALSE;
-
-//	style = gtk_style_copy (widget->style);
-//	style = gtk_style_copy (gtk_widget_get_default_style());
 
 	y1 = event->area.y;
 	y2 = y1 + event->area.height;
@@ -197,8 +167,7 @@ line_numbers_expose (GtkWidget *widget, cairo_t *event)
 	/* a zero-lined document should display a "1"; we don't need to worry about
 	scrolling effects of the text widget in this special case */
 
-	if (count == 0)
-	{
+	if (count == 0) {
 		gint y = 0;
 		gint n = 0;
 		count = 1;
@@ -212,11 +181,9 @@ DV({g_print("Painting line numbers %d - %d\n",
 
 	layout = gtk_widget_create_pango_layout (widget, "");
 
-//	str = g_strdup_printf ("%d", gtk_text_buffer_get_line_count(text_view->buffer));
 	g_snprintf (str, sizeof (str),
 			"%d", MAX (99, gtk_text_buffer_get_line_count(gtk_text_view_get_buffer(text_view))));
 	pango_layout_set_text (layout, str, -1);
-//	g_free (str);
 
 	pango_layout_get_pixel_size (layout, &layout_width, NULL);
 
@@ -225,10 +192,8 @@ DV({g_print("Painting line numbers %d - %d\n",
 		gtk_text_view_set_border_window_size (text_view,
 			GTK_TEXT_WINDOW_LEFT, layout_width + margin + submargin);
 	else {
-//		if ((gtk_text_view_get_border_window_size (text_view, GTK_TEXT_WINDOW_LEFT) - 5) > layout_width) {
-			gtk_text_view_set_border_window_size (text_view,
-				GTK_TEXT_WINDOW_LEFT, min_number_window_width + margin + submargin);
-//		}
+		gtk_text_view_set_border_window_size (text_view,
+			GTK_TEXT_WINDOW_LEFT, min_number_window_width + margin + submargin);
 		justify_width = min_number_window_width - layout_width;
 	}
 
@@ -255,8 +220,7 @@ DV({g_print("Painting line numbers %d - %d\n",
 	/* Draw fully internationalized numbers! */
 
 	i = 0;
-	while (i < count)
-	{
+	while (i < count) {
 		gint pos;
 
 		gtk_text_view_buffer_to_window_coords (text_view,
@@ -265,8 +229,6 @@ DV({g_print("Painting line numbers %d - %d\n",
 		                                       g_array_index (pixels, gint, i),
 		                                       NULL,
 		                                       &pos);
-
-//		str = g_strdup_printf ("%d", g_array_index (numbers, gint, i) + 1);
 		g_snprintf (str, sizeof (str),
 				"%d", g_array_index (numbers, gint, i) + 1);
 
@@ -277,20 +239,13 @@ DV({g_print("Painting line numbers %d - %d\n",
 		                  layout_width + justify_width + margin / 2 + 1,
 		                  pos,
 		                  layout);
-//		g_free (str);
-
 		++i;
 	}
 
 	g_array_free (pixels, TRUE);
 	g_array_free (numbers, TRUE);
-
 	g_object_unref (G_OBJECT (layout));
-//	g_object_ref (G_OBJECT (style));
-
-	/* don't stop emission, need to draw children */
-
-	}}}}}
+	}
 
 #if 0
 	gc = gdk_gc_new(event->window);
@@ -334,35 +289,3 @@ void linenum_init(GtkWidget *text_view)
 		NULL);
 	show_line_numbers(text_view, FALSE);
 }
-/*
-static void show_line_numbers(GtkWidget *text_view, gboolean visible)
-{
-	gtk_text_view_set_border_window_size(
-		GTK_TEXT_VIEW(text_view),
-		GTK_TEXT_WINDOW_LEFT,
-		submargin);
-	if (visible) {
-		min_number_window_width = calculate_min_number_window_width(text_view);
-//		gtk_text_view_set_border_window_size(
-//			GTK_TEXT_VIEW(text_view),
-//			GTK_TEXT_WINDOW_LEFT,
-//			min_number_window_width + margin + submargin);
-//			submargin);
-		g_signal_connect(
-			G_OBJECT(text_view),
-			"draw",
-			G_CALLBACK(line_numbers_expose),
-			NULL);
-	} else {
-//		gtk_text_view_set_border_window_size(
-//			GTK_TEXT_VIEW(text_view),
-//			GTK_TEXT_WINDOW_LEFT,
-//			0);
-//			submargin);
-		g_signal_handlers_disconnect_by_func(
-			G_OBJECT(text_view),
-			G_CALLBACK(line_numbers_expose),
-			NULL);
-	}
-}
-*/

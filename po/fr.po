@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-08 16:32+0800\n"
+"POT-Creation-Date: 2011-11-09 14:19+0800\n"
 "PO-Revision-Date: 2009-06-25 10:53-0500\n"
 "Last-Translator: Marc Veillet <scouigne@gmail.com>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -134,16 +134,16 @@ msgstr "_Numérotation des lignes"
 msgid "_Auto Indent"
 msgstr "_Indentation automatique"
 
-#: ../src/callback.c:307
+#: ../src/callback.c:299
 msgid "GTK+ based simple text editor"
 msgstr "Un éditeur de texte tout simple, basé sur GTK+"
 
-#: ../src/callback.c:313
+#: ../src/callback.c:305
 msgid "translator-credits"
 msgstr ""
 "Luc Pionchon <luc@handhelds.org>, Marc Veillet 2009 <scouigne@gmail.com>"
 
-#: ../src/callback.c:323
+#: ../src/callback.c:316
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 

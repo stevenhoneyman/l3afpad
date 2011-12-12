@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: L3afpad 0.7.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-08 16:32+0800\n"
+"POT-Creation-Date: 2011-11-09 14:19+0800\n"
 "PO-Revision-Date: 2004-12-28 19:56:59-0300\n"
 "Last-Translator: Alan Kelon Oliveira de Moraes <alankelon@yahoo.com.br>\n"
 "Language-Team: \n"
@@ -132,15 +132,15 @@ msgstr "_Número de linhas"
 msgid "_Auto Indent"
 msgstr "_Auto Indentar"
 
-#: ../src/callback.c:307
+#: ../src/callback.c:299
 msgid "GTK+ based simple text editor"
 msgstr "Simples editor de texto feito em GTK+"
 
-#: ../src/callback.c:313
+#: ../src/callback.c:305
 msgid "translator-credits"
 msgstr "Alan Kelon <alankelon@yahoo.com.br>"
 
-#: ../src/callback.c:323
+#: ../src/callback.c:316
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 

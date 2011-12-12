@@ -24,6 +24,6 @@ void menu_sensitivity_from_modified_flag(gboolean is_text_modified);
 void menu_sensitivity_from_selection_bound(gboolean is_bound_exist);
 //void menu_sensitivity_from_clipboard(gboolean is_clipboard_exist);
 void menu_sensitivity_from_clipboard(void);
-GtkWidget *create_menu_bar(GtkWidget *window);
+GtkUIManager *create_menu_bar(GtkWidget *window);
 
 #endif /* _MENU_H */
