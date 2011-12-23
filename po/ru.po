@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-12-09 11:16+0800\n"
 "PO-Revision-Date:2004-10-24 00:40+0400\n"
-"Last-Translator: Artem Vakhitov <temcat@mail.ru>\n"
+"Last-Translator: Aleksej Perepyolkin <chaos8ster@gmail.com>\n"
 "Language-Team: RUSSIAN <ru@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -54,15 +54,15 @@ msgstr "Сохранить _как..."
 
 #: ../src/menu.c:44
 msgid "Sta_tistics..."
-msgstr ""
+msgstr "Статистика"
 
 #: ../src/menu.c:47
 msgid "Print Pre_view"
-msgstr "В_ыход"
+msgstr "Просмотр печати"
 
 #: ../src/menu.c:48
 msgid "_Print..."
-msgstr "В_ыход"
+msgstr "_Печать..."
 
 #: ../src/menu.c:50
 msgid "_Quit"
@@ -138,7 +138,7 @@ msgstr "_Автоматический отступ"
 
 #: ../src/callback.c:139
 msgid "<b>Statistics</b>"
-msgstr ""
+msgstr "<b>Статистика</b>"
 
 #: ../src/callback.c:330
 msgid "GTK+ based simple text editor"
@@ -226,6 +226,11 @@ msgid ""
 "<u>Selection</u>\n"
 "Chars: %7d Words: %6d Lines: %5d\n"
 msgstr ""
+"<u>Всего</u>\n"
+"Символов: %7d Слов: %6d Строк: %5d\n"
+"\n"
+"<u>В выделении</u>\n"
+"Символов: %7d Слов: %6d Строк: %5d\n"
 
 #: ../src/search.c:125
 msgid "Search string not found"
