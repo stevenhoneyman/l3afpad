@@ -232,7 +232,7 @@ gint file_save_real(GtkWidget *view, FileInfo *fi)
 #if ENABLE_STATISTICS
 void text_stats(gchar * text, gint * wc, gint * lc);
 gint skipDelim(gchar ** pos);
-inline gboolean isDelim(gchar);
+gboolean isDelim(gchar);
 
 gchar * file_stats(GtkWidget *view, FileInfo *fi)
 {

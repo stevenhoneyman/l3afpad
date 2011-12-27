@@ -1,3 +1,10 @@
+2011-12-27
+
+  version UNRELEASED:
+	* Updated Japanese translation (Toshiharu Kudoh).
+	* Updated Russian translation (Aleksej Perepyolkin).
+	* Make everything compatible with gcc -std=c1x
+
 2011-12-09
 
   version 0.8.18.1.6:
