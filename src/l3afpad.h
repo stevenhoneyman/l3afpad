@@ -31,6 +31,10 @@
 #define ENABLE_PRINT 1
 #endif
 
+#ifndef SEARCH_HISTORY
+#define SEARCH_HISTORY 1
+#endif
+
 #ifndef ENABLE_STATISTICS
 #define ENABLE_STATISTICS 1
 #endif

@@ -104,3 +104,62 @@ GtkWidget *create_button_with_stock_image(const gchar *text, const gchar *stock_
 
 	return button;
 }
+
+#if SEARCH_HISTORY
+void update_combo_data (GtkWidget *entry, GList **history)
+{
+	const gchar *text;
+	GList *node;
+
+	text = gtk_entry_get_text (GTK_ENTRY (entry));
+	if (*text == '\0')
+		return;
+	for (node = *history; node != NULL; node = g_list_next (node))
+	{
+		if (g_str_equal ((gchar *)node->data, text))
+		{
+			g_free (node->data);
+			*history = g_list_delete_link (*history, node);
+			break;
+		}
+	}
+	*history = g_list_prepend (*history, g_strdup (text));
+}
+
+GtkWidget *create_combo_with_history (GList **history)
+{
+	GtkWidget *combo;
+	GList *node;
+
+	combo = gtk_combo_box_text_new_with_entry ();
+	//work around gtk silliness -
+	//'appears-as-list' is a read-only style property instead of a widget property
+	gtk_rc_parse_string (
+		"style \"list-style-style\" { GtkComboBox::appears-as-list = 1 } "
+		"widget \"*.list-style\" style \"list-style-style\"");
+	gtk_widget_set_name (combo, "list-style");
+
+	for (node = *history; node != NULL; node = g_list_next (node))
+		gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (combo), node->data);
+
+	gtk_widget_show (combo);
+	return combo;
+}
+
+#if 0 /* if we want to cleanup before exit ... */
+void clear_combo_history (GList *history)
+{
+	GList *node;
+	if (history != NULL)
+	{
+		for (node = history; node != NULL; node = g_list_next (node))
+		{
+			if (node->data != NULL)
+				g_free (node->data);
+		}
+		g_list_free (history);
+		history = NULL;
+	}
+}
+#endif
+#endif

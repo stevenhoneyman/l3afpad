@@ -2,15 +2,15 @@
 Hash: SHA1,SHA512
 
 634071380936e4893b0e8cacdfcd344638406575    171 AUTHORS
-41064a7f3d01661f5de5cfee2345e3e9c6a8136a   9961 ChangeLog
+9ff029efada108641f205078add0829f44b861a7  10039 ChangeLog
 0beb31ee37259edeb621d345db933f2c827b2a21     22 Makefile.am
 32ae3f99a247e614dcad4cfb2156a8d992ab53d0  22228 Makefile.in
 04dc937708d52f3b9b6f9a096898c5e23fb80ace   2071 README
 2a4026c3eed929bfa5341fb5ea22a5e0f95a5fc4  66077 aclocal.m4
 08e7ff6a0bc9382beae57974c3ac95c9ac565faa   3769 compile
-9b95284d89fb2a7f4d32dfeb088573fc897192a0   2637 config.h.in
-278bed4a56a4e09159a04f3b90c54007a309a9df 239424 configure
-97f4ed00fab00e320d42d63b884ce63308c0d842   1921 configure.ac
+7c5c2a0e918489ebb5817d0035e087a4ddc6ca3d   2709 config.h.in
+ebaa7bea2f6acf203c53a9be0fa552a336b1e43e 239778 configure
+100d8aa7b504824ec5b269245e9d25d3e21dabf9   2160 configure.ac
 cbd191104fbb3eda18bc12e1caa9e60db401a008    264 data/Makefile.am
 dd49d0ee0462718182658e33e8cb4aa8dddce9b8  19803 data/Makefile.in
 d5f3d29e0f768e7a48a9ab7bb7903aa123a72280     99 data/icons/128x128/Makefile.am
@@ -140,38 +140,38 @@ f6b21adcfc00151deba02a4339ea5883a7b8f411   2486 src/hlight.c
 828e51d43aaa64cbaa492baf761d053bba6b02dd   1019 src/hlight.h
 65d41180e4ad4ffc8e15910f64cd1c659bc30aa2   6774 src/indent.c
 bb2a52d5a1969da5a312b91bbba32d0489a48871   1334 src/indent.h
-f218290b77b711f5e2946c299c333725268128ce   3643 src/l3afpad.h
+fee3226a54e807797560be5ee61cb8cd81a848c8   3699 src/l3afpad.h
 5c7f1b15d14250641334d67af6768c6b66ae9450   7420 src/linenum.c
 6f63e2c07f844c7ba97c77d3e7234d30560a09f0    983 src/linenum.h
 5451aa9d991c54e57f2a23492830050320321f5a   8319 src/main.c
 3c0259eda7028cfa574c29674235f5109f90526a   8751 src/menu.c
 cafed6cfdf79765fae8127d020d311c4842fdeba   1179 src/menu.h
-e258f45dbf8b72e62f4cad204aaa1245c2d1cf0a  14745 src/search.c
+13f187180f999117bc24911c47e55e070e34cc88  17350 src/search.c
 cee72ed3fd94d1637021e9c73602f109f7af06d1   1054 src/search.h
 65fce9c9880a5cf6e73592bb67ad057e7832e73c  12595 src/selector.c
 5af4e5fa14e8ab0106b07f15a74777124df098a8   1019 src/selector.h
 609fd713cef54955274804dadd59d51fbc3e7aa4  10743 src/undo.c
 13e3a08982c1aee8ea5bedb3e76ac33f3f161290   1211 src/undo.h
-db205a5a6aa876fd5764a3ee1e4bdef8d82c2433   2746 src/utils.c
-e700377b8a734da1fc62cde0e735ea3b0be3b3ff   1026 src/utils.h
+26918883912f5f087e467d6ea8620db316cd9512   4155 src/utils.c
+cd4f957aa8207021b04882574ecd1720b5069457   1166 src/utils.h
 3e9703e4eee527e8db4b082aa4aa2eeb158e111b  11206 src/view.c
 f9797a035a29fe5e6f1137d20fb916c573bd1bea   1276 src/view.h
 bf524e4de2a68901495a91d181cf3573edd3027b   2532 src/window.c
 75d1c79bfdd24b7ae5450ead4aef3ab43267e85f   1068 src/window.h
 -----BEGIN PGP SIGNATURE-----
 
-iEYEARECAAYFAk75HM0ACgkQdEpXpumNYVnmpgCdHIOBWvLd5Bjb4DeocKpqabmW
-Zn4AoIfSil8IV+v06CTsj/4Rky3BYEt3iQIcBAEBCgAGBQJO+RzNAAoJELc3H0m+
-i6gZs1gP/iF1siVF/ROcK6NREqF8lkSXopLUnsP6E6QZR71Bb1G+PEKLblehe5Jf
-n/EOca+u56eGsJ0aPm+p8+Um9OJWb1/e/JP+4UdKQqKQGVGexQXlrOJ6ykHhOvWy
-ASK1g0FDN2dkGcmfidJzifhEIeVw7xuxqwDRw/NFaaMpMGM0sCQEz3AbOdFNr5T/
-IRuahpR6qRdZRQn3SdqjiJ6HK3o68TsyjBsTomk8IWvTreOiGdMNrXZnEvkILxUT
-lDcf92/HQ15pCpSlIrCGjR8JDym7v9JUU2szzV5ArK3M69+oiXyx2ex1Y8M2+nfc
-mqyjqS4roaaTf5v5ajx7q29WNq1aC+2PNhPhINQwzwSmBy4DwUgs8PpMtC7ZGGtj
-VOhpQvM52RD16Ea0fbkYnHWo7WbEA1ByB+jE2jfKbd/5G1+d2vHE0+tJNEXvVgh1
-WLEKRV6fdWR4geHvI97Qj6hAIniXrbQr/2BdeayYbfVIRALxyClibqqIyR1RZmmQ
-QbqPZAKzU3tcu3fwgg8cxCJ8+BoC43PyWqKl71zWc/WcdWELSgX4nQhxJmesNhrP
-Yfd4iEy+pu26m9shR3wp63BrxeTeiqVsaej+tfpwzCqoCQCm+1w2MkWzOe94iw/J
-BCuv+7dWFYwET5A/rAWEsA+elMjegHmYRv37kHTPwji7rDnPn9TQ
-=zo73
+iEYEARECAAYFAk8KiMkACgkQdEpXpumNYVkrpACeJDwi3t9a+Hpdon+0fzl9wSq+
+5ScAn2i28kW9VY50zT4AsIppEGO9OUQeiQIcBAEBCgAGBQJPCojJAAoJELc3H0m+
+i6gZDOcQAI0AsfAplCvjDiiWe7cR8o7moE9k1ci6nTO5qgjdOv1XT/u5dVnKbm73
+GlAKcDna5i2HKbaDddlaFSC0Oqy90tduiyeW2gU7WjX03NuHDg/cypCKhI4Mj7Jf
+0OVP2Xb/hYj5cntx2FdgtER/UqGoCnVRhDTwpYN+MbVHa6Aoiyg6Wk5EkI5XX3vD
+wUefokJL8tJeKhRQnh7wwVltQixk2jDHjnAh0olLnUxnxqsDTNlSso3ytKbGMtRO
+fKx80cGkBo5VgrcT8wyf8qZR9qNbwL6aWEi/gD5ni96so7X/WdilfzLeCRmtZP6X
+VIgEmzpyrX9wtouQRfJsW9jS4d5ppYn6Vf5Q0Z4MZsSNWvL2FFejoJTijvdRma80
+oBSb7MLtay6Kr70CMpRK05doCsXIt9qr/tsjxxOPfkmojX2pJr3jXpNvcCP3ULvj
+Ks4cI0H4Pbf7l2zbqDvucXcq0o2gST8fG7gy2DH8GgkIvi0oZXd63v8ph0iQ9D5W
+A6/UsDBHyJgEBoY8bAoyIYDzgzZD2OHoF0+/dPlTe9khVTpI2aebzEP+WwobgjJ/
+QxXylmDBnBZFBpHpmLbd8W/+9qiT9b8LDxzyB9mrz1tUbPLZ4PFQkxHYpOvg6ILr
+kEA8lvL5K/uPaci+p37BGf7YdbWZTVx79V3rIZMhXhSLo/Yx5QYI
+=IRBy
 -----END PGP SIGNATURE-----

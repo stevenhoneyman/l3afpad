@@ -1,6 +1,8 @@
-2011-12-27
+2012-01-09
 
-  version UNRELEASED:
+  version 0.8.18.1.7:
+	* Support search and replace history and
+	  option: --disable-search-history
 	* Updated Japanese translation (Toshiharu Kudoh).
 	* Updated Russian translation (Aleksej Perepyolkin).
 	* Make everything compatible with gcc -std=c1x

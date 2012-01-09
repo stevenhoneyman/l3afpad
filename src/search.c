@@ -22,6 +22,10 @@
 #include "l3afpad.h"
 #include "gtksourceiter.h"
 
+#if SEARCH_HISTORY
+static GList *find_history;
+static GList *replace_history;
+#endif
 static gchar *string_find    = NULL;
 static gchar *string_replace = NULL;
 static gboolean match_case, replace_all;//, replace_mode = FALSE;
@@ -246,6 +250,7 @@ static gint document_replace_real(GtkWidget *textview)
 }
 
 
+#if !SEARCH_HISTORY
 static gint entry_len;
 
 static void toggle_sensitivity(GtkWidget *w, gint pos1, gint pos2, gint *pos3)
@@ -263,6 +268,17 @@ static void toggle_sensitivity(GtkWidget *w, gint pos1, gint pos2, gint *pos3)
 				GTK_RESPONSE_OK, FALSE);
 	}
 }
+#endif /* !SEARCH_HISTORY */
+
+#if SEARCH_HISTORY
+static void toggle_sensitivity(GtkWidget *entry)
+{
+	gboolean has_text = *(gtk_entry_get_text(GTK_ENTRY(entry))) != '\0';
+	gtk_dialog_set_response_sensitive(
+		GTK_DIALOG(gtk_widget_get_toplevel(entry)), GTK_RESPONSE_OK,
+		(has_text) ? TRUE : FALSE);
+}
+#endif
 
 static void toggle_check_case(GtkWidget *widget)
 {
@@ -279,6 +295,11 @@ gint run_dialog_search(GtkWidget *textview, gint mode)
 	GtkWidget *dialog;
 	GtkWidget *table;
 	GtkWidget *label_find, *label_replace;
+#if SEARCH_HISTORY
+	GtkWidget *combo_find, *combo_replace = NULL;
+	GtkTextBuffer *buffer;
+	GtkTextIter start_iter, end_iter;
+#endif
 	GtkWidget *entry_find, *entry_replace = NULL;
 	GtkWidget *check_case, *check_all;
 	gint res;
@@ -306,9 +327,16 @@ gint run_dialog_search(GtkWidget *textview, gint mode)
 	label_find = gtk_label_new_with_mnemonic(_("Fi_nd what:"));
 	 gtk_misc_set_alignment(GTK_MISC(label_find), 0, 0.5);
 	 gtk_table_attach_defaults(GTK_TABLE(table), label_find, 0, 1, 0, 1);
+#if SEARCH_HISTORY
+	combo_find = create_combo_with_history (&find_history);
+	 gtk_table_attach_defaults(GTK_TABLE(table), combo_find, 1, 2, 0, 1);
+	 entry_find = gtk_bin_get_child(GTK_BIN(combo_find));
+#else
 	entry_find = gtk_entry_new();
 	 gtk_table_attach_defaults(GTK_TABLE(table), entry_find, 1, 2, 0, 1);
+#endif
 	 gtk_label_set_mnemonic_widget(GTK_LABEL(label_find), entry_find);
+#if !SEARCH_HISTORY
 	 gtk_dialog_set_response_sensitive(GTK_DIALOG(dialog),
 		GTK_RESPONSE_OK, FALSE);
 	 entry_len = 0;
@@ -321,10 +349,37 @@ gint run_dialog_search(GtkWidget *textview, gint mode)
 		 gtk_dialog_set_response_sensitive(GTK_DIALOG(dialog),
 			GTK_RESPONSE_OK, TRUE);
 	 }
+#endif
+#if SEARCH_HISTORY
+	 gtk_entry_set_activates_default(GTK_ENTRY(entry_find), TRUE);
+	 g_signal_connect_after(G_OBJECT(entry_find), "insert-text",
+		G_CALLBACK(toggle_sensitivity), NULL);
+	 g_signal_connect_after(G_OBJECT(entry_find), "delete-text",
+		G_CALLBACK(toggle_sensitivity), NULL);
+	 buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (textview));
+	 if (gtk_text_buffer_get_selection_bounds (buffer, &start_iter, &end_iter)) {
+		if (string_find != NULL)
+		 g_free(string_find);
+		string_find = gtk_text_buffer_get_text (buffer, &start_iter, &end_iter,
+			FALSE);
+		gtk_entry_set_text(GTK_ENTRY(entry_find), string_find);
+		gtk_dialog_set_response_sensitive(GTK_DIALOG(dialog),
+			GTK_RESPONSE_OK, TRUE);
+	 }
+	 else
+		gtk_entry_set_text(GTK_ENTRY(entry_find), "");
+#endif
 	if (mode) {
 		label_replace = gtk_label_new_with_mnemonic(_("Re_place with:"));
 		 gtk_misc_set_alignment(GTK_MISC(label_replace), 0, 0.5);
 		 gtk_table_attach_defaults(GTK_TABLE(table), label_replace, 0, 1, 1, 2);
+#if SEARCH_HISTORY
+		combo_replace = create_combo_with_history (&replace_history);
+		 gtk_table_attach_defaults(GTK_TABLE(table), combo_replace, 1, 2, 1, 2);
+		entry_replace = gtk_bin_get_child(GTK_BIN(combo_replace));
+		 gtk_label_set_mnemonic_widget(GTK_LABEL(label_replace), entry_replace);
+		 gtk_entry_set_text(GTK_ENTRY(entry_replace), "");
+#else
 		entry_replace = gtk_entry_new();
 		 gtk_table_attach_defaults(GTK_TABLE(table), entry_replace, 1, 2, 1, 2);
 		 gtk_label_set_mnemonic_widget(GTK_LABEL(label_replace), entry_replace);
@@ -334,26 +389,45 @@ gint run_dialog_search(GtkWidget *textview, gint mode)
 	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_OK);
 	gtk_entry_set_activates_default(GTK_ENTRY(entry_find), TRUE);
 	if (mode)
+#endif
 		gtk_entry_set_activates_default(GTK_ENTRY(entry_replace), TRUE);
 
+#if !SEARCH_HISTORY
 	check_case = gtk_check_button_new_with_mnemonic(_("_Match case"));
 	 gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(check_case), match_case);
 	 g_signal_connect(check_case, "toggled", G_CALLBACK(toggle_check_case), NULL);
 	 gtk_table_attach_defaults (GTK_TABLE(table), check_case, 0, 2, 1 + mode, 2 + mode);
 	if (mode) {
+#endif
 	check_all = gtk_check_button_new_with_mnemonic(_("Replace _all at once"));
 	 gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(check_all), replace_all);
 	 g_signal_connect(check_all, "toggled", G_CALLBACK(toggle_check_all), NULL);
 	 gtk_table_attach_defaults(GTK_TABLE(table), check_all, 0, 2, 2 + mode, 3 + mode);
 	}
+#if SEARCH_HISTORY
+	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_OK);
+	toggle_sensitivity (entry_find);
+	check_case = gtk_check_button_new_with_mnemonic(_("_Match case"));
+	 gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(check_case), match_case);
+	 g_signal_connect(check_case, "toggled", G_CALLBACK(toggle_check_case), NULL);
+	 gtk_table_attach_defaults (GTK_TABLE(table), check_case, 0, 2, 1 + mode, 2 + mode);
+#endif
 	gtk_window_set_resizable(GTK_WINDOW(dialog), FALSE);
 	gtk_widget_show_all(table);
 
 	res = gtk_dialog_run(GTK_DIALOG(dialog));
 	if (res == GTK_RESPONSE_OK) {
+#if SEARCH_HISTORY
+		update_combo_data (entry_find, &find_history);
+		if (string_find != NULL)
+#endif
 		g_free(string_find);
 		string_find = g_strdup(gtk_entry_get_text(GTK_ENTRY(entry_find)));
 		if (mode) {
+#if SEARCH_HISTORY
+			update_combo_data (entry_replace, &replace_history);
+			if (string_replace != NULL)
+#endif
 			g_free(string_replace);
 			string_replace = g_strdup(gtk_entry_get_text(GTK_ENTRY(entry_replace)));
 		}
