@@ -2,61 +2,61 @@
 Hash: SHA1,SHA512
 
 634071380936e4893b0e8cacdfcd344638406575    171 AUTHORS
-9ff029efada108641f205078add0829f44b861a7  10039 ChangeLog
+2b2b17cf69211b609d36d77c4a0d4a0d20469ff4  10128 ChangeLog
 0beb31ee37259edeb621d345db933f2c827b2a21     22 Makefile.am
-32ae3f99a247e614dcad4cfb2156a8d992ab53d0  22228 Makefile.in
+6d41b7eaa5d93184c207223e2e295e7998d0ac3d  23155 Makefile.in
 04dc937708d52f3b9b6f9a096898c5e23fb80ace   2071 README
-2a4026c3eed929bfa5341fb5ea22a5e0f95a5fc4  66077 aclocal.m4
-08e7ff6a0bc9382beae57974c3ac95c9ac565faa   3769 compile
+c65fd422fb384c984b4662bd85b5d3c5b26c0024  66405 aclocal.m4
+ebde5ed5590e81b0426dc0ebc4c0b124e987a288   6879 compile
 7c5c2a0e918489ebb5817d0035e087a4ddc6ca3d   2709 config.h.in
-ebaa7bea2f6acf203c53a9be0fa552a336b1e43e 239778 configure
+6cc264f5190e09978b2db3dfa90595be31c15326 239965 configure
 100d8aa7b504824ec5b269245e9d25d3e21dabf9   2160 configure.ac
 cbd191104fbb3eda18bc12e1caa9e60db401a008    264 data/Makefile.am
-dd49d0ee0462718182658e33e8cb4aa8dddce9b8  19803 data/Makefile.in
+14fba1879a8ea4f45c1df692dcc56de7294a5814  20076 data/Makefile.in
 d5f3d29e0f768e7a48a9ab7bb7903aa123a72280     99 data/icons/128x128/Makefile.am
-51a21737a46b2adfb366fc675ea4f393bb1c8fb4  11450 data/icons/128x128/Makefile.in
+32aca633baa6dcbda6c1869b879ee4994880c67c  11805 data/icons/128x128/Makefile.in
 8cf1a82f7ff3a26c46919185a78984f70a067cdb   9794 data/icons/128x128/l3afpad.png
 26763e3c019a93fb07f055bb4ebdab1e47774ffb     97 data/icons/16x16/Makefile.am
-cbb6fb16634a744c09c027771b7a83de0e33a634  11442 data/icons/16x16/Makefile.in
+c3651c7c8e5c6e2d760fb0c2293413094a4b9405  11797 data/icons/16x16/Makefile.in
 7f2b6a5b5dc41d504ba6b60c7ab1d36322e71306    947 data/icons/16x16/l3afpad.png
 4d60f663c6929798d2d90818a23952229b6fea20     99 data/icons/192x192/Makefile.am
-4a9620dcb4fd0ff8e8001af5d4d77e3995832162  11450 data/icons/192x192/Makefile.in
+de0f9dea28e0cbc6de60b6c4205d898af1c4a145  11805 data/icons/192x192/Makefile.in
 64750d14155472c2786f792946ca15769e62b156  17029 data/icons/192x192/l3afpad.png
 f09b9895a7c1594b10a7725e8fa906cde786dc71     97 data/icons/20x20/Makefile.am
-dec66900b977464389eee5dbe0c77e3b548ba77f  11442 data/icons/20x20/Makefile.in
+c9ea0b233a9844c2816d224cc7e48b83e2620766  11797 data/icons/20x20/Makefile.in
 3b235a6b2d0ab4d07b3f5f2e80809cf78bcbb452   1111 data/icons/20x20/l3afpad.png
 0d23a3a980e585436e18c6dfecd21a8e2f8bb367     97 data/icons/22x22/Makefile.am
-c8c09106329addeb4f3e9aa6bceab80159c7fe0c  11442 data/icons/22x22/Makefile.in
+41acee9e296f8f474a316ef047fc477290533e5c  11797 data/icons/22x22/Makefile.in
 27b187a98e7b3cdf2b8fd99aee2fb7c982c26401   1055 data/icons/22x22/l3afpad.png
 f72d9a4a77058c84d1e43c70fe1dac18bf5c47a1     97 data/icons/24x24/Makefile.am
-d222fa67d42ca7de4a71dd97795825a767d2f23f  11442 data/icons/24x24/Makefile.in
+45746d1f5c2787583f0fe997c379ec5081fcef82  11797 data/icons/24x24/Makefile.in
 17ac87ac5727643ed9fcc2967960c8927a53bd91   1174 data/icons/24x24/l3afpad.png
 bad47c5a5bb5dd71d71ef21b6cc00da048e32b17     99 data/icons/256x256/Makefile.am
-8f197be4ce1682a60846160f4583fd269a2aa800  11450 data/icons/256x256/Makefile.in
+d09a4e37df5525cadf1f5c7e7a87484d55ec37c1  11805 data/icons/256x256/Makefile.in
 0c86eff769c88d3c0cf6253f361e74420317e7ea  21030 data/icons/256x256/l3afpad.png
 78634346b204497840efb96e73862ce005d6146c     97 data/icons/32x32/Makefile.am
-a1fced71aec94ec50c8ea8a49a10260121018b14  11442 data/icons/32x32/Makefile.in
+0adfc7773a1bb649b58857886dfd60e868724141  11797 data/icons/32x32/Makefile.in
 ef1d36c748d72a652b5c8ff28a085b6a8528a78d   1774 data/icons/32x32/l3afpad.png
 905be94251b1c9755aa7ff3f97800a79dd11d705     97 data/icons/36x36/Makefile.am
-add4cc7b0413c9345b40f40f383253896fe738ab  11442 data/icons/36x36/Makefile.in
+44255162cf1b134efb07fd35e850933cb8edcdc9  11797 data/icons/36x36/Makefile.in
 216d0b4ce6019af75879379b92673d062049e667   2068 data/icons/36x36/l3afpad.png
 6ad0f16850025dddb4b56ea7560789179f576c60     97 data/icons/40x40/Makefile.am
-fd93a5643db7fc1d29ccdfe0bd90d46c24d1b05a  11442 data/icons/40x40/Makefile.in
+a53bca6eee3de75ff70e51fa6076867389f3f2e5  11797 data/icons/40x40/Makefile.in
 9a42580dbb087cb919af31cce2658c43bf8107f7   2349 data/icons/40x40/l3afpad.png
 097d718eedaca858f5bb17964c2ed0706a8ecd53     97 data/icons/48x48/Makefile.am
-113dd152f03064ed64a90aac7f536362fbc59efe  11442 data/icons/48x48/Makefile.in
+6245035cf3c2ff71a440c32f2fa666c3b64bb5ea  11797 data/icons/48x48/Makefile.in
 99322946fd6eb0bec8d797f5c2cf899f213e973f   2915 data/icons/48x48/l3afpad.png
 86b6a9d74db3af1930b51c7d05af8c6be80d711d     97 data/icons/64x64/Makefile.am
-b3e6ea3c7f87318a39a3e82ef624b1998c9204f5  11442 data/icons/64x64/Makefile.in
+820cc8587ff1f76ae5611f747adcd56aedf5dabc  11797 data/icons/64x64/Makefile.in
 b0d1df41ed150bbc1dbc47cb9393942a6b199d9b   4006 data/icons/64x64/l3afpad.png
 b46fd65a2be0fec8785d07d467c4407d83cddecf     97 data/icons/72x72/Makefile.am
-60b668a6fc1c9d0879c215eb93af07f346cebf84  11442 data/icons/72x72/Makefile.in
+02fa6d8d9b4bc421f516365296a6e4f00a6a4a22  11797 data/icons/72x72/Makefile.in
 2723548ad1cca0103845123c2e644dfa175e3fec   4605 data/icons/72x72/l3afpad.png
 c6c66fd2722e65917d41c70969689e5bcb20c6d6     97 data/icons/96x96/Makefile.am
-c876fa7c7814ceb5cc7668914c9b889514b9fd8a  11442 data/icons/96x96/Makefile.in
+beeb2214f4c9380539030055e86047084ab17546  11797 data/icons/96x96/Makefile.in
 df7241f90d99f10577aceaf7cc3f3344ac1f5450   6678 data/icons/96x96/l3afpad.png
 33c3415cb3575f4347456695b56271bd014c658b    426 data/icons/Makefile.am
-a6163cd87721b83514b38aee3ab556b6af1d2902  17147 data/icons/Makefile.in
+1daae265cc58c15cd7adf84e667bec37f32baade  17339 data/icons/Makefile.in
 fd55d34765bc0c212ea128ae2b76a7bc377c1e77   1065 data/icons_another/16.png
 7910b4e10d69d67b82d516511190472f056b3f10   1066 data/icons_another/20.png
 a5c2ec354db9f29c4614945477a5d26fec335fb9   1218 data/icons_another/22.png
@@ -69,13 +69,13 @@ f9dc3d93b1d0256dc920a704c1cc7c3e42c852d0   2681 data/icons_another/40.png
 99322946fd6eb0bec8d797f5c2cf899f213e973f   2915 data/l3afpad.png
 9b536224b0f38c95a52b9b268e12995f26ac33b2   2308 data/l3afpad.xpm
 2fe74a056b17fac68d7e27149dd44f4e94f27d12  35387 data/l3afpad_original.svg
-6749a6b5ab2b3edd45d38ac560759c641cd50200  18615 depcomp
+22250306aecea98abe4cc05ea69c1bf4f005edc8  20334 depcomp
 4cc77b90af91e615a64ae04893fdffa7939db84c  18092 gpl-2.0.txt
-d30e962a3de2da09ab0a9a7979bee787922464a1  13663 install-sh
+06ee6336e63bb845c8439d777c32eb2eccc4fbf1  13998 install-sh
 01a6b4bf79aca9b556822601186afab86e8c4fbf  26530 lgpl-2.1.txt
-aeef20c1028a7ac4b904dd51b4c40376eba21350  11419 missing
-c749145d16c43a17ed040cb5325353d04b0c5946   7069 po/ChangeLog
-0640d6d14812d6323dbb683259046b95a6c0ceb5    169 po/LINGUAS
+d7c9981a81af13370d4ed152b24c0a82b7028585  10346 missing
+9d3a54af4a39639d4c6cdde77f42274e3d2da43b   7161 po/ChangeLog
+9762868836b7908c6ce7244d6743c19ea1cc6e9d    172 po/LINGUAS
 ce1c3468fcd9afcacfb197457ae3c40ea97f585f   6911 po/Makefile.in.in
 610fcd63bc842d466f948e96e625fb3927202b32    135 po/POTFILES.in
 524fe365953c15ba867a6bfc3bc2c686636f6159   6240 po/bg.po
@@ -87,6 +87,7 @@ e3a8d0bfa39c8f7040a8a8a93547542279a58973   5779 po/da.po
 bc81fd05e9bc4e3826463d33bda5eb25aa14fb0c   6157 po/el.po
 acb52d930caa4715a43ec8dd80cf90bbd6517e8c   5079 po/eo.po
 454cfc5293a6ae09535b733cf7e95f89c2ca2209   5219 po/es.po
+cfd70b2145c0af8762ccb28ee742bc9b915e2c64   5317 po/et.po
 46040c8f4255d1b12e0df7201f0c6bc785b5a819   5298 po/eu.po
 a50d6f9d3bb985c9d8ff3542284013d2e3f9d89e   5236 po/fi.po
 904563d7c195d7de0277ab6cfd66dcb6da269f7a   5555 po/fr.po
@@ -117,7 +118,7 @@ b613839b6a6c14137e94e1b4778e4d8c80fd3579   5451 po/vi.po
 9254b740e87dde806416bec24a4be3835983ff57   5275 po/zh_CN.po
 5112a4f16e7250f5d3799a4792800015fe049b2c   5253 po/zh_TW.po
 5436cb3b94928a04328d697be5716f4e71aa4e0f    583 src/Makefile.am
-23b1dac1edc2f3a415a6ceeac9c821a05332de37  50150 src/Makefile.in
+d6627d3b45d0935d3dee3e5d31f647b84ceb064c  50372 src/Makefile.in
 aeceb68b50e86a97097604479af0c7c255b1a481   8649 src/callback.c
 1985e67d5ad11330ccaca93409b99c147c821bc9   1657 src/callback.h
 4f2d3c776664cff12d4b3d78731b1dbbc0191e68   2594 src/dialog.c
@@ -160,18 +161,18 @@ bf524e4de2a68901495a91d181cf3573edd3027b   2532 src/window.c
 75d1c79bfdd24b7ae5450ead4aef3ab43267e85f   1068 src/window.h
 -----BEGIN PGP SIGNATURE-----
 
-iEYEARECAAYFAk8KiMkACgkQdEpXpumNYVkrpACeJDwi3t9a+Hpdon+0fzl9wSq+
-5ScAn2i28kW9VY50zT4AsIppEGO9OUQeiQIcBAEBCgAGBQJPCojJAAoJELc3H0m+
-i6gZDOcQAI0AsfAplCvjDiiWe7cR8o7moE9k1ci6nTO5qgjdOv1XT/u5dVnKbm73
-GlAKcDna5i2HKbaDddlaFSC0Oqy90tduiyeW2gU7WjX03NuHDg/cypCKhI4Mj7Jf
-0OVP2Xb/hYj5cntx2FdgtER/UqGoCnVRhDTwpYN+MbVHa6Aoiyg6Wk5EkI5XX3vD
-wUefokJL8tJeKhRQnh7wwVltQixk2jDHjnAh0olLnUxnxqsDTNlSso3ytKbGMtRO
-fKx80cGkBo5VgrcT8wyf8qZR9qNbwL6aWEi/gD5ni96so7X/WdilfzLeCRmtZP6X
-VIgEmzpyrX9wtouQRfJsW9jS4d5ppYn6Vf5Q0Z4MZsSNWvL2FFejoJTijvdRma80
-oBSb7MLtay6Kr70CMpRK05doCsXIt9qr/tsjxxOPfkmojX2pJr3jXpNvcCP3ULvj
-Ks4cI0H4Pbf7l2zbqDvucXcq0o2gST8fG7gy2DH8GgkIvi0oZXd63v8ph0iQ9D5W
-A6/UsDBHyJgEBoY8bAoyIYDzgzZD2OHoF0+/dPlTe9khVTpI2aebzEP+WwobgjJ/
-QxXylmDBnBZFBpHpmLbd8W/+9qiT9b8LDxzyB9mrz1tUbPLZ4PFQkxHYpOvg6ILr
-kEA8lvL5K/uPaci+p37BGf7YdbWZTVx79V3rIZMhXhSLo/Yx5QYI
-=IRBy
+iEYEARECAAYFAk85ItgACgkQdEpXpumNYVkEbgCdFFXEbO455IXCIY+/u0cESSp2
+NjMAoIMaEuoHkRNFtOZZGGvDg+6o/rF3iQIcBAEBCgAGBQJPOSLYAAoJELc3H0m+
+i6gZSC4QAIQqQlx9AqYpUQCq4P7VTZ9gEqIkp3LOkYJwGYRg0G175JAQYC9nmRUy
+06lkoLydG3Q64hTAfB/PBt547Lb+/Z4eVwQLqkQlTOj3hLI0IybQTORXzM+MM+KJ
+b4rRtnTVc5+K6dv6+WfcGYXfrwj5rHR43UtWvRMYHCLDwa2/J1b6d8oR0XK16IeS
+WmrbwI0vlI821uZhWTLDcLH0HzVS5W9pMVZjpAMF19fXIiJ5UeRV9EI4tQp2FmjD
+w1GL2wyDqvZkyLOMxWr/r9FgBK1xNhQFLJMrpe/b2EAb8iR16lCERzq4/rM+CBbo
+LrMbaDRDeXn/eq7CJ5ur0/pa/lVz0ooqQibcnKDtv8wxGB3cJHZYEvdmpdyK6Gq7
+TuBamARACGYwic5ODqRHVNMmRFoWfRyE7Qoacc6sNh4Pr6aBYAg+YnG83qGO+nNe
+uE95ln8u3kQ1YPYtgj4zp95uUSuYJgFds3xA2IU1a+ptgvIueOqs+3D0wKbDez+e
+eHyfm1xzlXBbLPGnDloKQvRCAEQw2dU/JzKWEA7aV0vr0Eg6JFocHnlg/jQ77+ne
+IZSic3JcsNjQL8ZMDg3pJrf9bxCfBP+0BtgQlIofHAiK7YggIZOO1+Ij1bMgvbiJ
+AhVwLOXdb2U6JiaamFz2DIFRJvw2CwKkRYLQ5+XAmxKVeUHwllCS
+=k24t
 -----END PGP SIGNATURE-----
