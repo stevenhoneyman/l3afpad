@@ -1,0 +1,291 @@
+# L3afpad Estonian translation.
+# Copyright (C) 2012 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# Anari Jalakas <anari.jalakas@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: L3afpad 0.7.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-12-09 11:16+0800\n"
+"PO-Revision-Date:2012-02-13 13:25+0200\n"
+"Last-Translator: Anari Jalakas <anari.jalakas@gmail.com>\n"
+"Language-Team: Eesti <>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: ../src/menu.c:34
+msgid "_File"
+msgstr "_Fail"
+
+#: ../src/menu.c:35
+msgid "_Edit"
+msgstr "_Redigeerimine"
+
+#: ../src/menu.c:36
+msgid "_Search"
+msgstr "_Otsing"
+
+#: ../src/menu.c:37
+msgid "_Options"
+msgstr "_Valikud"
+
+#: ../src/menu.c:38
+msgid "_Help"
+msgstr "_Abi"
+
+#: ../src/menu.c:39
+msgid "_New"
+msgstr "_Uus"
+
+#: ../src/menu.c:40
+msgid "_Open..."
+msgstr "_Ava..."
+
+#: ../src/menu.c:41
+msgid "_Save"
+msgstr "_Salvesta"
+
+#: ../src/menu.c:42
+msgid "Save _As..."
+msgstr "Salvesta _kui..."
+
+#: ../src/menu.c:44
+msgid "Sta_tistics..."
+msgstr "S_tatistika..."
+
+#: ../src/menu.c:47
+msgid "Print Pre_view"
+msgstr "Printimise eel_vaade"
+
+#: ../src/menu.c:48
+msgid "_Print..."
+msgstr "_Prindi..."
+
+#: ../src/menu.c:50
+msgid "_Quit"
+msgstr "_Välju"
+
+#: ../src/menu.c:51
+msgid "_Undo"
+msgstr "_Võta tagasi"
+
+#: ../src/menu.c:52
+msgid "_Redo"
+msgstr "_Tee uuesti"
+
+#: ../src/menu.c:53
+msgid "Cu_t"
+msgstr "_Lõika"
+
+#: ../src/menu.c:54
+msgid "_Copy"
+msgstr "_Kopeeri"
+
+#: ../src/menu.c:55
+msgid "_Paste"
+msgstr "_Aseta"
+
+#: ../src/menu.c:56
+msgid "_Delete"
+msgstr "_Kustuta"
+
+#: ../src/menu.c:57
+msgid "Select _All"
+msgstr "Vali _kõik"
+
+#: ../src/menu.c:58
+msgid "_Find..."
+msgstr "_Otsi..."
+
+#: ../src/menu.c:59
+msgid "Find _Next"
+msgstr "Otsi _järgmine"
+
+#: ../src/menu.c:60
+msgid "Find _Previous"
+msgstr "Otsi _eelmine"
+
+#: ../src/menu.c:61
+msgid "_Replace..."
+msgstr "_Asenda..."
+
+#: ../src/menu.c:62
+msgid "_Jump To..."
+msgstr "Liigu asu_kohta..."
+
+#: ../src/menu.c:63
+msgid "_Font..."
+msgstr "_Kirjatüüp..."
+
+#: ../src/menu.c:64
+msgid "_About"
+msgstr "_Programmist lähemalt"
+
+#: ../src/menu.c:71
+msgid "_Word Wrap"
+msgstr "_Reamurdmine"
+
+#: ../src/menu.c:72
+msgid "_Line Numbers"
+msgstr "Rea_numbrid"
+
+#: ../src/menu.c:73
+msgid "_Auto Indent"
+msgstr "_Automaatne taane"
+
+#: ../src/callback.c:139
+msgid "<b>Statistics</b>"
+msgstr "<b>Statistika</b>"
+
+#: ../src/callback.c:330
+msgid "GTK+ based simple text editor"
+msgstr "GTK+ baasil lihtne tekstiredaktor"
+
+#: ../src/callback.c:336
+msgid "translator-credits"
+msgstr "Anari Jalakas <anari.jalakas@gmail.com>, 2012"
+
+#: ../src/callback.c:347
+msgid "Lɜafpad"
+msgstr "Lɜafpad"
+
+#: ../src/view.c:62
+#, c-format
+msgid "Save changes to '%s'?"
+msgstr "Muudatuste salvestamine faili '%s'?"
+
+#: ../src/font.c:36
+msgid "Font"
+msgstr "Kirjatüüp"
+
+#: ../src/selector.c:95
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Käesolev lokaat (%s)"
+
+#: ../src/selector.c:126
+msgid "Other Codeset"
+msgstr "Muu märgistik"
+
+#: ../src/selector.c:166
+msgid "Code_set:"
+msgstr "Märgi_stik:"
+
+#: ../src/selector.c:190
+#, c-format
+msgid "'%s' is not supported"
+msgstr "'%s' pole toetatud"
+
+#: ../src/selector.c:250
+msgid "Auto-Detect"
+msgstr "Automaatne-tuvastamine"
+
+#: ../src/selector.c:299
+msgid "Open"
+msgstr "Ava"
+
+#: ../src/selector.c:299
+msgid "Save As"
+msgstr "Salvesta kui"
+
+#: ../src/selector.c:314
+msgid "C_haracter Coding:"
+msgstr "Märgi _kodeering:"
+
+#: ../src/selector.c:372
+#, c-format
+msgid "'%s' already exists. Overwrite?"
+msgstr "'%s' nimeline fail on juba olemas. Kas kirjutada see üle?"
+
+#: ../src/file.c:48
+msgid "Untitled"
+msgstr "Pealkirjata"
+
+#: ../src/file.c:203
+#, c-format
+msgid "Can't convert codeset to '%s'"
+msgstr "Märgitikku ei õnnestu konverteerida '%s'"
+
+#: ../src/file.c:216
+msgid "Can't open file to write"
+msgstr "Faili kirjutamiseks avamine ebaõnnestus"
+
+#: ../src/file.c:221
+msgid "Can't write file"
+msgstr "Faili kirjutamine ebaõnnestus"
+
+#: ../src/file.c:274
+#, c-format
+msgid ""
+"<u>Totals count</u>\n"
+"Chars: %7d Words: %6d Lines: %5d\n"
+"\n"
+"<u>Selection</u>\n"
+"Chars: %7d Words: %6d Lines: %5d\n"
+msgstr ""
+"<u>Kokku</u>\n"
+"Märke: %7d Sõnu: %6d Ridu: %5d\n"
+"\n"
+"<u>Valitud</u>\n"
+"Märke: %7d Sõnu: %6d Ridu: %5d\n"
+
+#: ../src/search.c:125
+msgid "Search string not found"
+msgstr "Otsitavat ei leitud"
+
+#: ../src/search.c:178
+msgid "Replace?"
+msgstr "Asenda?"
+
+#: ../src/search.c:241
+#, c-format
+msgid "%d strings replaced"
+msgstr "%d stringi asedatud"
+
+#: ../src/search.c:287
+msgid "Replace"
+msgstr "Asendamine"
+
+#: ../src/search.c:294
+msgid "Find"
+msgstr "Otsimine"
+
+#: ../src/search.c:306
+msgid "Fi_nd what:"
+msgstr "Leia:"
+
+#: ../src/search.c:325
+msgid "Re_place with:"
+msgstr "A_semele:"
+
+#: ../src/search.c:339
+msgid "_Match case"
+msgstr "_Tõstutundlik"
+
+#: ../src/search.c:344
+msgid "Replace _all at once"
+msgstr "Asenda _kõik korraga"
+
+#: ../src/search.c:395
+msgid "Jump To"
+msgstr "Liigu kohale "
+
+#: ../src/search.c:400
+msgid "_Jump"
+msgstr "_Liigu"
+
+#: ../src/search.c:407
+msgid "_Line number:"
+msgstr "_Rea number"
+
+#: ../data/l3afpad.desktop.in.h:1
+msgid "L3afpad"
+msgstr "L3afpad"
+
+#: ../data/l3afpad.desktop.in.h:2
+msgid "Simple text editor"
+msgstr "Lihtne tekstiredaktor"
