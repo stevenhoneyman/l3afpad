@@ -1,6 +1,7 @@
 AC_INIT(L3afpad, 0.8.18.1.7, caleb@calno.com)
 AM_INIT_AUTOMAKE($PACKAGE_TARNAME, $PACKAGE_VERSION)
 AM_CONFIG_HEADER(config.h)
+AM_MAINTAINER_MODE([enable])
 AC_SYS_LARGEFILE
 AC_PROG_INTLTOOL(, no-xml)	# require >= 0.31 for autoreconf
 AC_PROG_CC

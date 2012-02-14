@@ -1,7 +1,8 @@
-2012-02-13
+2012-02-14
 
   version UNRELEASED:
 	* Added Estonian translation (thanks Anari Jalakas).
+	* Use AM_MAINTAINER_MODE([enable]) to prevent timestamp skew issue
 
 2012-01-09
 
