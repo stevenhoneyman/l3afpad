@@ -4,6 +4,7 @@
 	* Added Estonian translation (thanks Anari Jalakas).
 	* Use AM_MAINTAINER_MODE([enable]) to prevent timestamp skew issue
 	* Disable search and replace history by default.
+	* Workaround for line number color with GTK+ >= 3.3.14
 
 2012-01-09
 
