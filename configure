@@ -744,11 +744,11 @@ enable_largefile
 enable_dependency_tracking
 enable_nls
 enable_print
-enable_search_history
 enable_statistics
 enable_xinput2
 enable_emacs
 enable_gtkgrid
+enable_search_history
 '
       ac_precious_vars='build_alias
 host_alias
@@ -1387,12 +1387,11 @@ Optional Features:
   --enable-dependency-tracking   do not reject slow dependency extractors
   --disable-nls           do not use Native Language Support
   --disable-print         force to disable print feature
-  --disable-search-history
-                          force to disable search history
   --disable-statistics    force to disable statistics
   --disable-xinput2       force to disable Xinput2
   --enable-emacs          implement Emacs key theme (experimental)
   --enable-gtkgrid        Enable GtkGrid
+  --enable-search-history force to enable search history
 
 Some influential environment variables:
   CC          C compiler command
@@ -5485,17 +5484,6 @@ $as_echo "#define ENABLE_PRINT 0" >>confdefs.h
 
 	fi
 
-# Check whether --enable-search-history was given.
-if test "${enable_search_history+set}" = set; then :
-  enableval=$enable_search_history;
-fi
-
-	if test "$enable_search_history" = "no"; then
-
-$as_echo "#define SEARCH_HISTORY 0" >>confdefs.h
-
-	fi
-
 # Check whether --enable-statistics was given.
 if test "${enable_statistics+set}" = set; then :
   enableval=$enable_statistics;
@@ -5537,6 +5525,17 @@ fi
 	if test "$enable_gtkgrid" = "yes"; then
 
 $as_echo "#define USE_GTK_GRID 1" >>confdefs.h
+
+	fi
+
+# Check whether --enable-search-history was given.
+if test "${enable_search_history+set}" = set; then :
+  enableval=$enable_search_history;
+fi
+
+	if test "$enable_search_history" = "yes"; then
+
+$as_echo "#define SEARCH_HISTORY 1" >>confdefs.h
 
 	fi
 

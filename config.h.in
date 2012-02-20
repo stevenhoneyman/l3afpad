@@ -84,7 +84,7 @@
 /* Define to the version of this package. */
 #undef PACKAGE_VERSION
 
-/* Define to 0 if you disable search history. */
+/* Define to 1 if you enable search history. */
 #undef SEARCH_HISTORY
 
 /* Define to 1 if you have the ANSI C header files. */

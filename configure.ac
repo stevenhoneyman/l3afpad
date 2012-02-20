@@ -18,12 +18,6 @@ AC_ARG_ENABLE(print,
 		AC_DEFINE(ENABLE_PRINT, 0, [Define to 0 if you disable print.])
 	fi
 
-AC_ARG_ENABLE(search-history,
-	AC_HELP_STRING([--disable-search-history], [force to disable search history]))
-	if test "$enable_search_history" = "no"; then
-		AC_DEFINE(SEARCH_HISTORY, 0, [Define to 0 if you disable search history.])
-	fi
-
 AC_ARG_ENABLE(statistics,
 	AC_HELP_STRING([--disable-statistics], [force to disable statistics]))
 	if test "$enable_statistics" = "no"; then
@@ -46,6 +40,12 @@ AC_ARG_ENABLE(gtkgrid,
 	AC_HELP_STRING([--enable-gtkgrid], [Enable GtkGrid]))
 	if test "$enable_gtkgrid" = "yes"; then
 		AC_DEFINE(USE_GTK_GRID, 1, [Define to 1 if you enable GtkGrid.])
+	fi
+
+AC_ARG_ENABLE(search-history,
+	AC_HELP_STRING([--enable-search-history], [force to enable search history]))
+	if test "$enable_search_history" = "yes"; then
+		AC_DEFINE(SEARCH_HISTORY, 1, [Define to 1 if you enable search history.])
 	fi
 
 GETTEXT_PACKAGE="$PACKAGE"

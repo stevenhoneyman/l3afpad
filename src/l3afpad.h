@@ -32,7 +32,7 @@
 #endif
 
 #ifndef SEARCH_HISTORY
-#define SEARCH_HISTORY 1
+#define SEARCH_HISTORY 0
 #endif
 
 #ifndef ENABLE_STATISTICS
