@@ -25,6 +25,7 @@
 #endif
 
 #include <gtk/gtk.h>
+#include <glib.h>
 #include <glib/gi18n.h>
 
 #ifndef ENABLE_PRINT
@@ -60,9 +61,7 @@
 #include "dnd.h"
 #include "utils.h"
 #include "emacs.h"
-#if ENABLE_PRINT
 #include "gtkprint.h"
-#endif
 #include <gdk/gdkkeysyms-compat.h>
 
 #define gtk_check_menu_item_get_active gtk_toggle_action_get_active

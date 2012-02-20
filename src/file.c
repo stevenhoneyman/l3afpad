@@ -17,6 +17,7 @@
  *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
+#include <glib/gprintf.h>
 #include <stdio.h>
 #include <string.h>
 #include "l3afpad.h"

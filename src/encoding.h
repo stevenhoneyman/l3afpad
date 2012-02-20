@@ -20,8 +20,6 @@
 #ifndef _ENCODING_H
 #define _ENCODING_H
 
-#include <glib.h> // TODO: ?????  It must to -> .c
-
 enum {
 	IANA = 0,
 	OPENI18N,

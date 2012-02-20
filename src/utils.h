@@ -20,13 +20,9 @@
 #ifndef _UTILS_H
 #define _UTILS_H
 
-#ifdef G_OS_UNIX
 gchar *gedit_utils_get_stdin(void);
-#endif
 GtkWidget *create_button_with_stock_image(const gchar *text, const gchar *stock_id);
-#if SEARCH_HISTORY
 void update_combo_data(GtkWidget *entry, GList **history);
 GtkWidget *create_combo_with_history(GList **history);
-#endif
 
 #endif /* _UTILS_H */
