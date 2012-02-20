@@ -1,6 +1,6 @@
-2012-02-14
+2012-02-20
 
-  version UNRELEASED:
+  version 0.8.18.1.8:
 	* Added Estonian translation (thanks Anari Jalakas).
 	* Use AM_MAINTAINER_MODE([enable]) to prevent timestamp skew issue
 	* Disable search and replace history by default.
