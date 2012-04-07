@@ -198,12 +198,7 @@ DV({g_print("Painting line numbers %d - %d\n",
 
 	alist = pango_attr_list_new();
 /* TODO: should change line number color by conffile */
-#if !GTK_CHECK_VERSION(3,3,14)
 	attr = pango_attr_foreground_new(0, 0, 0);
-#endif
-#if GTK_CHECK_VERSION(3,3,14)
-	attr = pango_attr_foreground_new(65535, 65535, 65535);
-#endif
 	attr->start_index = 0;
 	attr->end_index = G_MAXUINT;
 	pango_attr_list_insert(alist, attr);
