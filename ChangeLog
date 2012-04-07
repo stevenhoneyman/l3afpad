@@ -1,3 +1,8 @@
+2012-04-07
+
+  version UNRELEASED:
+	* Revert workaround for line number color, fixed by GTK+ upstream.
+
 2012-02-20
 
   version 0.8.18.1.8:
