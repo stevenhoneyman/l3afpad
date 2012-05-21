@@ -1,6 +1,8 @@
 2012-04-07
 
   version UNRELEASED:
+	* Better compatibility with some compilers and CFLAGS
+	  Thanks to Daniel Richard G. <skunk AT iSKUNK DOT ORG>
 	* Revert workaround for line number color, fixed by GTK+ upstream.
 
 2012-02-20

@@ -28,6 +28,10 @@
 #include <glib.h>
 #include <glib/gi18n.h>
 
+#ifndef ENABLE_EMACS
+#define ENABLE_EMACS 0
+#endif
+
 #ifndef ENABLE_PRINT
 #define ENABLE_PRINT 1
 #endif
@@ -114,7 +118,9 @@ typedef struct {
 	MainWin *mw;
 } PublicData;
 
-PublicData *pub;
+#ifndef _L3AFPAD_MAIN
+extern PublicData *pub;
+#endif
 
 void save_config_file(void);
 

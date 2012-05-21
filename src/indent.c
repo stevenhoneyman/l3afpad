@@ -21,6 +21,7 @@
 #include <gtk/gtk.h>
 //#include <gdk/gdkkeysyms.h>
 #include <undo.h>
+#include "indent.h"
 
 static gboolean auto_indent = FALSE;
 static gint default_tab_width = 8;

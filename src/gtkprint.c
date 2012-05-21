@@ -18,6 +18,7 @@
  */
 
 #include <gtk/gtk.h>
+#include "gtkprint.h"
 
 static PangoLayout *layout;
 static const PangoFontDescription *font_desc;

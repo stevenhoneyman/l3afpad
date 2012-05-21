@@ -18,6 +18,7 @@
  */
 
 #include <gtk/gtk.h>
+#include "linenum.h"
 
 #define	DV(x)
 

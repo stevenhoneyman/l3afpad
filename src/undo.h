@@ -20,6 +20,8 @@
 #ifndef _UNDO_H
 #define _UNDO_H
 
+gboolean undo_redo_real(GtkTextBuffer *buffer);
+gboolean undo_undo_real(GtkTextBuffer *buffer);
 void undo_reset_modified_step(GtkTextBuffer *buffer);
 void undo_clear_all(GtkTextBuffer *buffer);
 void undo_init(GtkWidget *view, GtkWidget *undo_button, GtkWidget *redo_button);
