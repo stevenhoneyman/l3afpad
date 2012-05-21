@@ -1,9 +1,8 @@
-2012-04-07
-
-  version UNRELEASED:
+2012-05-21
+  version 0.8.18.1.9:
 	* Better compatibility with some compilers and CFLAGS
 	  Thanks to Daniel Richard G. <skunk AT iSKUNK DOT ORG>
-	* Revert workaround for line number color, fixed by GTK+ upstream.
+	* Revert workaround for GTK+ 3.3.14, fixed in upstream 3.3.16
 
 2012-02-20
 

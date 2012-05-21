@@ -1,4 +1,4 @@
-AC_INIT(L3afpad, 0.8.18.1.8, caleb@calno.com)
+AC_INIT(L3afpad, 0.8.18.1.9, caleb@calno.com)
 AM_INIT_AUTOMAKE($PACKAGE_TARNAME, $PACKAGE_VERSION)
 AM_CONFIG_HEADER(config.h)
 AM_MAINTAINER_MODE([enable])
