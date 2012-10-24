@@ -286,6 +286,7 @@ gint main(gint argc, gchar **argv)
 	}
 
 	set_main_window_title();
+	indent_refresh_tab_width(pub->mw->view);
 //	hlight_apply_all(pub->mw->buffer);
 
 	gtk_main();

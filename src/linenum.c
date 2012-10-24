@@ -1,6 +1,7 @@
 /*
  *  L3afpad - GTK+ based simple text editor
  *  Copyright (C) 2004-2005 Tarot Osuji
+ *  Copyright (C) 2012      Yoo, Taik-Yon <jaagar AT gmail DOT com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -106,6 +107,20 @@ get_lines (GtkTextView  *text_view,
 	*countp = count;
 }
 
+static inline PangoAttribute *
+line_numbers_foreground_attr_new(GtkWidget *widget)
+{
+	GtkStyleContext *context;
+	GdkRGBA          rgb;
+
+	context = gtk_widget_get_style_context(widget);
+	gtk_style_context_get_color(context, GTK_STATE_FLAG_NORMAL, &rgb);
+
+	return pango_attr_foreground_new((guint16)(rgb.red   * 65535),
+									 (guint16)(rgb.green * 65535),
+									 (guint16)(rgb.blue  * 65535));
+}
+
 static gint
 line_numbers_expose (GtkWidget *widget, cairo_t *event)
 {
@@ -122,6 +137,8 @@ line_numbers_expose (GtkWidget *widget, cairo_t *event)
 	gint i;
 	gchar str [8];  /* we don't expect more than ten million lines */
 
+	cairo_rectangle_list_t *clips;
+
 	if (line_number_visible) {
 
 	text_view = GTK_TEXT_VIEW (widget);
@@ -137,17 +154,28 @@ line_numbers_expose (GtkWidget *widget, cairo_t *event)
 	y2 = y1 + event->area.height;
 #endif
 
+	/* get origin of the clipping area. */
+	clips = cairo_copy_clip_rectangle_list(event);
+
+	i  = (gint)clips->rectangles[0].x;
+	y1 = (gint)clips->rectangles[0].y;
+
+	cairo_rectangle_list_destroy(clips);
+
+	/* skip drawing if not in the line number area. */
+	if (i >= gtk_text_view_get_border_window_size(text_view, GTK_TEXT_WINDOW_LEFT))
+		return FALSE;
+
 	gtk_text_view_window_to_buffer_coords (text_view,
 	                                       GTK_TEXT_WINDOW_LEFT,
 	                                       0,
 	                                       y1,
 	                                       NULL,
 	                                       &y1);
-
 	gtk_text_view_window_to_buffer_coords (text_view,
 	                                       GTK_TEXT_WINDOW_LEFT,
 	                                       0,
-	                                       y2,
+	                                       gtk_widget_get_allocated_height(widget),
 	                                       NULL,
 	                                       &y2);
 
@@ -199,7 +227,7 @@ DV({g_print("Painting line numbers %d - %d\n",
 
 	alist = pango_attr_list_new();
 /* TODO: should change line number color by conffile */
-	attr = pango_attr_foreground_new(0, 0, 0);
+	attr = line_numbers_foreground_attr_new(widget);
 	attr->start_index = 0;
 	attr->end_index = G_MAXUINT;
 	pango_attr_list_insert(alist, attr);
@@ -208,8 +236,7 @@ DV({g_print("Painting line numbers %d - %d\n",
 
 	/* Draw fully internationalized numbers! */
 
-	i = 0;
-	while (i < count) {
+	for (i = 0; i < count; i++) {
 		gint pos;
 
 		gtk_text_view_buffer_to_window_coords (text_view,
@@ -228,7 +255,6 @@ DV({g_print("Painting line numbers %d - %d\n",
 		                  layout_width + justify_width + margin / 2 + 1,
 		                  pos,
 		                  layout);
-		++i;
 	}
 
 	g_array_free (pixels, TRUE);

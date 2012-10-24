@@ -1,4 +1,17 @@
+2012-10-24
+
+  The "Thanks to Yoo, Taik-Yon!" Release
+
+  version 0.8.18.1.10:
+	* Fixed: indentation is not correctly initialized.
+	* Fixed: the color of the line number is different from GTK theme.
+	* Improved: remove overhead when drawing line numbers.
+	* Improved: use the clipping information of the cairo context when
+	  drawing line numbers.
+	  Thanks to Yoo, Taik-Yon <jaagar AT gmail DOT com> for changes above.
+
 2012-05-21
+
   version 0.8.18.1.9:
 	* Better compatibility with some compilers and CFLAGS
 	  Thanks to Daniel Richard G. <skunk AT iSKUNK DOT ORG>
