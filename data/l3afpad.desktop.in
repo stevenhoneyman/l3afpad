@@ -5,5 +5,5 @@ Exec=l3afpad %f
 Icon=l3afpad
 Terminal=false
 Type=Application
-MimeType=text/plain
+MimeType=text/plain;
 Categories=GTK;Utility;TextEditor;

@@ -1,7 +1,9 @@
-2012-10-28
+2012-10-30
 
   version UNRELEASED:
 	* Updated Czech translation (Pavel Fric).
+	* Fixed: missing semicolon in l3afpad.desktop.in
+	  Thanks to Schäfer, Benedikt <benedikt DOT schaefer AT flieden DOT org>
 
 2012-10-24
 
