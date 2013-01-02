@@ -54,7 +54,7 @@ msgstr "Guardar _como..."
 
 #: ../src/menu.c:44
 msgid "Sta_tistics..."
-msgstr ""
+msgstr "Estadísticas..."
 
 #: ../src/menu.c:47
 msgid "Print Pre_view"
@@ -138,7 +138,7 @@ msgstr "_Autoindentación"
 
 #: ../src/callback.c:139
 msgid "<b>Statistics</b>"
-msgstr ""
+msgstr "Estadísticas"
 
 #: ../src/callback.c:330
 msgid "GTK+ based simple text editor"
@@ -226,6 +226,11 @@ msgid ""
 "<u>Selection</u>\n"
 "Chars: %7d Words: %6d Lines: %5d\n"
 msgstr ""
+"<u>En total</u>\n"
+"Caracteres: %7d Palabras: %6d Líneas: %5d\n"
+"\n"
+"<u>Selección</u>\n"
+"Caracteres: %7d Palabras: %6d Líneas: %5d\n"
 
 #: ../src/search.c:125
 msgid "Search string not found"
