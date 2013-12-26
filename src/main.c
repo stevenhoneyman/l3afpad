@@ -114,6 +114,7 @@ void save_config_file(void)
 }
 
 gint jump_linenum = 0;
+GtkClipboard *selection_primary = NULL;
 
 static void parse_args(gint argc, gchar **argv, FileInfo *fi)
 {
@@ -206,6 +207,8 @@ gint main(gint argc, gchar **argv)
 
 	gtk_init(&argc, &argv);
 	g_set_application_name(PACKAGE_NAME);
+
+	selection_primary = gtk_clipboard_get(GDK_SELECTION_PRIMARY);
 
 	pub->mw = create_main_window();
 

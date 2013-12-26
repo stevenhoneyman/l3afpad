@@ -24,6 +24,9 @@
 static gint keyval;
 static gboolean view_scroll_flag = FALSE;
 
+extern GtkClipboard *selection_primary;
+gchar *selection_primary_str = NULL;
+
 gint get_current_keyval(void)
 {
 	return keyval;
@@ -214,6 +217,16 @@ static gboolean cb_button_press_event(GtkWidget *view, GdkEventButton *event)
 		gtk_text_buffer_get_selection_bounds(buffer, &start, &end);
 		if (!gtk_text_iter_in_range(&iter, &start, &end))
 			gtk_text_buffer_place_cursor(buffer, &iter);
+	}
+
+	// backup and restore the clipboard
+	gchar *current_clipboard_str = gtk_clipboard_wait_for_text(selection_primary);
+	if ((current_clipboard_str == NULL) || (current_clipboard_str[0]=='\0')) {
+		gtk_clipboard_set_text(selection_primary, selection_primary_str, -1);
+	}
+	else {
+		g_free(selection_primary_str);
+		selection_primary_str = g_strdup(current_clipboard_str);
 	}
 
 	return FALSE;
