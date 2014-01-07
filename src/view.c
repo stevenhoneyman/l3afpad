@@ -221,7 +221,8 @@ static gboolean cb_button_press_event(GtkWidget *view, GdkEventButton *event)
 
 	// backup and restore the clipboard
 	gchar *current_clipboard_str = gtk_clipboard_wait_for_text(selection_primary);
-	if ((current_clipboard_str == NULL) || (current_clipboard_str[0]=='\0')) {
+	if (((current_clipboard_str == NULL) || (current_clipboard_str[0]=='\0')) &&
+	    selection_primary_str && selection_primary_str[0]) {
 		gtk_clipboard_set_text(selection_primary, selection_primary_str, -1);
 	}
 	else {
