@@ -33,6 +33,7 @@ typedef struct {
 	gboolean wordwrap;
 	gboolean linenumbers;
 	gboolean autoindent;
+	gint tabwidth;
 } Conf;
 
 static void load_config_file(Conf *conf)
@@ -65,6 +66,8 @@ static void load_config_file(Conf *conf)
 			conf->linenumbers = atoi(buf);
 			fgets(buf, sizeof(buf), fp);
 			conf->autoindent = atoi(buf);
+			fgets(buf, sizeof(buf), fp);
+			conf->tabwidth = atoi(buf) > 0 ? atoi(buf) : get_current_tab_width();
 		}
 		g_strfreev(num);
 	}
@@ -75,7 +78,7 @@ void save_config_file(void)
 {
 	FILE *fp;
 	gchar *path;
-	gint width, height;
+	gint width, height, tabwidth;
 	gchar *fontname;
 	gboolean wordwrap, linenumbers, autoindent;
 
@@ -90,6 +93,7 @@ void save_config_file(void)
 	autoindent = gtk_check_menu_item_get_active(
 		GTK_TOGGLE_ACTION(gtk_item_factory_get_item(pub->mw->menubar,
 			"/M/Options/AutoIndent")));
+	tabwidth = get_current_tab_width();
 
 	path = g_build_filename(g_get_user_config_dir(), PACKAGE, NULL);
 	if (!g_file_test(path, G_FILE_TEST_IS_DIR))
@@ -111,6 +115,7 @@ void save_config_file(void)
 	fprintf(fp, "%d\n", wordwrap);
 	fprintf(fp, "%d\n", linenumbers);
 	fprintf(fp, "%d\n", autoindent);
+	fprintf(fp, "%d\n", tabwidth);
 	fclose(fp);
 
 	g_free(fontname);
@@ -222,6 +227,7 @@ gint main(gint argc, gchar **argv)
 	conf->wordwrap    = FALSE;
 	conf->linenumbers = FALSE;
 	conf->autoindent  = FALSE;
+	conf->tabwidth    = get_current_tab_width();
 
 	load_config_file(conf);
 
@@ -235,6 +241,7 @@ gint main(gint argc, gchar **argv)
 	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(
 		gtk_item_factory_get_widget(pub->mw->menubar, "/M/Options/LineNumbers")),
 		conf->linenumbers);
+	indent_set_default_tab_width(conf->tabwidth);
 	indent_refresh_tab_width(pub->mw->view);
 	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(
 		gtk_item_factory_get_widget(pub->mw->menubar, "/M/Options/AutoIndent")),
