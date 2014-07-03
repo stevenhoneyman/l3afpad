@@ -1,3 +1,9 @@
+2014-07-03
+
+  version UNRELEASED:
+	* Fix many Gtk3 deprecations
+
+
 2012-10-30
 
   version UNRELEASED:
