@@ -83,17 +83,13 @@ GtkWidget *create_button_with_stock_image(const gchar *text, const gchar *stock_
 	GtkWidget *label;
 	GtkWidget *align;
 
-	hbox = gtk_hbox_new(FALSE, 2);
+	hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 2);
 
-	image = gtk_image_new_from_stock(stock_id, GTK_ICON_SIZE_BUTTON);
+	image = gtk_image_new_from_icon_name(stock_id, GTK_ICON_SIZE_BUTTON);
 	gtk_box_pack_start(GTK_BOX(hbox), image, FALSE, FALSE, 0);
 
 	label = gtk_label_new_with_mnemonic(text);
-#if USE_GTK_GRID
-	gtk_grid_attach_next_to (GTK_BOX (hbox), label, image, GTK_POS_RIGHT, 1, 1);
-#else
 	gtk_box_pack_end(GTK_BOX(hbox), label, FALSE, FALSE, 0);
-#endif
 
 	align = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
 	gtk_container_add(GTK_CONTAINER(align), hbox);

@@ -68,51 +68,6 @@
 #include "gtkprint.h"
 #include <gdk/gdkkeysyms-compat.h>
 
-#define gtk_check_menu_item_get_active gtk_toggle_action_get_active
-#define gtk_item_factory_get_item(x,y) GTK_TOGGLE_ACTION(gtk_ui_manager_get_action(x,y))
-#define gtk_item_factory_get_widget gtk_ui_manager_get_widget
-#define GTK_OPTION_MENU GTK_COMBO_BOX
-#define GTK_WIDGET_IS_SENSITIVE gtk_widget_is_sensitive
-#define GTK_WIDGET_VISIBLE gtk_widget_get_visible
-#define GtkOptionMenu GtkComboBox
-#define gtk_option_menu_get_history gtk_combo_box_get_active
-#define gtk_option_menu_set_history gtk_combo_box_set_active
-#if !USE_GTK_GRID
-#define gtk_orientable_set_orientation(x,y)
-#define gtk_widget_set_hexpand(x,y)
-#define gtk_widget_set_vexpand(x,y)
-#endif
-#if USE_GTK_GRID
-#undef GTK_BOX
-#define GTK_BOX GTK_GRID
-#define gtk_hbox_new(x,y) gtk_grid_new()
-#define gtk_vbox_new(x,y) gtk_grid_new()
-#define gtk_box_pack_start(v,w,x,y,z) gtk_container_add(GTK_CONTAINER(v),w)
-#endif
-#if GLIB_CHECK_VERSION(2,29,14) && defined(G_DISABLE_DEPRECATED)
-#define g_unicode_canonical_decomposition (gunichar*)g_unicode_canonical_decomposition
-#endif
-#if GTK_CHECK_VERSION(3,1,6) && !USE_GTK_GRID && defined(GTK_DISABLE_DEPRECATED)
-#define gtk_hbox_new (GtkWidget*)gtk_hbox_new
-#define gtk_vbox_new (GtkWidget*)gtk_vbox_new
-#endif
-#if GTK_CHECK_VERSION(3,1,90)
-#undef  GTK_FONT_SELECTION_DIALOG
-#define GTK_FONT_SELECTION_DIALOG GTK_FONT_CHOOSER
-#define gtk_font_selection_dialog_new(x) gtk_font_chooser_dialog_new(x, NULL)
-#define gtk_font_selection_dialog_get_font_name gtk_font_chooser_get_font
-#define gtk_font_selection_dialog_set_font_name gtk_font_chooser_set_font
-#endif
-#if GTK_CHECK_VERSION(3,3,2)
-#undef GTK_TABLE
-#define GTK_TABLE GTK_GRID
-#define gtk_table_attach_defaults(u,v,w,x,y,z) gtk_grid_attach(u,v,w,y,1,1)
-#define gtk_table_new(x, y, z) gtk_grid_new()
-#define gtk_table_set_col_spacing(x,y,z) gtk_grid_set_column_spacing(x,z)
-#define gtk_table_set_col_spacings gtk_grid_set_column_spacing
-#define gtk_table_set_row_spacings gtk_grid_set_row_spacing
-#endif
-
 typedef struct {
 	FileInfo *fi;
 	MainWin *mw;

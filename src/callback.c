@@ -247,10 +247,10 @@ static void activate_quick_find(void)
 
 	if (!flag) {
 		gtk_widget_set_sensitive(
-			gtk_item_factory_get_widget(pub->mw->menubar, "/M/Search/FindNext"),
+			gtk_ui_manager_get_widget(pub->mw->menubar, "/M/Search/FindNext"),
 			TRUE);
 		gtk_widget_set_sensitive(
-			gtk_item_factory_get_widget(pub->mw->menubar, "/M/Search/FindPrevious"),
+			gtk_ui_manager_get_widget(pub->mw->menubar, "/M/Search/FindPrevious"),
 			TRUE);
 		flag = TRUE;
 	}
@@ -292,8 +292,8 @@ void on_option_word_wrap(void)
 {
 	gboolean state;
 
-	state = gtk_check_menu_item_get_active(
-		GTK_TOGGLE_ACTION(gtk_item_factory_get_item(pub->mw->menubar, "/M/Options/WordWrap")));
+	state = gtk_toggle_action_get_active(
+		GTK_TOGGLE_ACTION(gtk_ui_manager_get_action(pub->mw->menubar, "/M/Options/WordWrap")));
 	gtk_text_view_set_wrap_mode(GTK_TEXT_VIEW(pub->mw->view),
 		state ? GTK_WRAP_WORD : GTK_WRAP_NONE);
 }
@@ -302,8 +302,8 @@ void on_option_line_numbers(void)
 {
 	gboolean state;
 
-	state = gtk_check_menu_item_get_active(
-		GTK_TOGGLE_ACTION(gtk_item_factory_get_item(pub->mw->menubar, "/M/Options/LineNumbers")));
+	state = gtk_toggle_action_get_active(
+		GTK_TOGGLE_ACTION(gtk_ui_manager_get_action(pub->mw->menubar, "/M/Options/LineNumbers")));
 	show_line_numbers(pub->mw->view, state);
 }
 
@@ -319,19 +319,20 @@ void on_option_auto_indent(void)
 {
 	gboolean state;
 
-	state = gtk_check_menu_item_get_active(
-		GTK_TOGGLE_ACTION(gtk_item_factory_get_item(pub->mw->menubar, "/M/Options/AutoIndent")));
+	state = gtk_toggle_action_get_active(
+		GTK_TOGGLE_ACTION(gtk_ui_manager_get_action(pub->mw->menubar, "/M/Options/AutoIndent")));
 	indent_set_state(state);
 }
 
 void on_help_about(void)
 {
-	const gchar *copyright = "Copyright \xc2\xa9 2004-2010 Tarot Osuji\nCopyright \xc2\xa9 2011 Wen-Yen Chuang\nCopyright \xc2\xa9 2012 Yoo, Taik-Yon\nCopyright \xc2\xa9 2011 Jack Gandy";
+	const gchar *copyright = "Copyright \xc2\xa9 2004-2010 Tarot Osuji\nCopyright \xc2\xa9 2011 Wen-Yen Chuang\nCopyright \xc2\xa9 2011 Jack Gandy\nCopyright \xc2\xa9 2012 Yoo, Taik-Yon\nCopyright \xc2\xa9 2014 Steven Honeyman";
 	const gchar *comments = _("GTK+ based simple text editor");
 	const gchar *authors[] = {
 		"Tarot Osuji <tarot@sdf.lonestar.org>",
 		"Wen-Yen Chuang <caleb@calno.com>",
 		"Yoo, Taik-Yon <jaagar@gmail.com>",
+		"Steven Honeyman <stevenhoneyman@gmail.com>",
 		NULL
 	};
 	const gchar *translator_credits = _("translator-credits");

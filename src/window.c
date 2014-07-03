@@ -42,12 +42,11 @@ MainWin *create_main_window(void)
 	g_signal_connect_after(G_OBJECT(mw->window), "delete-event",
 		G_CALLBACK(gtk_widget_hide_on_delete), NULL);
 
-	vbox = gtk_vbox_new(FALSE, 0);
-	gtk_orientable_set_orientation(GTK_ORIENTABLE(vbox), GTK_ORIENTATION_VERTICAL);
+	vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
 	gtk_container_add(GTK_CONTAINER(mw->window), vbox);
 
 	mw->menubar = create_menu_bar(mw->window);
-	gtk_box_pack_start(GTK_BOX(vbox), gtk_item_factory_get_widget(mw->menubar, "/M"), FALSE, FALSE, 0);
+	gtk_box_pack_start(GTK_BOX(vbox), gtk_ui_manager_get_widget(mw->menubar, "/M"), FALSE, FALSE, 0);
 
 	sw = gtk_scrolled_window_new(NULL, NULL);
 	gtk_widget_set_hexpand (sw, TRUE);

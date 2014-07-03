@@ -187,31 +187,31 @@ GtkUIManager *create_menu_bar(GtkWidget *window)
 		accel_group, GDK_T, GDK_CONTROL_MASK, 0,
 		g_cclosure_new_swap(G_CALLBACK(on_option_always_on_top), NULL, NULL));
 	gtk_widget_add_accelerator(
-		gtk_item_factory_get_widget(ifactory, "/M/Edit/Redo"),
+		gtk_ui_manager_get_widget(ifactory, "/M/Edit/Redo"),
 		"activate", accel_group, GDK_Y, GDK_CONTROL_MASK, 0);
 	gtk_widget_add_accelerator(
-		gtk_item_factory_get_widget(ifactory, "/M/Search/FindNext"),
+		gtk_ui_manager_get_widget(ifactory, "/M/Search/FindNext"),
 		"activate", accel_group, GDK_F3, 0, 0);
 	gtk_widget_add_accelerator(
-		gtk_item_factory_get_widget(ifactory, "/M/Search/FindPrevious"),
+		gtk_ui_manager_get_widget(ifactory, "/M/Search/FindPrevious"),
 		"activate", accel_group, GDK_F3, GDK_SHIFT_MASK, 0);
 	gtk_widget_add_accelerator(
-		gtk_item_factory_get_widget(ifactory, "/M/Search/Replace"),
+		gtk_ui_manager_get_widget(ifactory, "/M/Search/Replace"),
 		"activate", accel_group, GDK_R, GDK_CONTROL_MASK, 0);
 
 	/* initialize sensitivities */
 	gtk_widget_set_sensitive(
-		gtk_item_factory_get_widget(ifactory, "/M/Search/FindNext"),
+		gtk_ui_manager_get_widget(ifactory, "/M/Search/FindNext"),
 		FALSE);
 	gtk_widget_set_sensitive(
-		gtk_item_factory_get_widget(ifactory, "/M/Search/FindPrevious"),
+		gtk_ui_manager_get_widget(ifactory, "/M/Search/FindPrevious"),
 		FALSE);
 
-	menu_item_save   = gtk_item_factory_get_widget(ifactory, "/M/File/Save");
-	menu_item_cut    = gtk_item_factory_get_widget(ifactory, "/M/Edit/Cut");
-	menu_item_copy   = gtk_item_factory_get_widget(ifactory, "/M/Edit/Copy");
-	menu_item_paste  = gtk_item_factory_get_widget(ifactory, "/M/Edit/Paste");
-	menu_item_delete = gtk_item_factory_get_widget(ifactory, "/M/Edit/Delete");
+	menu_item_save   = gtk_ui_manager_get_widget(ifactory, "/M/File/Save");
+	menu_item_cut    = gtk_ui_manager_get_widget(ifactory, "/M/Edit/Cut");
+	menu_item_copy   = gtk_ui_manager_get_widget(ifactory, "/M/Edit/Copy");
+	menu_item_paste  = gtk_ui_manager_get_widget(ifactory, "/M/Edit/Paste");
+	menu_item_delete = gtk_ui_manager_get_widget(ifactory, "/M/Edit/Delete");
 	menu_sensitivity_from_selection_bound(FALSE);
 
 	return ifactory;

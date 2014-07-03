@@ -471,7 +471,7 @@ void run_dialog_jump_to(GtkWidget *textview)
 		GTK_DIALOG_DESTROY_WITH_PARENT,
 		GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
 		NULL);
-	button = create_button_with_stock_image(_("_Jump"), GTK_STOCK_JUMP_TO);
+	button = create_button_with_stock_image(_("_Jump"), "go-jump");
 	gtk_widget_set_can_default(button, TRUE);
 	gtk_dialog_add_action_widget(GTK_DIALOG(dialog), button, GTK_RESPONSE_OK);
 	table = gtk_table_new(1, 2, FALSE);

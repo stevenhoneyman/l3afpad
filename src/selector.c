@@ -31,9 +31,9 @@ static gchar *lineend_str[] = {
 	"CR"
 };
 
-static void cb_select_lineend(GtkOptionMenu *option_menu, FileInfo *selected_fi)
+static void cb_select_lineend(GtkComboBox *option_menu, FileInfo *selected_fi)
 {
-	switch (gtk_option_menu_get_history(option_menu)) {
+	switch (gtk_combo_box_get_active(option_menu)) {
 	case 1:
 		selected_fi->lineend = CR+LF;
 		break;
@@ -71,7 +71,7 @@ static GtkWidget *create_lineend_menu(FileInfo *selected_fi)
 	case CR:
 		i = 2;
 	}
-	gtk_option_menu_set_history(GTK_OPTION_MENU(option_menu), i);
+	gtk_combo_box_set_active(GTK_COMBO_BOX(option_menu), i);
 
 	return option_menu;
 }
@@ -140,7 +140,7 @@ static GtkWidget *init_menu_item_manual_charset(gchar *manual_charset)
 	return menu_item_manual_charset;
 }
 
-static gboolean get_manual_charset(GtkOptionMenu *option_menu, FileInfo *selected_fi)
+static gboolean get_manual_charset(GtkComboBox *option_menu, FileInfo *selected_fi)
 {
 	GtkWidget *dialog;
 	GtkWidget *vbox;
@@ -152,14 +152,13 @@ static gboolean get_manual_charset(GtkOptionMenu *option_menu, FileInfo *selecte
 	dialog = gtk_dialog_new_with_buttons(other_codeset_title,
 			GTK_WINDOW(gtk_widget_get_toplevel(GTK_WIDGET(option_menu))),
 			GTK_DIALOG_DESTROY_WITH_PARENT,
-			GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-			GTK_STOCK_OK, GTK_RESPONSE_OK,
+			_("_Cancel"), GTK_RESPONSE_CANCEL,
+			_("_OK"), GTK_RESPONSE_OK,
 			NULL);
 	gtk_dialog_set_default_response(GTK_DIALOG(dialog), GTK_RESPONSE_OK);
 	gtk_window_set_position(GTK_WINDOW(dialog), GTK_WIN_POS_MOUSE);
 
-	vbox = gtk_vbox_new(FALSE, 0);
-	gtk_orientable_set_orientation(GTK_ORIENTABLE(vbox), GTK_ORIENTATION_VERTICAL);
+	vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL, 0);
 	gtk_container_set_border_width(GTK_CONTAINER(vbox), 8);
 	gtk_box_pack_start(GTK_BOX(gtk_dialog_get_content_area(GTK_DIALOG(dialog))), vbox, FALSE, FALSE, 0);
 
@@ -210,13 +209,13 @@ static gboolean get_manual_charset(GtkOptionMenu *option_menu, FileInfo *selecte
 
 gboolean charset_menu_init_flag;
 
-static void cb_select_charset(GtkOptionMenu *option_menu, FileInfo *selected_fi)
+static void cb_select_charset(GtkComboBox *option_menu, FileInfo *selected_fi)
 {
 	CharsetTable *ctable;
 	static guint index_history = 0, prev_history;
 
 	prev_history = index_history;
-	index_history = gtk_option_menu_get_history(option_menu);
+	index_history = gtk_combo_box_get_active(option_menu);
 	if (!charset_menu_init_flag) {
 		ctable = get_charset_table();
 		if (index_history < ctable->num + mode) {
@@ -231,7 +230,7 @@ static void cb_select_charset(GtkOptionMenu *option_menu, FileInfo *selected_fi)
 		} else
 			if (!get_manual_charset(option_menu, selected_fi)) {
 				index_history = prev_history;
-				gtk_option_menu_set_history(option_menu, index_history);
+				gtk_combo_box_set_active(option_menu, index_history);
 			}
 	}
 }
@@ -280,7 +279,7 @@ static GtkWidget *create_charset_menu(FileInfo *selected_fi)
 		i += mode;
 	}
 	if (mode == SAVE || selected_fi->charset_flag)
-		gtk_option_menu_set_history(GTK_OPTION_MENU(option_menu), i);
+		gtk_combo_box_set_active(GTK_COMBO_BOX(option_menu), i);
 	charset_menu_init_flag = FALSE;
 
 	return option_menu;
@@ -300,26 +299,24 @@ static GtkWidget *create_file_selector(FileInfo *selected_fi)
 
 	selector = gtk_file_chooser_dialog_new(title, NULL,
 		mode ? GTK_FILE_CHOOSER_ACTION_OPEN : GTK_FILE_CHOOSER_ACTION_SAVE,
-		GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-		mode ? GTK_STOCK_OPEN : GTK_STOCK_SAVE, GTK_RESPONSE_OK,
+		_("_Cancel"), GTK_RESPONSE_CANCEL,
+		mode ? _("_Open") : _("_Save As"), GTK_RESPONSE_OK,
 		NULL);
 	gtk_dialog_set_default_response(GTK_DIALOG(selector), GTK_RESPONSE_OK);
 
-//	align = gtk_alignment_new(0.5, 0, 0, 0);
 	align = gtk_alignment_new(1, 0, 0, 0);
 	gtk_file_chooser_set_extra_widget(GTK_FILE_CHOOSER(selector), align);
-	table = gtk_table_new(2, 2, FALSE);
+	table = gtk_grid_new();
 	gtk_container_add(GTK_CONTAINER(align), table);
 	option_menu_charset = create_charset_menu(selected_fi);
 	label = gtk_label_new_with_mnemonic(_("C_haracter Coding:"));
 	gtk_label_set_mnemonic_widget(GTK_LABEL(label), option_menu_charset);
-	gtk_table_attach_defaults(GTK_TABLE(table), label, 0, 1, 0, 1);
-//	gtk_table_set_row_spacings(GTK_TABLE(table), 5);
-	gtk_table_set_col_spacing(GTK_TABLE(table), 0, 8);
-	gtk_table_attach_defaults(GTK_TABLE(table), option_menu_charset, 1, 2, 0, 1);
+	gtk_grid_attach(GTK_GRID(table), label, 0, 0, 1, 1);
+	gtk_grid_set_column_spacing(GTK_GRID(table), 8);
+	gtk_grid_attach(GTK_GRID(table), option_menu_charset, 1, 0, 1, 1);
 	if (mode == SAVE) {
 		option_menu_lineend = create_lineend_menu(selected_fi);
-		gtk_table_attach_defaults(GTK_TABLE(table), option_menu_lineend, 2, 3, 0, 1);
+		gtk_grid_attach(GTK_GRID(table), option_menu_lineend, 2, 0, 1, 1);
 	}
 	gtk_widget_show_all(align);
 
@@ -382,7 +379,7 @@ FileInfo *get_fileinfo_from_selector(FileInfo *fi, gint requested_mode)
 			}
 		}
 		gtk_widget_hide(selector);
-	} while (GTK_WIDGET_VISIBLE(selector));
+	} while (gtk_widget_get_visible(selector));
 
 	if (res != GTK_RESPONSE_OK) {
 		if (selected_fi->charset)

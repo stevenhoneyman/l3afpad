@@ -1,6 +1,6 @@
 bin_PROGRAMS = l3afpad
 
-INCLUDES = -DICONDIR=\"$(datadir)/pixmaps\"
+AM_CPPFLAGS = -DICONDIR=\"$(datadir)/pixmaps\"
 
 l3afpad_SOURCES = \
 	l3afpad.h main.c \

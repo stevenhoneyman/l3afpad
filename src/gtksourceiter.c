@@ -36,17 +36,19 @@
 static const gchar *
 pointer_from_offset_skipping_decomp (const gchar *str, gint offset)
 {
-	gsize decomp_len;
-	gunichar *decomp;
-	const gchar *p;
+	gchar *casefold, *normal;
+	const gchar *p, *q;
 
 	p = str;
 	while (offset > 0)
 	{
-		decomp = g_unicode_canonical_decomposition (g_utf8_get_char (p), &decomp_len);
-		g_free (decomp);
-		p = g_utf8_next_char (p);
-		offset -= decomp_len;
+		q = g_utf8_next_char (p);
+		casefold = g_utf8_casefold (p, q - p);
+		normal = g_utf8_normalize (casefold, -1, G_NORMALIZE_NFD);
+		offset -= g_utf8_strlen (normal, -1);
+		g_free (casefold);
+		g_free (normal);
+		p = q;
 	}
 	return p;
 }
@@ -201,15 +203,14 @@ finally_2:
 }
 
 static void
-forward_chars_with_skipping (GtkTextIter *iter,
+forward_chars_with_skipping(GtkTextIter * iter,
 			     gint         count,
 			     gboolean     skip_invisible,
-			     gboolean     skip_nontext,
-			     gboolean     skip_decomp)
+                            gboolean skip_nontext, gboolean skip_decomp)
 {
 	gint i;
 
-	g_return_if_fail (count >= 0);
+    g_return_if_fail(count >= 0);
 
 	i = count;
 
@@ -217,28 +218,36 @@ forward_chars_with_skipping (GtkTextIter *iter,
 	{
 		gboolean ignored = FALSE;
 
-		if (skip_nontext && gtk_text_iter_get_char (iter) == GTK_TEXT_UNKNOWN_CHAR)
+        /* minimal workaround to avoid the infinite loop of bug #168247. It
+         * doesn't fix the problemjust the symptom... */
+        if (gtk_text_iter_is_end(iter))
+            return;
+
+        if (skip_nontext
+            && gtk_text_iter_get_char(iter) == GTK_TEXT_UNKNOWN_CHAR)
 			ignored = TRUE;
 
 		if (!ignored && skip_invisible &&
-		    /* _gtk_text_btree_char_is_invisible (iter)*/ FALSE)
+            /* _gtk_text_btree_char_is_invisible (iter) */ FALSE)
 			ignored = TRUE;
 
 		if (!ignored && skip_decomp)
 		{
-			/* being UTF8 correct sucks; this accounts for extra
-			   offsets coming from canonical decompositions of
-			   UTF8 characters (e.g. accented characters) which
-			   g_utf8_normalize() performs */
-			gunichar *decomp;
-			gsize decomp_len;
-			decomp = g_unicode_canonical_decomposition (
-				gtk_text_iter_get_char (iter), &decomp_len);
-			i -= (decomp_len - 1);
-			g_free (decomp);
+            /* being UTF8 correct sucks; this accounts for extra offsets
+             * coming from canonical decompositions of UTF8 characters (e.g.
+             * accented characters) which g_utf8_normalize() performs */
+            gchar *normal;
+            gchar buffer[6];
+            gint buffer_len;
+
+            buffer_len =
+                g_unichar_to_utf8(gtk_text_iter_get_char(iter), buffer);
+            normal = g_utf8_normalize(buffer, buffer_len, G_NORMALIZE_NFD);
+            i -= (g_utf8_strlen(normal, -1) - 1);
+            g_free(normal);
 		}
 
-		gtk_text_iter_forward_char (iter);
+        gtk_text_iter_forward_char(iter);
 
 		if (!ignored)
 			--i;
@@ -246,12 +255,11 @@ forward_chars_with_skipping (GtkTextIter *iter,
 }
 
 static gboolean
-lines_match (const GtkTextIter *start,
-	     const gchar      **lines,
+lines_match(const GtkTextIter * start,
+            const gchar ** lines,
 	     gboolean           visible_only,
 	     gboolean           slice,
-	     GtkTextIter       *match_start,
-	     GtkTextIter       *match_end)
+            GtkTextIter * match_start, GtkTextIter * match_end)
 {
 	GtkTextIter next;
 	gchar *line_text;
@@ -268,38 +276,37 @@ lines_match (const GtkTextIter *start,
 	}
 
 	next = *start;
-	gtk_text_iter_forward_line (&next);
+    gtk_text_iter_forward_line(&next);
 
 	/* No more text in buffer, but *lines is nonempty */
-	if (gtk_text_iter_equal (start, &next))
+    if (gtk_text_iter_equal(start, &next))
 		return FALSE;
 
 	if (slice)
 	{
 		if (visible_only)
-			line_text = gtk_text_iter_get_visible_slice (start, &next);
+            line_text = gtk_text_iter_get_visible_slice(start, &next);
 		else
-			line_text = gtk_text_iter_get_slice (start, &next);
+            line_text = gtk_text_iter_get_slice(start, &next);
 	}
 	else
 	{
 		if (visible_only)
-			line_text = gtk_text_iter_get_visible_text (start, &next);
+            line_text = gtk_text_iter_get_visible_text(start, &next);
 		else
-			line_text = gtk_text_iter_get_text (start, &next);
+            line_text = gtk_text_iter_get_text(start, &next);
 	}
 
 	if (match_start) /* if this is the first line we're matching */
 	{
-		found = g_utf8_strcasestr (line_text, *lines);
+        found = g_utf8_strcasestr(line_text, *lines);
 	}
 	else
 	{
-		/* If it's not the first line, we have to match from the
-		 * start of the line.
-		 */
-		if (g_utf8_caselessnmatch (line_text, *lines, strlen (line_text),
-					   strlen (*lines)))
+        /* If it's not the first line, we have to match from the start of the
+         * line. */
+        if (g_utf8_caselessnmatch(line_text, *lines, strlen(line_text),
+                                  strlen(*lines)))
 			found = line_text;
 		else
 			found = NULL;
@@ -307,47 +314,45 @@ lines_match (const GtkTextIter *start,
 
 	if (found == NULL)
 	{
-		g_free (line_text);
+        g_free(line_text);
 		return FALSE;
 	}
 
 	/* Get offset to start of search string */
-	offset = g_utf8_strlen (line_text, found - line_text);
+    offset = g_utf8_strlen(line_text, found - line_text);
 
 	next = *start;
 
-	/* If match start needs to be returned, set it to the
-	 * start of the search string.
-	 */
-	forward_chars_with_skipping (&next, offset, visible_only, !slice, FALSE);
+    /* If match start needs to be returned, set it to the start of the search
+     * string. */
+    forward_chars_with_skipping(&next, offset, visible_only, !slice, FALSE);
 	if (match_start)
 	{
 		*match_start = next;
 	}
 
 	/* Go to end of search string */
-	forward_chars_with_skipping (&next, g_utf8_strlen (*lines, -1), visible_only, !slice, TRUE);
+    forward_chars_with_skipping(&next, g_utf8_strlen(*lines, -1),
+                                visible_only, !slice, TRUE);
 
-	g_free (line_text);
+    g_free(line_text);
 
 	++lines;
 
 	if (match_end)
 		*match_end = next;
 
-	/* pass NULL for match_start, since we don't need to find the
-	 * start again.
-	 */
-	return lines_match (&next, lines, visible_only, slice, NULL, match_end);
+    /* pass NULL for match_start, since we don't need to find the start
+     * again. */
+    return lines_match(&next, lines, visible_only, slice, NULL, match_end);
 }
 
 static gboolean
-backward_lines_match (const GtkTextIter *start,
-		      const gchar      **lines,
+backward_lines_match(const GtkTextIter * start,
+                     const gchar ** lines,
 		      gboolean           visible_only,
 		      gboolean           slice,
-		      GtkTextIter       *match_start,
-		      GtkTextIter       *match_end)
+                     GtkTextIter * match_start, GtkTextIter * match_end)
 {
 	GtkTextIter line, next;
 	gchar *line_text;
@@ -364,40 +369,39 @@ backward_lines_match (const GtkTextIter *start,
 	}
 
 	line = next = *start;
-	if (gtk_text_iter_get_line_offset (&next) == 0)
+    if (gtk_text_iter_get_line_offset(&next) == 0)
 	{
-		if (!gtk_text_iter_backward_line (&next))
+        if (!gtk_text_iter_backward_line(&next))
 			return FALSE;
 	}
 	else
-		gtk_text_iter_set_line_offset (&next, 0);
+        gtk_text_iter_set_line_offset(&next, 0);
 
 	if (slice)
 	{
 		if (visible_only)
-			line_text = gtk_text_iter_get_visible_slice (&next, &line);
+            line_text = gtk_text_iter_get_visible_slice(&next, &line);
 		else
-			line_text = gtk_text_iter_get_slice (&next, &line);
+            line_text = gtk_text_iter_get_slice(&next, &line);
 	}
 	else
 	{
 		if (visible_only)
-			line_text = gtk_text_iter_get_visible_text (&next, &line);
+            line_text = gtk_text_iter_get_visible_text(&next, &line);
 		else
-			line_text = gtk_text_iter_get_text (&next, &line);
+            line_text = gtk_text_iter_get_text(&next, &line);
 	}
 
 	if (match_start) /* if this is the first line we're matching */
 	{
-		found = g_utf8_strrcasestr (line_text, *lines);
+        found = g_utf8_strrcasestr(line_text, *lines);
 	}
 	else
 	{
-		/* If it's not the first line, we have to match from the
-		 * start of the line.
-		 */
-		if (g_utf8_caselessnmatch (line_text, *lines, strlen (line_text),
-					   strlen (*lines)))
+        /* If it's not the first line, we have to match from the start of the
+         * line. */
+        if (g_utf8_caselessnmatch(line_text, *lines, strlen(line_text),
+                                  strlen(*lines)))
 			found = line_text;
 		else
 			found = NULL;
@@ -405,38 +409,36 @@ backward_lines_match (const GtkTextIter *start,
 
 	if (found == NULL)
 	{
-		g_free (line_text);
+        g_free(line_text);
 		return FALSE;
 	}
 
 	/* Get offset to start of search string */
-	offset = g_utf8_strlen (line_text, found - line_text);
+    offset = g_utf8_strlen(line_text, found - line_text);
 
-	forward_chars_with_skipping (&next, offset, visible_only, !slice, FALSE);
+    forward_chars_with_skipping(&next, offset, visible_only, !slice, FALSE);
 
-	/* If match start needs to be returned, set it to the
-	 * start of the search string.
-	 */
+    /* If match start needs to be returned, set it to the start of the search
+     * string. */
 	if (match_start)
 	{
 		*match_start = next;
 	}
 
 	/* Go to end of search string */
-	forward_chars_with_skipping (&next, g_utf8_strlen (*lines, -1), visible_only, !slice, TRUE);
+    forward_chars_with_skipping(&next, g_utf8_strlen(*lines, -1),
+                                visible_only, !slice, TRUE);
 
-	g_free (line_text);
+    g_free(line_text);
 
 	++lines;
 
 	if (match_end)
 		*match_end = next;
 
-	/* try to match the rest of the lines forward, passing NULL
-	 * for match_start so lines_match will try to match the entire
-	 * line */
-	return lines_match (&next, lines, visible_only,
-			    slice, NULL, match_end);
+    /* try to match the rest of the lines forward, passing NULL for
+     * match_start so lines_match will try to match the entire line */
+    return lines_match(&next, lines, visible_only, slice, NULL, match_end);
 }
 
 /* strsplit () that retains the delimiter as part of the string. */
@@ -533,12 +535,12 @@ strbreakup (const char *string,
  * Return value: whether a match was found
  **/
 gboolean
-gtk_source_iter_forward_search (const GtkTextIter   *iter,
-				const gchar         *str,
+gtk_source_iter_forward_search(const GtkTextIter * iter,
+                               const gchar * str,
 				GtkSourceSearchFlags flags,
-				GtkTextIter         *match_start,
-				GtkTextIter         *match_end,
-				const GtkTextIter   *limit)
+                               GtkTextIter * match_start,
+                               GtkTextIter * match_end,
+                               const GtkTextIter * limit)
 {
 	gchar **lines = NULL;
 	GtkTextIter match;
@@ -547,15 +549,14 @@ gtk_source_iter_forward_search (const GtkTextIter   *iter,
 	gboolean visible_only;
 	gboolean slice;
 
-	g_return_val_if_fail (iter != NULL, FALSE);
-	g_return_val_if_fail (str != NULL, FALSE);
+    g_return_val_if_fail(iter != NULL, FALSE);
+    g_return_val_if_fail(str != NULL, FALSE);
 
 	if ((flags & GTK_SOURCE_SEARCH_CASE_INSENSITIVE) == 0)
-		return gtk_text_iter_forward_search (iter, str, flags,
-						     match_start, match_end,
-						     limit);
+        return gtk_text_iter_forward_search(iter, str, flags,
+                                            match_start, match_end, limit);
 
-	if (limit && gtk_text_iter_compare (iter, limit) >= 0)
+    if (limit && gtk_text_iter_compare(iter, limit) >= 0)
 		return FALSE;
 
 	if (*str == '\0')
@@ -563,9 +564,9 @@ gtk_source_iter_forward_search (const GtkTextIter   *iter,
 		/* If we can move one char, return the empty string there */
 		match = *iter;
 
-		if (gtk_text_iter_forward_char (&match))
+        if (gtk_text_iter_forward_char(&match))
 		{
-			if (limit && gtk_text_iter_equal (&match, limit))
+            if (limit && gtk_text_iter_equal(&match, limit))
 				return FALSE;
 
 			if (match_start)
@@ -584,26 +585,24 @@ gtk_source_iter_forward_search (const GtkTextIter   *iter,
 	slice = (flags & GTK_SOURCE_SEARCH_TEXT_ONLY) == 0;
 
 	/* locate all lines */
-	lines = strbreakup (str, "\n", -1);
+    lines = strbreakup(str, "\n", -1);
 
 	search = *iter;
 
 	do
 	{
 		/* This loop has an inefficient worst-case, where
-		 * gtk_text_iter_get_text () is called repeatedly on
-		 * a single line.
-		 */
+         * gtk_text_iter_get_text () is called repeatedly on a single line. */
 		GtkTextIter end;
 
-		if (limit && gtk_text_iter_compare (&search, limit) >= 0)
+        if (limit && gtk_text_iter_compare(&search, limit) >= 0)
 			break;
 
-		if (lines_match (&search, (const gchar**)lines,
+        if (lines_match(&search, (const gchar **) lines,
 				 visible_only, slice, &match, &end))
 		{
 			if (limit == NULL || (limit &&
-					      gtk_text_iter_compare (&end, limit) < 0))
+                                  gtk_text_iter_compare(&end, limit) < 0))
 			{
 				retval = TRUE;
 
@@ -614,9 +613,9 @@ gtk_source_iter_forward_search (const GtkTextIter   *iter,
 			}
 			break;
 		}
-	} while (gtk_text_iter_forward_line (&search));
+    } while (gtk_text_iter_forward_line(&search));
 
-	g_strfreev ((gchar**)lines);
+    g_strfreev((gchar **) lines);
 
 	return retval;
 }
@@ -636,12 +635,12 @@ gtk_source_iter_forward_search (const GtkTextIter   *iter,
  * Return value: whether a match was found
  **/
 gboolean
-gtk_source_iter_backward_search (const GtkTextIter   *iter,
-				 const gchar         *str,
+gtk_source_iter_backward_search(const GtkTextIter * iter,
+                                const gchar * str,
 				 GtkSourceSearchFlags flags,
-				 GtkTextIter         *match_start,
-				 GtkTextIter         *match_end,
-				 const GtkTextIter   *limit)
+                                GtkTextIter * match_start,
+                                GtkTextIter * match_end,
+                                const GtkTextIter * limit)
 {
 	gchar **lines = NULL;
 	GtkTextIter match;
@@ -650,15 +649,14 @@ gtk_source_iter_backward_search (const GtkTextIter   *iter,
 	gboolean visible_only;
 	gboolean slice;
 
-	g_return_val_if_fail (iter != NULL, FALSE);
-	g_return_val_if_fail (str != NULL, FALSE);
+    g_return_val_if_fail(iter != NULL, FALSE);
+    g_return_val_if_fail(str != NULL, FALSE);
 
 	if ((flags & GTK_SOURCE_SEARCH_CASE_INSENSITIVE) == 0)
-		return gtk_text_iter_backward_search (iter, str, flags,
-						      match_start, match_end,
-						      limit);
+        return gtk_text_iter_backward_search(iter, str, flags,
+                                             match_start, match_end, limit);
 
-	if (limit && gtk_text_iter_compare (iter, limit) <= 0)
+    if (limit && gtk_text_iter_compare(iter, limit) <= 0)
 		return FALSE;
 
 	if (*str == '\0')
@@ -666,9 +664,9 @@ gtk_source_iter_backward_search (const GtkTextIter   *iter,
 		/* If we can move one char, return the empty string there */
 		match = *iter;
 
-		if (gtk_text_iter_backward_char (&match))
+        if (gtk_text_iter_backward_char(&match))
 		{
-			if (limit && gtk_text_iter_equal (&match, limit))
+            if (limit && gtk_text_iter_equal(&match, limit))
 				return FALSE;
 
 			if (match_start)
@@ -687,26 +685,24 @@ gtk_source_iter_backward_search (const GtkTextIter   *iter,
 	slice = (flags & GTK_SOURCE_SEARCH_TEXT_ONLY) == 0;
 
 	/* locate all lines */
-	lines = strbreakup (str, "\n", -1);
+    lines = strbreakup(str, "\n", -1);
 
 	search = *iter;
 
 	while (TRUE)
 	{
 		/* This loop has an inefficient worst-case, where
-		 * gtk_text_iter_get_text () is called repeatedly on
-		 * a single line.
-		 */
+         * gtk_text_iter_get_text () is called repeatedly on a single line. */
 		GtkTextIter end;
 
-		if (limit && gtk_text_iter_compare (&search, limit) <= 0)
+        if (limit && gtk_text_iter_compare(&search, limit) <= 0)
 			break;
 
-		if (backward_lines_match (&search, (const gchar**)lines,
+        if (backward_lines_match(&search, (const gchar **) lines,
 					  visible_only, slice, &match, &end))
 		{
 			if (limit == NULL || (limit &&
-					      gtk_text_iter_compare (&end, limit) > 0))
+                                  gtk_text_iter_compare(&end, limit) > 0))
 			{
 				retval = TRUE;
 
@@ -718,18 +714,18 @@ gtk_source_iter_backward_search (const GtkTextIter   *iter,
 			break;
 		}
 
-		if (gtk_text_iter_get_line_offset (&search) == 0)
+        if (gtk_text_iter_get_line_offset(&search) == 0)
 		{
-			if (!gtk_text_iter_backward_line (&search))
+            if (!gtk_text_iter_backward_line(&search))
 				break;
 		}
 		else
 		{
-			gtk_text_iter_set_line_offset (&search, 0);
+            gtk_text_iter_set_line_offset(&search, 0);
 		}
 	}
 
-	g_strfreev ((gchar**)lines);
+    g_strfreev((gchar **) lines);
 
 	return retval;
 }
