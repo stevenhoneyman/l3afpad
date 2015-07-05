@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: L3afpad 0.7.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-09 11:16+0800\n"
+"POT-Creation-Date: 2015-07-05 16:31+0200\n"
 "PO-Revision-Date: 2004-11-04 10:10+0100\n"
 "Last-Translator: David Rosal <davidrr@users.sourceforge.net>\n"
 "Language-Team: Catalan\n"
@@ -144,15 +144,15 @@ msgstr ""
 msgid "GTK+ based simple text editor"
 msgstr "Editor de text simple, basat en GTK+"
 
-#: ../src/callback.c:336
+#: ../src/callback.c:338
 msgid "translator-credits"
 msgstr "David Rosal <davidrr@users.sourceforge.net>"
 
-#: ../src/callback.c:347
+#: ../src/callback.c:349
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 
-#: ../src/view.c:62
+#: ../src/view.c:65
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "Vols desar els canvis fets a '%s'?"
@@ -170,54 +170,72 @@ msgstr "Locale actual (%s)"
 msgid "Other Codeset"
 msgstr "Una altra codificació"
 
-#: ../src/selector.c:166
+#: ../src/selector.c:155 ../src/selector.c:302
+msgid "_Cancel"
+msgstr ""
+
+#: ../src/selector.c:156
+msgid "_OK"
+msgstr ""
+
+#: ../src/selector.c:165
 msgid "Code_set:"
 msgstr "Codificació:"
 
-#: ../src/selector.c:190
+#: ../src/selector.c:189
 #, c-format
 msgid "'%s' is not supported"
 msgstr "'%s' no és suportat"
 
-#: ../src/selector.c:250
+#: ../src/selector.c:249
 msgid "Auto-Detect"
 msgstr "Autodetectar"
 
-#: ../src/selector.c:299
+#: ../src/selector.c:298
 msgid "Open"
 msgstr "Obrir"
 
-#: ../src/selector.c:299
+#: ../src/selector.c:298
 msgid "Save As"
 msgstr "Guardar com a"
 
-#: ../src/selector.c:314
+#: ../src/selector.c:303
+#, fuzzy
+msgid "_Open"
+msgstr "Obrir"
+
+#: ../src/selector.c:303
+#, fuzzy
+msgid "_Save As"
+msgstr "Guardar com a"
+
+#: ../src/selector.c:312
 msgid "C_haracter Coding:"
 msgstr "Codificació de c_aràcters: "
 
-#: ../src/selector.c:372
+#: ../src/selector.c:369
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' ja existeix. Vols sobreescriure'l?"
 
-#: ../src/file.c:48
+#: ../src/file.c:49
 msgid "Untitled"
 msgstr "Sense nom"
 
-#: ../src/file.c:203
+#: ../src/file.c:204
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "No es pot convertir la codificació a '%s'"
 
-#: ../src/file.c:216
+#: ../src/file.c:217
 msgid "Can't open file to write"
 msgstr "No es pot obrir el fitxer per a escriure"
 
-#: ../src/file.c:221
+#: ../src/file.c:222
 msgid "Can't write file"
 msgstr "No es pot escriure al fitxer"
 
-#: ../src/file.c:274
+#: ../src/file.c:275
 #, c-format
 msgid ""
 "<u>Totals count</u>\n"
@@ -227,52 +245,52 @@ msgid ""
 "Chars: %7d Words: %6d Lines: %5d\n"
 msgstr ""
 
-#: ../src/search.c:125
+#: ../src/search.c:129
 msgid "Search string not found"
 msgstr "No s'ha trobat la cadena desitjada"
 
-#: ../src/search.c:178
+#: ../src/search.c:182
 msgid "Replace?"
 msgstr "Substituir?"
 
-#: ../src/search.c:241
+#: ../src/search.c:245
 #, c-format
 msgid "%d strings replaced"
 msgstr "S'han substituit %d cadenes"
 
-#: ../src/search.c:287
+#: ../src/search.c:308
 msgid "Replace"
 msgstr "Substituir"
 
-#: ../src/search.c:294
+#: ../src/search.c:315
 msgid "Find"
 msgstr "Cercar"
 
-#: ../src/search.c:306
+#: ../src/search.c:327
 msgid "Fi_nd what:"
 msgstr "_Cercar: "
 
-#: ../src/search.c:325
+#: ../src/search.c:373
 msgid "Re_place with:"
 msgstr "_Substituir per: "
 
-#: ../src/search.c:339
+#: ../src/search.c:396 ../src/search.c:410
 msgid "_Match case"
 msgstr "Distingir _majúscules / minúscules"
 
-#: ../src/search.c:344
+#: ../src/search.c:402
 msgid "Replace _all at once"
 msgstr "Substituir-les _totes de cop"
 
-#: ../src/search.c:395
+#: ../src/search.c:469
 msgid "Jump To"
 msgstr "Saltar a"
 
-#: ../src/search.c:400
+#: ../src/search.c:474
 msgid "_Jump"
 msgstr "_Saltar"
 
-#: ../src/search.c:407
+#: ../src/search.c:481
 msgid "_Line number:"
 msgstr "Número de _línia: "
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-09 11:16+0800\n"
+"POT-Creation-Date: 2015-07-05 16:31+0200\n"
 "PO-Revision-Date: 2008-07-20 21:29-0400\n"
 "Last-Translator: Gintautas Miliauskas <gintas@akl.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
@@ -144,15 +144,15 @@ msgstr ""
 msgid "GTK+ based simple text editor"
 msgstr "Paprastas teksto redaktorius paremtas GTK+"
 
-#: ../src/callback.c:336
+#: ../src/callback.c:338
 msgid "translator-credits"
 msgstr "Lech Jankovski <godgard@gmail.com>"
 
-#: ../src/callback.c:347
+#: ../src/callback.c:349
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 
-#: ../src/view.c:62
+#: ../src/view.c:65
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "Išsaugoti pokyčius į '%s'?"
@@ -170,54 +170,72 @@ msgstr "Esama lokalė (%s)"
 msgid "Other Codeset"
 msgstr "Kitas kodavimas"
 
-#: ../src/selector.c:166
+#: ../src/selector.c:155 ../src/selector.c:302
+msgid "_Cancel"
+msgstr ""
+
+#: ../src/selector.c:156
+msgid "_OK"
+msgstr ""
+
+#: ../src/selector.c:165
 msgid "Code_set:"
 msgstr "_Kodavimas:"
 
-#: ../src/selector.c:190
+#: ../src/selector.c:189
 #, c-format
 msgid "'%s' is not supported"
 msgstr "„%s“ nepalaikomas"
 
-#: ../src/selector.c:250
+#: ../src/selector.c:249
 msgid "Auto-Detect"
 msgstr "Automatiškai aptikti"
 
-#: ../src/selector.c:299
+#: ../src/selector.c:298
 msgid "Open"
 msgstr "Atverti"
 
-#: ../src/selector.c:299
+#: ../src/selector.c:298
 msgid "Save As"
 msgstr "Įrašyti kaip"
 
-#: ../src/selector.c:314
+#: ../src/selector.c:303
+#, fuzzy
+msgid "_Open"
+msgstr "Atverti"
+
+#: ../src/selector.c:303
+#, fuzzy
+msgid "_Save As"
+msgstr "Įrašyti kaip"
+
+#: ../src/selector.c:312
 msgid "C_haracter Coding:"
 msgstr "Si_mbolių kodavimas:"
 
-#: ../src/selector.c:372
+#: ../src/selector.c:369
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' jau egzistuoja. Perrašyti?"
 
-#: ../src/file.c:48
+#: ../src/file.c:49
 msgid "Untitled"
 msgstr "Bevardis"
 
-#: ../src/file.c:203
+#: ../src/file.c:204
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Nepavyko pakeisti kodavimo į „%s“"
 
-#: ../src/file.c:216
+#: ../src/file.c:217
 msgid "Can't open file to write"
 msgstr "Neįmanoma atidaryti failo  rašymui"
 
-#: ../src/file.c:221
+#: ../src/file.c:222
 msgid "Can't write file"
 msgstr "Neįmanoma įrašyti failo"
 
-#: ../src/file.c:274
+#: ../src/file.c:275
 #, c-format
 msgid ""
 "<u>Totals count</u>\n"
@@ -227,52 +245,52 @@ msgid ""
 "Chars: %7d Words: %6d Lines: %5d\n"
 msgstr ""
 
-#: ../src/search.c:125
+#: ../src/search.c:129
 msgid "Search string not found"
 msgstr "Ieškomas tekstas nerastas"
 
-#: ../src/search.c:178
+#: ../src/search.c:182
 msgid "Replace?"
 msgstr "Pakeisti?"
 
-#: ../src/search.c:241
+#: ../src/search.c:245
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d tekstų pakeista"
 
-#: ../src/search.c:287
+#: ../src/search.c:308
 msgid "Replace"
 msgstr "Pakeisti"
 
-#: ../src/search.c:294
+#: ../src/search.c:315
 msgid "Find"
 msgstr "Ieškoti"
 
-#: ../src/search.c:306
+#: ../src/search.c:327
 msgid "Fi_nd what:"
 msgstr "_Ieškoti ko:"
 
-#: ../src/search.c:325
+#: ../src/search.c:373
 msgid "Re_place with:"
 msgstr "P_akeisti kuo:"
 
-#: ../src/search.c:339
+#: ../src/search.c:396 ../src/search.c:410
 msgid "_Match case"
 msgstr "_Skirti raidžių dydį"
 
-#: ../src/search.c:344
+#: ../src/search.c:402
 msgid "Replace _all at once"
 msgstr "Pakeisti _visus vienu metu"
 
-#: ../src/search.c:395
+#: ../src/search.c:469
 msgid "Jump To"
 msgstr "Peršokti į"
 
-#: ../src/search.c:400
+#: ../src/search.c:474
 msgid "_Jump"
 msgstr "_Nušokti"
 
-#: ../src/search.c:407
+#: ../src/search.c:481
 msgid "_Line number:"
 msgstr "_Eilutės numeris: "
 

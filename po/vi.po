@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-09 11:16+0800\n"
+"POT-Creation-Date: 2015-07-05 16:31+0200\n"
 "PO-Revision-Date: 2009-09-19 18:32+0930\n"
 "Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
 "Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
@@ -147,15 +147,15 @@ msgstr ""
 msgid "GTK+ based simple text editor"
 msgstr "Một trình soạn thảo văn bản đơn giản dựa trên GTK+"
 
-#: ../src/callback.c:336
+#: ../src/callback.c:338
 msgid "translator-credits"
 msgstr "Nhóm Việt hoá Phần mềm Tự do <vi-VN@googlegroups.com>"
 
-#: ../src/callback.c:347
+#: ../src/callback.c:349
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 
-#: ../src/view.c:62
+#: ../src/view.c:65
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "Lưu các thay đổi cho « %s » không?"
@@ -173,54 +173,72 @@ msgstr "Miền địa phương hiện tại (%s)"
 msgid "Other Codeset"
 msgstr "Bảng mã khác"
 
-#: ../src/selector.c:166
+#: ../src/selector.c:155 ../src/selector.c:302
+msgid "_Cancel"
+msgstr ""
+
+#: ../src/selector.c:156
+msgid "_OK"
+msgstr ""
+
+#: ../src/selector.c:165
 msgid "Code_set:"
 msgstr "Bảng _mã:"
 
-#: ../src/selector.c:190
+#: ../src/selector.c:189
 #, c-format
 msgid "'%s' is not supported"
 msgstr "Không hỗ trợ « %s »"
 
-#: ../src/selector.c:250
+#: ../src/selector.c:249
 msgid "Auto-Detect"
 msgstr "Tự động dò tìm"
 
-#: ../src/selector.c:299
+#: ../src/selector.c:298
 msgid "Open"
 msgstr "Mở"
 
-#: ../src/selector.c:299
+#: ../src/selector.c:298
 msgid "Save As"
 msgstr "Lưu dạng"
 
-#: ../src/selector.c:314
+#: ../src/selector.c:303
+#, fuzzy
+msgid "_Open"
+msgstr "Mở"
+
+#: ../src/selector.c:303
+#, fuzzy
+msgid "_Save As"
+msgstr "Lưu dạng"
+
+#: ../src/selector.c:312
 msgid "C_haracter Coding:"
 msgstr "_Bảng mã ký tự :"
 
-#: ../src/selector.c:372
+#: ../src/selector.c:369
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "Tập tin « %s » đã có. Ghi đè ?"
 
-#: ../src/file.c:48
+#: ../src/file.c:49
 msgid "Untitled"
 msgstr "Không tên"
 
-#: ../src/file.c:203
+#: ../src/file.c:204
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Không thể chuyển đổi bảng mã sang « %s »"
 
-#: ../src/file.c:216
+#: ../src/file.c:217
 msgid "Can't open file to write"
 msgstr "Không thể mở tập tin để ghi"
 
-#: ../src/file.c:221
+#: ../src/file.c:222
 msgid "Can't write file"
 msgstr "Không thể ghi tập tin"
 
-#: ../src/file.c:274
+#: ../src/file.c:275
 #, c-format
 msgid ""
 "<u>Totals count</u>\n"
@@ -230,52 +248,52 @@ msgid ""
 "Chars: %7d Words: %6d Lines: %5d\n"
 msgstr ""
 
-#: ../src/search.c:125
+#: ../src/search.c:129
 msgid "Search string not found"
 msgstr "Không tìm thấy"
 
-#: ../src/search.c:178
+#: ../src/search.c:182
 msgid "Replace?"
 msgstr "Thay thế ?"
 
-#: ../src/search.c:241
+#: ../src/search.c:245
 #, c-format
 msgid "%d strings replaced"
 msgstr "Đã thay thế %d lần"
 
-#: ../src/search.c:287
+#: ../src/search.c:308
 msgid "Replace"
 msgstr "Thay thế"
 
-#: ../src/search.c:294
+#: ../src/search.c:315
 msgid "Find"
 msgstr "Tìm"
 
-#: ../src/search.c:306
+#: ../src/search.c:327
 msgid "Fi_nd what:"
 msgstr "_Tìm kiếm:"
 
-#: ../src/search.c:325
+#: ../src/search.c:373
 msgid "Re_place with:"
 msgstr "Thay thế _bởi:"
 
-#: ../src/search.c:339
+#: ../src/search.c:396 ../src/search.c:410
 msgid "_Match case"
 msgstr "_Phân biệt chữ hoa/thường"
 
-#: ../src/search.c:344
+#: ../src/search.c:402
 msgid "Replace _all at once"
 msgstr "_Thay thế tất cả"
 
-#: ../src/search.c:395
+#: ../src/search.c:469
 msgid "Jump To"
 msgstr "Nhảy tới"
 
-#: ../src/search.c:400
+#: ../src/search.c:474
 msgid "_Jump"
 msgstr "_Nhảy"
 
-#: ../src/search.c:407
+#: ../src/search.c:481
 msgid "_Line number:"
 msgstr "Dòng _số :"
 
