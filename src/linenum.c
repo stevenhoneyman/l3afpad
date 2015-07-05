@@ -299,7 +299,7 @@ void show_line_numbers(GtkWidget *text_view, gboolean visible)
 void linenum_init(GtkWidget *text_view)
 {
 	min_number_window_width = calculate_min_number_window_width(text_view);
-	g_signal_connect(
+	g_signal_connect_after(
 		G_OBJECT(text_view),
 		"draw",
 		G_CALLBACK(line_numbers_expose),
