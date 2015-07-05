@@ -7,4 +7,5 @@ src/font.c
 src/selector.c
 src/file.c
 src/search.c
+src/dialog.c
 data/l3afpad.desktop.in

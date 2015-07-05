@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: L3afpad 0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-09 11:16+0800\n"
+"POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2006-11-01 10:50+0900\n"
 "Last-Translator: Seo Sanghyeon <sanxiyn@gmail.com>\n"
 "Language-Team: Korean\n"
@@ -144,15 +144,15 @@ msgstr ""
 msgid "GTK+ based simple text editor"
 msgstr "GTK+로 만든 간단한 텍스트 편집기"
 
-#: ../src/callback.c:336
+#: ../src/callback.c:338
 msgid "translator-credits"
 msgstr "Seo Sanghyeon <sanxiyn@gmail.com>"
 
-#: ../src/callback.c:347
+#: ../src/callback.c:349
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 
-#: ../src/view.c:62
+#: ../src/view.c:65
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "'%s'의 변경된 내용을 저장할까요?"
@@ -170,54 +170,72 @@ msgstr "현재 로케일 (%s)"
 msgid "Other Codeset"
 msgstr ""
 
-#: ../src/selector.c:166
+#: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
+msgid "_Cancel"
+msgstr ""
+
+#: ../src/selector.c:156 ../src/dialog.c:42
+msgid "_OK"
+msgstr ""
+
+#: ../src/selector.c:165
 msgid "Code_set:"
 msgstr ""
 
-#: ../src/selector.c:190
+#: ../src/selector.c:189
 #, c-format
 msgid "'%s' is not supported"
 msgstr ""
 
-#: ../src/selector.c:250
+#: ../src/selector.c:249
 msgid "Auto-Detect"
 msgstr "자동 선택"
 
-#: ../src/selector.c:299
+#: ../src/selector.c:298
 msgid "Open"
 msgstr "열기"
 
-#: ../src/selector.c:299
+#: ../src/selector.c:298
 msgid "Save As"
 msgstr "다른 이름으로 저장"
 
-#: ../src/selector.c:314
+#: ../src/selector.c:303
+#, fuzzy
+msgid "_Open"
+msgstr "열기"
+
+#: ../src/selector.c:303
+#, fuzzy
+msgid "_Save As"
+msgstr "다른 이름으로 저장"
+
+#: ../src/selector.c:312
 msgid "C_haracter Coding:"
 msgstr "문자 인코딩(_H):"
 
-#: ../src/selector.c:372
+#: ../src/selector.c:369
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s'은(는) 이미 있습니다. 덮어쓸까요?"
 
-#: ../src/file.c:48
+#: ../src/file.c:49
 msgid "Untitled"
 msgstr "제목 없음"
 
-#: ../src/file.c:203
+#: ../src/file.c:204
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr ""
 
-#: ../src/file.c:216
+#: ../src/file.c:217
 msgid "Can't open file to write"
 msgstr ""
 
-#: ../src/file.c:221
+#: ../src/file.c:222
 msgid "Can't write file"
 msgstr ""
 
-#: ../src/file.c:274
+#: ../src/file.c:275
 #, c-format
 msgid ""
 "<u>Totals count</u>\n"
@@ -227,54 +245,62 @@ msgid ""
 "Chars: %7d Words: %6d Lines: %5d\n"
 msgstr ""
 
-#: ../src/search.c:125
+#: ../src/search.c:129
 msgid "Search string not found"
 msgstr "찾지 못했습니다"
 
-#: ../src/search.c:178
+#: ../src/search.c:182
 msgid "Replace?"
 msgstr "바꿀까요?"
 
-#: ../src/search.c:241
+#: ../src/search.c:245
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d번 바꿨습니다"
 
-#: ../src/search.c:287
+#: ../src/search.c:308
 msgid "Replace"
 msgstr "바꾸기"
 
-#: ../src/search.c:294
+#: ../src/search.c:315
 msgid "Find"
 msgstr "찾기"
 
-#: ../src/search.c:306
+#: ../src/search.c:327
 msgid "Fi_nd what:"
 msgstr "찾을 내용(_N):"
 
-#: ../src/search.c:325
+#: ../src/search.c:373
 msgid "Re_place with:"
 msgstr "바꿀 내용(_P):"
 
-#: ../src/search.c:339
+#: ../src/search.c:396 ../src/search.c:410
 msgid "_Match case"
 msgstr "대/소문자 구분(_M)"
 
-#: ../src/search.c:344
+#: ../src/search.c:402
 msgid "Replace _all at once"
 msgstr "모두 바꾸기"
 
-#: ../src/search.c:395
+#: ../src/search.c:469
 msgid "Jump To"
 msgstr "이동"
 
-#: ../src/search.c:400
+#: ../src/search.c:474
 msgid "_Jump"
 msgstr "이동(_J)"
 
-#: ../src/search.c:407
+#: ../src/search.c:481
 msgid "_Line number:"
 msgstr "줄 번호(_L):"
+
+#: ../src/dialog.c:67
+msgid "_No"
+msgstr ""
+
+#: ../src/dialog.c:69
+msgid "_Yes"
+msgstr ""
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"

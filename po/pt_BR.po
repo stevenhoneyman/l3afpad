@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-09 11:16+0800\n"
+"POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2008-05-07 17:39-0300\n"
 "Last-Translator: Leslie Harlley Watter <leslie@watter.org>\n"
 "Language-Team:  Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
@@ -144,15 +144,15 @@ msgstr ""
 msgid "GTK+ based simple text editor"
 msgstr "Editor de texto simples feito em GTK+"
 
-#: ../src/callback.c:336
+#: ../src/callback.c:338
 msgid "translator-credits"
 msgstr "Fábio Antunes <fabio.antunes@hotmail.com>"
 
-#: ../src/callback.c:347
+#: ../src/callback.c:349
 msgid "Lɜafpad"
 msgstr "Lɜafpad"
 
-#: ../src/view.c:62
+#: ../src/view.c:65
 #, c-format
 msgid "Save changes to '%s'?"
 msgstr "Salvar modificações em '%s'?"
@@ -170,54 +170,72 @@ msgstr "Idioma Atual (%s)"
 msgid "Other Codeset"
 msgstr "Outro conjunto de caracteres"
 
-#: ../src/selector.c:166
+#: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
+msgid "_Cancel"
+msgstr ""
+
+#: ../src/selector.c:156 ../src/dialog.c:42
+msgid "_OK"
+msgstr ""
+
+#: ../src/selector.c:165
 msgid "Code_set:"
 msgstr "_Conjunto de caracteres"
 
-#: ../src/selector.c:190
+#: ../src/selector.c:189
 #, c-format
 msgid "'%s' is not supported"
 msgstr "'%s' não é suportado"
 
-#: ../src/selector.c:250
+#: ../src/selector.c:249
 msgid "Auto-Detect"
 msgstr "Auto-detectar"
 
-#: ../src/selector.c:299
+#: ../src/selector.c:298
 msgid "Open"
 msgstr "Abrir"
 
-#: ../src/selector.c:299
+#: ../src/selector.c:298
 msgid "Save As"
 msgstr "Salvar Como"
 
-#: ../src/selector.c:314
+#: ../src/selector.c:303
+#, fuzzy
+msgid "_Open"
+msgstr "Abrir"
+
+#: ../src/selector.c:303
+#, fuzzy
+msgid "_Save As"
+msgstr "Salvar Como"
+
+#: ../src/selector.c:312
 msgid "C_haracter Coding:"
 msgstr "_Codificação de Caracteres:"
 
-#: ../src/selector.c:372
+#: ../src/selector.c:369
 #, c-format
 msgid "'%s' already exists. Overwrite?"
 msgstr "'%s' já existe. Sobrescrever?"
 
-#: ../src/file.c:48
+#: ../src/file.c:49
 msgid "Untitled"
 msgstr "Sem Título"
 
-#: ../src/file.c:203
+#: ../src/file.c:204
 #, c-format
 msgid "Can't convert codeset to '%s'"
 msgstr "Não foi possível converter o conjunto de caracteres para '%s'"
 
-#: ../src/file.c:216
+#: ../src/file.c:217
 msgid "Can't open file to write"
 msgstr "Não foi possível abrir o arquivo para escrita"
 
-#: ../src/file.c:221
+#: ../src/file.c:222
 msgid "Can't write file"
 msgstr "Não foi possível escrever no arquivo"
 
-#: ../src/file.c:274
+#: ../src/file.c:275
 #, c-format
 msgid ""
 "<u>Totals count</u>\n"
@@ -227,54 +245,62 @@ msgid ""
 "Chars: %7d Words: %6d Lines: %5d\n"
 msgstr ""
 
-#: ../src/search.c:125
+#: ../src/search.c:129
 msgid "Search string not found"
 msgstr "Palavra(s) não encontrada"
 
-#: ../src/search.c:178
+#: ../src/search.c:182
 msgid "Replace?"
 msgstr "Substituir?"
 
-#: ../src/search.c:241
+#: ../src/search.c:245
 #, c-format
 msgid "%d strings replaced"
 msgstr "%d palavra(s) substituídas"
 
-#: ../src/search.c:287
+#: ../src/search.c:308
 msgid "Replace"
 msgstr "Substituir"
 
-#: ../src/search.c:294
+#: ../src/search.c:315
 msgid "Find"
 msgstr "Procurar"
 
-#: ../src/search.c:306
+#: ../src/search.c:327
 msgid "Fi_nd what:"
 msgstr "_Procurar o que:"
 
-#: ../src/search.c:325
+#: ../src/search.c:373
 msgid "Re_place with:"
 msgstr "_Substituir com:"
 
-#: ../src/search.c:339
+#: ../src/search.c:396 ../src/search.c:410
 msgid "_Match case"
 msgstr "_Diferenciar maiúsculas e minúsculas"
 
-#: ../src/search.c:344
+#: ../src/search.c:402
 msgid "Replace _all at once"
 msgstr "Substituir _todos de uma vez"
 
-#: ../src/search.c:395
+#: ../src/search.c:469
 msgid "Jump To"
 msgstr "Ir Para"
 
-#: ../src/search.c:400
+#: ../src/search.c:474
 msgid "_Jump"
 msgstr "_Ir"
 
-#: ../src/search.c:407
+#: ../src/search.c:481
 msgid "_Line number:"
 msgstr "_Número de linhas:"
+
+#: ../src/dialog.c:67
+msgid "_No"
+msgstr ""
+
+#: ../src/dialog.c:69
+msgid "_Yes"
+msgstr ""
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"
