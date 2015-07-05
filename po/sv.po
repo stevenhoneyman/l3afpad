@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-05 16:31+0200\n"
+"POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2005-12-05 20:30+0100\n"
 "Last-Translator: Isak Savo <iso01001@student.mdh.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -171,11 +171,11 @@ msgstr "Nuvarande lokal (%s)"
 msgid "Other Codeset"
 msgstr "Annan teckenkodning"
 
-#: ../src/selector.c:155 ../src/selector.c:302
+#: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
 msgstr ""
 
-#: ../src/selector.c:156
+#: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
 msgstr ""
 
@@ -294,6 +294,14 @@ msgstr "_Hoppa"
 #: ../src/search.c:481
 msgid "_Line number:"
 msgstr "_Radnummer: "
+
+#: ../src/dialog.c:67
+msgid "_No"
+msgstr ""
+
+#: ../src/dialog.c:69
+msgid "_Yes"
+msgstr ""
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"

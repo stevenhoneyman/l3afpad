@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: L3afpad 0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-05 16:31+0200\n"
+"POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2009-07-04 16:58+0100\n"
 "Last-Translator: Alan Monfort <alan.monfort@free.fr>\n"
 "Language-Team: Breton Team <brenux@free.fr>\n"
@@ -179,11 +179,11 @@ msgstr "Lec'hadur bremanel (%s)"
 msgid "Other Codeset"
 msgstr "Spletad arouezennou all"
 
-#: ../src/selector.c:155 ../src/selector.c:302
+#: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
 msgstr ""
 
-#: ../src/selector.c:156
+#: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
 msgstr ""
 
@@ -305,6 +305,14 @@ msgstr "_Mont d'al linenn"
 #: ../src/search.c:481
 msgid "_Line number:"
 msgstr "Niverenn al _linenn :"
+
+#: ../src/dialog.c:67
+msgid "_No"
+msgstr ""
+
+#: ../src/dialog.c:69
+msgid "_Yes"
+msgstr ""
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"

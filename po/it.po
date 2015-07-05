@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad-0.8.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-05 16:31+0200\n"
+"POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2008-11-29 18:23+0100\n"
 "Last-Translator: Vincenzo Campanella <vinz65@gmail.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -173,11 +173,11 @@ msgstr "Localizzazione attuale (%s)"
 msgid "Other Codeset"
 msgstr "Altra codifica"
 
-#: ../src/selector.c:155 ../src/selector.c:302
+#: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
 msgstr ""
 
-#: ../src/selector.c:156
+#: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
 msgstr ""
 
@@ -296,6 +296,14 @@ msgstr "_Vai"
 #: ../src/search.c:481
 msgid "_Line number:"
 msgstr "Numero di _riga:"
+
+#: ../src/dialog.c:67
+msgid "_No"
+msgstr ""
+
+#: ../src/dialog.c:69
+msgid "_Yes"
+msgstr ""
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"

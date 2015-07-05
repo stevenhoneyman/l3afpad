@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.7.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-05 16:31+0200\n"
+"POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2004-11-25 03:24-0700\n"
 "Last-Translator: Vijay Durairaj <vjd81@yahoo.com>\n"
 "Language-Team: Tamil <tamilinix@yahoogroups.com>\n"
@@ -170,11 +170,11 @@ msgstr "தற்பொழுதுள்ள Locale (%s)"
 msgid "Other Codeset"
 msgstr ""
 
-#: ../src/selector.c:155 ../src/selector.c:302
+#: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
 msgstr ""
 
-#: ../src/selector.c:156
+#: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
 msgstr ""
 
@@ -293,6 +293,14 @@ msgstr "தாவு(_J)"
 #: ../src/search.c:481
 msgid "_Line number:"
 msgstr "வரி எண்(_L): "
+
+#: ../src/dialog.c:67
+msgid "_No"
+msgstr ""
+
+#: ../src/dialog.c:69
+msgid "_Yes"
+msgstr ""
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"

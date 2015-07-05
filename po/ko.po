@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: L3afpad 0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-05 16:31+0200\n"
+"POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2006-11-01 10:50+0900\n"
 "Last-Translator: Seo Sanghyeon <sanxiyn@gmail.com>\n"
 "Language-Team: Korean\n"
@@ -170,11 +170,11 @@ msgstr "현재 로케일 (%s)"
 msgid "Other Codeset"
 msgstr ""
 
-#: ../src/selector.c:155 ../src/selector.c:302
+#: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
 msgstr ""
 
-#: ../src/selector.c:156
+#: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
 msgstr ""
 
@@ -293,6 +293,14 @@ msgstr "이동(_J)"
 #: ../src/search.c:481
 msgid "_Line number:"
 msgstr "줄 번호(_L):"
+
+#: ../src/dialog.c:67
+msgid "_No"
+msgstr ""
+
+#: ../src/dialog.c:69
+msgid "_Yes"
+msgstr ""
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"

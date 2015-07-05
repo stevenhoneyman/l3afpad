@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad-0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-05 16:31+0200\n"
-"PO-Revision-Date: 2015-07-05 17:01+0200\n"
+"POT-Creation-Date: 2015-07-05 17:27+0200\n"
+"PO-Revision-Date: 2015-07-05 17:28+0200\n"
 "Last-Translator: Balló György <ballogyor@gmail.com>\n"
 "Language-Team: magyar <>\n"
 "Language: hu\n"
@@ -176,11 +176,11 @@ msgstr "Jelenlegi nyelv (%s)"
 msgid "Other Codeset"
 msgstr "Más kódtábla"
 
-#: ../src/selector.c:155 ../src/selector.c:302
+#: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
 msgstr "_Mégse"
 
-#: ../src/selector.c:156
+#: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
 msgstr "_OK"
 
@@ -302,6 +302,14 @@ msgstr "_Ugrás"
 #: ../src/search.c:481
 msgid "_Line number:"
 msgstr "_Sor száma:"
+
+#: ../src/dialog.c:67
+msgid "_No"
+msgstr "_Nem"
+
+#: ../src/dialog.c:69
+msgid "_Yes"
+msgstr "_Igen"
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"

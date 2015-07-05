@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.7.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-05 16:31+0200\n"
+"POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2012-10-28 11:53+0100\n"
 "Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -175,11 +175,11 @@ msgstr "Nynější jazykové nastavení (%s)"
 msgid "Other Codeset"
 msgstr "Jiná znaková sada"
 
-#: ../src/selector.c:155 ../src/selector.c:302
+#: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
 msgstr ""
 
-#: ../src/selector.c:156
+#: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
 msgstr ""
 
@@ -305,6 +305,14 @@ msgstr "_Přejít"
 #: ../src/search.c:481
 msgid "_Line number:"
 msgstr "_Číslo řádku:"
+
+#: ../src/dialog.c:67
+msgid "_No"
+msgstr ""
+
+#: ../src/dialog.c:69
+msgid "_Yes"
+msgstr ""
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"

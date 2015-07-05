@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-05 16:31+0200\n"
+"POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2009-06-24 21:36+0100\n"
 "Last-Translator: Michał Trzebiatowski <hippie_1968@hotmail.com>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
@@ -209,11 +209,11 @@ msgstr "Bieżące ustawienia regionalne (%s)"
 msgid "Other Codeset"
 msgstr "Inne kodowanie znaków"
 
-#: ../src/selector.c:155 ../src/selector.c:302
+#: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
 msgstr ""
 
-#: ../src/selector.c:156
+#: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
 msgstr ""
 
@@ -373,6 +373,14 @@ msgstr "_Idź"
 #: ../src/search.c:481
 msgid "_Line number:"
 msgstr "Numer _linii:"
+
+#: ../src/dialog.c:67
+msgid "_No"
+msgstr ""
+
+#: ../src/dialog.c:69
+msgid "_Yes"
+msgstr ""
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"

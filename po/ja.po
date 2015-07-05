@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: L3afpad 0.8.18.1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-05 16:31+0200\n"
+"POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2007-05-06 20:26+0900\n"
 "Last-Translator: Toshiharu Kudoh <toshi.kd2@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -171,11 +171,11 @@ msgstr "現在のロケール (%s)"
 msgid "Other Codeset"
 msgstr "その他の文字コード"
 
-#: ../src/selector.c:155 ../src/selector.c:302
+#: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
 msgstr ""
 
-#: ../src/selector.c:156
+#: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
 msgstr ""
 
@@ -299,6 +299,14 @@ msgstr "ジャンプ(_J)"
 #: ../src/search.c:481
 msgid "_Line number:"
 msgstr "行番号(_L):"
+
+#: ../src/dialog.c:67
+msgid "_No"
+msgstr ""
+
+#: ../src/dialog.c:69
+msgid "_Yes"
+msgstr ""
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"

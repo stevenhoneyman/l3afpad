@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad-0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-05 16:31+0200\n"
+"POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2009-06-24 21:49+0200\n"
 "Last-Translator: Lucas Vieites <lucas@codexion.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -170,11 +170,11 @@ msgstr "Locale actual (%s)"
 msgid "Other Codeset"
 msgstr "Otro conjunto de códigos"
 
-#: ../src/selector.c:155 ../src/selector.c:302
+#: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
 msgstr ""
 
-#: ../src/selector.c:156
+#: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
 msgstr ""
 
@@ -298,6 +298,14 @@ msgstr "_Saltar"
 #: ../src/search.c:481
 msgid "_Line number:"
 msgstr "Número de _línea:"
+
+#: ../src/dialog.c:67
+msgid "_No"
+msgstr ""
+
+#: ../src/dialog.c:69
+msgid "_Yes"
+msgstr ""
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-05 16:31+0200\n"
+"POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2009-07-03 13:59+0100\n"
 "Last-Translator: Eivind Ødegård <meinmycell-lists@yahoo.no>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
@@ -180,11 +180,11 @@ msgstr "Noverande lokale (%s)"
 msgid "Other Codeset"
 msgstr "Anna teiknsett"
 
-#: ../src/selector.c:155 ../src/selector.c:302
+#: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
 msgstr ""
 
-#: ../src/selector.c:156
+#: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
 msgstr ""
 
@@ -303,6 +303,14 @@ msgstr "_Hopp"
 #: ../src/search.c:481
 msgid "_Line number:"
 msgstr "_Linjenummer:"
+
+#: ../src/dialog.c:67
+msgid "_No"
+msgstr ""
+
+#: ../src/dialog.c:69
+msgid "_Yes"
+msgstr ""
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"
