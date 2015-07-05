@@ -1,8 +1,13 @@
+2015-07-05
+
+  version 0.8.18.1.11
+    * Updated Hungarian translation (György Balló)
+	* Fixed: Line number visibility
+
 2014-07-03
 
   version UNRELEASED:
 	* Fix many Gtk3 deprecations
-
 
 2012-10-30
 
