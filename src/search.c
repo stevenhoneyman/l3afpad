@@ -304,20 +304,25 @@ gint run_dialog_search(GtkWidget *textview, gint mode)
 	GtkWidget *check_case, *check_all;
 	gint res;
 
-	if (mode)
+	if (mode) {
 		dialog = gtk_dialog_new_with_buttons(_("Replace"),
 			GTK_WINDOW(gtk_widget_get_toplevel(textview)),
 			GTK_DIALOG_DESTROY_WITH_PARENT,
 			GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
 			GTK_STOCK_FIND_AND_REPLACE, GTK_RESPONSE_OK,
 			NULL);
-	else
+		gtk_container_set_border_width (GTK_CONTAINER(dialog), 4);
+		gtk_widget_set_size_request(dialog, 400, -1);
+	} else {
 		dialog = gtk_dialog_new_with_buttons(_("Find"),
 			GTK_WINDOW(gtk_widget_get_toplevel(textview)),
 			GTK_DIALOG_DESTROY_WITH_PARENT,
 			GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
 			GTK_STOCK_FIND, GTK_RESPONSE_OK,
 			NULL);
+		gtk_container_set_border_width (GTK_CONTAINER(dialog), 4);
+		gtk_widget_set_size_request(dialog, 400, -1);
+	}
 
 	table = gtk_table_new(mode + 2, 2, FALSE);
 	 gtk_table_set_row_spacings(GTK_TABLE(table), 8);
@@ -471,6 +476,7 @@ void run_dialog_jump_to(GtkWidget *textview)
 		GTK_DIALOG_DESTROY_WITH_PARENT,
 		GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
 		NULL);
+	gtk_container_set_border_width (GTK_CONTAINER(dialog), 4);
 	button = create_button_with_stock_image(_("_Jump"), "go-jump");
 	gtk_widget_set_can_default(button, TRUE);
 	gtk_dialog_add_action_widget(GTK_DIALOG(dialog), button, GTK_RESPONSE_OK);
