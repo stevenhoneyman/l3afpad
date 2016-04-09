@@ -172,11 +172,11 @@ msgstr "Otro conjunto de códigos"
 
 #: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
-msgstr ""
+msgstr "_Cancelar"
 
 #: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
-msgstr ""
+msgstr "_Aceptar"
 
 #: ../src/selector.c:165
 msgid "Code_set:"
@@ -281,7 +281,7 @@ msgstr "Reem_plazar con:"
 
 #: ../src/search.c:396 ../src/search.c:410
 msgid "_Match case"
-msgstr "Coi_ncidir con capitalización"
+msgstr "Coi_ncidir mayúsculas y minúsculas"
 
 #: ../src/search.c:402
 msgid "Replace _all at once"
@@ -301,11 +301,11 @@ msgstr "Número de _línea:"
 
 #: ../src/dialog.c:67
 msgid "_No"
-msgstr ""
+msgstr "_NO"
 
 #: ../src/dialog.c:69
 msgid "_Yes"
-msgstr ""
+msgstr "Sí"
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"
