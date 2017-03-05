@@ -9,8 +9,16 @@ if test "$GCC" = "yes"; then
 	CFLAGS="$CFLAGS -Wall"
 fi
 AM_PROG_CC_C_O
+AC_PROG_CXX
+AC_PROG_RANLIB
 
 PKG_CHECK_MODULES(GTK, gtk+-3.0)
+
+AC_ARG_ENABLE(chardetect,
+	AC_HELP_STRING([--disable-chardetect], [force to disable universalchardet feature]))
+if test "$enable_chardetect" != "no"; then
+	AC_DEFINE(ENABLE_CHARDETECT, 1, [Define if universalchardet is enabled.])
+fi
 
 AC_ARG_ENABLE(print,
 	AC_HELP_STRING([--disable-print], [force to disable print feature]))
@@ -49,6 +57,12 @@ AM_GLIB_DEFINE_LOCALEDIR(LOCALEDIR)
 AC_OUTPUT([
 	Makefile
 	src/Makefile
+	src/charset-detector/Makefile
+	src/charset-detector/include/Makefile
+	src/charset-detector/src/Makefile
+	src/charset-detector/src/entry/Makefile
+	src/charset-detector/src/tables/Makefile
+	src/charset-detector/test/Makefile
 	data/Makefile
 	data/icons/16x16/Makefile
 	data/icons/20x20/Makefile

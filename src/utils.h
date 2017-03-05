@@ -20,6 +20,10 @@
 #ifndef _UTILS_H
 #define _UTILS_H
 
+#ifdef HAVE_CONFIG_H
+#	include "config.h"
+#endif
+
 gchar *gedit_utils_get_stdin(void);
 GtkWidget *create_button_with_stock_image(const gchar *text, const gchar *stock_id);
 void update_combo_data(GtkWidget *entry, GList **history);

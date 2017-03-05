@@ -1,6 +1,7 @@
 bin_PROGRAMS = l3afpad
 
-AM_CPPFLAGS = -DICONDIR=\"$(datadir)/pixmaps\"
+AM_CPPFLAGS = -DICONDIR=\"$(datadir)/pixmaps\" \
+	-Icharset-detector/include
 
 l3afpad_SOURCES = \
 	l3afpad.h main.c \
@@ -25,4 +26,7 @@ l3afpad_SOURCES = \
 	gtksourceiter.h gtksourceiter.c
 
 l3afpad_CFLAGS  = $(GTK_CFLAGS)
-l3afpad_LDADD   = $(GTK_LIBS) $(INTLLIBS)
+l3afpad_LDADD   = $(GTK_LIBS) $(INTLLIBS) \
+	charset-detector/src/libchardetect.a -lstdc++
+
+SUBDIRS = charset-detector

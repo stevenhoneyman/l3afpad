@@ -42,6 +42,11 @@ const gchar *get_default_charset(void);
 gint detect_line_ending(const gchar *text);
 void convert_line_ending_to_lf(gchar *text);
 void convert_line_ending(gchar **text, gint retcode);
+#ifdef HAVE_CONFIG_H
+#	include "config.h"
+#endif
+#ifndef ENABLE_CHARDETECT
 const gchar *detect_charset(const gchar *text);
+#endif
 
 #endif  /* _ENCODING_H */

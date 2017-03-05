@@ -217,6 +217,7 @@ gint detect_line_ending(const gchar *text)
 	return LF;
 }
 
+#ifndef ENABLE_CHARDETECT
 static const gchar *detect_charset_cylillic(const gchar *text)
 {
 	guint8 c = *text;
@@ -483,3 +484,4 @@ const gchar *detect_charset(const gchar *text)
 
 	return charset;
 }
+#endif
