@@ -4,14 +4,15 @@
 # Sebastian Stach <sebsta@t-online.de>, 2004.
 # Ruediger Arp <ruediger@gmx.net>, 2004.
 # Mario Blättermann <mario.blaettermann@t-online.de>, 2009.
+# Robin Vobruba <hoijui.quaero@gmail.com>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad 0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-05 17:27+0200\n"
-"PO-Revision-Date: 2009-06-28 13:12+0100\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@t-online.de>\n"
+"PO-Revision-Date: 2017-12-16 16:44:00+0100\n"
+"Last-Translator: Robin Vobruba <hoijui.quaero@gmail.com>\n"
 "Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +45,7 @@ msgstr "_Neu"
 
 #: ../src/menu.c:40
 msgid "_Open..."
-msgstr "Ö_ffnen"
+msgstr "Ö_ffnen..."
 
 #: ../src/menu.c:41
 msgid "_Save"
@@ -52,11 +53,11 @@ msgstr "_Speichern"
 
 #: ../src/menu.c:42
 msgid "Save _As..."
-msgstr "Speichern _unter"
+msgstr "Speichern _unter..."
 
 #: ../src/menu.c:44
 msgid "Sta_tistics..."
-msgstr ""
+msgstr "Dokumentens_tatistik..."
 
 #: ../src/menu.c:47
 msgid "Print Pre_view"
@@ -64,7 +65,7 @@ msgstr "Druck_vorschau"
 
 #: ../src/menu.c:48
 msgid "_Print..."
-msgstr "_Drucken …"
+msgstr "_Drucken..."
 
 #: ../src/menu.c:50
 msgid "_Quit"
@@ -112,15 +113,15 @@ msgstr "_Rückwärts suchen"
 
 #: ../src/menu.c:61
 msgid "_Replace..."
-msgstr "_Ersetzen …"
+msgstr "_Ersetzen..."
 
 #: ../src/menu.c:62
 msgid "_Jump To..."
-msgstr "_Gehe zu …"
+msgstr "_Gehe zu..."
 
 #: ../src/menu.c:63
 msgid "_Font..."
-msgstr "_Schriftart …"
+msgstr "_Schriftart..."
 
 #: ../src/menu.c:64
 msgid "_About"
@@ -140,18 +141,19 @@ msgstr "_Auto-Einzug"
 
 #: ../src/callback.c:139
 msgid "<b>Statistics</b>"
-msgstr ""
+msgstr "<b>Dokumentenstatistik</b>"
 
 #: ../src/callback.c:330
 msgid "GTK+ based simple text editor"
-msgstr "Einfacher auf GTK+ basierender Texteditor"
+msgstr "Einfacher, auf GTK+ basierender Texteditor"
 
 #: ../src/callback.c:338
 msgid "translator-credits"
 msgstr ""
 "Sebastian Stach <sebsta@t-online.de>\n"
 "Ruediger Arp <ruediger@gmx.net>\n"
-"Mario Blättermann <mariobl@gnome.org>"
+"Mario Blättermann <mariobl@gnome.org>\n"
+"Robin Vobruba <hoijui.quaero@gmail.com>"
 
 #: ../src/callback.c:349
 msgid "Lɜafpad"
@@ -177,11 +179,11 @@ msgstr "Anderer Zeichensatz"
 
 #: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
-msgstr ""
+msgstr "_Abbrechen"
 
 #: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
-msgstr ""
+msgstr "_OK"
 
 #: ../src/selector.c:165
 msgid "Code_set:"
@@ -207,16 +209,16 @@ msgstr "Speichern unter"
 #: ../src/selector.c:303
 #, fuzzy
 msgid "_Open"
-msgstr "Öffnen"
+msgstr "Ö_ffnen"
 
 #: ../src/selector.c:303
 #, fuzzy
 msgid "_Save As"
-msgstr "Speichern unter"
+msgstr "_Speichern unter"
 
 #: ../src/selector.c:312
 msgid "C_haracter Coding:"
-msgstr "Zeic_henkodierung: "
+msgstr "Zeic_henkodierung:"
 
 #: ../src/selector.c:369
 #, c-format
@@ -249,6 +251,11 @@ msgid ""
 "<u>Selection</u>\n"
 "Chars: %7d Words: %6d Lines: %5d\n"
 msgstr ""
+"<u>Gesammt</u>\n"
+"Zeichen: %7d Wörter: %6d Zeilen: %5d\n"
+"\n"
+"<u>Auswahl</u>\n"
+"Zeichen: %7d Wörter: %6d Zeilen: %5d\n"
 
 #: ../src/search.c:129
 msgid "Search string not found"
@@ -261,7 +268,7 @@ msgstr "Ersetzen?"
 #: ../src/search.c:245
 #, c-format
 msgid "%d strings replaced"
-msgstr "%d Mal gefunden und ersetzt"
+msgstr "%d Mal ersetzt"
 
 #: ../src/search.c:308
 msgid "Replace"
@@ -281,11 +288,11 @@ msgstr "_Ersetzen durch: "
 
 #: ../src/search.c:396 ../src/search.c:410
 msgid "_Match case"
-msgstr "_Groß-/Kleinschreibung berücksichtigen"
+msgstr "_Groß-/Kleinschreibung beachten"
 
 #: ../src/search.c:402
 msgid "Replace _all at once"
-msgstr "_Alles ersetzen"
+msgstr "_Alle ersetzen"
 
 #: ../src/search.c:469
 msgid "Jump To"
@@ -297,15 +304,15 @@ msgstr "_Gehe zu"
 
 #: ../src/search.c:481
 msgid "_Line number:"
-msgstr "Zeilen_nummer: "
+msgstr "Zeilen_nummer:"
 
 #: ../src/dialog.c:67
 msgid "_No"
-msgstr ""
+msgstr "_Nein"
 
 #: ../src/dialog.c:69
 msgid "_Yes"
-msgstr ""
+msgstr "_Ja"
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"
