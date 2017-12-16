@@ -34,6 +34,7 @@ Simple install procedure:
 
   $ tar xzvf l3afpad-x.x.x.tar.gz       # unpack the sources
   $ cd l3afpad-x.x.x                    # change to the toplevel directory
+  $ ./autogen.sh                        # generate the `configure' script
   $ ./configure                         # run the `configure' script
   $ make                                # build L3afpad
   [ Become root if necessary ]
