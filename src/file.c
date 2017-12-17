@@ -220,6 +220,7 @@ gint file_save_real(GtkWidget *view, FileInfo *fi)
 	if (fwrite(cstr, 1, wbytes, fp) != wbytes) {
 		run_dialog_message(gtk_widget_get_toplevel(view),
 			GTK_MESSAGE_ERROR, _("Can't write file"));
+		fclose(fp);
 		return -1;
 	}
 
