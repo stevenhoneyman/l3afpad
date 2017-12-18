@@ -32,7 +32,7 @@ static gint calculate_min_number_window_width(GtkWidget *widget)
 {
 	PangoLayout *layout;
 	gchar *str;
-	gint width, col = 4;
+	gint width, col = 2;
 
 	str = g_strnfill(col, 0x20);
 	layout = gtk_widget_create_pango_layout(widget, str);
