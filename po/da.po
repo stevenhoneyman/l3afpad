@@ -1,5 +1,5 @@
-# Danish translation for L3afpad.
-# Copyright (C) 2008 L3afpad.
+# Danish translation for l3afpad.
+# Copyright (C) 2008 l3afpad.
 # This file is distributed under the same license as the l3afpad package.
 # Joe Hansen <joedalton2@yahoo.dk>, 2008.
 #
@@ -15,6 +15,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Danish\n"
+"X-Poedit-Country: DENMARK\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/menu.c:34
 msgid "_File"

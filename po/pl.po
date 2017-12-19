@@ -1,12 +1,12 @@
-# Polish translation of L3afpad
+# Polish translation of l3afpad.
 # Copyright (C) 2004 Free Software Foundation, Inc.
-# This file is distributed under the same license as the L3afpad package.
+# This file is distributed under the same license as the l3afpad package.
 # Michal Wrobel <wrobel@task.gda.pl>, 2005.
 # Michał Trzebiatowski <hippie_1968@hotmail.com>, 2009
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: l3afpad 0.8.16\n"
+"Project-Id-Version: l3afpad-0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2009-06-24 21:36+0100\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: POLAND\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 # src/menu.c:31
 #: ../src/menu.c:34

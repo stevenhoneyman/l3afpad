@@ -1,163 +1,156 @@
-# Galician translation for l3afpad.
+# Swiss-German translation of l3afpad.
+# Copyright (C) 2017 Free Software Foundation, Inc.
 # This file is distributed under the same license as the l3afpad package.
-# Copyright (C) 2010 Leandro Regueiro.
-# Leandro Regueiro <leandro.regueiro@gmail.com>, 2010.
-#
-# Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
-# colaborar connosco, podes atopar máis información en <http://www.trasno.net>
+# Robin Vobruba <hoijui.quaero@gmail.com>, 2017.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: l3afpad-0.8.16\n"
+"Project-Id-Version: l3afpad-0.8.18.1.11\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-05 17:27+0200\n"
-"PO-Revision-Date: 2010-12-02 10:22+0100\n"
-"Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
-"Language-Team: Galician <proxecto@trasno.net>\n"
-"Language: gl\n"
+"POT-Creation-Date: 2017-12-19 14:25+0100\n"
+"PO-Revision-Date: 2017-12-19 14:25+0100\n"
+"Last-Translator: Robin Vobruba <hoijui.quaero@gmail.com>\n"
+"Language-Team: \n"
+"Language: gsw\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Poedit-Language: Galician\n"
-"X-Poedit-Country: SPAIN\n"
+"X-Poedit-Language: Swiss-German\n"
+"X-Poedit-Country: Switzerland\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/menu.c:34
 msgid "_File"
-msgstr "_Ficheiro"
+msgstr "_Datäi"
 
 #: ../src/menu.c:35
 msgid "_Edit"
-msgstr "_Editar"
+msgstr "_Wärchle"
 
 #: ../src/menu.c:36
 msgid "_Search"
-msgstr "_Buscar"
+msgstr "_Suechä"
 
 #: ../src/menu.c:37
 msgid "_Options"
-msgstr "_Opcións"
+msgstr "_Istelligä"
 
 #: ../src/menu.c:38
 msgid "_Help"
-msgstr "A_xuda"
+msgstr "_Heuf"
 
 #: ../src/menu.c:39
 msgid "_New"
-msgstr "_Novo"
+msgstr "_Nöi"
 
 #: ../src/menu.c:40
 msgid "_Open..."
-msgstr "_Abrir"
+msgstr "U_f mache..."
 
 #: ../src/menu.c:41
 msgid "_Save"
-msgstr "_Gardar"
+msgstr "_Speichärä"
 
 #: ../src/menu.c:42
 msgid "Save _As..."
-msgstr "Gardar _como..."
+msgstr "Speichärä _under..."
 
 #: ../src/menu.c:44
 msgid "Sta_tistics..."
-msgstr ""
+msgstr "Dokumäntäs_tatistik..."
 
 #: ../src/menu.c:47
 msgid "Print Pre_view"
-msgstr "Pre_visualización da impresión"
+msgstr "Drock_vorschou"
 
 #: ../src/menu.c:48
 msgid "_Print..."
-msgstr "_Imprimir"
+msgstr "_Druckä..."
 
 #: ../src/menu.c:50
 msgid "_Quit"
-msgstr "_Saír"
+msgstr "_Beendä"
 
 #: ../src/menu.c:51
 msgid "_Undo"
-msgstr "_Desfacer"
+msgstr "_Zrugg machä"
 
 #: ../src/menu.c:52
 msgid "_Redo"
-msgstr "_Refacer"
+msgstr "_Äh nei ebbe doch ned"
 
 #: ../src/menu.c:53
 msgid "Cu_t"
-msgstr "Cor_tar"
+msgstr "_Usschniedä"
 
 #: ../src/menu.c:54
 msgid "_Copy"
-msgstr "_Copiar"
+msgstr "_Kopierä"
 
 #: ../src/menu.c:55
 msgid "_Paste"
-msgstr "_Pegar"
+msgstr "_Infüägä"
 
 #: ../src/menu.c:56
 msgid "_Delete"
-msgstr "E_liminar"
+msgstr "_Löschä"
 
 #: ../src/menu.c:57
 msgid "Select _All"
-msgstr "Seleccionar _todo"
+msgstr "_Alles aziä"
 
 #: ../src/menu.c:58
 msgid "_Find..."
-msgstr "_Buscar..."
+msgstr "_Suchä …"
 
 #: ../src/menu.c:59
 msgid "Find _Next"
-msgstr "Buscar segu_inte"
+msgstr "_Weitersuchä"
 
 #: ../src/menu.c:60
 msgid "Find _Previous"
-msgstr "Buscar an_terior"
+msgstr "Z_rugg suchä"
 
 #: ../src/menu.c:61
 msgid "_Replace..."
-msgstr "_Substituír..."
+msgstr "_Ustuschä..."
 
 #: ../src/menu.c:62
 msgid "_Jump To..."
-msgstr "Ir á _liña..."
+msgstr "_Gömmer zu..."
 
 #: ../src/menu.c:63
 msgid "_Font..."
-msgstr "_Tipo de letra..."
+msgstr "_Schriftart..."
 
 #: ../src/menu.c:64
 msgid "_About"
-msgstr "_Sobre"
+msgstr "_Öbber"
 
 #: ../src/menu.c:71
 msgid "_Word Wrap"
-msgstr "A_xuste do texto"
+msgstr "_Zieleumbruch"
 
 #: ../src/menu.c:72
 msgid "_Line Numbers"
-msgstr "Números de _liña"
+msgstr "Zielen_nummerä"
 
 #: ../src/menu.c:73
 msgid "_Auto Indent"
-msgstr "_Sangría automática"
+msgstr "_Auto-Inzug"
 
 #: ../src/callback.c:139
 msgid "<b>Statistics</b>"
-msgstr ""
+msgstr "<b>Dokumäntästatistik</b>"
 
 #: ../src/callback.c:330
 msgid "GTK+ based simple text editor"
-msgstr "Editor de texto sinxelo baseado en GTK+"
+msgstr "Einfache GTK+ Texteditor"
 
 #: ../src/callback.c:338
 msgid "translator-credits"
 msgstr ""
-"Leandro Regueiro <leandro.regueiro@gmail.com>, 2010.\n"
-"\n"
-"Proxecto Trasno - Adaptación de software libre á lingua galega:  Se desexas\n"
-"colaborar connosco, podes atopar máis información en <http://www.trasno.net>"
+"Robin Vobruba <hoijui.quaero@gmail.com>"
 
 #: ../src/callback.c:349
 msgid "Lɜafpad"
@@ -166,85 +159,85 @@ msgstr "Lɜafpad"
 #: ../src/view.c:65
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "Desexa gardar os cambios en '%s'?"
+msgstr "Änderige a »%s« speichärä?"
 
 #: ../src/font.c:36
 msgid "Font"
-msgstr "Tipo de letra"
+msgstr "Schriftart"
 
 #: ../src/selector.c:95
 #, c-format
 msgid "Current Locale (%s)"
-msgstr "Configuración rexional actual (%s)"
+msgstr "Jetztigi Standortistellig (%s)"
 
 #: ../src/selector.c:126
 msgid "Other Codeset"
-msgstr "Outra codificación de caracteres"
+msgstr "Anderä Zeichesatz"
 
 #: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
-msgstr ""
+msgstr "_Abbrächä"
 
 #: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
-msgstr ""
+msgstr "_Jo-jo"
 
 #: ../src/selector.c:165
 msgid "Code_set:"
-msgstr "_Codificación de caracteres:"
+msgstr "_Zeichäsatz:"
 
 #: ../src/selector.c:189
 #, c-format
 msgid "'%s' is not supported"
-msgstr "Non hai compatibilidade con '%s'"
+msgstr "»%s« werd ned unterstützt"
 
 #: ../src/selector.c:249
 msgid "Auto-Detect"
-msgstr "Detectar automaticamente"
+msgstr "Automatisch erkenne"
 
 #: ../src/selector.c:298
 msgid "Open"
-msgstr "Abrir"
+msgstr "Ufmache"
 
 #: ../src/selector.c:298
 msgid "Save As"
-msgstr "Abrir como"
+msgstr "Speichärä als"
 
 #: ../src/selector.c:303
 #, fuzzy
 msgid "_Open"
-msgstr "Abrir"
+msgstr "U_fmache"
 
 #: ../src/selector.c:303
 #, fuzzy
 msgid "_Save As"
-msgstr "Abrir como"
+msgstr "_Speichärä als"
 
 #: ../src/selector.c:312
 msgid "C_haracter Coding:"
-msgstr "_Codificación de caracteres:"
+msgstr "Zeic_häkodierig:"
 
 #: ../src/selector.c:369
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "'%s' xa existe. Desexa sobrescribilo?"
+msgstr "»%s« gets scho. Öberschriebä?"
 
 #: ../src/file.c:49
 msgid "Untitled"
-msgstr "Sen nome"
+msgstr "Namelos"
 
 #: ../src/file.c:204
 #, c-format
 msgid "Can't convert codeset to '%s'"
-msgstr "Non foi posíbel converter a codificación de caracteres a '%s'"
+msgstr "De Zeichäsatz chamme ned zu »%s« konvertierä"
 
 #: ../src/file.c:217
 msgid "Can't open file to write"
-msgstr "Non foi posíbel abrir o ficheiro para escribir"
+msgstr "Diä Datäi chamme ned zum schriebä ufmache"
 
 #: ../src/file.c:222
 msgid "Can't write file"
-msgstr "Non foi posíbel escribir o ficheiro"
+msgstr "Diä Datäi chamme ned schriebe"
 
 #: ../src/file.c:275
 #, c-format
@@ -255,63 +248,68 @@ msgid ""
 "<u>Selection</u>\n"
 "Chars: %7d Words: %6d Lines: %5d\n"
 msgstr ""
+"<u>Gsammttotal</u>\n"
+"Zeichä: %7d Wörtär: %6d Zilä: %5d\n"
+"\n"
+"<u>Vom markierte</u>\n"
+"Zeichä: %7d Wörtär: %6d Zilä: %5d\n"
 
 #: ../src/search.c:129
 msgid "Search string not found"
-msgstr "Non se atopou a cadea de busca"
+msgstr "Dä Text gets ned"
 
 #: ../src/search.c:182
 msgid "Replace?"
-msgstr "Desexa substituír?"
+msgstr "Ustuschä?"
 
 #: ../src/search.c:245
 #, c-format
 msgid "%d strings replaced"
-msgstr "%d cadeas substituídas"
+msgstr "%d mol ustuscht"
 
 #: ../src/search.c:308
 msgid "Replace"
-msgstr "Substituír"
+msgstr "Ustuschä"
 
 #: ../src/search.c:315
 msgid "Find"
-msgstr "Buscar"
+msgstr "Suchä"
 
 #: ../src/search.c:327
 msgid "Fi_nd what:"
-msgstr "_Buscar por:"
+msgstr "_Suchä nach:"
 
 #: ../src/search.c:373
 msgid "Re_place with:"
-msgstr "Substituír _con:"
+msgstr "_Ustuschä met:"
 
 #: ../src/search.c:396 ../src/search.c:410
 msgid "_Match case"
-msgstr "_Diferenciar maiúsculas de minúsculas"
+msgstr "Met dä _Gross-/Klischriebig ufpasse"
 
 #: ../src/search.c:402
 msgid "Replace _all at once"
-msgstr "Substituír _todo"
+msgstr "_Alli ustuschä"
 
 #: ../src/search.c:469
 msgid "Jump To"
-msgstr "Ir á liña"
+msgstr "Gang zu"
 
 #: ../src/search.c:474
 msgid "_Jump"
-msgstr "_Ir á liña"
+msgstr "_Gang zu"
 
 #: ../src/search.c:481
 msgid "_Line number:"
-msgstr "Número de _liña:"
+msgstr "Zielä_nummärä:"
 
 #: ../src/dialog.c:67
 msgid "_No"
-msgstr ""
+msgstr "_Nei"
 
 #: ../src/dialog.c:69
 msgid "_Yes"
-msgstr ""
+msgstr "_Jo"
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"
@@ -319,4 +317,4 @@ msgstr "L3afpad"
 
 #: ../data/l3afpad.desktop.in.h:2
 msgid "Simple text editor"
-msgstr "Editor de texto sinxelo"
+msgstr "Einfachä Texteditor"

@@ -1,4 +1,4 @@
-# Spanish/Spain translation of L3afpad
+# Spanish/Spain translation of l3afpad
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the l3afpad package.
 # Lucas Vieites <lucas@codexion.com>,2004-2009.
@@ -15,6 +15,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/menu.c:34
 msgid "_File"

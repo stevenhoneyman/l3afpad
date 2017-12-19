@@ -1,4 +1,4 @@
-# Latvain translation of l3afpad.
+# Latvain translations for l3afpad.
 # Copyright (C) 2009 l3afpad
 # This file is distributed under the same license as the l3afpad package.
 # Arvis Lācis <arvis.lacis@inbox.lv>, 2009.

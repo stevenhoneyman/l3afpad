@@ -1,6 +1,6 @@
-# Slovenian translations for PACKAGE package
-# Slovenski prevodi paketa PACKAGE.
-# Copyright (C) 2009 THE PACKAGE'S COPYRIGHT HOLDER
+# Slovenian translations for l3afpad.
+# Slovenski prevodi paketa l3afpad.
+# Copyright (C) 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the l3afpad package.
 # Alan Pepelko <alan.pepelko@gmail.com>, 2009.
 #

@@ -1,10 +1,11 @@
-# L3afpad - GTK+ based simple text editor
+# French translations for l3afpad.
 # Copyright (C) 2004 Tarot Osuji <tarot@sdf.lonestar.org>
 # This file is distributed under the same license as the l3afpad package.
 # Marc Veillet <scouigne@gmail.com>, 2008.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: l3afpad 0.8.16\n"
+"Project-Id-Version: l3afpad-0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2009-06-25 10:53-0500\n"

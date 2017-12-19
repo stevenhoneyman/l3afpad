@@ -1,20 +1,23 @@
-# Korean translation of L3afpad
+# Korean translation of l3afpad
 # Copyright (C) 2006 Seo Sanghyeon
 # This file is distributed under the same license as the l3afpad package.
 # Seo Sanghyeon <sanxiyn@gmail.com>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: L3afpad 0.8.9\n"
+"Project-Id-Version: l3afpad-0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2006-11-01 10:50+0900\n"
 "Last-Translator: Seo Sanghyeon <sanxiyn@gmail.com>\n"
 "Language-Team: Korean\n"
-"Language: \n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Korean\n"
+"X-Poedit-Country: KOREA\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/menu.c:34
 msgid "_File"

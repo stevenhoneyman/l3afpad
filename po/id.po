@@ -1,11 +1,11 @@
-# Indonesian translations for l3afpad package.
+# Indonesian translations for l3afpad.
 # Copyright (C) 2008 THE l3afpad'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the l3afpad package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: l3afpad 0.8.16\n"
+"Project-Id-Version: l3afpad-0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2009-06-25 21:35+0700\n"
@@ -15,6 +15,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Indonesian\n"
+"X-Poedit-Country: INDONESIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/menu.c:34
 msgid "_File"

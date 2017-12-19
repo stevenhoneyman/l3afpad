@@ -1,12 +1,12 @@
 # Czech translation of l3afpad.
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the l3afpad package.
-#
 # Petr Vysloužil <evyslouz@volny.cz>, 2004.
 # Pavel Fric <pavelfric@seznam.cz>, 2012.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: l3afpad 0.7.6\n"
+"Project-Id-Version: l3afpad-0.7.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2012-10-28 11:53+0100\n"
@@ -18,6 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.5\n"
+"X-Poedit-Language: Czech\n"
+"X-Poedit-Country: CZECH REPUBLIC\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/menu.c:34
 msgid "_File"
