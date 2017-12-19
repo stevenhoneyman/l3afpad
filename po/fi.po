@@ -1,4 +1,4 @@
-# Finnish messages for l3afpad.
+# Finnish translations for l3afpad.
 # Copyright © 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the l3afpad package.
 # Eero Tamminen <eerot@sf>, 2006.
@@ -6,7 +6,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: l3afpad 0.8.16\n"
+"Project-Id-Version: l3afpad-0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2010-12-07 13:02+0200\n"
@@ -17,6 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Finnish\n"
+"X-Poedit-Country: FINNLAND\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/menu.c:34
 msgid "_File"

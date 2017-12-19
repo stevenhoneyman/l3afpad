@@ -1,7 +1,6 @@
-# Galician translation for l3afpad package.
+# Galician translation for l3afpad.
 # This file is distributed under the same license as the l3afpad package.
 # Copyright (C) 2010 Leandro Regueiro.
-#
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2010.
 #
 # Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
@@ -9,7 +8,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: l3afpad 0.8.16\n"
+"Project-Id-Version: l3afpad-0.8.16\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2010-12-02 10:22+0100\n"
@@ -20,6 +19,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Poedit-Language: Galician\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/menu.c:34
 msgid "_File"

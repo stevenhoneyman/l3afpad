@@ -1,6 +1,6 @@
 # Hungarian translation of L3afpad
 # Copyright (C) 2007 Free Software Foundation, Inc.
-# This file is distributed under the same license as the L3afpad package.
+# This file is distributed under the same license as the l3afpad package.
 # Reviczky Ádám János <reviczky@freemail.hu>, 2007.
 # Kalman Kemenczy <kkemenczy@gmail.com>, 2010
 # Balló György <ballogyor@gmail.com>, 2015.
@@ -19,6 +19,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 2.91.7\n"
+"X-Poedit-Language: Hungarian\n"
+"X-Poedit-Country: HUNGARY\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/menu.c:34
 msgid "_File"

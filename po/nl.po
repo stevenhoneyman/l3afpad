@@ -1,7 +1,6 @@
-# Translation of l3afpad-0.8.13 to Dutch.
+# Dutch translations for l3afpad.
 # Copyright (C) 2004-2006 Tarot Osuji <tarot@sdf.lonestar.org>
 # This file is distributed under the same license as the l3afpad package.
-#
 # Wouter Van Hemel <wouter-oss@publica.duodecim.org>, 2006.
 # Benno Schulenberg <benno@vertaalt.nl>, 2008.
 msgid ""
@@ -18,6 +17,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: Holland\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/menu.c:34
 msgid "_File"

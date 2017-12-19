@@ -5,9 +5,10 @@
 # Fábio Antunes <fabio.antunes@hotmail.com>, 2008.
 # Leslie Harlley Watter <leslie@watter.org>, 2008.
 # Rafael Fontenelle <rafaelff@gnome.org>, 2017.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: l3afpad 0.8.18.1.11\n"
+"Project-Id-Version: l3afpad-0.8.18.1.11\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-02 19:32-0300\n"
 "PO-Revision-Date: 2017-09-02 19:07-0200\n"
@@ -20,6 +21,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Virtaal 1.0.0-beta1\n"
 "X-Project-Style: gnome\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: BRAZIL\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: ../src/menu.c:34
 msgid "_File"
