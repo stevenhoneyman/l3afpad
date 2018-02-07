@@ -28,7 +28,13 @@ Features
 Installation
 ============
 
-L3afpad requires GTK+-3.x.x libraries.
+L3afpad requires:
+* GTK+-3.x.x libraries
+* ncurses library
+
+and for building also:
+* automake
+* intltool
 
 Simple install procedure:
 
