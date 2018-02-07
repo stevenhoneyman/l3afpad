@@ -4,6 +4,7 @@ Makefile
 Makefile.in
 Makefile.in.in
 /aclocal.m4
+/build/
 /compile
 /config.h
 /config.h.in
