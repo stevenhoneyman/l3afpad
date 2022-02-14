@@ -14,7 +14,7 @@ Makefile.in.in
 /depcomp
 /install-sh
 /missing
-/po/.intltool-merge-cache
+/po/.intltool-merge-cache*
 /po/POTFILES
 /po/*.gmo
 /po/stamp-it
