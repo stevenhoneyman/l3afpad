@@ -2,14 +2,14 @@
 # Copyright (C) 2004-2005 Tarot Osuji <tarot@sdf.lonestar.org>
 # This file is distributed under the same license as the l3afpad package.
 # Stavros Giannouris <stavrosg2002@freemail.gr>, 2005-2006
-#
+# Vasilis Kosmidis <skyhirules@gmail.com>, 2022
 msgid ""
 msgstr ""
 "Project-Id-Version: l3afpad-0.8.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-05 17:27+0200\n"
-"PO-Revision-Date: 2006-04-23 00:52+0200\n"
-"Last-Translator: Stavros Giannouris <stavrosg2002@freemail.gr>\n"
+"PO-Revision-Date: 2022-08-11 11:14+0200\n"
+"Last-Translator: Vasilis Kosmidis <skyhirules@gmail.com>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgstr "_Επεξεργασία"
 
 #: ../src/menu.c:36
 msgid "_Search"
-msgstr "Ανα_ζήτηση:"
+msgstr "Ανα_ζήτηση"
 
 #: ../src/menu.c:37
 msgid "_Options"
@@ -57,7 +57,7 @@ msgstr "Αποθήκευση _ως..."
 
 #: ../src/menu.c:44
 msgid "Sta_tistics..."
-msgstr ""
+msgstr "Στατιστικά"
 
 #: ../src/menu.c:47
 msgid "Print Pre_view"
@@ -105,7 +105,7 @@ msgstr "_Εύρεση..."
 
 #: ../src/menu.c:59
 msgid "Find _Next"
-msgstr "Εύρεση Επόμε_νου"
+msgstr "Εύρεση επόμε_νου"
 
 #: ../src/menu.c:60
 msgid "Find _Previous"
@@ -125,7 +125,7 @@ msgstr "_Γραμματοσειρά..."
 
 #: ../src/menu.c:64
 msgid "_About"
-msgstr "_Περί"
+msgstr "_Σχετικά"
 
 #: ../src/menu.c:71
 msgid "_Word Wrap"
@@ -141,7 +141,7 @@ msgstr "Αυ_τόματες εσοχές"
 
 #: ../src/callback.c:139
 msgid "<b>Statistics</b>"
-msgstr ""
+msgstr "Στατιστικά"
 
 #: ../src/callback.c:330
 msgid "GTK+ based simple text editor"
@@ -149,7 +149,7 @@ msgstr "Ένας απλός επεξεργαστής κειμένου σε GTK+"
 
 #: ../src/callback.c:338
 msgid "translator-credits"
-msgstr "Σταύρος Γιαννούρης <stavrosg2002@freemail.gr>"
+msgstr "Σταύρος Γιαννούρης <stavrosg2002@freemail.gr>, Βασίλης Κοσμίδης <skyhirules@gmail.com>"
 
 #: ../src/callback.c:349
 msgid "Lɜafpad"
@@ -158,7 +158,7 @@ msgstr "Lɜafpad"
 #: ../src/view.c:65
 #, c-format
 msgid "Save changes to '%s'?"
-msgstr "Αποθήκευση αλλαγών στο '%s' ;"
+msgstr "Αποθήκευση αλλαγών στο '%s';"
 
 #: ../src/font.c:36
 msgid "Font"
@@ -175,11 +175,11 @@ msgstr "Άλλες κωδικοποίησεις"
 
 #: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
-msgstr ""
+msgstr "Ακύρωση"
 
 #: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
-msgstr ""
+msgstr "_ΟΚ"
 
 #: ../src/selector.c:165
 msgid "Code_set:"
@@ -232,7 +232,7 @@ msgstr "Αδυναμία μετατροπής της κωδικοσελίδας 
 
 #: ../src/file.c:217
 msgid "Can't open file to write"
-msgstr "Αδυναμία εγγραφής σε αυτό το αρχείο."
+msgstr "Αδυναμία ανοίγματος αρχείου για εγγραφή."
 
 #: ../src/file.c:222
 msgid "Can't write file"
@@ -246,7 +246,7 @@ msgid ""
 "\n"
 "<u>Selection</u>\n"
 "Chars: %7d Words: %6d Lines: %5d\n"
-msgstr ""
+msgstr "Χαρακτήρες: %7d Λέξεις: %6d Γραμμές: %5d\n"
 
 #: ../src/search.c:129
 msgid "Search string not found"
@@ -299,11 +299,11 @@ msgstr "_Αριθμός γραμμής:"
 
 #: ../src/dialog.c:67
 msgid "_No"
-msgstr ""
+msgstr "Όχι"
 
 #: ../src/dialog.c:69
 msgid "_Yes"
-msgstr ""
+msgstr "Ναι"
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"
