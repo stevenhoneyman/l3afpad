@@ -58,6 +58,7 @@ MainWin *create_main_window(void)
 	gtk_box_pack_start(GTK_BOX(vbox), sw, TRUE, TRUE, 0);
 
 	mw->view = create_text_view();
+    gtk_container_set_border_width(GTK_CONTAINER(mw->view), 12);
 	gtk_container_add(GTK_CONTAINER(sw), mw->view);
 	mw->buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(mw->view));
 
