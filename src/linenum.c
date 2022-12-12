@@ -162,10 +162,6 @@ line_numbers_expose (GtkWidget *widget, cairo_t *event)
 
 	cairo_rectangle_list_destroy(clips);
 
-	/* skip drawing if not in the line number area. */
-	if (i >= gtk_text_view_get_border_window_size(text_view, GTK_TEXT_WINDOW_LEFT))
-		return FALSE;
-
 	gtk_text_view_window_to_buffer_coords (text_view,
 	                                       GTK_TEXT_WINDOW_LEFT,
 	                                       0,
