@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the l3afpad package.
 # Wouter Van Hemel <wouter-oss@publica.duodecim.org>, 2006.
 # Benno Schulenberg <benno@vertaalt.nl>, 2008.
+# Pjotr <pjotrvertaalt@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"Project-Id-Version: l3afpad-0.8.13\n"
+"Project-Id-Version: l3afpad\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-05 17:27+0200\n"
 "PO-Revision-Date: 2008-01-15 15:15+0100\n"
-"Last-Translator: Benno Schulenberg <benno@vertaalt.nl>\n"
-"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
+"Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
+"Language-Team: Dutch\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,7 +60,7 @@ msgstr "Opslaan _als..."
 
 #: ../src/menu.c:44
 msgid "Sta_tistics..."
-msgstr ""
+msgstr "Statistieken..."
 
 #: ../src/menu.c:47
 msgid "Print Pre_view"
@@ -143,17 +144,18 @@ msgstr "Automatisch _inspringen"
 
 #: ../src/callback.c:139
 msgid "<b>Statistics</b>"
-msgstr ""
+msgstr "<b>Statistieken</b>"
 
 #: ../src/callback.c:330
 msgid "GTK+ based simple text editor"
-msgstr "Eenvoudige teksteditor gebouwd op GTK+"
+msgstr "Eenvoudige tekstbewerker gebouwd op GTK+"
 
 #: ../src/callback.c:338
 msgid "translator-credits"
 msgstr ""
 "Wouter Van Hemel <wouter-oss@publica.duodecim.org>\n"
 "Benno Schulenberg <benno@vertaalt.nl>"
+"Pjotr <pjotrvertaalt@gmail.com>
 
 #: ../src/callback.c:349
 msgid "Lɜafpad"
@@ -179,11 +181,11 @@ msgstr "Andere tekencodering"
 
 #: ../src/selector.c:155 ../src/selector.c:302 ../src/dialog.c:68
 msgid "_Cancel"
-msgstr ""
+msgstr "_Annuleren"
 
 #: ../src/selector.c:156 ../src/dialog.c:42
 msgid "_OK"
-msgstr ""
+msgstr "_Oké"
 
 #: ../src/selector.c:165
 msgid "Code_set:"
@@ -207,14 +209,12 @@ msgid "Save As"
 msgstr "Opslaan als"
 
 #: ../src/selector.c:303
-#, fuzzy
 msgid "_Open"
-msgstr "Openen"
+msgstr "_Openen"
 
 #: ../src/selector.c:303
-#, fuzzy
 msgid "_Save As"
-msgstr "Opslaan als"
+msgstr "Op_slaan als"
 
 #: ../src/selector.c:312
 msgid "C_haracter Coding:"
@@ -223,7 +223,7 @@ msgstr "Teken_codering:"
 #: ../src/selector.c:369
 #, c-format
 msgid "'%s' already exists. Overwrite?"
-msgstr "Bestand '%s' bestaat al.  Vervangen?"
+msgstr "Bestand '%s' bestaat al. Vervangen?"
 
 #: ../src/file.c:49
 msgid "Untitled"
@@ -251,6 +251,11 @@ msgid ""
 "<u>Selection</u>\n"
 "Chars: %7d Words: %6d Lines: %5d\n"
 msgstr ""
+"<u>Totaaltelling</u>\n"
+"Tekens: %7d Woorden: %6d Regels: %5d\n"
+"\n"
+"<u>Selectie</u>\n"
+"Tekens: %7d Woorden: %6d Regels: %5d\n"
 
 #: ../src/search.c:129
 msgid "Search string not found"
@@ -287,11 +292,11 @@ msgstr "_Hoofdlettergevoelig"
 
 #: ../src/search.c:402
 msgid "Replace _all at once"
-msgstr "Alle v_ondsten vervangen"
+msgstr "Alle v_ondsten direct vervangen"
 
 #: ../src/search.c:469
 msgid "Jump To"
-msgstr "Naar regel"
+msgstr "Spring naar regel"
 
 #: ../src/search.c:474
 msgid "_Jump"
@@ -303,11 +308,11 @@ msgstr "Regel_nummer:"
 
 #: ../src/dialog.c:67
 msgid "_No"
-msgstr ""
+msgstr "_Nee"
 
 #: ../src/dialog.c:69
 msgid "_Yes"
-msgstr ""
+msgstr "_Ja"
 
 #: ../data/l3afpad.desktop.in.h:1
 msgid "L3afpad"
@@ -315,4 +320,4 @@ msgstr "L3afpad"
 
 #: ../data/l3afpad.desktop.in.h:2
 msgid "Simple text editor"
-msgstr "Eenvoudige teksteditor"
+msgstr "Eenvoudige tekstbewerker"
